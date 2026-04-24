@@ -1,0 +1,5 @@
+attached_assets/
+docs/
+validator-node/
+*.md
+.local/

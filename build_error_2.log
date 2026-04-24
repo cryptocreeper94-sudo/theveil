@@ -1,0 +1,154 @@
+
+> rest-express@1.0.0 build
+> tsx script/build.ts
+
+
+========================================
+  DarkWave Chain Portal - Release
+========================================
+
+[Release] Current version: 1.2.47
+[Release] Version bumped to 1.2.48
+[Release] Release hash: 1a20941c5c09b4ec...
+[Release] Ready for chain stamping on first request
+
+building client...
+[36mvite v7.1.12 [32mbuilding for production...[36m[39m
+transforming...
+[plugin vite:esbuild] client/src/pages/home.tsx: Duplicate key "purple" in object literal
+538 |    teal: { text: "text-teal-400", dot: "bg-teal-400", btn: "bg-teal-500/20 border-teal-500/40 text-teal-300" },
+539 |    rose: { text: "text-rose-400", dot: "bg-rose-400", btn: "bg-rose-500/20 border-rose-500/40 text-rose-300" },
+540 |    purple: { text: "text-purple-400", dot: "bg-purple-400", btn: "bg-purple-500/20 border-purple-500/40 text-purple-30...
+    |    ^
+541 |    cyan: { text: "text-cyan-400", dot: "bg-cyan-400", btn: "bg-cyan-500/20 border-cyan-500/40 text-cyan-300" },
+542 |    zinc: { text: "text-zinc-400", dot: "bg-zinc-400", btn: "bg-zinc-500/20 border-zinc-500/40 text-zinc-300" },
+
+[plugin vite:esbuild] client/src/pages/home.tsx: Duplicate key "cyan" in object literal
+539 |    rose: { text: "text-rose-400", dot: "bg-rose-400", btn: "bg-rose-500/20 border-rose-500/40 text-rose-300" },
+540 |    purple: { text: "text-purple-400", dot: "bg-purple-400", btn: "bg-purple-500/20 border-purple-500/40 text-purple-30...
+541 |    cyan: { text: "text-cyan-400", dot: "bg-cyan-400", btn: "bg-cyan-500/20 border-cyan-500/40 text-cyan-300" },
+    |    ^
+542 |    zinc: { text: "text-zinc-400", dot: "bg-zinc-400", btn: "bg-zinc-500/20 border-zinc-500/40 text-zinc-300" },
+543 |    indigo: { text: "text-indigo-400", dot: "bg-indigo-400", btn: "bg-indigo-500/20 border-indigo-500/40 text-indigo-30...
+
+[32mΓ£ô[39m 1069 modules transformed.
+Γ£ù Build failed in 13.45s
+[vite:asset] Could not load D:\trust-layer\attached_assets/generated_images/darkwave_trust_layer_emblem_enhanced.jpg (imported by client/src/components/site-nav.tsx): ENOENT: no such file or directory, open 'D:\trust-layer\attached_assets\generated_images\darkwave_trust_layer_emblem_enhanced.jpg'
+    at async open (node:internal/fs/promises:642:25)
+    at async Object.readFile (node:internal/fs/promises:1279:14)
+    at async fileToBuiltUrl (D:\trust-layer\node_modules\vite\dist\node\chunks\config.js:7526:18)
+    at async Object.handler (D:\trust-layer\node_modules\vite\dist\node\chunks\config.js:7420:17)
+    at async PluginDriver.hookFirstAndGetPlugin (D:\trust-layer\node_modules\rollup\dist\es\shared\node-entry.js:22308:28)
+    at async <anonymous> (D:\trust-layer\node_modules\rollup\dist\es\shared\node-entry.js:21308:33)
+    at async Queue.work (D:\trust-layer\node_modules\rollup\dist\es\shared\node-entry.js:22536:32) {
+  errno: -4058,
+  code: 'PLUGIN_ERROR',
+  syscall: 'open',
+  path: 'D:\\trust-layer\\attached_assets\\generated_images\\darkwave_trust_layer_emblem_enhanced.jpg',
+  pluginCode: 'ENOENT',
+  plugin: 'vite:asset',
+  hook: 'load',
+  watchFiles: [
+    'D:/trust-layer/client/index.html',
+    'D:/trust-layer/client/src/main.tsx',
+    'D:\\trust-layer\\package.json',
+    'D:/trust-layer/node_modules/react/jsx-runtime.js',
+    'D:/trust-layer/node_modules/react-dom/client.js',
+    'D:/trust-layer/client/src/App.tsx',
+    'D:/trust-layer/client/src/index.css',
+    'D:\\trust-layer\\node_modules\\tailwindcss\\index.css',
+    'D:\\trust-layer\\node_modules\\tw-animate-css\\dist\\tw-animate.css',
+    'D:\\trust-layer\\client\\index.html',
+    'D:\\trust-layer\\client\\public\\academy-sw.js',
+    'D:\\trust-layer\\client\\public\\dw-sso-node.js',
+    'D:\\trust-layer\\client\\public\\dw-sso.js',
+    'D:\\trust-layer\\client\\public\\ecosystem-directory.js',
+    'D:\\trust-layer\\client\\public\\ecosystem-shared-loader.js',
+    'D:\\trust-layer\\client\\public\\ecosystem-widget.js',
+    'D:\\trust-layer\\client\\public\\guardian-scanner-sw.js',
+    'D:\\trust-layer\\client\\public\\guardian-screener-sw.js',
+    'D:\\trust-layer\\client\\public\\manifest-academy.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-chrono.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-chronochat.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-dwsc.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-games.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-guardian-screener.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-guardian.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-signal-chat.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-studios.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-trustbook.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-trustshield.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest-veil.webmanifest',
+    'D:\\trust-layer\\client\\public\\manifest.webmanifest',
+    'D:\\trust-layer\\client\\public\\signal-chat-manifest.json',
+    'D:\\trust-layer\\client\\public\\sw.js',
+    'D:\\trust-layer\\client\\public\\through-the-veil-BACKUP-ORIGINAL.md',
+    'D:\\trust-layer\\client\\public\\through-the-veil.md',
+    'D:\\trust-layer\\client\\src\\App.tsx',
+    'D:\\trust-layer\\client\\src\\components\\achievements.tsx',
+    'D:\\trust-layer\\client\\src\\components\\ai-assistant.tsx',
+    'D:\\trust-layer\\client\\src\\components\\airdrop-dashboard.tsx',
+    'D:\\trust-layer\\client\\src\\components\\audio-player.tsx',
+    'D:\\trust-layer\\client\\src\\components\\auth-login.tsx',
+    'D:\\trust-layer\\client\\src\\components\\bridge\\bridge-interface.tsx',
+    'D:\\trust-layer\\client\\src\\components\\bridge\\BridgeHistory.tsx',
+    'D:\\trust-layer\\client\\src\\components\\bridge\\BridgeInterface.tsx',
+    'D:\\trust-layer\\client\\src\\components\\buy-crypto-modal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\ChannelList.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\ChatContainer.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\CommunityList.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\CreateChannelModal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\CreateCommunityModal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\FilePreview.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\FileUploadZone.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\InviteModal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\MemberList.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\MemberProfile.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\MessageActions.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\MessageItem.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\NotificationSettings.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\PresenceIndicator.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\ReactionPicker.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\ReplyThread.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\RoleManager.tsx',
+    'D:\\trust-layer\\client\\src\\components\\chat\\TypingIndicator.tsx',
+    'D:\\trust-layer\\client\\src\\components\\code-block.tsx',
+    'D:\\trust-layer\\client\\src\\components\\contextual-help.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dex\\LiquidityPanel.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dex\\PriceChart.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dex\\SwapInterface.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dex-swap-widget.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dwc-bag-dashboard.tsx',
+    'D:\\trust-layer\\client\\src\\components\\dyor-disclaimer.tsx',
+    'D:\\trust-layer\\client\\src\\components\\ecosystem-directory.tsx',
+    'D:\\trust-layer\\client\\src\\components\\favorite-button.tsx',
+    'D:\\trust-layer\\client\\src\\components\\favorites-watchlist.tsx',
+    'D:\\trust-layer\\client\\src\\components\\feature-badge.tsx',
+    'D:\\trust-layer\\client\\src\\components\\first-login-modal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\floating-chat.tsx',
+    'D:\\trust-layer\\client\\src\\components\\footer.tsx',
+    'D:\\trust-layer\\client\\src\\components\\founders-badge.tsx',
+    'D:\\trust-layer\\client\\src\\components\\games-coming-soon-modal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\games-nav.tsx',
+    'D:\\trust-layer\\client\\src\\components\\genesis-hallmark-badge.tsx',
+    'D:\\trust-layer\\client\\src\\components\\genesis-hallmark.tsx',
+    'D:\\trust-layer\\client\\src\\components\\global-search.tsx',
+    'D:\\trust-layer\\client\\src\\components\\guardian\\CertificationBadge.tsx',
+    'D:\\trust-layer\\client\\src\\components\\guardian-swap-modal.tsx',
+    'D:\\trust-layer\\client\\src\\components\\header-tools.tsx',
+    'D:\\trust-layer\\client\\src\\components\\info-button.tsx',
+    'D:\\trust-layer\\client\\src\\components\\info-tooltip.tsx',
+    'D:\\trust-layer\\client\\src\\components\\keyboard-shortcuts.tsx',
+    'D:\\trust-layer\\client\\src\\components\\limit-orders.tsx',
+    'D:\\trust-layer\\client\\src\\components\\loading-skeleton.tsx',
+    'D:\\trust-layer\\client\\src\\components\\member-badge.tsx',
+    'D:\\trust-layer\\client\\src\\components\\mobile-nav.tsx',
+    'D:\\trust-layer\\client\\src\\components\\monaco-editor.tsx',
+    'D:\\trust-layer\\client\\src\\components\\nft\\NFTCard.tsx',
+    'D:\\trust-layer\\client\\src\\components\\nft\\NFTGallery.tsx',
+    'D:\\trust-layer\\client\\src\\components\\nft\\NFTMintForm.tsx',
+    'D:\\trust-layer\\client\\src\\components\\notification-preferences.tsx',
+    'D:\\trust-layer\\client\\src\\components\\notifications.tsx',
+    ... 1600 more items
+  ]
+}

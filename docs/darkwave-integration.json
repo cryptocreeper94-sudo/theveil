@@ -1,0 +1,218 @@
+{
+  "meta": {
+    "name": "DarkWave Chain Integration Manifest",
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-21",
+    "maintainer": "DarkWave Studios"
+  },
+  "chain": {
+    "id": 8453,
+    "name": "DarkWave Chain",
+    "symbol": "DWT",
+    "decimals": 18,
+    "totalSupply": "100000000",
+    "blockTime": 400,
+    "maxTps": 200000,
+    "finality": "sub-second"
+  },
+  "domains": {
+    "primary": "darkwavechain.io",
+    "secondary": "darkwavechain.com"
+  },
+  "services": {
+    "hashSubmission": {
+      "description": "Submit data hashes to DarkWave Chain for immutable timestamping",
+      "endpoint": "POST /api/hash/submit",
+      "authentication": "X-API-Key header",
+      "requestBody": {
+        "dataHash": "string (required) - SHA-256 or Keccak-256 hash",
+        "metadata": "object (optional) - Custom metadata"
+      },
+      "response": {
+        "txHash": "Transaction hash on DarkWave Chain",
+        "blockHeight": "Block number containing the transaction",
+        "timestamp": "ISO 8601 timestamp",
+        "confirmations": "Number of confirmations",
+        "gasUsed": "Gas units consumed"
+      }
+    },
+    "dualChainStamping": {
+      "description": "Stamp data to both DarkWave Chain and Solana simultaneously",
+      "endpoint": "POST /api/stamp/dual",
+      "authentication": "X-API-Key header",
+      "requestBody": {
+        "dataHash": "string (required) - Data hash to stamp",
+        "metadata": "object (optional) - Custom metadata"
+      },
+      "response": {
+        "stampId": "Unique stamp identifier",
+        "darkwave": {
+          "txHash": "DarkWave transaction hash",
+          "status": "confirmed | pending",
+          "blockHeight": "Block number"
+        },
+        "solana": {
+          "status": "pending_client_submission | confirmed",
+          "signature": "Solana transaction signature (after update)"
+        }
+      },
+      "workflow": [
+        "1. Submit to /api/stamp/dual with your hash",
+        "2. DarkWave Chain submission happens server-side automatically",
+        "3. Use returned memoData to submit to Solana client-side",
+        "4. Update stamp with Solana signature via PATCH /api/stamp/{stampId}/solana",
+        "5. Both chains now contain your timestamped data"
+      ]
+    },
+    "hallmark": {
+      "description": "Generate unique, verifiable product identifiers",
+      "format": "XXXXXXXXX-YY (9-digit master + 2-digit sub-sequence)",
+      "endpoints": {
+        "generate": "POST /api/hallmark/generate",
+        "verify": "GET /api/hallmark/{hallmarkId}/verify",
+        "qrCode": "GET /api/hallmark/{hallmarkId}/qr",
+        "details": "GET /api/hallmark/{hallmarkId}"
+      },
+      "features": [
+        "Auto-generated QR codes (SVG)",
+        "On-chain verification via DarkWave Chain",
+        "Verification status tracking (pending → confirmed)",
+        "Full audit trail with timestamps"
+      ]
+    },
+    "gasEstimation": {
+      "description": "Estimate gas costs for transactions",
+      "endpoint": "GET /api/gas/estimate",
+      "queryParams": {
+        "dataSize": "Size of data in bytes"
+      },
+      "feeSchedule": {
+        "baseFee": 21000,
+        "hashSubmission": 25000,
+        "perByte": 16,
+        "hallmarkGeneration": 50000,
+        "dualChainStamp": 75000
+      }
+    }
+  },
+  "authentication": {
+    "developerPin": {
+      "description": "Initial authentication using developer PIN",
+      "endpoint": "POST /api/developer/auth",
+      "requestBody": {
+        "pin": "4-digit developer PIN"
+      },
+      "response": {
+        "sessionToken": "Temporary session token (1 hour)",
+        "expiresIn": 3600
+      }
+    },
+    "apiKeyRegistration": {
+      "description": "Register for a permanent API key",
+      "endpoint": "POST /api/developer/register",
+      "headers": {
+        "X-Developer-Session": "Session token from PIN auth"
+      },
+      "requestBody": {
+        "appName": "Your application name",
+        "email": "Contact email for notifications"
+      },
+      "response": {
+        "apiKey": "Permanent API key (dwc_live_...)",
+        "appId": "Your application ID"
+      }
+    }
+  },
+  "sdk": {
+    "npm": "darkwave-sdk",
+    "languages": ["TypeScript", "JavaScript"],
+    "features": [
+      "DarkWaveClient - Single-chain operations",
+      "DualChainClient - Multi-chain stamping",
+      "HallmarkClient - Product verification",
+      "Automatic retry and error handling"
+    ],
+    "installation": "npm install darkwave-sdk"
+  },
+  "ecosystem": {
+    "apps": [
+      {
+        "name": "Orbit Staffing",
+        "url": "https://orbitstaffing.io",
+        "category": "Business"
+      },
+      {
+        "name": "LOTOPS Pro",
+        "url": "https://lotopspro.io",
+        "category": "Gaming"
+      },
+      {
+        "name": "Orby",
+        "url": "https://getorby.io",
+        "category": "Utility"
+      },
+      {
+        "name": "GarageBot",
+        "url": "https://garagebot.io",
+        "category": "Automotive"
+      },
+      {
+        "name": "Brew & Board",
+        "url": "https://brewandboard.coffee",
+        "category": "Food & Beverage"
+      },
+      {
+        "name": "DarkWave Pulse",
+        "url": "https://darkwavepulse.com",
+        "category": "Analytics"
+      },
+      {
+        "name": "PaintPros",
+        "url": "https://paintpros.io",
+        "category": "Services"
+      },
+      {
+        "name": "Strike Agent",
+        "url": "https://strikeagent.io",
+        "category": "AI/Automation"
+      }
+    ]
+  },
+  "rateLimits": {
+    "free": {
+      "requestsPerMinute": 60,
+      "requestsPerDay": 1000
+    },
+    "developer": {
+      "requestsPerMinute": 300,
+      "requestsPerDay": 10000
+    },
+    "enterprise": {
+      "requestsPerMinute": 1000,
+      "requestsPerDay": "unlimited"
+    }
+  },
+  "errorCodes": {
+    "400": "Bad Request - Invalid parameters",
+    "401": "Unauthorized - Invalid or missing API key",
+    "403": "Forbidden - Insufficient permissions",
+    "404": "Not Found - Resource does not exist",
+    "429": "Too Many Requests - Rate limit exceeded",
+    "500": "Internal Server Error"
+  },
+  "support": {
+    "developerPortal": "/developer-portal",
+    "documentation": "/docs",
+    "email": "cryptocreeper94@gmail.com"
+  },
+  "launch": {
+    "date": "2026-04-11",
+    "tokenDistribution": {
+      "ecosystemGrowth": "40%",
+      "communityLiquidity": "20%",
+      "coreTeam": "20%",
+      "strategicPartners": "10%",
+      "treasuryReserve": "10%"
+    }
+  }
+}

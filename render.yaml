@@ -1,0 +1,19 @@
+# Render Blueprint — Trust Layer (dwtl.io)
+services:
+  - type: web
+    name: trust-layer
+    runtime: node
+    region: ohio
+    plan: starter
+    branch: main
+    repo: https://github.com/cryptocreeper94-sudo/trust-layer
+    buildCommand: bash scripts/render-build.sh
+    startCommand: bash scripts/render-start.sh
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000

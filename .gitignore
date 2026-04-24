@@ -1,0 +1,21 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+blockchain/target/
+.local/state/
+*.db.local/state/replit/log-query.db
+
+# Secrets - NEVER commit
+.env
+.env.*
+!.env.example
+.git-old/
+.cache/
+.config/replit/
+.local/state/replit/
+.upm/
+.replit
+*.txt

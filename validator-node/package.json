@@ -1,0 +1,14 @@
+{
+  "name": "trustlayer-validator-node",
+  "version": "1.0.0",
+  "description": "Trust Layer External Validator Node — connects to dwtl.io mainnet and submits block attestations",
+  "main": "validator.js",
+  "scripts": {
+    "start": "node validator.js",
+    "dev": "node --watch validator.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
