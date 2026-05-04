@@ -139,11 +139,11 @@
 
 ---
 
-## 6. ChronoChat
-- **URL:** `dwsc.io/community` (also via chronochat.io domain)
-- **PWA ID:** `/community-chronochat`
-- **Manifest:** `manifest-chronochat.webmanifest`
-- **Icon:** `/icons/chronochat-icon-512.png`
+## 6. Signal Chat
+- **URL:** `dwsc.io/community` (also via Signal Chat.io domain)
+- **PWA ID:** `/community-Signal Chat`
+- **Manifest:** `manifest-Signal Chat.webmanifest`
+- **Icon:** `/icons/Signal Chat-icon-512.png`
 - **Theme Color:** #06b6d4 (Cyan)
 - **Categories:** Social, Communication, Lifestyle
 - **Description:** Connect across timelines. Chat beyond eras. The community hub for DarkWave ecosystem.
@@ -237,7 +237,7 @@
 | dwsc.io/signal-chat | Signal Chat (#3) |
 | dwsc.io/chronicles | DarkWave Chronicles (#4) |
 | trustshield.tech | TrustShield (#5) |
-| chronochat.io | ChronoChat (#6) |
+| Signal Chat.io | Signal Chat (#6) |
 | darkwavegames.io | DarkWave Games (#7) |
 | darkwavestudios.io | DarkWave Studio (#8) |
 | dwsc.io/veil | Through The Veil (#9) |

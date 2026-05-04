@@ -21,11 +21,11 @@
 
 ---
 
-## Scaffold Request #1: ChronoChat REST API Routes
+## Scaffold Request #1: Signal Chat REST API Routes
 
 **File:** `server/chat-routes.ts`
 
-Create Express routes for ChronoChat. Import from existing files:
+Create Express routes for Signal Chat. Import from existing files:
 - Schema: `shared/chat-schema.ts` (communities, channels, messages, reactions, members, roles, invites)
 - Types: `shared/chat-types.ts`
 - Storage pattern: Follow `server/storage.ts` interface pattern

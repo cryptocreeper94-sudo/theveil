@@ -17,7 +17,7 @@
 | The Arcade | DarkWave Games |
 | Academy | DarkWave Academy |
 | Chronicles | DarkWave Chronicles |
-| Signal Chat | ChronoChat |
+| Signal Chat | Signal Chat |
 | Bomber | (standalone — not "Trust Golf Bomber") |
 
 ---

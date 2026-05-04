@@ -156,7 +156,7 @@ Apps that can authenticate through the Trust Layer SSO:
 
 ```
 dwtl.io · tlid.io · darkwavegames.io · darkwavestudios.io
-yourlegacy.io · chronochat.io · trustshield.tech
+yourlegacy.io · Signal Chat.io · trustshield.tech
 ```
 
 ## Environment Variables (Ecosystem-Wide)
