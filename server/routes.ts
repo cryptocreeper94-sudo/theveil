@@ -273,7 +273,7 @@ export async function registerRoutes(
     "chronicles": "/",
     "throughtheveil": "/veil",
     "signalchat": "/signal-chat",
-    "chronochat": "/signal-chat",
+    "Signal Chat": "/signal-chat",
     "guardianscanner": "/guardian-scanner",
     "guardianscreener": "/guardian-ai",
     "trustshield": "/guardian-scanner",
@@ -4756,7 +4756,7 @@ export async function registerRoutes(
           "GET /api/domains/check/:name": "Check domain availability"
         }
       },
-      cors: ["tlid.io", "dwtl.io", "darkwavestudios.io", "darkwavegames.io", "yourlegacy.io", "chronochat.io", "intothevoid.app"],
+      cors: ["tlid.io", "dwtl.io", "darkwavestudios.io", "darkwavegames.io", "yourlegacy.io", "Signal Chat.io", "intothevoid.app"],
       integration: `const response = await fetch('https://tlid.io/api/auth/firebase-sync', {
   method: 'POST',
   headers: {
@@ -10541,7 +10541,7 @@ const { trustLayerId } = await response.json();`
 
   // Reserved ecosystem prefixes - these domains are not for public sale
   const RESERVED_ECOSYSTEM_PREFIXES = [
-    "darkwave", "dw", "dwsc", "chronochat", "chrono", "vedasolus", "veda",
+    "darkwave", "dw", "dwsc", "Signal Chat", "chrono", "vedasolus", "veda",
     "strikeagent", "strike", "yourlegacy", "legacy", "signal", "sig",
     "guardian", "pulse", "jason", "team", "admin", "owner", "official",
     "darkwavestudios", "darkwavegames", "trustlayer", "trust",
@@ -10660,7 +10660,7 @@ const { trustLayerId } = await response.json();`
       // Block DarkWave ecosystem reserved domains - unless owner bypass
       const normalizedName = data.name.toLowerCase();
       const RESERVED_PREFIXES = [
-        "darkwave", "dw", "dwsc", "chronochat", "chrono", "vedasolus", "veda",
+        "darkwave", "dw", "dwsc", "Signal Chat", "chrono", "vedasolus", "veda",
         "strikeagent", "strike", "yourlegacy", "legacy", "signal", "sig",
         "guardian", "pulse", "jason", "team", "admin", "owner", "official",
         "darkwavestudios", "darkwavegames", "trustlayer", "trust",
@@ -20339,7 +20339,7 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
   // ============================================
   // CHRONICLES GUILDS API
   // ============================================
-  // In-game guilds that can optionally link to ChronoChat
+  // In-game guilds that can optionally link to Signal Chat
 
   app.get("/api/guilds", async (req, res) => {
     try {
@@ -20501,7 +20501,7 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
       // Link guild to community
       await db.update(guilds)
         .set({
-          chronoChatCommunityId: community.id,
+          Signal ChatCommunityId: community.id,
           isChronoLinkActive: true,
           shellsBonus: 5, // 5% bonus shells for linked guilds
           updatedAt: new Date()
@@ -20918,7 +20918,7 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
   });
 
   // ============================================
-  // CHRONOCHAT ENHANCED FEATURES
+  // Signal Chat ENHANCED FEATURES
   // ============================================
 
   // Pinned Messages
@@ -24246,7 +24246,7 @@ Keep responses focused, actionable, and encouraging. Format with markdown. When 
   });
 
   // ==============================================
-  // CHRONOCHAT COMMUNITY ROUTES
+  // Signal Chat COMMUNITY ROUTES
   // ==============================================
 
   const { communities, communityChannels, communityMembers, communityMessages, messageReactions, messageAttachments, insertCommunitySchema, insertChannelSchema, insertMemberSchema, insertCommunityMessageSchema, insertReactionSchema } = await import("@shared/schema");

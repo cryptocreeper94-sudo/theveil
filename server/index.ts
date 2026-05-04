@@ -169,8 +169,8 @@ const ALLOWED_ORIGINS = [
   "https://www.darkwavestudios.io",
   "https://yourlegacy.io",
   "https://www.yourlegacy.io",
-  "https://chronochat.io",
-  "https://www.chronochat.io",
+  "https://Signal Chat.io",
+  "https://www.Signal Chat.io",
   "https://trustshield.tech",
   "https://www.trustshield.tech",
   "https://trust-layer-1pji.onrender.com",
@@ -405,7 +405,7 @@ async function initializeServices() {
     }
     servicesReady = true;
 
-    // Setup ChronoChat WebSocket presence (legacy)
+    // Setup Signal Chat WebSocket presence (legacy)
     setupPresence(httpServer);
 
     // Setup Signal Chat WebSocket (JWT-authenticated, /ws/chat)

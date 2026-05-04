@@ -300,7 +300,7 @@ async function generateExecutiveSummary() {
     'Portal fully operational with DEX, staking, NFT marketplace',
     'Chronicles beta with AI-powered gameplay',
     'Stripe payment integration complete',
-    'Community platform (ChronoChat) active'
+    'Community platform (Signal Chat) active'
   ]);
   
   addSection(doc, 'Roadmap', '');

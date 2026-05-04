@@ -311,7 +311,7 @@ addTable(
   [
     ['DarkWave Portal', 'Web3 Hub', 'Live', 'Wallet, DEX, Staking'],
     ['Chronicles', 'Gaming', 'Beta', 'Shells, NFTs, Economy'],
-    ['ChronoChat', 'Social', 'Alpha', 'Tipping, Subscriptions'],
+    ['Signal Chat', 'Social', 'Alpha', 'Tipping, Subscriptions'],
     ['Guardian Shield', 'Security', 'Live', 'Service Payments'],
   ]
 );
@@ -365,7 +365,7 @@ addBullet('Legal counsel in multiple jurisdictions');
 
 addHeader('14. Conclusion');
 addParagraph('DarkWave Coin represents a new paradigm in blockchain token design—one where utility drives value, not speculation. Through our integrated ecosystem of gaming, DeFi, and enterprise applications, DWC is positioned to capture value from real economic activity rather than relying on market sentiment alone.');
-addParagraph('The combination of high-performance infrastructure (200K+ TPS, 400ms finality), consumer-grade applications (Chronicles, ChronoChat), and enterprise services (Guardian Shield) creates multiple demand vectors that sustain token value through market cycles.');
+addParagraph('The combination of high-performance infrastructure (200K+ TPS, 400ms finality), consumer-grade applications (Chronicles, Signal Chat), and enterprise services (Guardian Shield) creates multiple demand vectors that sustain token value through market cycles.');
 addParagraph('We invite developers, gamers, enterprises, and investors to join us in building the future of digital ownership and decentralized entertainment.');
 
 addHeader('15. Resources & Contact');
