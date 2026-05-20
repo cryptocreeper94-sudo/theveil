@@ -20501,7 +20501,7 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
       // Link guild to community
       await db.update(guilds)
         .set({
-          Signal ChatCommunityId: community.id,
+          signalChatCommunityId: community.id,
           isChronoLinkActive: true,
           shellsBonus: 5, // 5% bonus shells for linked guilds
           updatedAt: new Date()

@@ -2,7 +2,58 @@ import express, { type Express, Request, Response, NextFunction } from "express"
 import fs from "fs";
 import path from "path";
 
-type AppDomain = "dwsc" | "games" | "chronicles" | "chronochat";
+type AppDomain = "dwsc" | "games" | "chronicles" | "chronochat" | "trustshield";
+
+/**
+ * TLID Subdomain → SPA path routing map.
+ * When a recognized subdomain hits the gateway, redirect to the correct path.
+ * Only triggers on the root "/" path — deep links pass through.
+ */
+const SUBDOMAIN_ROUTES: Record<string, string> = {
+  // Guardian / TrustShield
+  "guardianscanner": "/guardian-scanner",
+  "guardianscreener": "/guardian-scanner",
+  "guardian":         "/guardian-scanner",
+  "guardianai":       "/guardian-ai",
+  "trustshield":      "/guardian-scanner",
+  // Pricing
+  "pricing":          "/pricing",
+  // Internal pages that exist as routes in the SPA
+  "signalchat":       "/signal-chat",
+  "thevoid":          "/the-void",
+  "trustvault":       "/trust-vault",
+  "trusthome":        "/trust-home",
+  "torque":           "/torque",
+  // Subdomains that need their own Render service (redirect to external)
+  // These are marked with https:// prefix to distinguish from internal paths
+};
+
+/**
+ * External subdomain redirects — subdomains that point to entirely separate apps.
+ */
+const SUBDOMAIN_EXTERNALS: Record<string, string> = {
+  "lotopspro":        "https://lotopspro.com",
+  "orbit":            "https://orbitstaffing.io",
+  "orby":             "https://getorby.io",
+  "garagebot":        "https://garagebot.io",
+  "paintpros":        "https://paintpros.io",
+  "nashpaintpros":    "https://nashpaintpros.io",
+  "strikeagent":      "https://strikeagent.io",
+  "vedasolus":        "https://vedasolus.io",
+  "tradeworks":       "https://tradeworksai.io",
+  "brewboard":        "https://brewandboard.coffee",
+  "pulse":            "https://darkwavepulse.com",
+  "darkwavestudios":  "https://darkwavestudios.io",
+  "driverconnect":    "https://happyeats.app",
+};
+
+function getSubdomain(hostname: string): string | null {
+  const host = hostname.toLowerCase();
+  // Match *.tlid.io subdomains
+  const tlidMatch = host.match(/^([a-z0-9-]+)\.tlid\.io$/);
+  if (tlidMatch) return tlidMatch[1];
+  return null;
+}
 
 function getAppFromHost(hostname: string): AppDomain {
   const host = hostname.toLowerCase();
@@ -15,6 +66,9 @@ function getAppFromHost(hostname: string): AppDomain {
   }
   if (host.includes("chronochat") || host === "chronochat.io" || host === "www.chronochat.io") {
     return "chronochat";
+  }
+  if (host.includes("trustshield") || host.includes("guardian")) {
+    return "trustshield";
   }
   return "dwsc";
 }
@@ -54,6 +108,13 @@ const APP_CONFIG: Record<AppDomain, {
     description: "Connect across the ecosystem. The community hub for Trust Layer.",
     icon: "/icons/icon-512x512.png",
   },
+  trustshield: {
+    manifest: "/manifest-dwsc.webmanifest",
+    themeColor: "#10b981",
+    title: "TrustShield — Guardian Scanner",
+    description: "Real-time blockchain token security analysis. Scan any token for risks, honeypots, and contract vulnerabilities.",
+    icon: "/icons/dwsc-512x512.png",
+  },
 };
 
 // Cache index.html in memory to prevent cold start issues
@@ -75,6 +136,26 @@ export function serveStatic(app: Express) {
   } catch (err) {
     console.error('[Static] Failed to cache index.html:', err);
   }
+
+  // ── TLID Subdomain Router ──
+  // Redirect recognized subdomains to their correct SPA paths or external URLs.
+  // Only triggers on root "/" — deep links within the subdomain pass through.
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    const sub = getSubdomain(req.hostname);
+    if (!sub) return next();
+
+    // External redirects (separate Render services)
+    if (SUBDOMAIN_EXTERNALS[sub]) {
+      return res.redirect(301, SUBDOMAIN_EXTERNALS[sub]);
+    }
+
+    // Internal SPA path redirects (only on root path)
+    if (SUBDOMAIN_ROUTES[sub] && req.path === "/") {
+      return res.redirect(302, SUBDOMAIN_ROUTES[sub]);
+    }
+
+    next();
+  });
 
   app.use((req: Request, res: Response, next: NextFunction) => {
     const appType = getAppFromHost(req.hostname);
@@ -119,7 +200,11 @@ export function serveStatic(app: Express) {
   const publicAssetsPath = path.resolve(process.cwd(), "public/assets");
   app.use("/assets", express.static(publicAssetsPath));
 
-  app.use("*", (req: Request, res: Response) => {
+  app.use("/*splat", (req: Request, res: Response, next: NextFunction) => {
+    // Skip API routes — let them fall through to routes registered by initializeServices
+    if (req.originalUrl.startsWith('/api/') || req.originalUrl.startsWith('/api')) {
+      return next();
+    }
     const appConfig = (req as any).appConfig;
     
     // Use cached HTML if available, otherwise read from disk
