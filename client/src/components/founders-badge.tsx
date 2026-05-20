@@ -10,8 +10,8 @@ interface FoundersBadgeProps {
 
 const tierConfig = {
   bronze: { 
-    bg: 'bg-gradient-to-r from-purple-700 to-purple-600', 
-    text: 'text-purple-100',
+    bg: 'bg-gradient-to-r from-sky-700 to-sky-600', 
+    text: 'text-sky-100',
     label: 'Founder',
     bonus: '25%'
   },
@@ -22,13 +22,13 @@ const tierConfig = {
     bonus: '50%'
   },
   gold: { 
-    bg: 'bg-gradient-to-r from-purple-400 to-teal-300', 
-    text: 'text-purple-900',
+    bg: 'bg-gradient-to-r from-sky-400 to-teal-300', 
+    text: 'text-sky-900',
     label: 'Founder',
     bonus: '75%'
   },
   diamond: { 
-    bg: 'bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400', 
+    bg: 'bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400', 
     text: 'text-white',
     label: 'Founder',
     bonus: '100%'

@@ -39,8 +39,8 @@ export function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
           overflowY: 'auto',
           backgroundColor: '#0f172a',
           borderRadius: '20px',
-          border: '1px solid rgba(168, 85, 247, 0.3)',
-          boxShadow: '0 0 60px rgba(168, 85, 247, 0.2), 0 0 100px rgba(6, 182, 212, 0.1)',
+          border: '1px solid rgba(14,165,233, 0.3)',
+          boxShadow: '0 0 60px rgba(14,165,233, 0.2), 0 0 100px rgba(6, 182, 212, 0.1)',
           zIndex: 10002,
           padding: '24px',
         }}
@@ -50,7 +50,7 @@ export function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
           <h2 style={{ 
             fontSize: '24px', 
             fontWeight: 700, 
-            background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+            background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginBottom: '8px',
@@ -88,11 +88,11 @@ export function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <div style={{
-          backgroundColor: 'rgba(168, 85, 247, 0.1)',
+          backgroundColor: 'rgba(14,165,233, 0.1)',
           borderRadius: '12px',
           padding: '16px',
           textAlign: 'center',
-          border: '1px solid rgba(168, 85, 247, 0.2)',
+          border: '1px solid rgba(14,165,233, 0.2)',
           marginBottom: '16px'
         }}>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginBottom: '4px' }}>
@@ -110,7 +110,7 @@ export function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
             padding: '14px',
             borderRadius: '12px',
             border: 'none',
-            background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+            background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
             color: '#fff',
             fontSize: '14px',
             fontWeight: 600,

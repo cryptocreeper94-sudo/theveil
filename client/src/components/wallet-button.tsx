@@ -233,7 +233,7 @@ export function WalletButton() {
                 <Link href="/wallet" onClick={() => setShowModal(false)}>
                   <Button
                     variant="outline"
-                    className="w-full h-12 bg-gradient-to-r from-cyan-900/80 to-purple-900/80 border-primary/30 hover:border-primary/50 justify-start gap-3 text-white"
+                    className="w-full h-12 bg-gradient-to-r from-cyan-900/80 to-sky-900/80 border-primary/30 hover:border-primary/50 justify-start gap-3 text-white"
                     data-testid="button-darkwave-wallet"
                   >
                     <Shield className="w-7 h-7 text-cyan-400" />

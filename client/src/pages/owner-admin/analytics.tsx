@@ -19,7 +19,7 @@ const GlowOrb = ({ color, size, top, left, delay = 0 }: { color: string; size: n
   />
 );
 
-const COLORS = ['#06b6d4', '#8b5cf6', '#ec4899', '#f59e0b', '#22c55e'];
+const COLORS = ['#06b6d4', '#0ea5e9', '#ec4899', '#f59e0b', '#22c55e'];
 
 export default function OwnerAnalytics() {
   const [selectedHost, setSelectedHost] = useState<"dwsc.io" | "yourlegacy.io">("dwsc.io");
@@ -71,15 +71,15 @@ export default function OwnerAnalytics() {
 
   const summaryStats = [
     { label: "Page Views", value: analyticsData?.summary?.pageViews || 0, icon: <Eye className="w-5 h-5 text-cyan-400" />, change: "+12%" },
-    { label: "Unique Visitors", value: analyticsData?.summary?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-purple-400" />, change: "+8%" },
+    { label: "Unique Visitors", value: analyticsData?.summary?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-sky-400" />, change: "+8%" },
     { label: "Avg. Session", value: analyticsData?.summary?.avgSessionDuration || "0:00", icon: <Clock className="w-5 h-5 text-pink-400" />, change: "+5%" },
-    { label: "Bounce Rate", value: `${analyticsData?.summary?.bounceRate || 0}%`, icon: <TrendingUp className="w-5 h-5 text-purple-400" />, change: "-3%" },
+    { label: "Bounce Rate", value: `${analyticsData?.summary?.bounceRate || 0}%`, icon: <TrendingUp className="w-5 h-5 text-sky-400" />, change: "-3%" },
   ];
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
 
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 pt-20">
@@ -88,7 +88,7 @@ export default function OwnerAnalytics() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent">
                   Analytics Dashboard
                 </span>
               </h1>
@@ -117,7 +117,7 @@ export default function OwnerAnalytics() {
                   key={range.id}
                   onClick={() => setTimeRange(range.id as any)}
                   className={`px-3 py-1.5 rounded-md text-sm transition-all ${
-                    timeRange === range.id ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
+                    timeRange === range.id ? 'bg-sky-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
                   data-testid={`button-range-${range.id}`}
                 >
@@ -148,7 +148,7 @@ export default function OwnerAnalytics() {
               style={{ boxShadow: "0 0 30px rgba(0,200,255,0.05)" }}
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-sky-500/20">
                   {stat.icon}
                 </div>
                 <span className="text-xs text-green-400">{stat.change}</span>
@@ -196,10 +196,10 @@ export default function OwnerAnalytics() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6"
-            style={{ boxShadow: "0 0 40px rgba(168,85,247,0.1)" }}
+            style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
           >
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <BarChart3 className="w-5 h-5 text-purple-400" />
+              <BarChart3 className="w-5 h-5 text-sky-400" />
               Top Pages
             </h3>
             <div className="space-y-3">
@@ -212,7 +212,7 @@ export default function OwnerAnalytics() {
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-sky-500 to-pink-500 rounded-full"
                         style={{ width: `${(page.views / (analyticsData?.topPages?.[0]?.views || 1)) * 100}%` }}
                       />
                     </div>
@@ -262,7 +262,7 @@ export default function OwnerAnalytics() {
                 <span className="text-xs text-gray-400">Desktop</span>
               </div>
               <div className="flex items-center gap-1">
-                <Smartphone className="w-4 h-4 text-purple-400" />
+                <Smartphone className="w-4 h-4 text-sky-400" />
                 <span className="text-xs text-gray-400">Mobile</span>
               </div>
               <div className="flex items-center gap-1">
@@ -280,7 +280,7 @@ export default function OwnerAnalytics() {
             style={{ boxShadow: "0 0 30px rgba(245,158,11,0.1)" }}
           >
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <Globe className="w-5 h-5 text-purple-400" />
+              <Globe className="w-5 h-5 text-sky-400" />
               Top Referrers
             </h3>
             <div className="space-y-3">

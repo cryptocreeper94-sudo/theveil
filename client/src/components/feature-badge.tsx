@@ -81,9 +81,9 @@ export function ComingSoonOverlay({ featureId, title, expectedLaunch, children }
       </div>
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm rounded-xl opacity-0 group-hover:opacity-100 transition-opacity">
         <div className="text-center px-4">
-          <Clock className="w-8 h-8 text-purple-400 mx-auto mb-2" />
+          <Clock className="w-8 h-8 text-sky-400 mx-auto mb-2" />
           <p className="font-semibold text-white">{displayTitle}</p>
-          <p className="text-sm text-purple-400">Coming {displayLaunch}</p>
+          <p className="text-sm text-sky-400">Coming {displayLaunch}</p>
         </div>
       </div>
     </div>

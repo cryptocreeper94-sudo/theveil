@@ -408,13 +408,13 @@ export default function VeilPrintVol2() {
         @page { margin: 1in; }
       `}</style>
 
-      <div className="no-print bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 text-center sticky top-0 z-50">
+      <div className="no-print bg-gradient-to-r from-sky-600 to-pink-600 text-white p-4 text-center sticky top-0 z-50">
         <p className="text-lg font-medium">
           To save as PDF: Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong> on Mac), then select "Save as PDF"
         </p>
         <button 
           onClick={() => window.print()}
-          className="mt-2 px-6 py-2 bg-white text-purple-600 rounded-lg font-medium hover:bg-purple-50 transition"
+          className="mt-2 px-6 py-2 bg-white text-sky-600 rounded-lg font-medium hover:bg-sky-50 transition"
         >
           Print / Save as PDF
         </button>
@@ -425,7 +425,7 @@ export default function VeilPrintVol2() {
           <h1 className="text-5xl font-bold mb-6 text-gray-900">Through The Veil</h1>
           <p className="text-2xl text-gray-600 mb-4">Volume Two</p>
           <p className="text-xl text-gray-500 italic mb-12">My Journey Beyond the Veil</p>
-          <div className="w-24 h-1 bg-purple-500 mx-auto mb-12"></div>
+          <div className="w-24 h-1 bg-sky-500 mx-auto mb-12"></div>
           <p className="text-lg text-gray-600">By Jason Andrews</p>
           <p className="text-gray-400 mt-8">January 2026</p>
         </div>

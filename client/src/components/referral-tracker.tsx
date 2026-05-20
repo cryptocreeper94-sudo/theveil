@@ -74,8 +74,8 @@ const TIER_ICONS: Record<string, string> = {
 const TIER_COLORS: Record<string, string> = {
   explorer: "from-gray-500 to-gray-600",
   builder: "from-blue-500 to-cyan-500",
-  architect: "from-purple-500 to-pink-500",
-  oracle: "from-purple-500 to-cyan-500",
+  architect: "from-sky-500 to-pink-500",
+  oracle: "from-sky-500 to-cyan-500",
 };
 
 async function fetchReferralStats(): Promise<ReferralStats> {
@@ -232,7 +232,7 @@ export function ReferralTracker() {
         </GlassCard>
         <GlassCard className="p-3">
           <div className="flex items-center gap-2 mb-1">
-            <Gift className="w-4 h-4 text-purple-400" />
+            <Gift className="w-4 h-4 text-sky-400" />
             <span className="text-[10px] text-muted-foreground">Credits Earned</span>
           </div>
           <div className="text-xl font-bold" data-testid="text-credits-earned">{stats?.lifetimeEarnings || 0}</div>
@@ -246,7 +246,7 @@ export function ReferralTracker() {
             Your Referral Link
           </h4>
           {(stats?.pendingCommission || 0) > 0 && (
-            <Badge className="bg-purple-500/20 text-purple-400 text-[9px]">
+            <Badge className="bg-sky-500/20 text-sky-400 text-[9px]">
               ${((stats?.pendingCommission || 0) / 100).toFixed(2)} Pending
             </Badge>
           )}
@@ -279,7 +279,7 @@ export function ReferralTracker() {
 
       <GlassCard className="p-3">
         <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
-          <Trophy className="w-4 h-4 text-purple-400" />
+          <Trophy className="w-4 h-4 text-sky-400" />
           Recent Referrals
         </h4>
         <div className="space-y-2">
@@ -293,7 +293,7 @@ export function ReferralTracker() {
               data-testid={`referral-row-${ref.id}`}
             >
               <div className="flex items-center gap-2">
-                <div className={`w-2 h-2 rounded-full ${ref.status === 'converted' ? 'bg-green-400' : ref.status === 'qualified' ? 'bg-blue-400' : 'bg-purple-400'}`} />
+                <div className={`w-2 h-2 rounded-full ${ref.status === 'converted' ? 'bg-green-400' : ref.status === 'qualified' ? 'bg-blue-400' : 'bg-sky-400'}`} />
                 <span className="text-sm font-medium capitalize">{ref.status}</span>
               </div>
               <div className="text-right">
@@ -315,7 +315,7 @@ export function ReferralTracker() {
       <Dialog>
         <DialogTrigger asChild>
           <button 
-            className="w-full p-3 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 hover:from-cyan-500/20 hover:to-purple-500/20 transition-all cursor-pointer text-left"
+            className="w-full p-3 rounded-xl bg-gradient-to-r from-cyan-500/10 to-sky-500/10 border border-cyan-500/20 hover:from-cyan-500/20 hover:to-sky-500/20 transition-all cursor-pointer text-left"
             data-testid="button-how-it-works"
           >
             <div className="flex items-center gap-3">
@@ -348,8 +348,8 @@ export function ReferralTracker() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0">
-                <UserPlus className="w-4 h-4 text-purple-400" />
+              <div className="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center shrink-0">
+                <UserPlus className="w-4 h-4 text-sky-400" />
               </div>
               <div>
                 <h4 className="font-semibold text-sm">2. They Sign Up</h4>
@@ -366,18 +366,18 @@ export function ReferralTracker() {
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 rounded-full bg-purple-500/20 flex items-center justify-center shrink-0">
-                <Trophy className="w-4 h-4 text-purple-400" />
+              <div className="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center shrink-0">
+                <Trophy className="w-4 h-4 text-sky-400" />
               </div>
               <div>
                 <h4 className="font-semibold text-sm">4. Level Up</h4>
                 <p className="text-xs text-muted-foreground">The more referrals you bring, the higher your tier and rewards. Reach Oracle status for maximum benefits!</p>
               </div>
             </div>
-            <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+            <div className="mt-4 p-3 rounded-lg bg-gradient-to-r from-cyan-500/10 to-sky-500/10 border border-cyan-500/20">
               <p className="text-xs text-center">
                 <span className="font-bold text-cyan-400">{currentTier?.referrerRewardCredits || 250} credits</span> per signup + 
-                <span className="font-bold text-purple-400"> {currentTier?.commissionPercent || 10}%</span> lifetime commission
+                <span className="font-bold text-sky-400"> {currentTier?.commissionPercent || 10}%</span> lifetime commission
               </p>
             </div>
           </div>
@@ -387,7 +387,7 @@ export function ReferralTracker() {
       {tiers.length > 0 && (
         <GlassCard className="p-3">
           <h4 className="font-semibold text-sm mb-3 flex items-center gap-2">
-            <Trophy className="w-4 h-4 text-purple-400" />
+            <Trophy className="w-4 h-4 text-sky-400" />
             Tier Rewards
           </h4>
           <div className="space-y-2">

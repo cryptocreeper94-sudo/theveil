@@ -19,7 +19,7 @@ const GlowOrb = ({ color, size, top, left, delay = 0 }: { color: string; size: n
 );
 
 const STATUS_COLORS: Record<string, string> = {
-  pending: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+  pending: 'bg-sky-500/20 text-sky-400 border-sky-500/30',
   completed: 'bg-green-500/20 text-green-400 border-green-500/30',
   failed: 'bg-red-500/20 text-red-400 border-red-500/30',
 };
@@ -84,8 +84,8 @@ export default function OwnerFaucet() {
 
   return (
     <div className="min-h-screen bg-slate-950 relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={400} top="10%" left="10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={300} top="60%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={400} top="10%" left="10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={300} top="60%" left="70%" delay={2} />
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8">
         <div className="flex items-center justify-between mb-8">
@@ -130,8 +130,8 @@ export default function OwnerFaucet() {
             className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-lg border border-white/5"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                <Clock className="w-5 h-5 text-purple-400" />
+              <div className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center">
+                <Clock className="w-5 h-5 text-sky-400" />
               </div>
               <span className="text-gray-400 text-sm">Today</span>
             </div>
@@ -175,8 +175,8 @@ export default function OwnerFaucet() {
             className="p-5 rounded-2xl bg-slate-900/60 backdrop-blur-lg border border-white/5"
           >
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                <Droplets className="w-5 h-5 text-purple-400" />
+              <div className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center">
+                <Droplets className="w-5 h-5 text-sky-400" />
               </div>
               <span className="text-gray-400 text-sm">Distributed</span>
             </div>

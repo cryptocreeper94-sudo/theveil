@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 export const RoleManager: React.FC<{ roles: any[]; members: any[]; onSave: (r: any) => Promise<void> }> = ({ roles = [], members = [], onSave }) => {
   const [name, setName] = useState('');
-  const [color, setColor] = useState('#7c3aed');
+  const [color, setColor] = useState('#0369a1');
   const [perms, setPerms] = useState<{ [k: string]: boolean }>({ sendMessages: true, manageChannels: false });
 
   const createRole = async () => {

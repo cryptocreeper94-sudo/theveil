@@ -112,8 +112,8 @@ export function ReferralCalculator() {
                 <span>Convert to <strong className="text-cyan-400">Signal (SIG)</strong> at TGE</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-purple-400" />
-                <span>Exchange for <strong className="text-purple-400">Echoes</strong> in Chronicles</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-sky-400" />
+                <span>Exchange for <strong className="text-sky-400">Echoes</strong> in Chronicles</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-1.5 h-1.5 rounded-full bg-green-400" />
@@ -127,7 +127,7 @@ export function ReferralCalculator() {
           </div>
         </div>
 
-        <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
+        <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-sky-500/10 rounded-xl border border-cyan-500/20">
           <div className="text-xs text-muted-foreground mb-2">Your Referral Link</div>
           {codeLoading ? (
             <div className="flex items-center gap-2 text-muted-foreground">
@@ -329,9 +329,9 @@ export function ReferralCalculator() {
           </div>
         </div>
 
-        <div className="mt-6 p-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl border border-purple-500/20">
+        <div className="mt-6 p-4 bg-gradient-to-r from-sky-500/10 to-pink-500/10 rounded-xl border border-sky-500/20">
           <div className="flex items-start gap-3">
-            <Gift className="w-5 h-5 text-purple-400 mt-0.5" />
+            <Gift className="w-5 h-5 text-sky-400 mt-0.5" />
             <div>
               <div className="font-semibold text-sm mb-1">How It Works</div>
               <div className="text-xs text-muted-foreground space-y-1">

@@ -247,8 +247,8 @@ function NavCategory({ category, location, onClose, onShowComingSoon }: {
           gap: '12px',
           padding: '10px 12px',
           borderRadius: '10px',
-          backgroundColor: hasActiveItem ? 'rgba(168, 85, 247, 0.1)' : 'transparent',
-          color: hasActiveItem ? '#a855f7' : '#a1a1aa',
+          backgroundColor: hasActiveItem ? 'rgba(14,165,233, 0.1)' : 'transparent',
+          color: hasActiveItem ? '#38bdf8' : '#a1a1aa',
           cursor: 'pointer',
           border: 'none',
           textAlign: 'left',
@@ -409,8 +409,8 @@ function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
           overflowY: 'auto',
           backgroundColor: '#0f172a',
           borderRadius: '20px',
-          border: '1px solid rgba(168, 85, 247, 0.3)',
-          boxShadow: '0 0 60px rgba(168, 85, 247, 0.2), 0 0 100px rgba(6, 182, 212, 0.1)',
+          border: '1px solid rgba(14,165,233, 0.3)',
+          boxShadow: '0 0 60px rgba(14,165,233, 0.2), 0 0 100px rgba(6, 182, 212, 0.1)',
           zIndex: 10002,
           padding: '24px',
         }}
@@ -420,7 +420,7 @@ function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
           <h2 style={{ 
             fontSize: '24px', 
             fontWeight: 700, 
-            background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+            background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             marginBottom: '8px',
@@ -458,11 +458,11 @@ function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
         </div>
 
         <div style={{
-          backgroundColor: 'rgba(168, 85, 247, 0.1)',
+          backgroundColor: 'rgba(14,165,233, 0.1)',
           borderRadius: '12px',
           padding: '16px',
           textAlign: 'center',
-          border: '1px solid rgba(168, 85, 247, 0.2)',
+          border: '1px solid rgba(14,165,233, 0.2)',
           marginBottom: '16px'
         }}>
           <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.7)', marginBottom: '4px' }}>
@@ -480,7 +480,7 @@ function GamesComingSoonModal({ onClose }: { onClose: () => void }) {
             padding: '14px',
             borderRadius: '12px',
             border: 'none',
-            background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+            background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
             color: '#fff',
             fontSize: '14px',
             fontWeight: 600,
@@ -607,9 +607,9 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
         <div style={{ 
           marginBottom: '16px', 
           padding: '12px', 
-          backgroundColor: 'rgba(168, 85, 247, 0.1)', 
+          backgroundColor: 'rgba(14,165,233, 0.1)', 
           borderRadius: '12px',
-          border: '1px solid rgba(168, 85, 247, 0.2)'
+          border: '1px solid rgba(14,165,233, 0.2)'
         }}>
           {isAuthenticated ? (
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
@@ -618,7 +618,7 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
                   width: '36px',
                   height: '36px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+                  background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -671,7 +671,7 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
                 padding: '12px',
                 borderRadius: '10px',
                 border: 'none',
-                background: 'linear-gradient(135deg, #a855f7, #06b6d4)',
+                background: 'linear-gradient(135deg, #38bdf8, #06b6d4)',
                 color: '#fff',
                 fontSize: '14px',
                 fontWeight: 600,
@@ -787,7 +787,7 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
               marginBottom: '12px',
               padding: '16px',
               borderRadius: '16px',
-              background: 'linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(168,85,247,0.15) 100%)',
+              background: 'linear-gradient(135deg, rgba(6,182,212,0.15) 0%, rgba(14,165,233,0.15) 100%)',
               border: '2px solid rgba(6,182,212,0.4)',
               cursor: 'pointer',
               boxShadow: '0 0 40px rgba(6,182,212,0.2)',
@@ -827,8 +827,8 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
               marginBottom: '16px',
               padding: '12px',
               borderRadius: '12px',
-              background: 'linear-gradient(135deg, rgba(168,85,247,0.2) 0%, rgba(236,72,153,0.2) 100%)',
-              border: '1px solid rgba(168,85,247,0.3)',
+              background: 'linear-gradient(135deg, rgba(14,165,233,0.2) 0%, rgba(236,72,153,0.2) 100%)',
+              border: '1px solid rgba(14,165,233,0.3)',
               cursor: 'pointer',
               display: 'flex',
               alignItems: 'center',
@@ -839,7 +839,7 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
               width: '36px',
               height: '36px',
               borderRadius: '10px',
-              background: 'linear-gradient(135deg, #a855f7, #ec4899)',
+              background: 'linear-gradient(135deg, #38bdf8, #ec4899)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -869,7 +869,7 @@ function MenuPanel({ onClose, onShowLogin }: { onClose: () => void; onShowLogin:
               padding: '12px',
               marginBottom: '12px',
               borderRadius: '12px',
-              background: installPrompt ? 'linear-gradient(135deg, #06b6d4, #a855f7)' : 'rgba(6, 182, 212, 0.1)',
+              background: installPrompt ? 'linear-gradient(135deg, #06b6d4, #38bdf8)' : 'rgba(6, 182, 212, 0.1)',
               border: installPrompt ? 'none' : '1px solid rgba(6, 182, 212, 0.3)',
               color: installPrompt ? '#000' : '#06b6d4',
               cursor: installPrompt ? 'pointer' : 'default',

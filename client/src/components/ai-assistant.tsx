@@ -263,7 +263,7 @@ export function AIAssistant() {
       <AnimatePresence>
         {isMinimized && (
           <motion.button
-            className="fixed bottom-32 right-0 z-50 bg-gradient-to-l from-cyan-500 to-purple-500 text-white px-2 py-4 rounded-l-lg shadow-lg"
+            className="fixed bottom-32 right-0 z-50 bg-gradient-to-l from-cyan-500 to-sky-500 text-white px-2 py-4 rounded-l-lg shadow-lg"
             onClick={toggleMinimized}
             initial={{ x: 50 }}
             animate={{ x: 0 }}
@@ -288,7 +288,7 @@ export function AIAssistant() {
       <AnimatePresence>
         {!isMinimized && (
           <motion.button
-            className="fixed bottom-32 right-0 z-50 bg-gradient-to-l from-cyan-500 to-purple-500 text-white px-2 py-4 rounded-l-lg shadow-lg"
+            className="fixed bottom-32 right-0 z-50 bg-gradient-to-l from-cyan-500 to-sky-500 text-white px-2 py-4 rounded-l-lg shadow-lg"
             onClick={() => setIsOpen(!isOpen)}
             onContextMenu={(e) => { e.preventDefault(); toggleMinimized(); }}
             initial={{ x: 50 }}
@@ -324,7 +324,7 @@ export function AIAssistant() {
             transition={{ duration: 0.2 }}
             data-testid="ai-assistant-panel"
           >
-            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+            <div className="flex items-center justify-between p-4 border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-sky-500/10">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full overflow-hidden border border-cyan-500/50">
                   <img 

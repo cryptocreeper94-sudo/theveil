@@ -431,7 +431,7 @@ export default function OwnerSeoManager() {
               whileTap={{ scale: 0.98 }}
               onClick={() => saveMutation.mutate(form)}
               disabled={saveMutation.isPending}
-              className="flex-1 py-3 px-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl text-white font-medium flex items-center justify-center gap-2"
+              className="flex-1 py-3 px-4 bg-gradient-to-r from-cyan-500 to-sky-500 rounded-xl text-white font-medium flex items-center justify-center gap-2"
               data-testid="button-save"
             >
               <Save className="w-4 h-4" />
@@ -445,8 +445,8 @@ export default function OwnerSeoManager() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #8b5cf6, #ec4899)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #0ea5e9, #ec4899)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
 
 
       <AnimatePresence>
@@ -464,7 +464,7 @@ export default function OwnerSeoManager() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent">
                   SEO Manager
                 </span>
               </h1>
@@ -479,7 +479,7 @@ export default function OwnerSeoManager() {
                   key={host.id}
                   onClick={() => setSelectedHost(host.id as any)}
                   className={`px-3 py-1.5 rounded-md text-sm transition-all ${
-                    selectedHost === host.id ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
+                    selectedHost === host.id ? 'bg-sky-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
                   data-testid={`button-seo-host-${host.id}`}
                 >
@@ -491,7 +491,7 @@ export default function OwnerSeoManager() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => refetch()}
-              className="p-2 bg-slate-800/50 rounded-lg border border-white/10 hover:border-purple-500/50"
+              className="p-2 bg-slate-800/50 rounded-lg border border-white/10 hover:border-sky-500/50"
               data-testid="button-refresh"
             >
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
@@ -500,7 +500,7 @@ export default function OwnerSeoManager() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowNewForm(true)}
-              className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-medium flex items-center gap-2"
+              className="px-4 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-lg text-white font-medium flex items-center gap-2"
               data-testid="button-new-config"
             >
               <Plus className="w-4 h-4" />
@@ -513,11 +513,11 @@ export default function OwnerSeoManager() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="bg-slate-900/40 backdrop-blur-xl border border-white/10 rounded-2xl p-6 mb-8"
-          style={{ boxShadow: "0 0 40px rgba(168,85,247,0.1)" }}
+          style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-              <Search className="w-5 h-5 text-purple-400" />
+            <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-pink-500/20">
+              <Search className="w-5 h-5 text-sky-400" />
             </div>
             <div>
               <h3 className="font-medium text-white">SEO Configuration for {selectedHost}</h3>
@@ -556,7 +556,7 @@ export default function OwnerSeoManager() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowNewForm(true)}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white font-medium"
+                className="px-6 py-3 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-medium"
                 data-testid="button-create-first"
               >
                 Create First Config

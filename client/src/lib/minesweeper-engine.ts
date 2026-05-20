@@ -238,7 +238,7 @@ export function getNumberColor(num: number): string {
     1: "text-blue-600",
     2: "text-green-600",
     3: "text-red-600",
-    4: "text-purple-700",
+    4: "text-sky-700",
     5: "text-teal-700",
     6: "text-cyan-600",
     7: "text-gray-800",

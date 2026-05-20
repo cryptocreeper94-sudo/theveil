@@ -77,7 +77,7 @@ export const TRADING_PRESETS: Record<string, TradingPreset> = {
     icon: '⚖️',
     tagline: 'Balance risk & reward',
     description: 'Balanced strategy for consistent performance. Moderate risk with solid upside.',
-    color: '#8B5CF6',
+    color: '#0ea5e9',
     colorRgb: '139, 92, 246',
     tradeConfig: {
       buyAmountSol: 0.5,

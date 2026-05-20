@@ -136,22 +136,22 @@ function MessageCard({ message, isCore = false }: { message: MessageItem; isCore
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl p-5 relative overflow-hidden"
-      style={{ boxShadow: isCore ? "0 0 40px rgba(168,85,247,0.1)" : "0 0 30px rgba(0,200,255,0.05)" }}
+      style={{ boxShadow: isCore ? "0 0 40px rgba(14,165,233,0.1)" : "0 0 30px rgba(0,200,255,0.05)" }}
       data-testid={`card-message-${message.id}`}
     >
-      <div className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 rounded-full blur-2xl pointer-events-none" />
       
       <div className="flex items-start justify-between mb-3">
         <div className="flex items-center gap-2">
           <Badge 
             variant="outline" 
-            className={isCore ? "border-purple-500/50 text-purple-400" : "border-cyan-500/50 text-cyan-400"}
+            className={isCore ? "border-sky-500/50 text-sky-400" : "border-cyan-500/50 text-cyan-400"}
             data-testid={`badge-category-${message.id}`}
           >
             {message.category}
           </Badge>
           {isCore && (
-            <Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30" data-testid={`badge-core-${message.id}`}>
+            <Badge className="bg-sky-500/20 text-sky-400 border-sky-500/30" data-testid={`badge-core-${message.id}`}>
               <Lock className="w-3 h-3 mr-1" /> Core
             </Badge>
           )}
@@ -214,13 +214,13 @@ export default function MessagingCatalog() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute rounded-full blur-3xl opacity-20"
-          style={{ background: "linear-gradient(135deg, #8b5cf6, #06b6d4)", width: 500, height: 500, top: "-10%", left: "-10%" }}
+          style={{ background: "linear-gradient(135deg, #0ea5e9, #06b6d4)", width: 500, height: 500, top: "-10%", left: "-10%" }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
           className="absolute rounded-full blur-3xl opacity-20"
-          style={{ background: "linear-gradient(135deg, #ec4899, #8b5cf6)", width: 400, height: 400, top: "60%", left: "70%" }}
+          style={{ background: "linear-gradient(135deg, #ec4899, #0ea5e9)", width: 400, height: 400, top: "60%", left: "70%" }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
           transition={{ duration: 8, repeat: Infinity, delay: 2 }}
         />
@@ -241,7 +241,7 @@ export default function MessagingCatalog() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   Messaging Catalog
                 </span>
               </h1>
@@ -250,14 +250,14 @@ export default function MessagingCatalog() {
           </div>
         </motion.div>
 
-        <div className="bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-4 mb-8">
+        <div className="bg-gradient-to-r from-sky-500/10 via-pink-500/10 to-cyan-500/10 border border-sky-500/20 rounded-2xl p-4 mb-8">
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+            <AlertCircle className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
             <div>
               <h3 className="font-semibold text-white mb-1">How to Use</h3>
               <p className="text-sm text-gray-400">
                 Click the copy button on any message to copy the full text with hashtags. 
-                <span className="text-purple-400"> Core Signal</span> messages are permanent brand messaging.
+                <span className="text-sky-400"> Core Signal</span> messages are permanent brand messaging.
                 <span className="text-cyan-400"> Weekly Sprint</span> messages are for current campaigns.
               </p>
             </div>
@@ -268,12 +268,12 @@ export default function MessagingCatalog() {
           <TabsList className="bg-slate-900/50 border border-white/10 p-1 rounded-xl mb-6 w-full md:w-auto">
             <TabsTrigger 
               value="core" 
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-purple-500 data-[state=active]:to-pink-500 rounded-lg px-6"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-sky-500 data-[state=active]:to-pink-500 rounded-lg px-6"
               data-testid="tab-core"
             >
               <Lock className="w-4 h-4 mr-2" />
               Core Signal
-              <Badge className="ml-2 bg-purple-500/20 text-purple-400 text-xs">Permanent</Badge>
+              <Badge className="ml-2 bg-sky-500/20 text-sky-400 text-xs">Permanent</Badge>
             </TabsTrigger>
             <TabsTrigger 
               value="weekly" 
@@ -293,7 +293,7 @@ export default function MessagingCatalog() {
                   size="sm"
                   variant={selectedCategory === null ? "default" : "outline"}
                   onClick={() => setSelectedCategory(null)}
-                  className={selectedCategory === null ? "bg-purple-500" : ""}
+                  className={selectedCategory === null ? "bg-sky-500" : ""}
                   data-testid="button-filter-core-all"
                 >
                   All
@@ -304,7 +304,7 @@ export default function MessagingCatalog() {
                     size="sm"
                     variant={selectedCategory === cat ? "default" : "outline"}
                     onClick={() => setSelectedCategory(cat)}
-                    className={selectedCategory === cat ? "bg-purple-500" : ""}
+                    className={selectedCategory === cat ? "bg-sky-500" : ""}
                     data-testid={`button-filter-core-${cat.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {cat}
@@ -369,8 +369,8 @@ export default function MessagingCatalog() {
           className="mt-12 bg-slate-900/50 border border-white/10 rounded-2xl p-6"
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/20 to-cyan-500/20">
-              <Crown className="w-5 h-5 text-purple-400" />
+            <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20">
+              <Crown className="w-5 h-5 text-sky-400" />
             </div>
             <div>
               <h3 className="font-bold text-white">Operational Hierarchy</h3>
@@ -378,8 +378,8 @@ export default function MessagingCatalog() {
             </div>
           </div>
           <div className="space-y-3">
-            <div className="flex items-center gap-3 p-3 bg-purple-500/10 border border-purple-500/20 rounded-xl">
-              <Shield className="w-5 h-5 text-purple-400" />
+            <div className="flex items-center gap-3 p-3 bg-sky-500/10 border border-sky-500/20 rounded-xl">
+              <Shield className="w-5 h-5 text-sky-400" />
               <div>
                 <span className="font-medium text-white">Founder (Vision Keeper)</span>
                 <span className="text-gray-400 text-sm ml-2">• Full edit access • Final authority</span>

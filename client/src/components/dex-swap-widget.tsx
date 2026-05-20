@@ -216,11 +216,11 @@ export function DexSwapWidget({
                       ? 'bg-green-500/10 border border-green-500/30' 
                       : txStatus === 'failed'
                       ? 'bg-red-500/10 border border-red-500/30'
-                      : 'bg-purple-500/10 border border-purple-500/30'
+                      : 'bg-sky-500/10 border border-sky-500/30'
                   }`}
                 >
                   <div className="flex items-center gap-2">
-                    {txStatus === 'pending' && <Loader2 className="w-4 h-4 animate-spin text-purple-400" />}
+                    {txStatus === 'pending' && <Loader2 className="w-4 h-4 animate-spin text-sky-400" />}
                     {txStatus === 'confirmed' && <Check className="w-4 h-4 text-green-400" />}
                     {txStatus === 'failed' && <X className="w-4 h-4 text-red-400" />}
                     <span className="text-xs font-mono">

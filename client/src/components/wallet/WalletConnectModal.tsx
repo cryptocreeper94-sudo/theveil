@@ -129,7 +129,7 @@ export const WalletConnectModal: React.FC<{ open: boolean; onClose: () => void }
       hasExtension: hasPhantomExtension,
       deepLink: openPhantomDeepLink,
       installUrl: 'https://phantom.app/',
-      color: 'from-purple-500/20 to-purple-600/10',
+      color: 'from-sky-500/20 to-sky-600/10',
     },
     {
       id: 'solflare',
@@ -210,8 +210,8 @@ export const WalletConnectModal: React.FC<{ open: boolean; onClose: () => void }
   const getChainBadge = (chain: string) => {
     switch (chain) {
       case 'ethereum': return { text: 'ETH', color: 'bg-blue-500/30 text-blue-300' };
-      case 'solana': return { text: 'SOL', color: 'bg-purple-500/30 text-purple-300' };
-      case 'multi': return { text: 'Multi', color: 'bg-gradient-to-r from-blue-500/30 to-purple-500/30 text-white' };
+      case 'solana': return { text: 'SOL', color: 'bg-sky-500/30 text-sky-300' };
+      case 'multi': return { text: 'Multi', color: 'bg-gradient-to-r from-blue-500/30 to-sky-500/30 text-white' };
       default: return { text: '', color: '' };
     }
   };

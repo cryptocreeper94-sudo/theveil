@@ -186,7 +186,7 @@ export function BridgeInterface() {
         return 'text-green-400 bg-green-500/20 border-green-500/30';
       case 'pending':
       case 'processing':
-        return 'text-purple-400 bg-purple-500/20 border-purple-500/30';
+        return 'text-sky-400 bg-sky-500/20 border-sky-500/30';
       case 'failed':
         return 'text-red-400 bg-red-500/20 border-red-500/30';
       default:
@@ -202,13 +202,13 @@ export function BridgeInterface() {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="p-4 rounded-xl bg-purple-500/10 border border-purple-500/30"
+          className="p-4 rounded-xl bg-sky-500/10 border border-sky-500/30"
         >
-          <div className="flex items-center gap-2 text-purple-400">
+          <div className="flex items-center gap-2 text-sky-400">
             <AlertCircle className="w-5 h-5" />
             <span className="font-medium">Testnet Development Mode</span>
           </div>
-          <p className="text-sm text-purple-400/70 mt-1">
+          <p className="text-sm text-sky-400/70 mt-1">
             wSIG contracts not deployed yet. Bridge operations are simulated.
           </p>
         </motion.div>
@@ -270,7 +270,7 @@ export function BridgeInterface() {
 
         <GlassCard glow className="p-4">
           <h3 className="font-bold flex items-center gap-2 mb-4">
-            <Wallet className="w-5 h-5 text-purple-400" />
+            <Wallet className="w-5 h-5 text-sky-400" />
             Bridge Stats
           </h3>
           <div className="space-y-3">
@@ -280,7 +280,7 @@ export function BridgeInterface() {
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-400 text-sm">Status</span>
-              <Badge variant="outline" className={isTestnetMode ? 'text-purple-400 border-purple-500/30' : 'text-green-400 border-green-500/30'}>
+              <Badge variant="outline" className={isTestnetMode ? 'text-sky-400 border-sky-500/30' : 'text-green-400 border-green-500/30'}>
                 {bridgeInfo?.status || 'Loading...'}
               </Badge>
             </div>
@@ -294,7 +294,7 @@ export function BridgeInterface() {
                 {bridgeInfo?.contracts?.ethereum?.deployed ? (
                   <span className="text-green-400">Deployed</span>
                 ) : (
-                  <span className="text-purple-400">Pending</span>
+                  <span className="text-sky-400">Pending</span>
                 )}
               </span>
             </div>
@@ -304,7 +304,7 @@ export function BridgeInterface() {
                 {bridgeInfo?.contracts?.solana?.deployed ? (
                   <span className="text-green-400">Deployed</span>
                 ) : (
-                  <span className="text-purple-400">Pending</span>
+                  <span className="text-sky-400">Pending</span>
                 )}
               </span>
             </div>
@@ -353,7 +353,7 @@ export function BridgeInterface() {
               </div>
               <ArrowRightLeft className="w-6 h-6 text-gray-400" />
               <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-3xl mb-2">
+                <div className="w-16 h-16 rounded-full bg-sky-500/20 border border-sky-500/30 flex items-center justify-center text-3xl mb-2">
                   {direction === 'outbound' ? CHAIN_ICONS[targetChain] : '🌊'}
                 </div>
                 <span className="text-sm font-medium">
@@ -440,7 +440,7 @@ export function BridgeInterface() {
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-400">Bridge Fee (0.1%)</span>
-                    <span className="text-purple-400">-{(parseFloat(amount) * 0.001).toFixed(4)}</span>
+                    <span className="text-sky-400">-{(parseFloat(amount) * 0.001).toFixed(4)}</span>
                   </div>
                   <div className="flex justify-between text-sm font-medium border-t border-white/10 pt-2 mt-2">
                     <span className="text-gray-400">You Receive</span>
@@ -452,7 +452,7 @@ export function BridgeInterface() {
               )}
 
               <Button
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600"
+                className="w-full bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-600 hover:to-sky-600"
                 size="lg"
                 onClick={() => direction === 'outbound' ? lockMutation.mutate() : burnMutation.mutate()}
                 disabled={lockMutation.isPending || burnMutation.isPending || !amount || !targetAddress}

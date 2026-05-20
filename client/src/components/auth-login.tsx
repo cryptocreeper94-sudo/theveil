@@ -249,7 +249,7 @@ export function AuthLoginModal({ isOpen, onClose, onSuccess }: AuthLoginModalPro
                   data-testid="input-password"
                 />
                 <Button
-                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold"
+                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold"
                   onClick={handleEmailLogin}
                   disabled={loading !== null || !email || !password}
                   data-testid="button-submit-login"
@@ -309,7 +309,7 @@ export function AuthLoginModal({ isOpen, onClose, onSuccess }: AuthLoginModalPro
                   <p className={/[!@#$%^&*(),.?":{}|<>]/.test(password) ? "text-green-400" : ""}>• Special char</p>
                 </div>
                 <Button
-                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold"
+                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold"
                   onClick={handleEmailSignup}
                   disabled={loading !== null || !email || password.length < 8 || !/[A-Z]/.test(password) || !/[a-z]/.test(password) || !/[0-9]/.test(password) || !/[!@#$%^&*(),.?":{}|<>]/.test(password) || !username}
                   data-testid="button-submit-signup"
@@ -335,7 +335,7 @@ export function AuthLoginModal({ isOpen, onClose, onSuccess }: AuthLoginModalPro
                   data-testid="input-email-reset"
                 />
                 <Button
-                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold"
+                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold"
                   onClick={handleForgotPassword}
                   disabled={loading !== null || !email}
                   data-testid="button-submit-reset"
@@ -365,7 +365,7 @@ export function AuthLoginModal({ isOpen, onClose, onSuccess }: AuthLoginModalPro
                   maxLength={6}
                 />
                 <Button
-                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold"
+                  className="w-full h-12 bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold"
                   onClick={handlePinLogin}
                   disabled={loading !== null || !email || !pin}
                   data-testid="button-submit-pin"

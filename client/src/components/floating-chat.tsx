@@ -162,7 +162,7 @@ export function FloatingChat() {
             className="fixed bottom-44 left-4 w-80 sm:w-96 h-[400px] bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-2xl flex flex-col z-50 overflow-hidden"
             data-testid="floating-chat-window"
           >
-            <div className="bg-gradient-to-r from-cyan-600 to-purple-600 px-4 py-3 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-cyan-600 to-sky-600 px-4 py-3 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5 text-white" />
                 <span className="font-semibold text-white">Signal Chat</span>
@@ -221,7 +221,7 @@ export function FloatingChat() {
               ) : (
                 messages.map((msg) => (
                   <div key={msg.id} className="flex gap-2">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-sky-500 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
                       {(msg.author?.username || 'U')[0].toUpperCase()}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -322,7 +322,7 @@ export function FloatingChat() {
               setIsMinimized(false);
             }}
             onContextMenu={(e) => { e.preventDefault(); toggleHidden(); }}
-            className="fixed bottom-28 left-4 w-14 h-14 bg-gradient-to-r from-cyan-600 to-purple-600 rounded-full shadow-lg flex items-center justify-center z-50 hover:scale-110 transition-transform"
+            className="fixed bottom-28 left-4 w-14 h-14 bg-gradient-to-r from-cyan-600 to-sky-600 rounded-full shadow-lg flex items-center justify-center z-50 hover:scale-110 transition-transform"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             data-testid="button-toggle-chat"

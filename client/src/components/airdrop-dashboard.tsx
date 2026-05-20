@@ -114,12 +114,12 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
         animate={{ y: 0, opacity: 1 }}
         className="relative"
       >
-        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-purple-600/30 to-pink-600/30 border border-purple-500/40 flex items-center justify-center backdrop-blur-sm">
-          <span className="text-2xl md:text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent" data-testid={`text-countdown-${label.toLowerCase()}`}>
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-sky-600/30 to-pink-600/30 border border-sky-500/40 flex items-center justify-center backdrop-blur-sm">
+          <span className="text-2xl md:text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent" data-testid={`text-countdown-${label.toLowerCase()}`}>
             {String(value).padStart(2, "0")}
           </span>
         </div>
-        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl blur-xl -z-10" />
+        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500/20 to-sky-500/20 rounded-xl blur-xl -z-10" />
       </motion.div>
       <span className="text-[10px] text-muted-foreground uppercase tracking-wider mt-2">{label}</span>
     </motion.div>
@@ -130,7 +130,7 @@ function FloatingOrb({ delay = 0, size = "md" }: { delay?: number; size?: "sm" |
   const sizes = { sm: "w-8 h-8", md: "w-12 h-12", lg: "w-16 h-16" };
   return (
     <motion.div
-      className={`absolute ${sizes[size]} rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 blur-xl`}
+      className={`absolute ${sizes[size]} rounded-full bg-gradient-to-r from-cyan-500/10 to-sky-500/10 blur-xl`}
       animate={{
         x: [0, 20, -10, 0],
         y: [0, -15, 10, 0],
@@ -232,7 +232,7 @@ export function AirdropDashboard() {
         animate={{ opacity: 1, y: 0 }}
         className="relative overflow-hidden rounded-2xl"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-pink-900/30 to-cyan-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-pink-900/30 to-cyan-900/40" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItSDJ2LTJoMzR6bTAtMzB2Mkg0djJoMzJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
         
         <FloatingOrb delay={0} size="lg" />
@@ -243,11 +243,11 @@ export function AirdropDashboard() {
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <motion.div
-                className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30"
+                className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-cyan-500/30"
                 animate={{
                   boxShadow: [
                     "0 0 20px rgba(6,182,212,0.2)",
-                    "0 0 40px rgba(168,85,247,0.4)",
+                    "0 0 40px rgba(14,165,233,0.4)",
                     "0 0 20px rgba(6,182,212,0.2)",
                   ],
                 }}
@@ -256,7 +256,7 @@ export function AirdropDashboard() {
                 <Rocket className="w-6 h-6 text-cyan-400" />
               </motion.div>
               <div>
-                <h2 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                <h2 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
                   SIG Airdrop
                 </h2>
                 <p className="text-xs text-muted-foreground">Your pre-launch rewards</p>
@@ -270,7 +270,7 @@ export function AirdropDashboard() {
                   : isEligible
                   ? "bg-cyan-500/20 text-cyan-400"
                   : hasAirdrop
-                  ? "bg-purple-500/20 text-purple-400"
+                  ? "bg-sky-500/20 text-sky-400"
                   : "bg-gray-500/20 text-gray-400"
               } border-0`}
             >
@@ -302,7 +302,7 @@ export function AirdropDashboard() {
               </div>
               <motion.div
                 data-testid="text-dwc-balance"
-                className="text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"
+                className="text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 key={dwcAmount}
@@ -313,7 +313,7 @@ export function AirdropDashboard() {
             </div>
             <div className="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm">
               <div className="flex items-center gap-2 mb-2">
-                <Gift className="w-4 h-4 text-purple-400" />
+                <Gift className="w-4 h-4 text-sky-400" />
                 <span className="text-xs text-muted-foreground">USD Value</span>
               </div>
               <motion.div
@@ -406,7 +406,7 @@ export function AirdropDashboard() {
                 {walletMutation.isPending ? "Verifying..." : "Verify"}
               </Button>
             </div>
-            <p className="text-xs text-purple-400 flex items-center gap-1">
+            <p className="text-xs text-sky-400 flex items-center gap-1">
               <AlertCircle className="w-3 h-3" />
               Wallet verification required to receive airdrop
             </p>
@@ -416,26 +416,26 @@ export function AirdropDashboard() {
 
       <GlassCard className="p-4">
         <h3 className="font-semibold text-sm mb-3 flex items-center gap-2">
-          <Star className="w-4 h-4 text-purple-400" />
+          <Star className="w-4 h-4 text-sky-400" />
           Early Adopter Rewards
         </h3>
         <div className="grid grid-cols-3 gap-2">
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="p-3 rounded-xl bg-gradient-to-br from-purple-500/10 to-cyan-500/10 border border-purple-500/20 text-center"
+            className="p-3 rounded-xl bg-gradient-to-br from-sky-500/10 to-cyan-500/10 border border-sky-500/20 text-center"
             data-testid="reward-bonus-dwc"
           >
-            <Coins className="w-5 h-5 text-purple-400 mx-auto mb-1" />
-            <div className="text-lg font-bold text-purple-400" data-testid="text-bonus-dwc">500</div>
+            <Coins className="w-5 h-5 text-sky-400 mx-auto mb-1" />
+            <div className="text-lg font-bold text-sky-400" data-testid="text-bonus-dwc">500</div>
             <div className="text-[9px] text-muted-foreground">Bonus SIG</div>
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="p-3 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 text-center"
+            className="p-3 rounded-xl bg-gradient-to-br from-sky-500/10 to-pink-500/10 border border-sky-500/20 text-center"
             data-testid="reward-pioneer-title"
           >
-            <Trophy className="w-5 h-5 text-purple-400 mx-auto mb-1" />
-            <div className="text-lg font-bold text-purple-400" data-testid="text-pioneer-title">Pioneer</div>
+            <Trophy className="w-5 h-5 text-sky-400 mx-auto mb-1" />
+            <div className="text-lg font-bold text-sky-400" data-testid="text-pioneer-title">Pioneer</div>
             <div className="text-[9px] text-muted-foreground">Title</div>
           </motion.div>
           <motion.div

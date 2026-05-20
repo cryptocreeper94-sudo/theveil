@@ -182,7 +182,7 @@ export default function BusinessVerificationAdmin() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl font-bold text-white flex items-center gap-3">
-                <Building2 className="w-8 h-8 text-purple-400" />
+                <Building2 className="w-8 h-8 text-sky-400" />
                 Business Verification
               </h1>
               <p className="text-white/60">Review and approve business membership applications</p>
@@ -224,8 +224,8 @@ export default function BusinessVerificationAdmin() {
           </GlassCard>
           <GlassCard className="p-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                <Store className="w-5 h-5 text-purple-400" />
+              <div className="w-10 h-10 rounded-lg bg-sky-500/20 flex items-center justify-center">
+                <Store className="w-5 h-5 text-sky-400" />
               </div>
               <div>
                 <p className="text-2xl font-bold text-white">{Math.min(approvedCount, mainStreetCount)}/{mainStreetCount}</p>
@@ -255,7 +255,7 @@ export default function BusinessVerificationAdmin() {
                 placeholder="Search by name, EIN, email..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:border-purple-500 focus:outline-none"
+                className="w-full pl-10 pr-4 py-2 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:border-sky-500 focus:outline-none"
                 data-testid="input-search"
               />
             </div>
@@ -265,7 +265,7 @@ export default function BusinessVerificationAdmin() {
                   key={status}
                   variant={statusFilter === status ? "default" : "outline"}
                   onClick={() => setStatusFilter(status)}
-                  className={statusFilter === status ? "bg-purple-600" : "border-white/20"}
+                  className={statusFilter === status ? "bg-sky-600" : "border-white/20"}
                   data-testid={`filter-${status}`}
                 >
                   {status.charAt(0).toUpperCase() + status.slice(1)}
@@ -278,7 +278,7 @@ export default function BusinessVerificationAdmin() {
         <div className="space-y-4">
           {isLoading ? (
             <GlassCard className="p-8 text-center">
-              <RefreshCw className="w-8 h-8 text-purple-400 mx-auto mb-3 animate-spin" />
+              <RefreshCw className="w-8 h-8 text-sky-400 mx-auto mb-3 animate-spin" />
               <p className="text-white/60">Loading applications...</p>
             </GlassCard>
           ) : filteredApps.length === 0 ? (
@@ -300,8 +300,8 @@ export default function BusinessVerificationAdmin() {
                     data-testid={`app-row-${app.id}`}
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                        <Building2 className="w-6 h-6 text-purple-400" />
+                      <div className="w-12 h-12 rounded-xl bg-sky-500/20 flex items-center justify-center">
+                        <Building2 className="w-6 h-6 text-sky-400" />
                       </div>
                       <div>
                         <h3 className="font-bold text-white">{app.businessName}</h3>
@@ -330,7 +330,7 @@ export default function BusinessVerificationAdmin() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div className="space-y-3">
                           <h4 className="font-medium text-white flex items-center gap-2">
-                            <FileText className="w-4 h-4 text-purple-400" />
+                            <FileText className="w-4 h-4 text-sky-400" />
                             Business Details
                           </h4>
                           <div className="p-3 bg-white/5 rounded-lg">
@@ -354,7 +354,7 @@ export default function BusinessVerificationAdmin() {
                                 href={app.website.startsWith("http") ? app.website : `https://${app.website}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-purple-400 hover:text-purple-300 flex items-center gap-1"
+                                className="text-sky-400 hover:text-sky-300 flex items-center gap-1"
                               >
                                 <Globe className="w-3 h-3" />
                                 {app.website}
@@ -419,13 +419,13 @@ export default function BusinessVerificationAdmin() {
                               value={reviewNotes[app.id] || ""}
                               onChange={(e) => setReviewNotes({ ...reviewNotes, [app.id]: e.target.value })}
                               placeholder="Add notes about this application..."
-                              className="w-full p-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:border-purple-500 focus:outline-none resize-none"
+                              className="w-full p-3 bg-slate-800/50 border border-white/10 rounded-lg text-white placeholder-white/40 focus:border-sky-500 focus:outline-none resize-none"
                               rows={2}
                               data-testid={`notes-${app.id}`}
                             />
                           </div>
                           
-                          <div className="p-3 bg-purple-500/10 border border-purple-500/20 rounded-lg">
+                          <div className="p-3 bg-sky-500/10 border border-sky-500/20 rounded-lg">
                             <label className="flex items-center gap-2 cursor-pointer">
                               <input
                                 type="checkbox"
@@ -433,7 +433,7 @@ export default function BusinessVerificationAdmin() {
                                 className="w-4 h-4 rounded border-white/20 bg-slate-800"
                                 data-testid={`checkbox-mainstreet-${app.id}`}
                               />
-                              <Store className="w-4 h-4 text-purple-400" />
+                              <Store className="w-4 h-4 text-sky-400" />
                               <span className="text-white text-sm">
                                 Grant Main Street storefront in Chronicles ({Math.min(approvedCount, mainStreetCount)}/{mainStreetCount} slots filled)
                               </span>

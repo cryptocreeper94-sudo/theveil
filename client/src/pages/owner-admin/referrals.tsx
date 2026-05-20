@@ -21,10 +21,10 @@ const GlowOrb = ({ color, size, top, left, delay = 0 }: { color: string; size: n
   />
 );
 
-const COLORS = ['#06b6d4', '#8b5cf6', '#ec4899', '#f59e0b', '#22c55e'];
+const COLORS = ['#06b6d4', '#0ea5e9', '#ec4899', '#f59e0b', '#22c55e'];
 
 const STATUS_COLORS: Record<string, string> = {
-  pending: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+  pending: 'bg-sky-500/20 text-sky-400 border-sky-500/30',
   qualified: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
   converted: 'bg-green-500/20 text-green-400 border-green-500/30',
   expired: 'bg-gray-500/20 text-gray-400 border-gray-500/30',
@@ -33,7 +33,7 @@ const STATUS_COLORS: Record<string, string> = {
 
 const TIER_COLORS: Record<string, string> = {
   explorer: '#06b6d4',
-  builder: '#8b5cf6',
+  builder: '#0ea5e9',
   architect: '#ec4899',
   oracle: '#f59e0b',
 };
@@ -154,8 +154,8 @@ export default function OwnerReferrals() {
   const summaryStats = [
     { label: "Total Referrals", value: stats.totalReferrals, icon: <Users className="w-5 h-5 text-cyan-400" /> },
     { label: "Conversions", value: stats.totalConversions, icon: <TrendingUp className="w-5 h-5 text-green-400" /> },
-    { label: "Credits Rewarded", value: stats.totalCreditsRewarded.toLocaleString(), icon: <Gift className="w-5 h-5 text-purple-400" /> },
-    { label: "Commission Paid", value: `$${(stats.totalCommissionPaid / 100).toFixed(2)}`, icon: <DollarSign className="w-5 h-5 text-purple-400" /> },
+    { label: "Credits Rewarded", value: stats.totalCreditsRewarded.toLocaleString(), icon: <Gift className="w-5 h-5 text-sky-400" /> },
+    { label: "Commission Paid", value: `$${(stats.totalCommissionPaid / 100).toFixed(2)}`, icon: <DollarSign className="w-5 h-5 text-sky-400" /> },
   ];
 
   const tierDistribution = (adminStats?.topAffiliates || []).reduce((acc, a) => {
@@ -171,8 +171,8 @@ export default function OwnerReferrals() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
 
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 pt-20">
@@ -181,7 +181,7 @@ export default function OwnerReferrals() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent">
                   Referral Dashboard
                 </span>
               </h1>
@@ -196,7 +196,7 @@ export default function OwnerReferrals() {
                   key={host.id || "all"}
                   onClick={() => setSelectedHost(host.id as any)}
                   className={`px-3 py-1.5 rounded-md text-sm transition-all ${
-                    selectedHost === host.id ? 'bg-purple-500 text-white' : 'text-gray-400 hover:text-white'
+                    selectedHost === host.id ? 'bg-sky-500 text-white' : 'text-gray-400 hover:text-white'
                   }`}
                   data-testid={`button-host-${host.id || 'all'}`}
                 >
@@ -243,7 +243,7 @@ export default function OwnerReferrals() {
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-bold flex items-center gap-2">
-                <Trophy className="w-5 h-5 text-purple-400" />
+                <Trophy className="w-5 h-5 text-sky-400" />
                 Top Affiliates
               </h3>
             </div>
@@ -254,7 +254,7 @@ export default function OwnerReferrals() {
                   className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg border border-white/5"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-sm font-bold">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-pink-500 flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </div>
                     <div>
@@ -344,7 +344,7 @@ export default function OwnerReferrals() {
                     <div className="text-xs text-gray-400">{flag.reason}</div>
                     <Badge 
                       variant="outline" 
-                      className={`text-[9px] mt-1 ${flag.severity === 'high' ? 'border-red-500 text-red-400' : 'border-purple-500 text-purple-400'}`}
+                      className={`text-[9px] mt-1 ${flag.severity === 'high' ? 'border-red-500 text-red-400' : 'border-sky-500 text-sky-400'}`}
                     >
                       {flag.severity}
                     </Badge>

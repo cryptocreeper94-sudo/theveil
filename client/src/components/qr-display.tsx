@@ -117,7 +117,7 @@ export function QRDisplay({ address, chainName = "DarkWave", size = 200 }: QRDis
                   </div>
                 ) : error ? (
                   <div className="flex flex-col items-center gap-3 py-6 mb-4">
-                    <AlertCircle className="w-12 h-12 text-purple-500" />
+                    <AlertCircle className="w-12 h-12 text-sky-500" />
                     <p className="text-sm text-center text-muted-foreground px-4">
                       {error}
                     </p>

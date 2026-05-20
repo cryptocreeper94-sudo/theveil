@@ -28,10 +28,10 @@ interface QuickTradePanelProps {
 type Chain = 'solana' | 'ethereum' | 'base' | 'polygon' | 'bsc' | 'arbitrum' | 'optimism' | 'avalanche';
 
 const CHAINS: { id: Chain; name: string; icon: string; color: string; native: string }[] = [
-  { id: 'solana', name: 'Solana', icon: '◎', color: 'from-purple-500 to-cyan-500', native: 'SOL' },
-  { id: 'ethereum', name: 'Ethereum', icon: 'Ξ', color: 'from-blue-500 to-purple-500', native: 'ETH' },
+  { id: 'solana', name: 'Solana', icon: '◎', color: 'from-sky-500 to-cyan-500', native: 'SOL' },
+  { id: 'ethereum', name: 'Ethereum', icon: 'Ξ', color: 'from-blue-500 to-sky-500', native: 'ETH' },
   { id: 'base', name: 'Base', icon: '🔵', color: 'from-blue-400 to-blue-600', native: 'ETH' },
-  { id: 'polygon', name: 'Polygon', icon: '⬡', color: 'from-purple-400 to-purple-600', native: 'MATIC' },
+  { id: 'polygon', name: 'Polygon', icon: '⬡', color: 'from-sky-400 to-sky-600', native: 'MATIC' },
   { id: 'bsc', name: 'BNB Chain', icon: '🔶', color: 'from-teal-400 to-teal-600', native: 'BNB' },
   { id: 'arbitrum', name: 'Arbitrum', icon: '🔷', color: 'from-blue-500 to-cyan-500', native: 'ETH' },
   { id: 'optimism', name: 'Optimism', icon: '🔴', color: 'from-red-400 to-red-600', native: 'ETH' },
@@ -40,16 +40,16 @@ const CHAINS: { id: Chain; name: string; icon: string; color: string; native: st
 
 const SOLANA_DEXES = [
   { name: 'Jupiter', url: (token: string) => `https://jup.ag/swap/SOL-${token}`, color: 'bg-gradient-to-r from-emerald-500 to-cyan-500', primary: true },
-  { name: 'Raydium', url: (token: string) => `https://raydium.io/swap/?inputMint=sol&outputMint=${token}`, color: 'bg-purple-500/80' },
+  { name: 'Raydium', url: (token: string) => `https://raydium.io/swap/?inputMint=sol&outputMint=${token}`, color: 'bg-sky-500/80' },
   { name: 'Meteora', url: (token: string) => `https://app.meteora.ag/swap/SOL-${token}`, color: 'bg-cyan-500/80' },
   { name: 'Orca', url: (token: string) => `https://www.orca.so/swap?inputMint=sol&outputMint=${token}`, color: 'bg-blue-500/80' },
 ];
 
 const EVM_DEXES: Record<string, { name: string; url: (token: string) => string; color: string }[]> = {
   ethereum: [
-    { name: '1inch', url: (token: string) => `https://app.1inch.io/#/1/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-500 to-purple-500' },
+    { name: '1inch', url: (token: string) => `https://app.1inch.io/#/1/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-500 to-sky-500' },
     { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?outputCurrency=${token}`, color: 'bg-pink-500/80' },
-    { name: 'SushiSwap', url: (token: string) => `https://www.sushi.com/swap?chainId=1&token1=${token}`, color: 'bg-purple-500/80' },
+    { name: 'SushiSwap', url: (token: string) => `https://www.sushi.com/swap?chainId=1&token1=${token}`, color: 'bg-sky-500/80' },
   ],
   base: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/8453/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-400 to-blue-600' },
@@ -57,7 +57,7 @@ const EVM_DEXES: Record<string, { name: string; url: (token: string) => string; 
     { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?chain=base&outputCurrency=${token}`, color: 'bg-pink-500/80' },
   ],
   polygon: [
-    { name: '1inch', url: (token: string) => `https://app.1inch.io/#/137/simple/swap/MATIC/${token}`, color: 'bg-gradient-to-r from-purple-400 to-purple-600' },
+    { name: '1inch', url: (token: string) => `https://app.1inch.io/#/137/simple/swap/MATIC/${token}`, color: 'bg-gradient-to-r from-sky-400 to-sky-600' },
     { name: 'QuickSwap', url: (token: string) => `https://quickswap.exchange/#/swap?outputCurrency=${token}`, color: 'bg-blue-500/80' },
   ],
   bsc: [
@@ -66,7 +66,7 @@ const EVM_DEXES: Record<string, { name: string; url: (token: string) => string; 
   ],
   arbitrum: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/42161/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-500 to-cyan-500' },
-    { name: 'Camelot', url: (token: string) => `https://app.camelot.exchange/?token2=${token}`, color: 'bg-purple-500/80' },
+    { name: 'Camelot', url: (token: string) => `https://app.camelot.exchange/?token2=${token}`, color: 'bg-sky-500/80' },
   ],
   optimism: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/10/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-red-400 to-red-600' },
@@ -256,7 +256,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
       {aiScore !== undefined && recommendation && (
         <div className={`rounded-xl p-3 border ${
           recommendation === 'snipe' ? 'bg-emerald-500/10 border-emerald-500/20' :
-          recommendation === 'watch' ? 'bg-purple-500/10 border-purple-500/20' :
+          recommendation === 'watch' ? 'bg-sky-500/10 border-sky-500/20' :
           'bg-red-500/10 border-red-500/20'
         }`} data-testid="strike-agent-assessment">
           <div className="flex items-center justify-between mb-2">
@@ -266,7 +266,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
             </div>
             <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold ${
               recommendation === 'snipe' ? 'bg-emerald-500/20 text-emerald-400' :
-              recommendation === 'watch' ? 'bg-purple-500/20 text-purple-400' :
+              recommendation === 'watch' ? 'bg-sky-500/20 text-sky-400' :
               'bg-red-500/20 text-red-400'
             }`}>
               <Target className="w-3 h-3" />
@@ -283,7 +283,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
                 <div
                   className={`h-full rounded-full transition-all ${
                     aiScore >= 70 ? 'bg-gradient-to-r from-emerald-500 to-cyan-500' :
-                    aiScore >= 40 ? 'bg-gradient-to-r from-purple-500 to-teal-500' :
+                    aiScore >= 40 ? 'bg-gradient-to-r from-sky-500 to-teal-500' :
                     'bg-gradient-to-r from-red-500 to-pink-500'
                   }`}
                   style={{ width: `${aiScore}%` }}
@@ -293,7 +293,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
             {safetyScore !== undefined && !isNaN(safetyScore) && (
               <div className="flex flex-col items-center gap-0.5">
                 <Shield className="w-3 h-3 text-white/50" />
-                <span className={`text-xs font-bold ${safetyScore >= 60 ? 'text-emerald-400' : safetyScore >= 40 ? 'text-purple-400' : 'text-red-400'}`}>
+                <span className={`text-xs font-bold ${safetyScore >= 60 ? 'text-emerald-400' : safetyScore >= 40 ? 'text-sky-400' : 'text-red-400'}`}>
                   {safetyScore}
                 </span>
                 <span className="text-[8px] text-white/30">GUARD</span>
@@ -453,7 +453,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
                 disabled={isSwapping}
                 className={`w-full mt-3 bg-gradient-to-r ${
                   recommendation === 'snipe' ? 'from-emerald-500 to-cyan-500' :
-                  recommendation === 'watch' ? 'from-purple-500 to-cyan-500' :
+                  recommendation === 'watch' ? 'from-sky-500 to-cyan-500' :
                   'from-red-500 to-pink-500'
                 } text-white font-bold`}
                 data-testid="button-execute-swap"

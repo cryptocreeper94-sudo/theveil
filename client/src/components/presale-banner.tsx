@@ -97,7 +97,7 @@ export function PresaleBanner() {
         data-testid="presale-banner"
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 blur-xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-sky-600/20 to-pink-600/20 blur-xl" />
 
           <div className="relative bg-slate-950/95 backdrop-blur-xl border-t border-white/10">
             <button
@@ -117,7 +117,7 @@ export function PresaleBanner() {
               >
                 <div className="hidden sm:flex items-center gap-1.5 shrink-0">
                   <div className="relative">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center">
                       <Rocket className="w-4 h-4 text-white" />
                     </div>
                     <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-green-500 rounded-full border-2 border-slate-950 animate-pulse" />
@@ -125,17 +125,17 @@ export function PresaleBanner() {
                 </div>
 
                 <div className="flex items-center gap-1 sm:hidden shrink-0">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-500 to-purple-600 flex items-center justify-center">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center">
                     <Rocket className="w-3 h-3 text-white" />
                   </div>
-                  <span className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  <span className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400">
                     PRESALE LIVE
                   </span>
                 </div>
 
                 <div className="hidden sm:flex items-center gap-4 flex-1 min-w-0">
                   <div className="flex items-center gap-1">
-                    <span className="text-[10px] font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 uppercase">
+                    <span className="text-[10px] font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-sky-400 uppercase">
                       Signal Presale Live
                     </span>
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
@@ -160,7 +160,7 @@ export function PresaleBanner() {
                       </div>
                     )}
                     <div className="hidden lg:flex items-center gap-1.5">
-                      <Users className="w-3 h-3 text-purple-400" />
+                      <Users className="w-3 h-3 text-sky-400" />
                       <span className="text-white/60">Holders:</span>
                       <span className="font-semibold text-white" data-testid="presale-stat-holders">{stats.uniqueHolders}</span>
                     </div>
@@ -224,7 +224,7 @@ export function PresaleBanner() {
                   <motion.div
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold shrink-0 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-shadow"
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-sky-600 text-white text-xs font-bold shrink-0 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-shadow"
                   >
                     <span className="hidden sm:inline">Join Presale</span>
                     <span className="sm:hidden">Join</span>
@@ -259,7 +259,7 @@ export function PresaleBanner() {
                       </div>
                       <div className="bg-white/5 rounded-lg p-2.5">
                         <div className="flex items-center gap-1 mb-1">
-                          <Users className="w-3 h-3 text-purple-400" />
+                          <Users className="w-3 h-3 text-sky-400" />
                           <span className="text-[10px] text-white/50">Holders</span>
                         </div>
                         <span className="text-sm font-bold text-white" data-testid="presale-expanded-holders">{stats.uniqueHolders}</span>

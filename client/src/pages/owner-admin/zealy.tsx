@@ -224,8 +224,8 @@ export default function ZealyAdmin() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #8b5cf6, #06b6d4)" size={500} top="-5%" left="60%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={400} top="70%" left="10%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #0ea5e9, #06b6d4)" size={500} top="-5%" left="60%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={400} top="70%" left="10%" delay={2} />
 
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 pt-20">
@@ -248,7 +248,7 @@ export default function ZealyAdmin() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   Zealy Quest Manager
                 </span>
               </h1>
@@ -259,7 +259,7 @@ export default function ZealyAdmin() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setShowAddForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-semibold"
               data-testid="button-add-quest-mapping"
             >
               <Plus className="w-5 h-5" />
@@ -364,14 +364,14 @@ export default function ZealyAdmin() {
                 <div className="grid gap-6">
                   {QUEST_SUGGESTIONS.map((category) => (
                     <div key={category.category}>
-                      <h4 className="text-sm font-semibold text-purple-400 uppercase tracking-wider mb-3">
+                      <h4 className="text-sm font-semibold text-sky-400 uppercase tracking-wider mb-3">
                         {category.category}
                       </h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
                         {category.quests.map((quest) => (
                           <motion.button
                             key={quest.name}
-                            whileHover={{ scale: 1.02, borderColor: "rgba(168, 85, 247, 0.5)" }}
+                            whileHover={{ scale: 1.02, borderColor: "rgba(14,165,233, 0.5)" }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => importSuggestion(quest)}
                             className="text-left p-3 bg-slate-800/50 border border-white/10 rounded-xl hover:bg-slate-800 transition-colors"
@@ -436,7 +436,7 @@ export default function ZealyAdmin() {
                       value={formData.zealyQuestId}
                       onChange={(e) => setFormData({ ...formData, zealyQuestId: e.target.value })}
                       placeholder="e.g., abc123"
-                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-sky-500 focus:outline-none"
                       data-testid="input-zealy-quest-id"
                     />
                   </div>
@@ -447,7 +447,7 @@ export default function ZealyAdmin() {
                       value={formData.zealyQuestName}
                       onChange={(e) => setFormData({ ...formData, zealyQuestName: e.target.value })}
                       placeholder="e.g., Join Discord Server"
-                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-sky-500 focus:outline-none"
                       data-testid="input-zealy-quest-name"
                     />
                   </div>
@@ -458,7 +458,7 @@ export default function ZealyAdmin() {
                       value={formData.shellsReward}
                       onChange={(e) => setFormData({ ...formData, shellsReward: parseInt(e.target.value) || 0 })}
                       placeholder="50"
-                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-sky-500 focus:outline-none"
                       data-testid="input-shells-reward"
                     />
                   </div>
@@ -469,7 +469,7 @@ export default function ZealyAdmin() {
                       value={formData.maxRewardsPerUser}
                       onChange={(e) => setFormData({ ...formData, maxRewardsPerUser: e.target.value })}
                       placeholder="1"
-                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-sky-500 focus:outline-none"
                       data-testid="input-max-per-user"
                     />
                   </div>
@@ -480,7 +480,7 @@ export default function ZealyAdmin() {
                       value={formData.totalRewardsCap}
                       onChange={(e) => setFormData({ ...formData, totalRewardsCap: e.target.value })}
                       placeholder="1000"
-                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none"
+                      className="w-full px-4 py-2 bg-slate-800/50 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:border-sky-500 focus:outline-none"
                       data-testid="input-total-cap"
                     />
                   </div>
@@ -491,7 +491,7 @@ export default function ZealyAdmin() {
                     whileTap={{ scale: 0.98 }}
                     onClick={() => createMutation.mutate(formData)}
                     disabled={createMutation.isPending || !formData.zealyQuestId || !formData.zealyQuestName}
-                    className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl text-white font-semibold disabled:opacity-50"
+                    className="px-6 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-semibold disabled:opacity-50"
                     data-testid="button-save-mapping"
                   >
                     {createMutation.isPending ? "Saving..." : "Save Mapping"}
@@ -516,11 +516,11 @@ export default function ZealyAdmin() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6"
-            style={{ boxShadow: "0 0 40px rgba(139,92,246,0.1)" }}
+            style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-purple-500/20 to-pink-500/20">
-                <Trophy className="w-5 h-5 text-purple-400" />
+              <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-pink-500/20">
+                <Trophy className="w-5 h-5 text-sky-400" />
               </div>
               <h3 className="text-xl font-bold text-white">Quest Mappings</h3>
             </div>
@@ -539,7 +539,7 @@ export default function ZealyAdmin() {
                     key={mapping.id}
                     layout
                     className={`bg-slate-800/50 border rounded-xl p-4 ${
-                      mapping.isActive ? "border-purple-500/30" : "border-white/5 opacity-60"
+                      mapping.isActive ? "border-sky-500/30" : "border-white/5 opacity-60"
                     }`}
                   >
                     <div className="flex items-start justify-between">
@@ -659,7 +659,7 @@ export default function ZealyAdmin() {
           <h3 className="text-lg font-bold text-white mb-3">Quick Setup Guide</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
             <div className="bg-slate-800/30 rounded-xl p-4">
-              <div className="text-purple-400 font-semibold mb-2">1. Create Quest in Zealy</div>
+              <div className="text-sky-400 font-semibold mb-2">1. Create Quest in Zealy</div>
               <p>Set up your community quest in Zealy's dashboard with tasks like joining Discord, following Twitter, etc.</p>
             </div>
             <div className="bg-slate-800/30 rounded-xl p-4">

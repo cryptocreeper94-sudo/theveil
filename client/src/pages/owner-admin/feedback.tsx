@@ -87,11 +87,11 @@ function ReportCard({ report, onUpdate }: { report: FeedbackReport; onUpdate: ()
         <div className="flex items-start gap-3">
           <div className={`p-2 rounded-lg ${
             report.type === "bug" ? "bg-red-500/20" : 
-            report.type === "feature" ? "bg-purple-500/20" : "bg-cyan-500/20"
+            report.type === "feature" ? "bg-sky-500/20" : "bg-cyan-500/20"
           }`}>
             <TypeIcon className={`w-4 h-4 ${
               report.type === "bug" ? "text-red-400" : 
-              report.type === "feature" ? "text-purple-400" : "text-cyan-400"
+              report.type === "feature" ? "text-sky-400" : "text-cyan-400"
             }`} />
           </div>
           
@@ -274,7 +274,7 @@ export default function OwnerFeedback() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-cyan-900/20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-sky-900/20 via-transparent to-cyan-900/20 pointer-events-none" />
       
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-background/90 backdrop-blur-xl">
         <div className="w-full px-4 h-14 flex items-center justify-between">

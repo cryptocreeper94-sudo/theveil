@@ -73,7 +73,7 @@ const CHAIN_CONFIG: Record<string, {
     chainId: '0x89',
     dexUrl: 'https://quickswap.exchange/swap',
     walletType: 'evm',
-    color: 'from-purple-400 to-violet-500'
+    color: 'from-sky-400 to-cyan-500'
   },
   arbitrum: { 
     name: 'Arbitrum', 
@@ -129,7 +129,7 @@ const CHAIN_CONFIG: Record<string, {
     chainId: '0x144',
     dexUrl: 'https://syncswap.xyz/swap',
     walletType: 'evm',
-    color: 'from-purple-500 to-purple-700'
+    color: 'from-sky-500 to-sky-700'
   },
   scroll: { 
     name: 'Scroll', 

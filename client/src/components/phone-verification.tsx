@@ -119,7 +119,7 @@ export function PhoneVerification({ onVerified, compact = false }: PhoneVerifica
 
   if (compact) {
     return (
-      <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20">
+      <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-cyan-500/10 to-sky-500/10 border border-cyan-500/20">
         <div className="p-2 rounded-lg bg-cyan-500/20">
           <Phone className="h-4 w-4 text-cyan-400" />
         </div>
@@ -146,12 +146,12 @@ export function PhoneVerification({ onVerified, compact = false }: PhoneVerifica
       animate={{ opacity: 1, y: 0 }}
       className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/50 border border-cyan-500/20 backdrop-blur-xl"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-sky-500/5" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl" />
       
       <div className="relative p-6">
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+          <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-cyan-500/30">
             <MessageSquare className="h-6 w-6 text-cyan-400" />
           </div>
           <div>
@@ -189,7 +189,7 @@ export function PhoneVerification({ onVerified, compact = false }: PhoneVerifica
               <Button
                 onClick={() => sendCodeMutation.mutate(getRawPhone())}
                 disabled={phoneNumber.replace(/\D/g, "").length !== 10 || sendCodeMutation.isPending}
-                className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600"
+                className="w-full bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-600 hover:to-sky-600"
                 data-testid="button-send-code"
               >
                 {sendCodeMutation.isPending ? (
@@ -242,7 +242,7 @@ export function PhoneVerification({ onVerified, compact = false }: PhoneVerifica
                 <Button
                   onClick={() => verifyCodeMutation.mutate({ phone: getRawPhone(), code: verificationCode })}
                   disabled={verificationCode.length !== 6 || verifyCodeMutation.isPending}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600"
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-600 hover:to-sky-600"
                   data-testid="button-verify"
                 >
                   {verifyCodeMutation.isPending ? (

@@ -43,7 +43,7 @@ export function SocialShare({ title, text, url = window.location.href, hashtags 
     {
       name: "Email",
       icon: Mail,
-      color: "hover:bg-purple-500/20 hover:text-purple-400",
+      color: "hover:bg-sky-500/20 hover:text-sky-400",
       url: `mailto:?subject=${shareTitle}&body=${shareText}%0A%0A${shareUrl}`,
     },
   ];

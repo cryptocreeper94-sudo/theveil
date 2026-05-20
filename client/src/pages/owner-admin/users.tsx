@@ -113,11 +113,11 @@ function WhitelistManager() {
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="p-6 rounded-2xl bg-gradient-to-br from-purple-500/10 to-purple-500/5 border border-purple-500/20 backdrop-blur-sm"
+        className="p-6 rounded-2xl bg-gradient-to-br from-sky-500/10 to-sky-500/5 border border-sky-500/20 backdrop-blur-sm"
       >
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
-            <UserPlus className="w-5 h-5 text-purple-400" />
+          <div className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center">
+            <UserPlus className="w-5 h-5 text-sky-400" />
           </div>
           <div>
             <h3 className="text-lg font-bold text-white">Add to Whitelist</h3>
@@ -142,7 +142,7 @@ function WhitelistManager() {
           <Button
             onClick={handleAdd}
             disabled={loading || !email.trim()}
-            className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 gap-2"
+            className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 gap-2"
             data-testid="button-whitelist-add"
           >
             {loading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}
@@ -196,7 +196,7 @@ function WhitelistManager() {
                   <td className="px-4 py-3 font-mono text-cyan-400">{entry.email || entry.user_id}</td>
                   <td className="px-4 py-3 text-white">{entry.display_name || "-"}</td>
                   <td className="px-4 py-3">
-                    <Badge variant="outline" className="border-purple-500/30 text-purple-400">{entry.reason || "VIP"}</Badge>
+                    <Badge variant="outline" className="border-sky-500/30 text-sky-400">{entry.reason || "VIP"}</Badge>
                   </td>
                   <td className="px-4 py-3 text-gray-400">{new Date(entry.created_at).toLocaleDateString()}</td>
                   <td className="px-4 py-3 text-right">
@@ -383,7 +383,7 @@ function SigCreditManager() {
                     {entry.user_id ? (
                       <span className="flex items-center gap-1 text-green-400"><CheckCircle2 className="w-3 h-3" /> Linked</span>
                     ) : (
-                      <span className="flex items-center gap-1 text-purple-400"><Clock className="w-3 h-3" /> Pending</span>
+                      <span className="flex items-center gap-1 text-sky-400"><Clock className="w-3 h-3" /> Pending</span>
                     )}
                   </td>
                   <td className="px-4 py-3 text-gray-400">{new Date(entry.created_at).toLocaleDateString()}</td>
@@ -468,8 +468,8 @@ export default function OwnerUsers() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 pt-20">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
@@ -477,7 +477,7 @@ export default function OwnerUsers() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 to-sky-500 bg-clip-text text-transparent">
                   User Management
                 </span>
               </h1>
@@ -488,9 +488,9 @@ export default function OwnerUsers() {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
           {[
-            { label: "Whitelist", value: stats.totalWhitelisted, icon: <Shield className="w-5 h-5 text-purple-400" />, color: "from-purple-500/20 to-purple-500/5" },
+            { label: "Whitelist", value: stats.totalWhitelisted, icon: <Shield className="w-5 h-5 text-sky-400" />, color: "from-sky-500/20 to-sky-500/5" },
             { label: "Presale Orders", value: stats.totalPresaleOrders, icon: <Sparkles className="w-5 h-5 text-pink-400" />, color: "from-pink-500/20 to-pink-500/5" },
-            { label: "Early Adopters", value: stats.totalEarlyAdopters, icon: <Crown className="w-5 h-5 text-purple-400" />, color: "from-purple-500/20 to-purple-500/5" },
+            { label: "Early Adopters", value: stats.totalEarlyAdopters, icon: <Crown className="w-5 h-5 text-sky-400" />, color: "from-sky-500/20 to-sky-500/5" },
             { label: "Waitlist", value: stats.totalWaitlist, icon: <Mail className="w-5 h-5 text-cyan-400" />, color: "from-cyan-500/20 to-cyan-500/5" },
             { label: "Beta Testers", value: stats.totalBetaTesters, icon: <Star className="w-5 h-5 text-teal-400" />, color: "from-teal-500/20 to-teal-500/5" },
             { label: "Revenue", value: `$${(stats.totalRevenue / 100).toLocaleString()}`, icon: <Wallet className="w-5 h-5 text-green-400" />, color: "from-green-500/20 to-green-500/5" },
@@ -517,7 +517,7 @@ export default function OwnerUsers() {
                 onClick={() => setActiveTab(tab.id as any)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all ${
                   activeTab === tab.id 
-                    ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/20" 
+                    ? "bg-gradient-to-r from-cyan-500 to-sky-600 text-white shadow-lg shadow-cyan-500/20" 
                     : "bg-slate-800/50 text-gray-400 hover:text-white hover:bg-slate-700/50"
                 }`}
                 data-testid={`tab-${tab.id}`}
@@ -640,7 +640,7 @@ export default function OwnerUsers() {
                       {filterBySearch(data?.earlyAdopters, ["email", "tier"]).map((item) => (
                         <tr key={item.id} className="hover:bg-white/5">
                           <td className="px-4 py-3 font-mono text-cyan-400">{item.email}</td>
-                          <td className="px-4 py-3"><Badge className="bg-purple-500/20 text-purple-400 border-purple-500/30">{item.tier}</Badge></td>
+                          <td className="px-4 py-3"><Badge className="bg-sky-500/20 text-sky-400 border-sky-500/30">{item.tier}</Badge></td>
                           <td className="px-4 py-3">
                             {item.status === "active" ? (
                               <span className="flex items-center gap-1 text-green-400"><CheckCircle2 className="w-3 h-3" /> Active</span>
@@ -677,7 +677,7 @@ export default function OwnerUsers() {
                             {item.status === "completed" ? (
                               <span className="flex items-center gap-1 text-green-400"><CheckCircle2 className="w-3 h-3" /> Paid</span>
                             ) : (
-                              <span className="text-purple-400">{item.status}</span>
+                              <span className="text-sky-400">{item.status}</span>
                             )}
                           </td>
                           <td className="px-4 py-3 text-gray-400">{formatDate(item.createdAt)}</td>

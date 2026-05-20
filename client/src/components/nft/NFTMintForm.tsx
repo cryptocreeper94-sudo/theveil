@@ -42,7 +42,7 @@ export const NFTMintForm: React.FC<{ collections?: Collection[] }> = ({ collecti
 
         <div className="flex items-center justify-between">
           <div className="text-xs text-slate-400">Gas estimate: <span className="text-cyan-300">—</span></div>
-          <button data-testid="mint-button" onClick={onMint} disabled={minting} className="py-2 px-4 rounded-md bg-gradient-to-r from-pink-500 to-purple-500 text-black">
+          <button data-testid="mint-button" onClick={onMint} disabled={minting} className="py-2 px-4 rounded-md bg-gradient-to-r from-pink-500 to-sky-500 text-black">
             {minting ? 'Minting…' : 'Mint'}
           </button>
         </div>

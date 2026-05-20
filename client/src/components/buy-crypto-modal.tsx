@@ -227,7 +227,7 @@ export function BuyCryptoModal({
                       size="sm"
                       variant="outline"
                       onClick={() => setUseExternalWallet(false)}
-                      className={`flex-1 ${!useExternalWallet ? 'bg-purple-500/20 border-purple-500/50' : 'bg-white/5 border-white/10'}`}
+                      className={`flex-1 ${!useExternalWallet ? 'bg-sky-500/20 border-sky-500/50' : 'bg-white/5 border-white/10'}`}
                     >
                       My Wallet
                     </Button>
@@ -235,7 +235,7 @@ export function BuyCryptoModal({
                       size="sm"
                       variant="outline"
                       onClick={() => setUseExternalWallet(true)}
-                      className={`flex-1 ${useExternalWallet ? 'bg-purple-500/20 border-purple-500/50' : 'bg-white/5 border-white/10'}`}
+                      className={`flex-1 ${useExternalWallet ? 'bg-sky-500/20 border-sky-500/50' : 'bg-white/5 border-white/10'}`}
                     >
                       External Wallet
                     </Button>
@@ -256,11 +256,11 @@ export function BuyCryptoModal({
                     </p>
                   </div>
                 ) : (
-                  <div className="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20">
+                  <div className="p-3 rounded-xl bg-sky-500/10 border border-sky-500/20">
                     <p className="text-sm font-mono truncate">
                       {storedWalletAddresses[selectedCrypto === 'sol' ? 'solana' : 'ethereum'] || 'No address for this network'}
                     </p>
-                    <p className="text-xs text-purple-400 mt-1">Using your Trust Layer wallet</p>
+                    <p className="text-xs text-sky-400 mt-1">Using your Trust Layer wallet</p>
                   </div>
                 )}
               </div>

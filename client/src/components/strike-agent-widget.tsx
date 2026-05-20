@@ -41,9 +41,9 @@ const recommendationStyles = {
     glow: 'shadow-[0_0_20px_rgba(16,185,129,0.2)]'
   },
   watch: {
-    bg: 'bg-gradient-to-r from-purple-500/20 to-teal-500/20',
-    border: 'border-purple-500/30',
-    text: 'text-purple-400',
+    bg: 'bg-gradient-to-r from-sky-500/20 to-teal-500/20',
+    border: 'border-sky-500/30',
+    text: 'text-sky-400',
     icon: Eye,
     label: 'WATCH',
     glow: 'shadow-[0_0_20px_rgba(245,158,11,0.2)]'
@@ -100,7 +100,7 @@ function RecommendationCard({ rec }: { rec: StrikeRecommendation }) {
         </div>
         <div className="text-center">
           <div className="text-[10px] text-white/40 uppercase">Score</div>
-          <div className={`text-xs font-bold ${(rec.aiScore || 0) >= 70 ? 'text-emerald-400' : (rec.aiScore || 0) >= 40 ? 'text-purple-400' : 'text-red-400'}`}>
+          <div className={`text-xs font-bold ${(rec.aiScore || 0) >= 70 ? 'text-emerald-400' : (rec.aiScore || 0) >= 40 ? 'text-sky-400' : 'text-red-400'}`}>
             {rec.aiScore || 0}/100
           </div>
         </div>
@@ -151,7 +151,7 @@ export function StrikeAgentWidget() {
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
             <div className="relative">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 via-sky-500 to-pink-500 flex items-center justify-center">
                 <Bot className="w-5 h-5 text-white" />
               </div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full animate-pulse border-2 border-slate-900" />
@@ -199,7 +199,7 @@ export function StrikeAgentWidget() {
               <span className="text-[10px] text-white/50">Snipe</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 rounded-full bg-purple-500" />
+              <div className="w-2 h-2 rounded-full bg-sky-500" />
               <span className="text-[10px] text-white/50">Watch</span>
             </div>
             <div className="flex items-center gap-1.5">
@@ -239,7 +239,7 @@ export function StrikeAgentMini() {
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
-      className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-lg p-3 border border-white/10"
+      className="bg-gradient-to-r from-cyan-500/10 via-sky-500/10 to-pink-500/10 rounded-lg p-3 border border-white/10"
     >
       <div className="flex items-center gap-2 mb-2">
         <Bot className="w-4 h-4 text-cyan-400" />
@@ -258,7 +258,7 @@ export function StrikeAgentMini() {
               rec.aiRecommendation === 'snipe' 
                 ? 'bg-emerald-500/20 text-emerald-400' 
                 : rec.aiRecommendation === 'watch'
-                ? 'bg-purple-500/20 text-purple-400'
+                ? 'bg-sky-500/20 text-sky-400'
                 : 'bg-red-500/20 text-red-400'
             }`}
           >

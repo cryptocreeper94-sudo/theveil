@@ -14,7 +14,7 @@ const languageColors: Record<string, string> = {
   tsx: "text-cyan-400",
   python: "text-green-400",
   rust: "text-cyan-400",
-  solidity: "text-purple-400",
+  solidity: "text-sky-400",
   json: "text-gray-400",
   bash: "text-green-300",
   shell: "text-green-300",
@@ -33,7 +33,7 @@ export function CodeBlock({ code, language = "typescript", filename }: CodeBlock
     return code
       .replace(/(\/\/.*$)/gm, '<span class="text-gray-500">$1</span>')
       .replace(/(\/\*[\s\S]*?\*\/)/g, '<span class="text-gray-500">$1</span>')
-      .replace(/\b(import|export|from|const|let|var|function|async|await|return|if|else|for|while|class|extends|new|this|try|catch|throw)\b/g, '<span class="text-purple-400">$1</span>')
+      .replace(/\b(import|export|from|const|let|var|function|async|await|return|if|else|for|while|class|extends|new|this|try|catch|throw)\b/g, '<span class="text-sky-400">$1</span>')
       .replace(/\b(true|false|null|undefined)\b/g, '<span class="text-cyan-400">$1</span>')
       .replace(/(".*?"|'.*?'|`.*?`)/g, '<span class="text-green-400">$1</span>')
       .replace(/\b(\d+\.?\d*)\b/g, '<span class="text-cyan-400">$1</span>')

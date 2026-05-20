@@ -107,7 +107,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#22d3ee"/>
-      <stop offset="100%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#38bdf8"/>
     </linearGradient>
   </defs>
   <rect width="400" height="250" rx="16" fill="url(#bg)"/>
@@ -147,7 +147,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
     <div className="relative">
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 hover:border-cyan-400/50 transition-all"
+        className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-sky-500/20 border border-cyan-500/30 hover:border-cyan-400/50 transition-all"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         data-testid="button-member-badge"
@@ -155,7 +155,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
         <BadgeCheck className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
         <span className="text-xs sm:text-sm font-bold text-white">#{memberNumber}</span>
         {isEarlyAdopter && (
-          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-purple-400" />
+          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-sky-400" />
         )}
         <ChevronDown className={`w-3 h-3 sm:w-3.5 sm:h-3.5 text-white/60 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </motion.button>
@@ -178,7 +178,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
                 <div className="p-4">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="p-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                      <div className="p-2 rounded-xl bg-gradient-to-r from-cyan-500/20 to-sky-500/20 border border-cyan-500/30">
                         <BadgeCheck className="w-5 h-5 text-cyan-400" />
                       </div>
                       <div>
@@ -238,12 +238,12 @@ export function MemberBadge({ userId }: { userId?: string }) {
                   )}
 
                   {isEarlyAdopter && (
-                    <div className="mb-4 p-2 rounded-lg bg-purple-500/10 border border-purple-500/30">
+                    <div className="mb-4 p-2 rounded-lg bg-sky-500/10 border border-sky-500/30">
                       <div className="flex items-center gap-2">
-                        <Trophy className="w-4 h-4 text-purple-400" />
-                        <span className="text-xs font-semibold text-purple-400">Early Adopter Status</span>
+                        <Trophy className="w-4 h-4 text-sky-400" />
+                        <span className="text-xs font-semibold text-sky-400">Early Adopter Status</span>
                       </div>
-                      <p className="text-[10px] text-purple-400/70 mt-1">
+                      <p className="text-[10px] text-sky-400/70 mt-1">
                         First 500 members get bonus rewards
                       </p>
                     </div>
@@ -275,7 +275,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
                     {userStats && userStats.crowdfundTotalCents > 0 && (
                       <div className="flex items-center justify-between p-2 rounded-lg bg-white/5">
                         <div className="flex items-center gap-2">
-                          <Sparkles className="w-4 h-4 text-purple-400" />
+                          <Sparkles className="w-4 h-4 text-sky-400" />
                           <span className="text-xs text-white/80">Contributed</span>
                         </div>
                         <span className="text-sm font-bold text-white">
@@ -288,7 +288,7 @@ export function MemberBadge({ userId }: { userId?: string }) {
                   <div className="space-y-2">
                     <Link href="/my-hub" onClick={() => setIsOpen(false)}>
                       <Button 
-                        className="w-full bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-400 hover:to-cyan-400 text-black text-xs h-9 font-semibold"
+                        className="w-full bg-gradient-to-r from-sky-500 to-cyan-500 hover:from-sky-400 hover:to-cyan-400 text-black text-xs h-9 font-semibold"
                         data-testid="button-my-hub"
                       >
                         <Gift className="w-4 h-4 mr-2" />

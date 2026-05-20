@@ -35,10 +35,10 @@ export const APP_CONFIG: Record<AppDomain, {
   dwsc: {
     name: "Trust Layer",
     shortName: "Trust Layer",
-    themeColor: "#8b5cf6",
+    themeColor: "#0ea5e9",
     description: "Infrastructure where accountability is built in",
     logoText: "Trust Layer",
-    primaryGradient: "from-purple-500 to-pink-500",
+    primaryGradient: "from-sky-500 to-pink-500",
   },
   studios: {
     name: "DarkWave Studios",
@@ -46,7 +46,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#6366f1",
     description: "Build. Create. Deploy.",
     logoText: "DarkWave Studios",
-    primaryGradient: "from-indigo-500 to-purple-500",
+    primaryGradient: "from-indigo-500 to-sky-500",
   },
   games: {
     name: "The Arcade",
@@ -54,15 +54,15 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#ec4899",
     description: "Premium arcade games, sweepstakes, and classic card games",
     logoText: "The Arcade",
-    primaryGradient: "from-pink-500 to-purple-500",
+    primaryGradient: "from-pink-500 to-sky-500",
   },
   chrono: {
     name: "Chronicles",
     shortName: "Chronicles",
-    themeColor: "#a855f7",
+    themeColor: "#38bdf8",
     description: "Not a game. A life. Live your legacy.",
     logoText: "Chronicles",
-    primaryGradient: "from-purple-500 to-pink-500",
+    primaryGradient: "from-sky-500 to-pink-500",
   },
   chronochat: {
     name: "Signal Chat",
@@ -70,7 +70,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#06b6d4",
     description: "Connect across the network",
     logoText: "Signal Chat",
-    primaryGradient: "from-cyan-500 to-purple-500",
+    primaryGradient: "from-cyan-500 to-sky-500",
   },
   strikeagent: {
     name: "Strike Agent",
@@ -86,7 +86,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#06b6d4",
     description: "The world's first AI agent certification system. Verify, certify, and protect autonomous AI.",
     logoText: "TrustShield",
-    primaryGradient: "from-cyan-500 to-purple-500",
+    primaryGradient: "from-cyan-500 to-sky-500",
   },
 };
 

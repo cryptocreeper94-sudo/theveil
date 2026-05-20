@@ -123,7 +123,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
       className="space-y-4"
     >
       <GlassCard className="p-6 overflow-hidden relative" glow>
-        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 rounded-full blur-3xl" />
         
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
           <div className="flex items-center gap-4">
@@ -136,7 +136,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
                 <Wallet className="w-4 h-4 text-cyan-400" />
                 <span className="text-sm text-gray-400">Signals Dashboard</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
                 {formatNumber(totalDwc)} SIG
               </h2>
               <p className="text-sm text-gray-400 mt-1">
@@ -179,7 +179,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <GlassCard className="p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Coins className="w-4 h-4 text-purple-400" />
+            <Coins className="w-4 h-4 text-sky-400" />
             <span className="text-xs text-gray-400">Presale</span>
           </div>
           <p className="text-lg font-bold text-white">{formatNumber(sources.presale.tokens)}</p>
@@ -206,12 +206,12 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
 
         <GlassCard className="p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Trophy className="w-4 h-4 text-purple-400" />
+            <Trophy className="w-4 h-4 text-sky-400" />
             <span className="text-xs text-gray-400">Early Bonus</span>
           </div>
           <p className="text-lg font-bold text-white">{formatNumber(sources.earlyAdopterBonus.tokens)}</p>
           {sources.earlyAdopterBonus.isEarlyAdopter && (
-            <p className="text-xs text-purple-500">#{sources.earlyAdopterBonus.signupPosition} Early Adopter</p>
+            <p className="text-xs text-sky-500">#{sources.earlyAdopterBonus.signupPosition} Early Adopter</p>
           )}
         </GlassCard>
       </div>
@@ -225,7 +225,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/presale">
-              <Button className="bg-gradient-to-r from-cyan-600 to-purple-600" data-testid="link-buy-presale">
+              <Button className="bg-gradient-to-r from-cyan-600 to-sky-600" data-testid="link-buy-presale">
                 <Coins className="w-4 h-4 mr-2" />
                 Buy Presale
               </Button>

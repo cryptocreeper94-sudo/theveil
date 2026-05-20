@@ -49,7 +49,7 @@ export function GenesisHallmarkBadge() {
         onClick={() => setShowDetail(true)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all cursor-pointer"
+        className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-r from-cyan-500/10 to-sky-500/10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all cursor-pointer"
       >
         <Shield className="w-4 h-4 text-cyan-400" />
         <span className="text-xs font-semibold text-white">Genesis Hallmark</span>
@@ -75,12 +75,12 @@ export function GenesisHallmarkBadge() {
               className="w-full max-w-lg rounded-2xl overflow-hidden"
             >
               <div className="relative bg-[rgba(12,18,36,0.95)] backdrop-blur-2xl border border-white/10 rounded-2xl shadow-[0_0_60px_rgba(0,255,255,0.15)]">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-cyan-500" />
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500" />
 
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center gap-3">
-                      <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30">
+                      <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-cyan-500/30">
                         <Shield className="w-6 h-6 text-cyan-400" />
                       </div>
                       <div>
@@ -132,7 +132,7 @@ export function GenesisHallmarkBadge() {
 
                     <div className="rounded-xl bg-white/5 border border-white/10 p-4">
                       <div className="flex items-center gap-2 mb-3">
-                        <Layers className="w-4 h-4 text-purple-400" />
+                        <Layers className="w-4 h-4 text-sky-400" />
                         <h3 className="text-sm font-semibold text-white">Blockchain Record</h3>
                       </div>
                       <div className="space-y-2 text-sm">

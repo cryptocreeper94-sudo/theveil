@@ -75,7 +75,7 @@ function useVeilPWA() {
     
     let themeColor = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
     if (themeColor) {
-      themeColor.content = '#a855f7';
+      themeColor.content = '#38bdf8';
     }
     
     let appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]') as HTMLMetaElement;
@@ -1027,7 +1027,7 @@ export default function VeilReader() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center relative overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-cyan-500/8 rounded-full blur-3xl animate-pulse pointer-events-none" />
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
@@ -1035,13 +1035,13 @@ export default function VeilReader() {
           className="text-center relative z-10 px-4"
         >
           <div className="relative w-20 h-20 mx-auto mb-8">
-            <div className="absolute inset-0 rounded-full border-2 border-purple-500/20 animate-ping" />
-            <div className="absolute inset-0 rounded-full border-2 border-t-purple-400 border-r-cyan-400 border-b-transparent border-l-transparent animate-spin" />
-            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-purple-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/5" />
-            <BookOpen className="absolute inset-0 m-auto w-7 h-7 text-purple-400" />
+            <div className="absolute inset-0 rounded-full border-2 border-sky-500/20 animate-ping" />
+            <div className="absolute inset-0 rounded-full border-2 border-t-sky-400 border-r-cyan-400 border-b-transparent border-l-transparent animate-spin" />
+            <div className="absolute inset-2 rounded-full bg-gradient-to-br from-sky-500/10 to-cyan-500/10 backdrop-blur-sm border border-white/5" />
+            <BookOpen className="absolute inset-0 m-auto w-7 h-7 text-sky-400" />
           </div>
           <p className="text-slate-200 text-lg font-medium mb-2">Opening your book...</p>
-          <p className="text-sm bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent font-semibold tracking-wide mb-4">Through The Veil</p>
+          <p className="text-sm bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent font-semibold tracking-wide mb-4">Through The Veil</p>
           <p className="text-slate-500 text-xs">52 chapters · 107,000 words</p>
         </motion.div>
       </div>
@@ -1058,7 +1058,7 @@ export default function VeilReader() {
           className="text-center max-w-sm relative z-10"
         >
           <GlassCard glow className="p-8">
-            <div className="w-16 h-16 mx-auto mb-5 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-purple-500/20 flex items-center justify-center shadow-lg shadow-purple-500/10">
+            <div className="w-16 h-16 mx-auto mb-5 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 flex items-center justify-center shadow-lg shadow-sky-500/10">
               <X className="w-7 h-7 text-red-400" />
             </div>
             <p className="text-red-300 mb-2 font-medium text-lg">{error || 'Failed to load content'}</p>
@@ -1073,7 +1073,7 @@ export default function VeilReader() {
                   setLoading(true);
                   setTimeout(() => loadToc(), 300);
                 }} 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all w-full py-5"
+                className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all w-full py-5"
                 data-testid="button-retry-load"
               >
                 Clear Cache & Try Again
@@ -1194,25 +1194,25 @@ export default function VeilReader() {
   return (
     <div className="min-h-screen bg-slate-950 relative">
       <div className="fixed top-0 left-0 right-0 z-50">
-        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-b border-purple-500/15" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-b border-sky-500/15" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
         <div className="container mx-auto px-4 py-2.5 relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <Button 
               variant="ghost" 
               size="sm"
               onClick={() => setSidebarOpen(!sidebarOpen)}
-              className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 transition-all rounded-xl"
+              className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 transition-all rounded-xl"
               data-testid="button-toggle-sidebar"
             >
               <Menu className="w-5 h-5" />
             </Button>
             <div className="flex items-center gap-2.5">
-              <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-purple-500/20 shadow-sm shadow-purple-500/10">
-                <BookOpen className="w-4 h-4 text-purple-400" />
+              <div className="hidden sm:flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 shadow-sm shadow-sky-500/10">
+                <BookOpen className="w-4 h-4 text-sky-400" />
               </div>
               <div className="min-w-0">
-                <p className="text-[10px] font-medium uppercase tracking-[0.15em] bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">{volume.title}</p>
+                <p className="text-[10px] font-medium uppercase tracking-[0.15em] bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">{volume.title}</p>
                 <p className="text-sm text-white font-medium truncate max-w-[160px] sm:max-w-[300px] md:max-w-[400px]">{chapter.title}</p>
               </div>
             </div>
@@ -1223,7 +1223,7 @@ export default function VeilReader() {
               variant="ghost" 
               size="sm" 
               onClick={handleDownloadPDF}
-              className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 transition-all rounded-xl"
+              className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 transition-all rounded-xl"
               title="Download"
               data-testid="button-download-md"
             >
@@ -1231,7 +1231,7 @@ export default function VeilReader() {
             </Button>
 
             <div className="hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/60 border border-white/5 backdrop-blur-sm">
-              <BookMarked className="w-3 h-3 text-purple-400" />
+              <BookMarked className="w-3 h-3 text-sky-400" />
               <span className="text-xs text-slate-400 font-mono">
                 {currentGlobalIndex + 1}<span className="text-slate-600">/</span>{totalChapters}
               </span>
@@ -1241,18 +1241,18 @@ export default function VeilReader() {
               variant="ghost" 
               size="sm" 
               onClick={() => setShowWhatsNew(true)}
-              className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 relative transition-all rounded-xl"
+              className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 relative transition-all rounded-xl"
               title="What's New"
               data-testid="button-whats-new"
             >
               <Sparkles className="w-4 h-4" />
               {newUpdatesSinceVisit.length > 0 && !hasSeenUpdates && (
-                <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full animate-pulse shadow-lg shadow-purple-500/50" />
+                <span className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 bg-gradient-to-r from-sky-400 to-cyan-400 rounded-full animate-pulse shadow-lg shadow-sky-500/50" />
               )}
             </Button>
             
             <Link href="/veil">
-              <Button variant="ghost" size="sm" className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 transition-all rounded-xl" data-testid="button-home">
+              <Button variant="ghost" size="sm" className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 transition-all rounded-xl" data-testid="button-home">
                 <Home className="w-4 h-4" />
               </Button>
             </Link>
@@ -1262,13 +1262,13 @@ export default function VeilReader() {
       
       {(speechSupported || useAIVoice) && (
         <div className="fixed top-[52px] left-0 right-0 z-40">
-          <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl border-b border-purple-500/10" />
+          <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl border-b border-sky-500/10" />
           <div className="container mx-auto px-4 py-2 relative z-10">
             <div className="flex items-center justify-center gap-5">
               {isLoading ? (
-                <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
-                  <div className="w-4 h-4 border-2 border-purple-400 border-t-transparent rounded-full animate-spin" />
-                  <span className="text-sm text-purple-300">Loading audio...</span>
+                <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-sky-500/10 border border-sky-500/20">
+                  <div className="w-4 h-4 border-2 border-sky-400 border-t-transparent rounded-full animate-spin" />
+                  <span className="text-sm text-sky-300">Loading audio...</span>
                 </div>
               ) : isPlaying ? (
                 <div className="flex items-center gap-5">
@@ -1276,7 +1276,7 @@ export default function VeilReader() {
                     {[0, 150, 300, 450].map((delay, i) => (
                       <motion.div
                         key={i}
-                        className={`w-1 rounded-full ${i % 2 === 0 ? 'bg-purple-400' : 'bg-cyan-400'}`}
+                        className={`w-1 rounded-full ${i % 2 === 0 ? 'bg-sky-400' : 'bg-cyan-400'}`}
                         animate={{ height: [10, 18, 10] }}
                         transition={{ duration: 0.6, repeat: Infinity, delay: delay / 1000 }}
                       />
@@ -1307,7 +1307,7 @@ export default function VeilReader() {
                   <Button 
                     size="icon" 
                     onClick={handlePlay}
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 text-white rounded-full min-w-[48px] min-h-[48px] w-12 h-12 shadow-lg shadow-purple-500/30 transition-all hover:shadow-purple-500/50 hover:scale-105"
+                    className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white rounded-full min-w-[48px] min-h-[48px] w-12 h-12 shadow-lg shadow-sky-500/30 transition-all hover:shadow-sky-500/50 hover:scale-105"
                     data-testid="button-play-chapter"
                     title={isPaused ? 'Resume' : (useAIVoice ? 'Listen with AI Voice' : 'Listen (Browser Voice)')}
                   >
@@ -1334,7 +1334,7 @@ export default function VeilReader() {
               initial={{ opacity: 0, y: -5 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -5 }}
-              className={`mx-4 mb-2 p-3 backdrop-blur-xl border rounded-xl shadow-2xl z-[200] text-xs relative ${voicePermanentFail ? 'bg-red-950/95 border-red-500/30' : 'bg-slate-900/95 border-purple-500/30'}`}
+              className={`mx-4 mb-2 p-3 backdrop-blur-xl border rounded-xl shadow-2xl z-[200] text-xs relative ${voicePermanentFail ? 'bg-red-950/95 border-red-500/30' : 'bg-slate-900/95 border-sky-500/30'}`}
             >
               <button 
                 onClick={() => { setTtsError(null); if (voicePermanentFail) setVoicePermanentFail(false); }} 
@@ -1352,11 +1352,11 @@ export default function VeilReader() {
                 >
                   Download PDF
                 </button>
-                <a href="/veil" className="text-purple-400 hover:text-purple-300 underline transition-colors text-[10px]">Download page</a>
+                <a href="/veil" className="text-sky-400 hover:text-sky-300 underline transition-colors text-[10px]">Download page</a>
                 {voicePermanentFail && (
                   <button 
                     onClick={() => { setVoicePermanentFail(false); setTtsError(null); }}
-                    className="text-purple-400 hover:text-purple-300 underline transition-colors text-[10px]"
+                    className="text-sky-400 hover:text-sky-300 underline transition-colors text-[10px]"
                   >
                     Try again
                   </button>
@@ -1384,10 +1384,10 @@ export default function VeilReader() {
               className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] w-full max-w-lg max-h-[80vh] overflow-auto px-4"
             >
               <GlassCard glow className="p-6 sm:p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-purple-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-bl from-sky-500/10 to-transparent rounded-full blur-3xl pointer-events-none" />
                 <div className="flex items-center justify-between mb-5 relative z-10">
                   <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-purple-500/20 flex items-center justify-center shadow-sm shadow-purple-500/10">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 flex items-center justify-center shadow-sm shadow-sky-500/10">
                       <Sparkles className="w-4 h-4 text-cyan-400" />
                     </div>
                     <h2 className="text-xl font-bold text-white">What's New</h2>
@@ -1403,7 +1403,7 @@ export default function VeilReader() {
                 </div>
                 
                 <div className="flex items-center gap-2 mb-5 relative z-10">
-                  <Badge variant="outline" className="border-purple-500/30 text-purple-400 backdrop-blur-sm">
+                  <Badge variant="outline" className="border-sky-500/30 text-sky-400 backdrop-blur-sm">
                     <Crown className="w-3 h-3 mr-1" />
                     v{CURRENT_VERSION}
                   </Badge>
@@ -1418,7 +1418,7 @@ export default function VeilReader() {
                       transition={{ delay: i * 0.05 }}
                       className={`rounded-xl p-4 transition-all ${
                         i < newUpdatesSinceVisit.length 
-                          ? 'bg-gradient-to-r from-cyan-500/10 to-purple-500/5 border border-cyan-500/20 shadow-sm shadow-cyan-500/5' 
+                          ? 'bg-gradient-to-r from-cyan-500/10 to-sky-500/5 border border-cyan-500/20 shadow-sm shadow-cyan-500/5' 
                           : 'bg-slate-900/40 border border-white/5'
                       }`}
                     >
@@ -1449,7 +1449,7 @@ export default function VeilReader() {
                 <div className="mt-5 pt-5 border-t border-white/5 relative z-10">
                   <Button
                     onClick={() => { setShowWhatsNew(false); setHasSeenUpdates(true); }}
-                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/40 transition-all py-5"
+                    className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 shadow-lg shadow-sky-500/20 hover:shadow-sky-500/40 transition-all py-5"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
                     Continue Reading
@@ -1478,21 +1478,21 @@ export default function VeilReader() {
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               className="fixed left-0 top-0 bottom-0 w-80 z-50 overflow-y-auto"
             >
-              <div className="absolute inset-0 bg-slate-950/95 backdrop-blur-2xl border-r border-purple-500/15" />
-              <div className="absolute top-0 bottom-0 right-0 w-px bg-gradient-to-b from-purple-500/30 via-cyan-500/20 to-purple-500/30" />
+              <div className="absolute inset-0 bg-slate-950/95 backdrop-blur-2xl border-r border-sky-500/15" />
+              <div className="absolute top-0 bottom-0 right-0 w-px bg-gradient-to-b from-sky-500/30 via-cyan-500/20 to-sky-500/30" />
               
               <div className="relative z-10">
-                <div className="p-5 border-b border-white/5 flex items-center justify-between bg-gradient-to-r from-purple-500/5 to-transparent">
+                <div className="p-5 border-b border-white/5 flex items-center justify-between bg-gradient-to-r from-sky-500/5 to-transparent">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-purple-500/20 flex items-center justify-center shadow-lg shadow-purple-500/10">
-                      <ScrollText className="w-4 h-4 text-purple-400" />
+                    <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 flex items-center justify-center shadow-lg shadow-sky-500/10">
+                      <ScrollText className="w-4 h-4 text-sky-400" />
                     </div>
                     <div>
                       <h2 className="text-base font-bold text-white">Contents</h2>
                       <p className="text-[10px] text-slate-500 uppercase tracking-[0.15em]">{totalChapters} chapters</p>
                     </div>
                   </div>
-                  <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)} className="text-slate-400 hover:text-white hover:bg-purple-500/10 rounded-xl">
+                  <Button variant="ghost" size="sm" onClick={() => setSidebarOpen(false)} className="text-slate-400 hover:text-white hover:bg-sky-500/10 rounded-xl">
                     <X className="w-4 h-4" />
                   </Button>
                 </div>
@@ -1501,8 +1501,8 @@ export default function VeilReader() {
                   {toc.map((vol, volIndex) => (
                     <div key={vol.id} className="px-3 py-2">
                       <div className="flex items-center gap-2 mb-2 px-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 shadow-sm shadow-purple-500/30" />
-                        <h3 className="font-semibold text-[10px] uppercase tracking-[0.15em] bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                        <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 shadow-sm shadow-sky-500/30" />
+                        <h3 className="font-semibold text-[10px] uppercase tracking-[0.15em] bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
                           {vol.title}
                         </h3>
                       </div>
@@ -1521,7 +1521,7 @@ export default function VeilReader() {
                                 isLocked
                                   ? 'text-slate-600 cursor-not-allowed opacity-50'
                                   : isActive
-                                    ? 'bg-gradient-to-r from-purple-500/20 to-cyan-500/10 text-white border border-purple-500/25 shadow-md shadow-purple-500/10'
+                                    ? 'bg-gradient-to-r from-sky-500/20 to-cyan-500/10 text-white border border-sky-500/25 shadow-md shadow-sky-500/10'
                                     : 'text-slate-400 hover:bg-white/[0.03] hover:text-slate-200'
                               }`}
                               data-testid={`chapter-nav-${volIndex}-${chapIndex}`}
@@ -1531,7 +1531,7 @@ export default function VeilReader() {
                               <div className="flex items-center gap-2.5">
                                 {isActive && !isLocked && (
                                   <motion.div 
-                                    className="w-1 h-5 rounded-full bg-gradient-to-b from-purple-400 to-cyan-400 flex-shrink-0 shadow-sm shadow-purple-500/30"
+                                    className="w-1 h-5 rounded-full bg-gradient-to-b from-sky-400 to-cyan-400 flex-shrink-0 shadow-sm shadow-sky-500/30"
                                     layoutId="activeChapterIndicator"
                                   />
                                 )}
@@ -1551,14 +1551,14 @@ export default function VeilReader() {
                 <div className="p-4 border-t border-white/5 mt-2">
                   <div className="flex items-center justify-between text-xs text-slate-500 mb-2.5">
                     <span className="flex items-center gap-1.5">
-                      <Eye className="w-3 h-3 text-purple-400" />
+                      <Eye className="w-3 h-3 text-sky-400" />
                       Progress
                     </span>
-                    <span className="font-mono text-purple-400 font-medium">{progressPercent}%</span>
+                    <span className="font-mono text-sky-400 font-medium">{progressPercent}%</span>
                   </div>
                   <div className="h-2 bg-slate-900/80 rounded-full overflow-hidden border border-white/5">
                     <motion.div 
-                      className="h-full bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 rounded-full shadow-sm shadow-purple-500/30"
+                      className="h-full bg-gradient-to-r from-sky-500 via-cyan-500 to-sky-500 rounded-full shadow-sm shadow-sky-500/30"
                       initial={{ width: 0 }}
                       animate={{ width: `${progressPercent}%` }}
                       transition={{ duration: 0.5, ease: "easeOut" }}
@@ -1573,7 +1573,7 @@ export default function VeilReader() {
 
       <div className="fixed inset-0 pointer-events-none z-0">
         <motion.div
-          className="absolute top-1/4 -left-32 w-96 h-96 bg-purple-500/[0.04] rounded-full blur-3xl"
+          className="absolute top-1/4 -left-32 w-96 h-96 bg-sky-500/[0.04] rounded-full blur-3xl"
           animate={{ y: [0, -30, 0], opacity: [0.3, 0.5, 0.3] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -1588,8 +1588,8 @@ export default function VeilReader() {
         {(chapterLoading || !chapter) ? (
           <div className="max-w-3xl mx-auto flex flex-col items-center justify-center py-20">
             <div className="relative w-14 h-14 mb-6">
-              <div className="absolute inset-0 rounded-full border-2 border-t-purple-400 border-r-cyan-400 border-b-transparent border-l-transparent animate-spin" />
-              <BookOpen className="absolute inset-0 m-auto w-6 h-6 text-purple-400" />
+              <div className="absolute inset-0 rounded-full border-2 border-t-sky-400 border-r-cyan-400 border-b-transparent border-l-transparent animate-spin" />
+              <BookOpen className="absolute inset-0 m-auto w-6 h-6 text-sky-400" />
             </div>
             <p className="text-slate-400 text-sm">Loading chapter...</p>
           </div>
@@ -1603,44 +1603,44 @@ export default function VeilReader() {
         >
           <div className="mb-12 sm:mb-16 pt-6 sm:pt-8">
             <div className="flex items-center gap-3 mb-5">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
-              <Badge variant="outline" className="border-purple-500/20 text-purple-400 backdrop-blur-sm text-[10px] uppercase tracking-[0.15em]">
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
+              <Badge variant="outline" className="border-sky-500/20 text-sky-400 backdrop-blur-sm text-[10px] uppercase tracking-[0.15em]">
                 <Feather className="w-3 h-3 mr-1.5" />
                 {volume.title}
               </Badge>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
             </div>
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center leading-tight" data-testid="chapter-title">
               {chapter.title}
             </h1>
             <div className="flex items-center justify-center gap-3 mt-5">
-              <div className="w-10 h-px bg-gradient-to-r from-transparent to-purple-500/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-400 to-cyan-400 shadow-sm shadow-purple-500/30" />
+              <div className="w-10 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 shadow-sm shadow-sky-500/30" />
               <div className="w-10 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
             </div>
           </div>
 
           <GlassCard className="p-5 sm:p-8 md:p-10 lg:p-14 relative overflow-hidden" glow>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-purple-500/[0.03] to-transparent rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-sky-500/[0.03] to-transparent rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-cyan-500/[0.02] to-transparent rounded-full blur-3xl pointer-events-none" />
             
             <div className="relative z-10 prose prose-invert prose-lg max-w-none 
               prose-p:text-slate-300 prose-p:leading-[1.95] prose-p:mb-7 prose-p:text-[16px] sm:prose-p:text-[17px]
               prose-headings:text-white
               prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-12 sm:prose-h2:mt-14 prose-h2:mb-6 sm:prose-h2:mb-7 prose-h2:font-bold
-              prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 sm:prose-h3:mt-12 prose-h3:mb-4 sm:prose-h3:mb-5 prose-h3:text-purple-300
+              prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 sm:prose-h3:mt-12 prose-h3:mb-4 sm:prose-h3:mb-5 prose-h3:text-sky-300
               prose-strong:text-white prose-strong:font-semibold
-              prose-em:text-purple-200/90
+              prose-em:text-sky-200/90
               prose-ul:text-slate-300 prose-ul:space-y-2
               prose-ol:text-slate-300 prose-ol:space-y-2
               prose-li:text-slate-300 prose-li:leading-relaxed prose-li:text-[16px] sm:prose-li:text-[17px]
-              prose-blockquote:border-l-2 prose-blockquote:border-l-purple-500/60 prose-blockquote:bg-purple-500/5 prose-blockquote:px-4 sm:prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:rounded-r-xl
-              prose-blockquote:text-slate-200 prose-blockquote:italic prose-blockquote:not-italic prose-blockquote:text-[16px] sm:prose-blockquote:text-[17px] prose-blockquote:backdrop-blur-sm prose-blockquote:border prose-blockquote:border-purple-500/10
-              prose-hr:border-purple-500/20 prose-hr:my-10
-              prose-a:text-purple-400 prose-a:no-underline hover:prose-a:text-purple-300 prose-a:transition-colors
+              prose-blockquote:border-l-2 prose-blockquote:border-l-sky-500/60 prose-blockquote:bg-sky-500/5 prose-blockquote:px-4 sm:prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:rounded-r-xl
+              prose-blockquote:text-slate-200 prose-blockquote:italic prose-blockquote:not-italic prose-blockquote:text-[16px] sm:prose-blockquote:text-[17px] prose-blockquote:backdrop-blur-sm prose-blockquote:border prose-blockquote:border-sky-500/10
+              prose-hr:border-sky-500/20 prose-hr:my-10
+              prose-a:text-sky-400 prose-a:no-underline hover:prose-a:text-sky-300 prose-a:transition-colors
               prose-code:text-cyan-300 prose-code:bg-slate-800/60 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-code:border prose-code:border-slate-700/50
-              prose-img:rounded-xl prose-img:border prose-img:border-purple-500/20 prose-img:shadow-xl prose-img:shadow-purple-500/10
-              [&>p:first-of-type]:first-letter:text-5xl [&>p:first-of-type]:first-letter:font-bold [&>p:first-of-type]:first-letter:bg-gradient-to-b [&>p:first-of-type]:first-letter:from-purple-300 [&>p:first-of-type]:first-letter:to-cyan-400 [&>p:first-of-type]:first-letter:bg-clip-text [&>p:first-of-type]:first-letter:text-transparent [&>p:first-of-type]:first-letter:float-left [&>p:first-of-type]:first-letter:mr-3 [&>p:first-of-type]:first-letter:mt-1 [&>p:first-of-type]:first-letter:leading-none
+              prose-img:rounded-xl prose-img:border prose-img:border-sky-500/20 prose-img:shadow-xl prose-img:shadow-sky-500/10
+              [&>p:first-of-type]:first-letter:text-5xl [&>p:first-of-type]:first-letter:font-bold [&>p:first-of-type]:first-letter:bg-gradient-to-b [&>p:first-of-type]:first-letter:from-sky-300 [&>p:first-of-type]:first-letter:to-cyan-400 [&>p:first-of-type]:first-letter:bg-clip-text [&>p:first-of-type]:first-letter:text-transparent [&>p:first-of-type]:first-letter:float-left [&>p:first-of-type]:first-letter:mr-3 [&>p:first-of-type]:first-letter:mt-1 [&>p:first-of-type]:first-letter:leading-none
             ">
               <ReactMarkdown 
                 remarkPlugins={[remarkGfm]}
@@ -1648,13 +1648,13 @@ export default function VeilReader() {
                 components={{
                   h2: ({ node, children, ...props }) => (
                     <h2 {...props} className="flex items-center gap-3 not-prose">
-                      <div className="w-1 h-7 rounded-full bg-gradient-to-b from-purple-400 to-cyan-500 flex-shrink-0 shadow-sm shadow-purple-500/20" />
-                      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-purple-200 to-cyan-200 bg-clip-text text-transparent mt-12 sm:mt-14 mb-6 sm:mb-7">{children}</span>
+                      <div className="w-1 h-7 rounded-full bg-gradient-to-b from-sky-400 to-cyan-500 flex-shrink-0 shadow-sm shadow-sky-500/20" />
+                      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-sky-200 to-cyan-200 bg-clip-text text-transparent mt-12 sm:mt-14 mb-6 sm:mb-7">{children}</span>
                     </h2>
                   ),
                   h3: ({ node, children, ...props }) => (
-                    <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-purple-300 mt-10 sm:mt-12 mb-4 sm:mb-5 flex items-center gap-2">
-                      <Star className="w-3.5 h-3.5 text-purple-400/60 flex-shrink-0" />
+                    <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-sky-300 mt-10 sm:mt-12 mb-4 sm:mb-5 flex items-center gap-2">
+                      <Star className="w-3.5 h-3.5 text-sky-400/60 flex-shrink-0" />
                       {children}
                     </h3>
                   ),
@@ -1676,19 +1676,19 @@ export default function VeilReader() {
                       );
                     }
                     return (
-                      <a {...props} href={href} target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline decoration-purple-500/30 transition-colors">
+                      <a {...props} href={href} target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 underline decoration-sky-500/30 transition-colors">
                         {children}
                       </a>
                     );
                   },
                   blockquote: ({ node, children, ...props }) => (
-                    <blockquote {...props} className="not-prose border-l-2 border-l-purple-500/60 bg-gradient-to-r from-purple-500/5 to-transparent backdrop-blur-sm px-4 sm:px-5 py-4 rounded-r-xl my-6 border border-purple-500/10">
+                    <blockquote {...props} className="not-prose border-l-2 border-l-sky-500/60 bg-gradient-to-r from-sky-500/5 to-transparent backdrop-blur-sm px-4 sm:px-5 py-4 rounded-r-xl my-6 border border-sky-500/10">
                       <div className="text-slate-200 italic text-[16px] sm:text-[17px] leading-relaxed">{children}</div>
                     </blockquote>
                   ),
                   img: ({ node, ...props }) => (
                     <figure className="my-8 flex flex-col items-center not-prose">
-                      <div className="bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-purple-500/20 shadow-xl shadow-purple-500/5 max-w-lg w-full">
+                      <div className="bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-sky-500/20 shadow-xl shadow-sky-500/5 max-w-lg w-full">
                         <img {...props} className="w-full rounded-lg" loading="lazy" />
                         {props.alt && (
                           <p className="text-center text-sm text-slate-400 mt-3 italic">{props.alt}</p>
@@ -1698,13 +1698,13 @@ export default function VeilReader() {
                   ),
                   hr: () => (
                     <div className="my-10 sm:my-12 flex items-center justify-center gap-3 not-prose">
-                      <div className="h-px flex-1 bg-gradient-to-r from-transparent to-purple-500/30" />
+                      <div className="h-px flex-1 bg-gradient-to-r from-transparent to-sky-500/30" />
                       <div className="flex gap-1.5">
-                        <div className="w-1 h-1 rounded-full bg-purple-400/60" />
+                        <div className="w-1 h-1 rounded-full bg-sky-400/60" />
                         <div className="w-1 h-1 rounded-full bg-cyan-400/60" />
-                        <div className="w-1 h-1 rounded-full bg-purple-400/60" />
+                        <div className="w-1 h-1 rounded-full bg-sky-400/60" />
                       </div>
-                      <div className="h-px flex-1 bg-gradient-to-l from-transparent to-purple-500/30" />
+                      <div className="h-px flex-1 bg-gradient-to-l from-transparent to-sky-500/30" />
                     </div>
                   ),
                 }}
@@ -1722,9 +1722,9 @@ export default function VeilReader() {
             >
               <GlassCard glow>
                 <div className="p-6 sm:p-10 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-cyan-500/5" />
                   <div className="relative z-10">
-                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 to-cyan-600 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-purple-500/30">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-sky-600 to-cyan-600 flex items-center justify-center mx-auto mb-5 shadow-2xl shadow-sky-500/30">
                       <BookOpen className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -1759,7 +1759,7 @@ export default function VeilReader() {
                             setPurchaseLoading(false);
                           }
                         }}
-                        className="h-14 px-8 text-base gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-500 hover:to-cyan-500 shadow-2xl shadow-purple-500/25 rounded-xl"
+                        className="h-14 px-8 text-base gap-2 bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 shadow-2xl shadow-sky-500/25 rounded-xl"
                         data-testid="button-purchase-ebook"
                       >
                         {purchaseLoading ? (
@@ -1771,7 +1771,7 @@ export default function VeilReader() {
                       </Button>
                     </div>
                     {!userId && (
-                      <p className="text-purple-400/70 text-xs">
+                      <p className="text-sky-400/70 text-xs">
                         Sign in to purchase the full book
                       </p>
                     )}
@@ -1793,36 +1793,36 @@ export default function VeilReader() {
           {!(isPreviewOnly && currentChapter >= FREE_PREVIEW_CHAPTERS - 1) && (
             <>
               <div className="mt-10 sm:mt-14 flex items-center justify-center gap-3">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-purple-500/20" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-sky-500/20" />
                 <div className="flex gap-2">
-                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500/40" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-sky-500/40" />
                   <div className="w-1.5 h-1.5 rounded-full bg-cyan-500/40" />
-                  <div className="w-1.5 h-1.5 rounded-full bg-purple-500/40" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-sky-500/40" />
                 </div>
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-purple-500/20" />
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-sky-500/20" />
               </div>
 
               <div className="mt-8 sm:mt-10 flex items-center justify-between gap-4 max-w-xl mx-auto">
                 {hasPrev ? (
                   <motion.button
                     onClick={goPrev}
-                    className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all group min-h-[44px]"
+                    className="flex items-center gap-2 px-4 py-3 rounded-xl bg-white/[0.03] border border-white/5 hover:border-sky-500/30 hover:bg-sky-500/5 transition-all group min-h-[44px]"
                     whileHover={{ x: -4 }}
                     data-testid="button-prev-inline"
                   >
-                    <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-purple-400 transition-colors" />
+                    <ChevronLeft className="w-4 h-4 text-slate-500 group-hover:text-sky-400 transition-colors" />
                     <span className="text-sm text-slate-400 group-hover:text-slate-200 transition-colors hidden sm:inline">Previous</span>
                   </motion.button>
                 ) : <div />}
                 {hasNext ? (
                   <motion.button
                     onClick={goNext}
-                    className="flex items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-cyan-500/5 border border-purple-500/20 hover:border-purple-500/40 hover:from-purple-500/15 hover:to-cyan-500/10 transition-all group min-h-[44px]"
+                    className="flex items-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-cyan-500/5 border border-sky-500/20 hover:border-sky-500/40 hover:from-sky-500/15 hover:to-cyan-500/10 transition-all group min-h-[44px]"
                     whileHover={{ x: 4 }}
                     data-testid="button-next-inline"
                   >
                     <span className="text-sm text-slate-300 group-hover:text-white transition-colors hidden sm:inline">Next Chapter</span>
-                    <ChevronRight className="w-4 h-4 text-purple-400 group-hover:text-cyan-400 transition-colors" />
+                    <ChevronRight className="w-4 h-4 text-sky-400 group-hover:text-cyan-400 transition-colors" />
                   </motion.button>
                 ) : <div />}
               </div>
@@ -1846,7 +1846,7 @@ export default function VeilReader() {
               setSidebarOpen(false);
               setTimeout(() => window.scrollTo(0, pos.scrollY), 100);
             }}
-            className="fixed bottom-16 right-4 z-50 flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 backdrop-blur-xl shadow-lg shadow-cyan-500/10 hover:border-cyan-400/50 hover:from-cyan-500/30 hover:to-purple-500/30 transition-all min-h-[44px]"
+            className="fixed bottom-16 right-4 z-50 flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-sky-500/20 border border-cyan-500/30 backdrop-blur-xl shadow-lg shadow-cyan-500/10 hover:border-cyan-400/50 hover:from-cyan-500/30 hover:to-sky-500/30 transition-all min-h-[44px]"
             data-testid="button-return-to-reading"
           >
             <ArrowLeft className="w-4 h-4 text-cyan-400" />
@@ -1856,15 +1856,15 @@ export default function VeilReader() {
       </AnimatePresence>
 
       <div className="fixed bottom-0 left-0 right-0 z-40">
-        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-t border-purple-500/15" />
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-t border-sky-500/15" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
         <div className="container mx-auto px-4 py-2.5 relative z-10">
           <div className="flex items-center justify-between gap-3">
             <Button
               variant="ghost"
               onClick={goPrev}
               disabled={!hasPrev}
-              className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 disabled:opacity-20 transition-all min-w-[80px] sm:min-w-[100px] justify-start rounded-xl"
+              className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 disabled:opacity-20 transition-all min-w-[80px] sm:min-w-[100px] justify-start rounded-xl"
               data-testid="button-prev-chapter"
             >
               <ChevronLeft className="w-4 h-4 mr-1 flex-shrink-0" />
@@ -1874,14 +1874,14 @@ export default function VeilReader() {
             <div className="flex-1 max-w-md mx-auto flex flex-col items-center gap-1.5">
               <div className="w-full h-2 bg-slate-900/80 rounded-full overflow-hidden border border-white/5">
                 <motion.div 
-                  className="h-full bg-gradient-to-r from-purple-500 via-cyan-500 to-purple-500 rounded-full shadow-sm shadow-purple-500/30"
+                  className="h-full bg-gradient-to-r from-sky-500 via-cyan-500 to-sky-500 rounded-full shadow-sm shadow-sky-500/30"
                   initial={false}
                   animate={{ width: `${progressPercent}%` }}
                   transition={{ duration: 0.4 }}
                 />
               </div>
               <span className="text-[10px] text-slate-500 font-mono flex items-center gap-1">
-                <Flame className="w-2.5 h-2.5 text-purple-400" />
+                <Flame className="w-2.5 h-2.5 text-sky-400" />
                 {progressPercent}% complete
               </span>
             </div>
@@ -1890,7 +1890,7 @@ export default function VeilReader() {
               variant="ghost"
               onClick={goNext}
               disabled={!hasNext}
-              className="text-slate-400 hover:text-purple-300 hover:bg-purple-500/10 disabled:opacity-20 transition-all min-w-[80px] sm:min-w-[100px] justify-end rounded-xl"
+              className="text-slate-400 hover:text-sky-300 hover:bg-sky-500/10 disabled:opacity-20 transition-all min-w-[80px] sm:min-w-[100px] justify-end rounded-xl"
               data-testid="button-next-chapter"
             >
               <span className="hidden sm:inline text-sm">Next</span>

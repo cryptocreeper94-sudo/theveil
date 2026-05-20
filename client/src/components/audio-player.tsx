@@ -80,7 +80,7 @@ export function AmbientAudioController({ era, location, isNight = false }: Ambie
         >
           <div className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 ${
             state.isPlaying
-              ? "bg-gradient-to-r from-cyan-500/30 to-purple-500/30 shadow-lg shadow-cyan-500/10"
+              ? "bg-gradient-to-r from-cyan-500/30 to-sky-500/30 shadow-lg shadow-cyan-500/10"
               : "bg-slate-800/80"
           }`}>
             {state.isPlaying ? (
@@ -159,7 +159,7 @@ export function AmbientAudioController({ era, location, isNight = false }: Ambie
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
                     {state.isNight ? (
-                      <Moon className="w-3 h-3 text-purple-400" />
+                      <Moon className="w-3 h-3 text-sky-400" />
                     ) : (
                       <Sun className="w-3 h-3 text-teal-400" />
                     )}

@@ -31,7 +31,7 @@ export function HeaderTools() {
           <Button variant="ghost" size="icon" className="h-8 w-8 relative" data-testid="button-watchlist-header">
             <Star className="w-4 h-4" />
             {watchlistCount > 0 && (
-              <Badge className="absolute -top-1 -right-1 h-4 min-w-4 text-[9px] bg-purple-500 text-black px-1">
+              <Badge className="absolute -top-1 -right-1 h-4 min-w-4 text-[9px] bg-sky-500 text-black px-1">
                 {watchlistCount}
               </Badge>
             )}
@@ -41,7 +41,7 @@ export function HeaderTools() {
           <div className="p-3 border-b border-white/10">
             <div className="flex items-center justify-between">
               <h3 className="font-semibold text-sm flex items-center gap-2">
-                <Star className="w-4 h-4 text-purple-400" />
+                <Star className="w-4 h-4 text-sky-400" />
                 Watchlist
               </h3>
               <Link href="/watchlist">

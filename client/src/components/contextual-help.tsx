@@ -600,8 +600,8 @@ export function ContextualHelp() {
         className="fixed bottom-6 right-4 z-[60] w-12 h-12 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:scale-110"
         style={{
           background: isOpen
-            ? "linear-gradient(135deg, #06b6d4, #a855f7)"
-            : "linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(168, 85, 247, 0.9))"
+            ? "linear-gradient(135deg, #06b6d4, #38bdf8)"
+            : "linear-gradient(135deg, rgba(6, 182, 212, 0.9), rgba(14,165,233, 0.9))"
         }}
         data-testid="button-help-toggle"
         aria-label={isOpen ? "Close help" : "Open help"}
@@ -661,7 +661,7 @@ export function ContextualHelp() {
                         <p className="text-white/40 text-xs mb-2 px-1">{searchResults.length} result{searchResults.length !== 1 ? 's' : ''}</p>
                         {searchResults.map((r, i) => (
                           <div key={i} className="mb-1">
-                            <span className="text-xs text-purple-400 px-3">{r.section}</span>
+                            <span className="text-xs text-sky-400 px-3">{r.section}</span>
                             <HelpEntryItem entry={r.entry} />
                           </div>
                         ))}

@@ -53,7 +53,7 @@ export const BridgeInterface: React.FC = () => {
 
         <div className="text-xs text-slate-400">Estimated fee: <span className="text-cyan-300">{fee}</span></div>
 
-        <button data-testid="bridge-button" onClick={onBridge} disabled={processing} className="py-3 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold">
+        <button data-testid="bridge-button" onClick={onBridge} disabled={processing} className="py-3 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold">
           {processing ? 'Processing…' : 'Bridge'}
         </button>
       </div>

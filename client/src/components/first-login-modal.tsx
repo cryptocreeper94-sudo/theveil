@@ -52,12 +52,12 @@ export function FirstLoginModal() {
           animate={{ scale: 1, opacity: 1, y: 0 }}
           exit={{ scale: 0.9, opacity: 0, y: 20 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-purple-950/30 to-slate-900"
-          style={{ boxShadow: "0 0 80px rgba(168,85,247,0.3), 0 0 40px rgba(6,182,212,0.2)" }}
+          className="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-sky-950/30 to-slate-900"
+          style={{ boxShadow: "0 0 80px rgba(14,165,233,0.3), 0 0 40px rgba(6,182,212,0.2)" }}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-sky-500/5 pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-sky-500/20 to-pink-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           
           <button
@@ -80,14 +80,14 @@ export function FirstLoginModal() {
                   className="absolute inset-0 rounded-full"
                   animate={{ opacity: [0.3, 0.6, 0.3] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  style={{ boxShadow: "0 0 30px rgba(168,85,247,0.5)" }}
+                  style={{ boxShadow: "0 0 30px rgba(14,165,233,0.5)" }}
                 />
               </motion.div>
             </div>
 
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
                   Welcome to Trust Layer
                 </span>
               </h2>
@@ -97,9 +97,9 @@ export function FirstLoginModal() {
             </div>
 
             <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20">
-                <div className="p-2 rounded-lg bg-purple-500/20">
-                  <Coins className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-cyan-500/10 border border-sky-500/20">
+                <div className="p-2 rounded-lg bg-sky-500/20">
+                  <Coins className="w-5 h-5 text-sky-400" />
                 </div>
                 <div>
                   <p className="text-white font-medium text-sm">Signal Presale Live</p>
@@ -107,9 +107,9 @@ export function FirstLoginModal() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20">
-                <div className="p-2 rounded-lg bg-purple-500/20">
-                  <Gift className="w-5 h-5 text-purple-400" />
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-pink-500/10 border border-sky-500/20">
+                <div className="p-2 rounded-lg bg-sky-500/20">
+                  <Gift className="w-5 h-5 text-sky-400" />
                 </div>
                 <div>
                   <p className="text-white font-medium text-sm">Early Adopter Rewards</p>
@@ -131,7 +131,7 @@ export function FirstLoginModal() {
             <div className="space-y-2">
               <Button 
                 onClick={handleGoToPresale}
-                className="w-full py-5 text-base font-bold bg-gradient-to-r from-purple-500 via-cyan-500 to-red-500 hover:opacity-90 border-0"
+                className="w-full py-5 text-base font-bold bg-gradient-to-r from-sky-500 via-cyan-500 to-red-500 hover:opacity-90 border-0"
                 data-testid="button-first-login-presale"
               >
                 <Sparkles className="w-5 h-5 mr-2" />

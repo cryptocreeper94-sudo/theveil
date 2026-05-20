@@ -39,15 +39,15 @@ const ACHIEVEMENTS: Achievement[] = [
 const RARITY_COLORS = {
   common: "from-gray-400 to-gray-600",
   rare: "from-blue-400 to-blue-600",
-  epic: "from-purple-400 to-purple-600",
-  legendary: "from-purple-400 to-cyan-500",
+  epic: "from-sky-400 to-sky-600",
+  legendary: "from-sky-400 to-cyan-500",
 };
 
 const RARITY_GLOW = {
   common: "shadow-gray-500/20",
   rare: "shadow-blue-500/30",
-  epic: "shadow-purple-500/40",
-  legendary: "shadow-purple-500/50",
+  epic: "shadow-sky-500/40",
+  legendary: "shadow-sky-500/50",
 };
 
 export function AchievementBadge({ achievement }: { achievement: Achievement }) {

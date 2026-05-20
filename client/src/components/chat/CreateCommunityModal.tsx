@@ -40,7 +40,7 @@ export const CreateCommunityModal: React.FC<{ open: boolean; onClose: () => void
           </select>
 
           <div className="flex justify-end">
-            <button onClick={submit} disabled={creating} className="py-2 px-4 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black" data-testid="create-community-submit">{creating ? 'Creating…' : 'Create'}</button>
+            <button onClick={submit} disabled={creating} className="py-2 px-4 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black" data-testid="create-community-submit">{creating ? 'Creating…' : 'Create'}</button>
           </div>
         </div>
       </motion.div>

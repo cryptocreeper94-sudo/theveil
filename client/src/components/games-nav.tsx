@@ -85,12 +85,12 @@ export function GamesNav() {
             )}
 
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center shadow-lg shadow-pink-500/20 group-hover:shadow-pink-500/40 transition-shadow">
+              <div className="relative w-8 h-8 rounded-xl bg-gradient-to-br from-pink-500 to-sky-600 flex items-center justify-center shadow-lg shadow-pink-500/20 group-hover:shadow-pink-500/40 transition-shadow">
                 <Gamepad2 className="w-4.5 h-4.5 text-white" />
                 <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-slate-950 animate-pulse" />
               </div>
               <div className="hidden sm:flex flex-col leading-none">
-                <span className="text-sm font-bold bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
+                <span className="text-sm font-bold bg-gradient-to-r from-pink-400 to-sky-400 bg-clip-text text-transparent">
                   DarkWave
                 </span>
                 <span className="text-[10px] text-white/50 font-medium tracking-wider uppercase">Games</span>
@@ -128,7 +128,7 @@ export function GamesNav() {
               <Button
                 size="sm"
                 onClick={handleInstall}
-                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-400 hover:to-purple-400 text-white border-0 rounded-lg shadow-lg shadow-pink-500/20"
+                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-pink-500 to-sky-500 hover:from-pink-400 hover:to-sky-400 text-white border-0 rounded-lg shadow-lg shadow-pink-500/20"
                 data-testid="button-install-pwa"
               >
                 <Download className="w-3.5 h-3.5 mr-1" />
@@ -150,7 +150,7 @@ export function GamesNav() {
             <Link href="/wallet">
               <Button
                 size="sm"
-                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-teal-500/20 to-purple-500/20 hover:from-teal-500/30 hover:to-purple-500/30 text-teal-400 border border-teal-500/20 rounded-lg"
+                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-teal-500/20 to-sky-500/20 hover:from-teal-500/30 hover:to-sky-500/30 text-teal-400 border border-teal-500/20 rounded-lg"
                 data-testid="button-games-wallet"
               >
                 <Coins className="w-3.5 h-3.5 mr-1" />

@@ -30,8 +30,8 @@ export function InfoButton({
 
   const colors = {
     help: "from-blue-500 to-cyan-500",
-    info: "from-purple-500 to-pink-500",
-    tip: "from-purple-500 to-cyan-500",
+    info: "from-sky-500 to-pink-500",
+    tip: "from-sky-500 to-cyan-500",
   };
 
   const Icon = icons[variant];

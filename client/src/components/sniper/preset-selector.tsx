@@ -176,12 +176,12 @@ export function PresetSelector({ selectedPreset, onPresetChange }: PresetSelecto
                               <span className="text-white font-medium">${(preset.safetyFilters.minLiquidityUsd / 1000).toFixed(0)}K</span>
                             </div>
                             <div className="flex items-center gap-2 text-xs">
-                              <Bot className="w-3 h-3 text-purple-400" />
+                              <Bot className="w-3 h-3 text-sky-400" />
                               <span className="text-white/70">Max Bot:</span>
                               <span className="text-white font-medium">{preset.safetyFilters.maxBotPercent}%</span>
                             </div>
                             <div className="flex items-center gap-2 text-xs">
-                              <Users className="w-3 h-3 text-purple-400" />
+                              <Users className="w-3 h-3 text-sky-400" />
                               <span className="text-white/70">Min Holders:</span>
                               <span className="text-white font-medium">{preset.safetyFilters.minHolders}</span>
                             </div>

@@ -112,7 +112,7 @@ export const SwapInterface: React.FC = () => {
           data-testid="swap-button"
           onClick={onSwap}
           disabled={loadingSwap || !quote}
-          className="w-full py-3 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black font-semibold disabled:opacity-60"
+          className="w-full py-3 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black font-semibold disabled:opacity-60"
         >
           {loadingSwap ? 'Swapping…' : 'Swap'}
         </button>

@@ -33,7 +33,7 @@ interface PortfolioAnalyticsProps {
   hasData?: boolean;
 }
 
-const COLORS = ["#8B5CF6", "#6366F1", "#3B82F6", "#10B981", "#22D3EE"];
+const COLORS = ["#0ea5e9", "#6366F1", "#3B82F6", "#10B981", "#22D3EE"];
 
 export function PortfolioAnalytics({ metrics, holdings, chartData, hasData = false }: PortfolioAnalyticsProps) {
   const [timeframe, setTimeframe] = useState<"24h" | "7d" | "30d" | "all">("7d");
@@ -148,7 +148,7 @@ export function PortfolioAnalytics({ metrics, holdings, chartData, hasData = fal
 
       <GlassCard className="p-4" data-testid="card-allocation">
         <div className="flex items-center gap-2 mb-4">
-          <PieChart className="w-4 h-4 text-purple-400" />
+          <PieChart className="w-4 h-4 text-sky-400" />
           <h3 className="font-semibold text-sm">Allocation</h3>
         </div>
         

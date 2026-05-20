@@ -20,7 +20,7 @@ const GlowOrb = ({ color, size, top, left, delay = 0 }: { color: string; size: n
 const TIER_COLORS: Record<string, string> = {
   'signal_believer': '#22c55e',
   'early_supporter': '#06b6d4',
-  'community_builder': '#8b5cf6',
+  'community_builder': '#0ea5e9',
   'trust_pioneer': '#ec4899',
   'genesis_founder': '#f59e0b',
 };
@@ -106,13 +106,13 @@ export default function OwnerPresale() {
     { 
       label: "Total Purchases", 
       value: stats?.totalPurchases || 0, 
-      icon: <TrendingUp className="w-5 h-5 text-purple-400" />,
+      icon: <TrendingUp className="w-5 h-5 text-sky-400" />,
       color: "purple"
     },
     { 
       label: "SIG Sold", 
       value: (stats?.totalTokensSold || 0).toLocaleString(), 
-      icon: <Coins className="w-5 h-5 text-purple-400" />,
+      icon: <Coins className="w-5 h-5 text-sky-400" />,
       color: "purple"
     },
   ];
@@ -155,7 +155,7 @@ export default function OwnerPresale() {
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
       <GlowOrb color="linear-gradient(135deg, #22c55e, #06b6d4)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #8b5cf6, #ec4899)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #0ea5e9, #ec4899)" size={500} top="50%" left="70%" delay={2} />
 
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-8 pt-20">
@@ -206,7 +206,7 @@ export default function OwnerPresale() {
               style={{ boxShadow: "0 0 30px rgba(0,200,255,0.05)" }}
             >
               <div className="flex items-center justify-between mb-3">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-sky-500/20">
                   {stat.icon}
                 </div>
               </div>
@@ -260,10 +260,10 @@ export default function OwnerPresale() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="bg-slate-900/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6"
-            style={{ boxShadow: "0 0 40px rgba(139,92,246,0.1)" }}
+            style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
           >
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <Coins className="w-5 h-5 text-purple-400" />
+              <Coins className="w-5 h-5 text-sky-400" />
               Revenue by Tier
             </h3>
             <div className="h-64">

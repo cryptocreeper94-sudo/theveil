@@ -44,10 +44,10 @@ export function TrustCard({
 
   const tierColors: Record<string, string> = {
     pioneer: "from-green-500 to-emerald-500",
-    guardian: "from-purple-500 to-violet-500",
+    guardian: "from-sky-500 to-cyan-500",
     startup: "from-blue-500 to-cyan-500",
-    professional: "from-purple-500 to-pink-500",
-    enterprise: "from-purple-500 to-cyan-500",
+    professional: "from-sky-500 to-pink-500",
+    enterprise: "from-sky-500 to-cyan-500",
   };
 
   const tierGradient = tierColors[memberTier.toLowerCase()] || tierColors.pioneer;
@@ -86,22 +86,22 @@ export function TrustCard({
           <stop offset="100%" style="stop-color:#0f172a"/>
         </linearGradient>
         <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#a855f7"/>
+          <stop offset="0%" style="stop-color:#38bdf8"/>
           <stop offset="50%" style="stop-color:#ec4899"/>
           <stop offset="100%" style="stop-color:#3b82f6"/>
         </linearGradient>
       </defs>
       <rect width="400" height="250" rx="16" fill="url(#bg)"/>
       <rect x="1" y="1" width="398" height="248" rx="15" fill="none" stroke="url(#glow)" stroke-width="2" opacity="0.5"/>
-      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#a855f7" text-transform="uppercase" letter-spacing="1">Trust Layer</text>
+      <text x="20" y="35" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8" text-transform="uppercase" letter-spacing="1">Trust Layer</text>
       <text x="20" y="50" font-family="system-ui, sans-serif" font-size="8" fill="#94a3b8">Verified Member</text>
       <text x="20" y="100" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="white">${displayName}</text>
       ${organizationName ? `<text x="20" y="120" font-family="system-ui, sans-serif" font-size="12" fill="#94a3b8">${organizationName}</text>` : ''}
       <text x="20" y="160" font-family="system-ui, sans-serif" font-size="8" fill="#64748b" text-transform="uppercase">Trust Number</text>
       <rect x="15" y="165" width="180" height="30" rx="6" fill="rgba(0,0,0,0.4)"/>
-      <text x="25" y="185" font-family="monospace" font-size="14" font-weight="bold" fill="#c084fc">${trustNumber}</text>
+      <text x="25" y="185" font-family="monospace" font-size="14" font-weight="bold" fill="#7dd3fc">${trustNumber}</text>
       <text x="20" y="230" font-family="system-ui, sans-serif" font-size="10" fill="white">${totalTransactions} Transactions</text>
-      <text x="150" y="230" font-family="system-ui, sans-serif" font-size="10" fill="#a855f7">${rewardPoints} Rewards</text>
+      <text x="150" y="230" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8">${rewardPoints} Rewards</text>
       <rect x="298" y="138" width="84" height="84" rx="8" fill="white"/>
       ${qrEmbedded}
       <circle cx="370" cy="30" r="15" fill="url(#glow)" opacity="0.3"/>
@@ -135,14 +135,14 @@ export function TrustCard({
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         data-testid="trust-card"
       >
-        <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 shadow-2xl aspect-[1.6/1]">
+        <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 shadow-2xl aspect-[1.6/1]">
           <motion.div
             className="absolute inset-0 opacity-30 pointer-events-none"
             style={{
               background: `linear-gradient(
                 ${isHovered ? '135deg' : '45deg'},
                 transparent 0%,
-                rgba(168, 85, 247, 0.4) 25%,
+                rgba(14,165,233, 0.4) 25%,
                 rgba(236, 72, 153, 0.4) 50%,
                 rgba(59, 130, 246, 0.4) 75%,
                 transparent 100%
@@ -155,18 +155,18 @@ export function TrustCard({
             transition={{ duration: 2, repeat: isHovered ? Infinity : 0, ease: "linear" }}
           />
 
-          <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-50 blur-sm" />
+          <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-pink-500 to-blue-500 opacity-50 blur-sm" />
 
-          <div className="relative z-10 p-6 h-full flex flex-col bg-gradient-to-br from-slate-900/95 via-purple-950/95 to-slate-900/95 rounded-2xl">
+          <div className="relative z-10 p-6 h-full flex flex-col bg-gradient-to-br from-slate-900/95 via-sky-950/95 to-slate-900/95 rounded-2xl">
             <div className="flex items-start justify-between mb-4">
               <div className="flex items-center gap-3">
                 <Shield className="w-7 h-7 text-cyan-400" />
                 <div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[10px] uppercase tracking-wider text-purple-400 font-medium">
+                    <span className="text-[10px] uppercase tracking-wider text-sky-400 font-medium">
                       Trust Layer
                     </span>
-                    <span className="px-1.5 py-0.5 text-[8px] font-bold bg-purple-500/20 text-purple-400 border border-purple-500/30 rounded uppercase">
+                    <span className="px-1.5 py-0.5 text-[8px] font-bold bg-sky-500/20 text-sky-400 border border-sky-500/30 rounded uppercase">
                       Beta
                     </span>
                   </div>
@@ -196,12 +196,12 @@ export function TrustCard({
                   className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-black/40 backdrop-blur-sm border border-white/10"
                   animate={{ 
                     boxShadow: isHovered 
-                      ? ["0 0 10px rgba(168, 85, 247, 0.3)", "0 0 20px rgba(236, 72, 153, 0.3)", "0 0 10px rgba(168, 85, 247, 0.3)"]
-                      : "0 0 10px rgba(168, 85, 247, 0.2)"
+                      ? ["0 0 10px rgba(14,165,233, 0.3)", "0 0 20px rgba(236, 72, 153, 0.3)", "0 0 10px rgba(14,165,233, 0.3)"]
+                      : "0 0 10px rgba(14,165,233, 0.2)"
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <span className="text-sm font-mono font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="text-sm font-mono font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
                     {trustNumber}
                   </span>
                 </motion.div>
@@ -225,7 +225,7 @@ export function TrustCard({
                   <div className="text-[10px] text-white/40">Transactions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-xs font-bold text-purple-400">{rewardPoints}</div>
+                  <div className="text-xs font-bold text-sky-400">{rewardPoints}</div>
                   <div className="text-[10px] text-white/40">Rewards</div>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export function TrustCard({
         </div>
 
         <div className="relative mt-2">
-          <div className="absolute inset-x-8 h-4 bg-gradient-to-b from-purple-500/20 to-transparent rounded-b-full blur-md" />
+          <div className="absolute inset-x-8 h-4 bg-gradient-to-b from-sky-500/20 to-transparent rounded-b-full blur-md" />
         </div>
       </motion.div>
 
@@ -279,8 +279,8 @@ export function TrustCard({
         </Button>
       </div>
 
-      <div className="max-w-md mx-auto mt-4 p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
-        <p className="text-[10px] text-purple-400/80 text-center leading-relaxed">
+      <div className="max-w-md mx-auto mt-4 p-3 rounded-lg bg-sky-500/10 border border-sky-500/20">
+        <p className="text-[10px] text-sky-400/80 text-center leading-relaxed">
           <strong>BETA:</strong> This Trust Card is part of the Trust Layer beta program. 
           Do your own research (DYOR). Participation is at your own risk. 
           Features and functionality may change without notice.
@@ -298,10 +298,10 @@ interface TrustCardPlaceholderProps {
 export function TrustCardPlaceholder({ onActivate, isActivating }: TrustCardPlaceholderProps = {}) {
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-purple-950/50 to-slate-900 aspect-[1.6/1] p-6">
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-sky-950/50 to-slate-900 aspect-[1.6/1] p-6">
         <div className="h-full flex flex-col items-center justify-center text-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center mb-4">
-            <Award className="w-8 h-8 text-purple-400" />
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center mb-4">
+            <Award className="w-8 h-8 text-sky-400" />
           </div>
           <h3 className="font-bold text-lg mb-2">Get Your Trust Card</h3>
           <p className="text-sm text-muted-foreground mb-4">
@@ -310,7 +310,7 @@ export function TrustCardPlaceholder({ onActivate, isActivating }: TrustCardPlac
           <Button 
             onClick={onActivate}
             disabled={isActivating}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500"
+            className="bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500"
             data-testid="button-activate-membership"
           >
             {isActivating ? (

@@ -74,7 +74,7 @@ export function GenesisHallmarkCard() {
   if (isLoading) {
     return (
       <div className="w-full max-w-md mx-auto">
-        <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-purple-900/50 to-pink-900/50 animate-pulse" />
+        <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-sky-900/50 to-pink-900/50 animate-pulse" />
       </div>
     );
   }
@@ -97,7 +97,7 @@ export function GenesisHallmarkCard() {
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
           {/* Premium Refractor Card */}
-          <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-purple-950 to-slate-900 shadow-2xl">
+          <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-gradient-to-br from-slate-900 via-sky-950 to-slate-900 shadow-2xl">
             
             {/* Holographic Shimmer Effect */}
             <motion.div
@@ -106,7 +106,7 @@ export function GenesisHallmarkCard() {
                 background: `linear-gradient(
                   ${isHovered ? '135deg' : '45deg'},
                   transparent 0%,
-                  rgba(168, 85, 247, 0.4) 25%,
+                  rgba(14,165,233, 0.4) 25%,
                   rgba(236, 72, 153, 0.4) 50%,
                   rgba(59, 130, 246, 0.4) 75%,
                   transparent 100%
@@ -120,19 +120,19 @@ export function GenesisHallmarkCard() {
             />
             
             {/* Rainbow Border Glow */}
-            <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-50 blur-sm group-hover:opacity-75 transition-opacity" />
+            <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-pink-500 to-blue-500 opacity-50 blur-sm group-hover:opacity-75 transition-opacity" />
             
             {/* Card Content Container */}
-            <div className="relative z-10 p-6 bg-gradient-to-br from-slate-900/95 via-purple-950/95 to-slate-900/95 rounded-2xl">
+            <div className="relative z-10 p-6 bg-gradient-to-br from-slate-900/95 via-sky-950/95 to-slate-900/95 rounded-2xl">
               
               {/* Header Badge */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-500 to-pink-500 flex items-center justify-center">
                     <Award className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <div className="text-[10px] uppercase tracking-wider text-purple-400 font-medium">Genesis</div>
+                    <div className="text-[10px] uppercase tracking-wider text-sky-400 font-medium">Genesis</div>
                     <div className="text-xs font-bold text-white">Hallmark #1</div>
                   </div>
                 </div>
@@ -145,14 +145,14 @@ export function GenesisHallmarkCard() {
               {/* Main Card Display - NFT Style */}
               <div className="relative mb-6">
                 {/* Token Display */}
-                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-purple-900/50 via-slate-900 to-pink-900/50 border border-white/10 p-4 flex flex-col items-center justify-center overflow-hidden">
+                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-sky-900/50 via-slate-900 to-pink-900/50 border border-white/10 p-4 flex flex-col items-center justify-center overflow-hidden">
                   
                   {/* Animated Background Particles */}
                   <div className="absolute inset-0 overflow-hidden">
                     {[...Array(20)].map((_, i) => (
                       <motion.div
                         key={i}
-                        className="absolute w-1 h-1 bg-purple-400/30 rounded-full"
+                        className="absolute w-1 h-1 bg-sky-400/30 rounded-full"
                         style={{
                           left: `${Math.random() * 100}%`,
                           top: `${Math.random() * 100}%`,
@@ -186,13 +186,13 @@ export function GenesisHallmarkCard() {
                       className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-sm border border-white/10"
                       animate={{ 
                         boxShadow: isHovered 
-                          ? ["0 0 20px rgba(168, 85, 247, 0.5)", "0 0 40px rgba(236, 72, 153, 0.5)", "0 0 20px rgba(168, 85, 247, 0.5)"]
-                          : "0 0 20px rgba(168, 85, 247, 0.3)"
+                          ? ["0 0 20px rgba(14,165,233, 0.5)", "0 0 40px rgba(236, 72, 153, 0.5)", "0 0 20px rgba(14,165,233, 0.5)"]
+                          : "0 0 20px rgba(14,165,233, 0.3)"
                       }}
                       transition={{ duration: 2, repeat: Infinity }}
                     >
-                      <Hash className="w-3 h-3 text-purple-400" />
-                      <span className="text-xs font-mono font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      <Hash className="w-3 h-3 text-sky-400" />
+                      <span className="text-xs font-mono font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
                         {genesis.globalSerial}
                       </span>
                     </motion.div>
@@ -202,7 +202,7 @@ export function GenesisHallmarkCard() {
               
               {/* Title & Info */}
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-sky-400 via-pink-400 to-sky-400 bg-clip-text text-transparent mb-1">
                   Trust Layer
                 </h3>
                 <p className="text-sm text-white/60">{genesis.message}</p>
@@ -219,7 +219,7 @@ export function GenesisHallmarkCard() {
                 </div>
                 <div className="p-3 rounded-lg bg-white/5 border border-white/10">
                   <div className="flex items-center gap-2 mb-1">
-                    <Sparkles className="w-3 h-3 text-purple-400" />
+                    <Sparkles className="w-3 h-3 text-sky-400" />
                     <span className="text-[10px] text-white/50 uppercase">TPS</span>
                   </div>
                   <div className="text-sm font-bold text-white">{genesis.metadata.tps}</div>
@@ -255,7 +255,7 @@ export function GenesisHallmarkCard() {
                 <div className="text-center w-full">
                   <div className="text-[10px] text-white/50 uppercase mb-2">Payload Hash</div>
                   <div className="flex items-center justify-center gap-2">
-                    <code className="text-[11px] font-mono text-purple-400 break-all">
+                    <code className="text-[11px] font-mono text-sky-400 break-all">
                       {genesis.payloadHash.slice(0, 16)}...
                     </code>
                     <button
@@ -281,7 +281,7 @@ export function GenesisHallmarkCard() {
               
               {/* View Explorer Button */}
               <Button
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-medium mt-2"
+                className="w-full bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 text-white font-medium mt-2"
                 data-testid="button-view-explorer"
               >
                 <span>View on Explorer</span>
@@ -293,7 +293,7 @@ export function GenesisHallmarkCard() {
           
           {/* Pedestal / Stand Effect */}
           <div className="relative mt-4">
-            <div className="absolute inset-x-8 h-4 bg-gradient-to-b from-purple-500/20 to-transparent rounded-b-full blur-md" />
+            <div className="absolute inset-x-8 h-4 bg-gradient-to-b from-sky-500/20 to-transparent rounded-b-full blur-md" />
             <div className="absolute inset-x-12 h-2 bg-gradient-to-b from-white/10 to-transparent rounded-b-full" />
           </div>
           
@@ -312,10 +312,10 @@ export function GenesisHallmarkSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 border border-sky-500/30 mb-4"
           >
-            <Award className="w-4 h-4 text-purple-400" />
-            <span className="text-sm text-purple-300">Hallmark System</span>
+            <Award className="w-4 h-4 text-sky-400" />
+            <span className="text-sm text-sky-300">Hallmark System</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -324,7 +324,7 @@ export function GenesisHallmarkSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-sky-400 bg-clip-text text-transparent">
               Genesis Hallmark
             </span>
           </motion.h2>
@@ -358,8 +358,8 @@ export function GenesisHallmarkSection() {
           className="mt-12 grid md:grid-cols-3 gap-6 text-center"
         >
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center">
-              <Hash className="w-6 h-6 text-purple-400" />
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
+              <Hash className="w-6 h-6 text-sky-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">12-Digit Serial</h3>
             <p className="text-sm text-white/60">
@@ -367,7 +367,7 @@ export function GenesisHallmarkSection() {
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
               <Shield className="w-6 h-6 text-green-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">Immutable Proof</h3>
@@ -376,7 +376,7 @@ export function GenesisHallmarkSection() {
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
               <QrCode className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">Instant Verification</h3>

@@ -64,13 +64,13 @@ interface SafetyMetrics {
 
 const getScoreColor = (score: number) => {
   if (score >= 70) return { text: 'text-emerald-400', bg: 'bg-emerald-500', glow: 'shadow-emerald-500/30' };
-  if (score >= 40) return { text: 'text-purple-400', bg: 'bg-purple-500', glow: 'shadow-purple-500/30' };
+  if (score >= 40) return { text: 'text-sky-400', bg: 'bg-sky-500', glow: 'shadow-sky-500/30' };
   return { text: 'text-red-400', bg: 'bg-red-500', glow: 'shadow-red-500/30' };
 };
 
 const RECOMMENDATION_STYLES = {
   safe: { icon: ShieldCheck, bg: 'bg-emerald-500/20', border: 'border-emerald-500/30', text: 'text-emerald-400', label: 'SAFE TO TRADE' },
-  caution: { icon: Shield, bg: 'bg-purple-500/20', border: 'border-purple-500/30', text: 'text-purple-400', label: 'PROCEED WITH CAUTION' },
+  caution: { icon: Shield, bg: 'bg-sky-500/20', border: 'border-sky-500/30', text: 'text-sky-400', label: 'PROCEED WITH CAUTION' },
   danger: { icon: ShieldAlert, bg: 'bg-red-500/20', border: 'border-red-500/30', text: 'text-red-400', label: 'HIGH RISK' },
 };
 

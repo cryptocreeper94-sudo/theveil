@@ -181,7 +181,7 @@ export function LimitOrdersList() {
       case "open": return "bg-blue-500/20 text-blue-400 border-blue-500/30";
       case "filled": return "bg-green-500/20 text-green-400 border-green-500/30";
       case "cancelled": return "bg-gray-500/20 text-gray-400 border-gray-500/30";
-      case "expired": return "bg-purple-500/20 text-purple-400 border-purple-500/30";
+      case "expired": return "bg-sky-500/20 text-sky-400 border-sky-500/30";
     }
   };
 
@@ -256,7 +256,7 @@ export function LimitOrdersList() {
                       <motion.div
                         initial={{ width: 0 }}
                         animate={{ width: `${Math.min(100, parseFloat(progress))}%` }}
-                        className="h-full bg-gradient-to-r from-primary to-purple-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-primary to-sky-500 rounded-full"
                       />
                     </div>
                   </div>

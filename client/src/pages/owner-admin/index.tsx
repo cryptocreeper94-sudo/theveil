@@ -61,8 +61,8 @@ function SecretEntry({ onSuccess }: { onSuccess: () => void }) {
 
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={400} top="10%" left="10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={300} top="60%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={400} top="10%" left="10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={300} top="60%" left="70%" delay={2} />
       
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -71,7 +71,7 @@ function SecretEntry({ onSuccess }: { onSuccess: () => void }) {
         style={{ boxShadow: "0 0 60px rgba(0,200,255,0.1)" }}
       >
         <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-white/10 flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-white/10 flex items-center justify-center">
             <Shield className="w-8 h-8 text-cyan-400" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">Owner Portal Access</h1>
@@ -114,7 +114,7 @@ function SecretEntry({ onSuccess }: { onSuccess: () => void }) {
             whileTap={{ scale: 0.98 }}
             onClick={handleSubmit}
             disabled={loading || secret.length < 4}
-            className="w-full py-3 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:shadow-lg hover:shadow-cyan-500/25"
+            className="w-full py-3 bg-gradient-to-r from-cyan-500 to-sky-600 rounded-xl text-white font-semibold disabled:opacity-50 disabled:cursor-not-allowed transition-all hover:shadow-lg hover:shadow-cyan-500/25"
             data-testid="button-owner-auth"
           >
             {loading ? (
@@ -177,8 +177,8 @@ function PinEntry({ onSuccess }: { onSuccess: () => void }) {
 
   return (
     <div className="min-h-screen bg-slate-950 flex items-center justify-center relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={400} top="10%" left="10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={300} top="60%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={400} top="10%" left="10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={300} top="60%" left="70%" delay={2} />
       
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
@@ -187,7 +187,7 @@ function PinEntry({ onSuccess }: { onSuccess: () => void }) {
         style={{ boxShadow: "0 0 60px rgba(0,200,255,0.1)" }}
       >
         <div className="text-center mb-8">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-white/10 flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-white/10 flex items-center justify-center">
             <Shield className="w-8 h-8 text-cyan-400" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">Owner Portal Access</h1>
@@ -244,7 +244,7 @@ function PinEntry({ onSuccess }: { onSuccess: () => void }) {
             whileTap={{ scale: 0.98 }}
             onClick={handlePinSubmit}
             disabled={pin.length !== 4}
-            className="w-full py-4 rounded-xl font-bold text-lg transition-all bg-gradient-to-r from-cyan-500 to-purple-500 text-white disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full py-4 rounded-xl font-bold text-lg transition-all bg-gradient-to-r from-cyan-500 to-sky-500 text-white disabled:opacity-50 disabled:cursor-not-allowed"
             data-testid="button-submit-pin"
           >
             Unlock Portal
@@ -280,7 +280,7 @@ function BentoCard({
 }) {
   const glowColors = {
     cyan: "rgba(0,200,255,0.15)",
-    purple: "rgba(168,85,247,0.15)",
+    purple: "rgba(14,165,233,0.15)",
     pink: "rgba(236,72,153,0.15)",
     emerald: "rgba(16,185,129,0.15)",
   };
@@ -299,7 +299,7 @@ function BentoCard({
       transition={{ duration: 0.2 }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
-      <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-sky-500/10 rounded-full blur-3xl pointer-events-none" />
       <div className="relative z-10">{children}</div>
     </motion.div>
   );
@@ -343,7 +343,7 @@ function OwnerDashboard() {
 
   const quickStats = [
     { label: "Page Views (24h)", value: analyticsStats?.pageViews || 0, icon: <Eye className="w-5 h-5 text-cyan-400" />, trend: "up" },
-    { label: "Unique Visitors", value: analyticsStats?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-purple-400" />, trend: "up" },
+    { label: "Unique Visitors", value: analyticsStats?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-sky-400" />, trend: "up" },
     { label: "Marketing Posts", value: marketingStats?.totalPosts || 0, icon: <Megaphone className="w-5 h-5 text-pink-400" />, trend: "neutral" },
     { label: "Posts Deployed", value: marketingStats?.deployed || 0, icon: <CheckCircle2 className="w-5 h-5 text-green-400" />, trend: "up" },
   ];
@@ -376,8 +376,8 @@ function OwnerDashboard() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #06b6d4, #8b5cf6)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #06b6d4, #0ea5e9)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
       <GlowOrb color="linear-gradient(135deg, #f59e0b, #ef4444)" size={400} top="80%" left="20%" delay={4} />
 
       <AnimatePresence>
@@ -452,7 +452,7 @@ function OwnerDashboard() {
         >
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 via-sky-500 to-pink-500 bg-clip-text text-transparent">
                 Owner Portal
               </span>
             </h1>
@@ -468,7 +468,7 @@ function OwnerDashboard() {
                 onClick={() => setSelectedHost(host.id as any)}
                 className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all ${
                   selectedHost === host.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
+                    ? 'bg-gradient-to-r from-cyan-500 to-sky-500 text-white'
                     : 'text-gray-400 hover:text-white'
                 }`}
                 data-testid={`button-host-${host.id}`}
@@ -491,7 +491,7 @@ function OwnerDashboard() {
               style={{ boxShadow: "0 0 30px rgba(0,200,255,0.05)" }}
             >
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
+                <div className="p-2 rounded-lg bg-gradient-to-br from-cyan-500/20 to-sky-500/20">
                   {stat.icon}
                 </div>
               </div>
@@ -506,7 +506,7 @@ function OwnerDashboard() {
             <BentoCard key={module.id} href={module.href} glow={module.glow}>
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br from-${module.glow}-500/20 to-purple-500/20 border border-white/10`}>
+                  <div className={`p-3 rounded-xl bg-gradient-to-br from-${module.glow}-500/20 to-sky-500/20 border border-white/10`}>
                     {module.icon}
                   </div>
                   <div>
@@ -523,7 +523,7 @@ function OwnerDashboard() {
         <BentoCard span="row" glow="purple">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-xl font-bold text-white">Ecosystem Quick Links</h3>
-            <Globe className="w-5 h-5 text-purple-400" />
+            <Globe className="w-5 h-5 text-sky-400" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
@@ -534,7 +534,7 @@ function OwnerDashboard() {
             ].map((link) => (
               <Link key={link.href} href={link.href}>
                 <motion.div
-                  whileHover={{ scale: 1.02, borderColor: "rgba(168,85,247,0.5)" }}
+                  whileHover={{ scale: 1.02, borderColor: "rgba(14,165,233,0.5)" }}
                   className="p-3 bg-slate-800/50 rounded-xl border border-white/10 flex items-center gap-2 cursor-pointer"
                 >
                   {link.icon}

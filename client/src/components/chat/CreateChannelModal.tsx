@@ -37,7 +37,7 @@ export const CreateChannelModal: React.FC<{ open: boolean; categories: string[];
             <option value="announcement">Announcement</option>
           </select>
           <div className="flex justify-end">
-            <button onClick={submit} disabled={creating} className="py-2 px-4 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black" data-testid="create-channel-submit">{creating ? 'Creating…' : 'Create'}</button>
+            <button onClick={submit} disabled={creating} className="py-2 px-4 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black" data-testid="create-channel-submit">{creating ? 'Creating…' : 'Create'}</button>
           </div>
         </div>
       </motion.div>

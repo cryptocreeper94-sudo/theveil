@@ -20,7 +20,7 @@ export const NFTCard: React.FC<{ nft: NFT; onBuy?: (nft: NFT) => void; onView?: 
         </div>
 
         <div className="mt-3 flex gap-2">
-          <button data-testid={`nft-buy-${nft.id}`} onClick={() => onBuy?.(nft)} className="flex-1 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black text-sm">Buy</button>
+          <button data-testid={`nft-buy-${nft.id}`} onClick={() => onBuy?.(nft)} className="flex-1 py-2 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black text-sm">Buy</button>
           <button data-testid={`nft-bid-${nft.id}`} onClick={() => onBid?.(nft)} className="py-2 px-3 rounded-md bg-slate-800/40 text-white text-sm">Bid</button>
         </div>
       </div>

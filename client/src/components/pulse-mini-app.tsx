@@ -151,10 +151,10 @@ const QUICK_PRESETS = [
 ];
 
 const CHAINS = [
-  { id: "solana", name: "Solana", color: "bg-purple-500" },
+  { id: "solana", name: "Solana", color: "bg-sky-500" },
   { id: "ethereum", name: "Ethereum", color: "bg-blue-500" },
   { id: "base", name: "Base", color: "bg-blue-400" },
-  { id: "polygon", name: "Polygon", color: "bg-purple-400" },
+  { id: "polygon", name: "Polygon", color: "bg-sky-400" },
   { id: "arbitrum", name: "Arbitrum", color: "bg-blue-600" },
   { id: "bsc", name: "BSC", color: "bg-teal-500" },
 ];
@@ -289,10 +289,10 @@ function SignalCard({ signal, onAnalyze }: { signal: QuantSignal; onAnalyze?: (a
     return "F";
   };
   const chainColors: Record<string, string> = {
-    solana: "bg-purple-500/20 text-purple-400 border-purple-500/30",
+    solana: "bg-sky-500/20 text-sky-400 border-sky-500/30",
     ethereum: "bg-blue-500/20 text-blue-400 border-blue-500/30",
     base: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-    polygon: "bg-purple-500/20 text-purple-400 border-purple-500/30",
+    polygon: "bg-sky-500/20 text-sky-400 border-sky-500/30",
     arbitrum: "bg-blue-500/20 text-blue-400 border-blue-500/30",
     bsc: "bg-teal-500/20 text-teal-400 border-teal-500/30",
   };
@@ -572,7 +572,7 @@ function AdvancedSettings({ config, onChange }: { config: TradingConfig; onChang
       <AccordionItem value="chains" className="border border-white/10 rounded-xl overflow-hidden">
         <AccordionTrigger className="px-4 py-3 hover:bg-white/5" data-testid="accordion-preferred-chains">
           <div className="flex items-center gap-2">
-            <Layers className="w-4 h-4 text-purple-400" />
+            <Layers className="w-4 h-4 text-sky-400" />
             <span className="text-sm font-medium">Preferred Chains</span>
           </div>
         </AccordionTrigger>
@@ -811,7 +811,7 @@ export function PulseMiniApp() {
       {/* Compact Mobile Header */}
       <div className="px-3 py-2 border-b border-white/5 bg-black/60 backdrop-blur-xl flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center relative shadow-lg shadow-cyan-500/20">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-sky-500 flex items-center justify-center relative shadow-lg shadow-cyan-500/20">
             <Zap className="w-4 h-4 text-white" />
             <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full border border-gray-900 animate-pulse" />
           </div>
@@ -905,7 +905,7 @@ export function PulseMiniApp() {
             {/* Altcoin Season */}
             <div className="p-2 rounded-xl bg-white/5 border border-white/10">
               <p className="text-[9px] text-gray-500 uppercase">Alt SZN</p>
-              <p className="text-sm font-bold text-purple-400">{marketData.altcoinSeason}</p>
+              <p className="text-sm font-bold text-sky-400">{marketData.altcoinSeason}</p>
               <p className="text-[9px] text-gray-500">/100</p>
             </div>
           </div>
@@ -1013,14 +1013,14 @@ export function PulseMiniApp() {
               </GlassCard>
               <GlassCard className="p-4">
                 <div className="flex items-center gap-2 mb-3">
-                  <BarChart3 className="w-5 h-5 text-purple-400" />
+                  <BarChart3 className="w-5 h-5 text-sky-400" />
                   <h3 className="font-medium text-white">Technical Analysis</h3>
                 </div>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-purple-400" /> MACD / RSI indicators</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-purple-400" /> Golden/death cross</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-purple-400" /> Support/resistance</li>
-                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-purple-400" /> Trend detection</li>
+                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-sky-400" /> MACD / RSI indicators</li>
+                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-sky-400" /> Golden/death cross</li>
+                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-sky-400" /> Support/resistance</li>
+                  <li className="flex items-center gap-2"><Check className="w-3 h-3 text-sky-400" /> Trend detection</li>
                 </ul>
               </GlassCard>
               <GlassCard className="p-4">
@@ -1124,7 +1124,7 @@ export function PulseMiniApp() {
 
           <TabsContent value="wallet" className="mt-0 p-4 space-y-4">
             <GlassCard className="p-6 text-center">
-              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-sky-500/20 border border-cyan-500/30 flex items-center justify-center">
                 <Wallet className="w-8 h-8 text-cyan-400" />
               </div>
               <h3 className="text-lg font-bold text-white mb-2">Connect Your Wallet</h3>
@@ -1139,8 +1139,8 @@ export function PulseMiniApp() {
             <div className="grid gap-4 sm:grid-cols-2">
               <GlassCard className="p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                    <Activity className="w-4 h-4 text-purple-400" />
+                  <div className="w-8 h-8 rounded-lg bg-sky-500/20 flex items-center justify-center">
+                    <Activity className="w-4 h-4 text-sky-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-400">SOL Balance</p>

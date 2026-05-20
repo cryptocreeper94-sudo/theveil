@@ -16,7 +16,7 @@ export const CommunityList: React.FC<Props> = ({ communities, activeCommunityId,
         <h3 className="text-sm font-semibold text-white">Communities</h3>
         <button
           onClick={onCreate}
-          className="p-2 rounded-md bg-gradient-to-r from-cyan-500 to-purple-500 text-black text-xs min-h-[40px]"
+          className="p-2 rounded-md bg-gradient-to-r from-cyan-500 to-sky-500 text-black text-xs min-h-[40px]"
           data-testid="community-create-btn"
           aria-label="Create community"
         >

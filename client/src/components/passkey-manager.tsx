@@ -215,7 +215,7 @@ export function PasskeyLoginButton({ onSuccess }: { onSuccess?: (user: any) => v
     <Button
       onClick={handlePasskeyLogin}
       disabled={isLoading}
-      className="w-full h-14 bg-gradient-to-r from-cyan-600 to-purple-600 hover:from-cyan-500 hover:to-purple-500 text-white font-bold text-base rounded-xl shadow-lg shadow-cyan-500/20 border border-cyan-500/30"
+      className="w-full h-14 bg-gradient-to-r from-cyan-600 to-sky-600 hover:from-cyan-500 hover:to-sky-500 text-white font-bold text-base rounded-xl shadow-lg shadow-cyan-500/20 border border-cyan-500/30"
       data-testid="button-passkey-login"
     >
       {isLoading ? (

@@ -136,12 +136,12 @@ export function EcosystemDirectory({
     >
       <button
         onClick={() => setCollapsed(!collapsed)}
-        className="w-full flex items-center justify-between px-5 py-3 border-b border-white/5 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 hover:from-cyan-500/10 hover:to-purple-500/10 transition-all cursor-pointer group"
+        className="w-full flex items-center justify-between px-5 py-3 border-b border-white/5 bg-gradient-to-r from-cyan-500/5 to-sky-500/5 hover:from-cyan-500/10 hover:to-sky-500/10 transition-all cursor-pointer group"
         data-testid="directory-collapse-toggle"
       >
         <div className="flex items-center gap-2">
           <Sparkles className="w-4 h-4 text-cyan-400" />
-          <h3 className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+          <h3 className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
             Ecosystem Directory
           </h3>
           <span className="text-[10px] text-white/30 bg-white/5 px-2 py-0.5 rounded-full">

@@ -47,7 +47,7 @@ function KycCard({ kyc, onApprove, onReject }: {
   const [rejectionReason, setRejectionReason] = useState("");
 
   const statusColors = {
-    pending: "bg-purple-500/20 text-purple-400 border-purple-500/30",
+    pending: "bg-sky-500/20 text-sky-400 border-sky-500/30",
     approved: "bg-green-500/20 text-green-400 border-green-500/30",
     rejected: "bg-red-500/20 text-red-400 border-red-500/30",
     not_started: "bg-gray-500/20 text-gray-400 border-gray-500/30",
@@ -69,8 +69,8 @@ function KycCard({ kyc, onApprove, onReject }: {
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10 flex items-center justify-center">
-            <User className="w-6 h-6 text-purple-400" />
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-white/10 flex items-center justify-center">
+            <User className="w-6 h-6 text-sky-400" />
           </div>
           <div>
             <h3 className="font-semibold text-white">{kyc.fullName || "No name provided"}</h3>
@@ -249,8 +249,8 @@ export default function KycAdmin() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white relative overflow-hidden">
-      <GlowOrb color="linear-gradient(135deg, #8b5cf6, #06b6d4)" size={600} top="-10%" left="-10%" />
-      <GlowOrb color="linear-gradient(135deg, #ec4899, #8b5cf6)" size={500} top="50%" left="70%" delay={2} />
+      <GlowOrb color="linear-gradient(135deg, #0ea5e9, #06b6d4)" size={600} top="-10%" left="-10%" />
+      <GlowOrb color="linear-gradient(135deg, #ec4899, #0ea5e9)" size={500} top="50%" left="70%" delay={2} />
 
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-8 pt-20">
@@ -266,12 +266,12 @@ export default function KycAdmin() {
           </Link>
 
           <div className="flex items-center gap-4 mb-2">
-            <div className="p-3 rounded-xl bg-gradient-to-br from-purple-500/20 to-cyan-500/20 border border-white/10">
-              <ShieldCheck className="w-8 h-8 text-purple-400" />
+            <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-white/10">
+              <ShieldCheck className="w-8 h-8 text-sky-400" />
             </div>
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
                   KYC Verification
                 </span>
               </h1>
@@ -318,7 +318,7 @@ export default function KycAdmin() {
                 size="sm"
                 onClick={() => setStatusFilter(status)}
                 className={statusFilter === status 
-                  ? "bg-purple-600 hover:bg-purple-700" 
+                  ? "bg-sky-600 hover:bg-sky-700" 
                   : "border-white/10 text-gray-400 hover:text-white"
                 }
                 data-testid={`button-filter-${status}`}
@@ -331,7 +331,7 @@ export default function KycAdmin() {
 
         {isLoading ? (
           <div className="flex items-center justify-center py-12">
-            <Loader2 className="w-8 h-8 animate-spin text-purple-400" />
+            <Loader2 className="w-8 h-8 animate-spin text-sky-400" />
           </div>
         ) : filteredKyc.length === 0 ? (
           <div className="text-center py-12">
@@ -360,12 +360,12 @@ export default function KycAdmin() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-8 p-4 rounded-xl bg-purple-500/10 border border-purple-500/20"
+          className="mt-8 p-4 rounded-xl bg-sky-500/10 border border-sky-500/20"
         >
           <div className="flex items-start gap-3">
-            <AlertTriangle className="w-5 h-5 text-purple-400 shrink-0 mt-0.5" />
+            <AlertTriangle className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
             <div>
-              <h4 className="font-semibold text-purple-400 mb-1">Development Mode</h4>
+              <h4 className="font-semibold text-sky-400 mb-1">Development Mode</h4>
               <p className="text-sm text-gray-400">
                 This is a manual approval system. For production, integrate with a third-party KYC provider 
                 like Sumsub, Jumio, or Onfido for automated identity verification.
