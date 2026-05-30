@@ -16,6 +16,11 @@ if [ -d "public" ]; then
   cp -r public dist/public 2>/dev/null || true
 fi
 
+# Copy the complete HTML book
+if [ -f "Through-The-Veil-COMPLETE.html" ]; then
+  cp Through-The-Veil-COMPLETE.html dist/public/Through-The-Veil-COMPLETE.html 2>/dev/null || true
+fi
+
 # Also pull from client/public if public dir is missing the book
 if [ -d "client/public" ]; then
   mkdir -p dist/client/public

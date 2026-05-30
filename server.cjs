@@ -149,7 +149,9 @@ const server = http.createServer((req, res) => {
     const pdfPaths = [
       path.join(__dirname, 'public', 'assets', 'Through-The-Veil-EBOOK.pdf'),
       path.join(__dirname, 'client', 'public', 'assets', 'Through-The-Veil-EBOOK.pdf'),
+      path.join(__dirname, '..', 'public', 'assets', 'Through-The-Veil-EBOOK.pdf'),
     ];
+    console.log('[TheVeil] PDF download requested, checking:', pdfPaths.map(p => p + ' exists=' + fs.existsSync(p)));
     for (const p of pdfPaths) {
       if (fs.existsSync(p)) {
         const stat = fs.statSync(p);
@@ -188,6 +190,22 @@ const server = http.createServer((req, res) => {
   if (url.pathname === '/veil/read' || url.pathname === '/veil/read/') {
     res.writeHead(200, { 'Content-Type': 'text/html' });
     return res.end(readerHtml);
+  }
+
+  // HTML book (complete, for reading/printing)
+  if (url.pathname === '/api/veil/html') {
+    const htmlPaths = [
+      path.join(__dirname, 'public', 'Through-The-Veil-COMPLETE.html'),
+      path.join(__dirname, '..', 'Through-The-Veil-COMPLETE.html'),
+    ];
+    for (const p of htmlPaths) {
+      if (fs.existsSync(p)) {
+        const stat = fs.statSync(p);
+        res.writeHead(200, { 'Content-Type': 'text/html', 'Content-Length': stat.size });
+        return fs.createReadStream(p).pipe(res);
+      }
+    }
+    res.writeHead(404); return res.end('HTML book not found');
   }
 
   // Static files from public dirs
