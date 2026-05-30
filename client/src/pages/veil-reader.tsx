@@ -1622,10 +1622,10 @@ export default function VeilReader() {
             {/* Paper Body */}
             <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-14">
               <div className="prose prose-lg max-w-none
-                prose-p:text-stone-700 prose-p:leading-[2] prose-p:mb-6 prose-p:text-[16.5px] sm:prose-p:text-[17.5px]
+                prose-p:text-stone-700 prose-p:leading-[2] prose-p:mb-6 prose-p:text-[16.5px] sm:prose-p:text-[17.5px] prose-p:text-justify
                 prose-headings:text-stone-900
-                prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:font-bold prose-h2:border-b prose-h2:border-stone-200 prose-h2:pb-3
-                prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-stone-800
+                prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:font-bold prose-h2:border-b prose-h2:border-stone-200 prose-h2:pb-3 prose-h2:text-center
+                prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-stone-800 prose-h3:text-center
                 prose-strong:text-stone-900 prose-strong:font-semibold
                 prose-em:text-stone-600
                 prose-ul:text-stone-700 prose-ul:space-y-1.5
@@ -1636,19 +1636,19 @@ export default function VeilReader() {
                 prose-hr:border-stone-200 prose-hr:my-10
                 prose-a:text-sky-700 prose-a:underline prose-a:decoration-sky-300/50 hover:prose-a:text-sky-600 prose-a:transition-colors
                 prose-code:text-stone-800 prose-code:bg-stone-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:border prose-code:border-stone-200
-                prose-img:rounded-lg prose-img:shadow-lg
+                prose-img:rounded-lg prose-img:shadow-lg mx-auto
               " style={{ fontFamily: "'Georgia', 'Times New Roman', 'Cambria', serif" }}>
                 <ReactMarkdown 
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw, rehypeSlug]}
                   components={{
                     h2: ({ node, children, ...props }) => (
-                      <h2 {...props} className="not-prose text-xl sm:text-2xl font-bold text-stone-900 mt-14 mb-6 pb-3 border-b border-stone-200" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                      <h2 {...props} className="not-prose text-xl sm:text-2xl font-bold text-stone-900 mt-14 mb-6 pb-3 border-b border-stone-200 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
                         {children}
                       </h2>
                     ),
                     h3: ({ node, children, ...props }) => (
-                      <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-stone-800 mt-10 mb-4" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                      <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-stone-800 mt-10 mb-4 text-center" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
                         {children}
                       </h3>
                     ),
