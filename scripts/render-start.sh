@@ -1,7 +1,4 @@
 #!/bin/bash
-# Render Start Script — Through The Veil
-set -e
-
-echo "📖 [Render] Starting Through The Veil..."
-
-NODE_ENV=production node dist/index.cjs
+# Render Start — Through The Veil
+echo "🌫️ [Render] Starting TheVeil..."
+node server.cjs
