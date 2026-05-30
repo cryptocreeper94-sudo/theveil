@@ -1620,7 +1620,7 @@ export default function VeilReader() {
             </div>
           </div>
 
-          <GlassCard className="p-5 sm:p-8 md:p-10 lg:p-14 relative overflow-hidden" glow>
+          <GlassCard className="p-6 px-7 sm:p-10 sm:px-12 md:p-12 md:px-16 lg:p-16 lg:px-20 relative overflow-hidden" glow>
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-sky-500/[0.03] to-transparent rounded-full blur-3xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-cyan-500/[0.02] to-transparent rounded-full blur-3xl pointer-events-none" />
             
