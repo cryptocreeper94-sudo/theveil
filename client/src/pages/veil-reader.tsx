@@ -1601,118 +1601,112 @@ export default function VeilReader() {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl mx-auto"
         >
-          <div className="mb-12 sm:mb-16 pt-6 sm:pt-8">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
-              <Badge variant="outline" className="border-sky-500/20 text-sky-400 backdrop-blur-sm text-[10px] uppercase tracking-[0.15em]">
-                <Feather className="w-3 h-3 mr-1.5" />
-                {volume.title}
-              </Badge>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
+          {/* Academic Paper Container */}
+          <div className="bg-[#fafaf8] rounded-2xl shadow-2xl shadow-black/40 overflow-hidden border border-white/10">
+            {/* Paper Header */}
+            <div className="px-8 sm:px-12 md:px-16 lg:px-20 pt-12 sm:pt-16 pb-8 sm:pb-10 border-b border-stone-200/60">
+              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-stone-400 mb-4 text-center" style={{ fontFamily: "'Inter', sans-serif" }}>{volume.title}</p>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 text-center leading-tight" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }} data-testid="chapter-title">
+                {chapter.title}
+              </h1>
+              <div className="flex items-center justify-center gap-3 mt-6">
+                <div className="w-12 h-px bg-stone-300" />
+                <div className="w-1.5 h-1.5 rounded-full bg-stone-400" />
+                <div className="w-12 h-px bg-stone-300" />
+              </div>
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center leading-tight" data-testid="chapter-title">
-              {chapter.title}
-            </h1>
-            <div className="flex items-center justify-center gap-3 mt-5">
-              <div className="w-10 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
-              <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 shadow-sm shadow-sky-500/30" />
-              <div className="w-10 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
-            </div>
-          </div>
 
-          <GlassCard className="p-6 px-7 sm:p-10 sm:px-12 md:p-12 md:px-16 lg:p-16 lg:px-20 relative overflow-hidden" glow>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-sky-500/[0.03] to-transparent rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-cyan-500/[0.02] to-transparent rounded-full blur-3xl pointer-events-none" />
-            
-            <div className="relative z-10 prose prose-invert prose-lg max-w-none 
-              prose-p:text-slate-300 prose-p:leading-[1.95] prose-p:mb-7 prose-p:text-[16px] sm:prose-p:text-[17px]
-              prose-headings:text-white
-              prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-12 sm:prose-h2:mt-14 prose-h2:mb-6 sm:prose-h2:mb-7 prose-h2:font-bold
-              prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 sm:prose-h3:mt-12 prose-h3:mb-4 sm:prose-h3:mb-5 prose-h3:text-sky-300
-              prose-strong:text-white prose-strong:font-semibold
-              prose-em:text-sky-200/90
-              prose-ul:text-slate-300 prose-ul:space-y-2
-              prose-ol:text-slate-300 prose-ol:space-y-2
-              prose-li:text-slate-300 prose-li:leading-relaxed prose-li:text-[16px] sm:prose-li:text-[17px]
-              prose-blockquote:border-l-2 prose-blockquote:border-l-sky-500/60 prose-blockquote:bg-sky-500/5 prose-blockquote:px-4 sm:prose-blockquote:px-5 prose-blockquote:py-3 prose-blockquote:rounded-r-xl
-              prose-blockquote:text-slate-200 prose-blockquote:italic prose-blockquote:not-italic prose-blockquote:text-[16px] sm:prose-blockquote:text-[17px] prose-blockquote:backdrop-blur-sm prose-blockquote:border prose-blockquote:border-sky-500/10
-              prose-hr:border-sky-500/20 prose-hr:my-10
-              prose-a:text-sky-400 prose-a:no-underline hover:prose-a:text-sky-300 prose-a:transition-colors
-              prose-code:text-cyan-300 prose-code:bg-slate-800/60 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded-md prose-code:text-sm prose-code:border prose-code:border-slate-700/50
-              prose-img:rounded-xl prose-img:border prose-img:border-sky-500/20 prose-img:shadow-xl prose-img:shadow-sky-500/10
-              [&>p:first-of-type]:first-letter:text-5xl [&>p:first-of-type]:first-letter:font-bold [&>p:first-of-type]:first-letter:bg-gradient-to-b [&>p:first-of-type]:first-letter:from-sky-300 [&>p:first-of-type]:first-letter:to-cyan-400 [&>p:first-of-type]:first-letter:bg-clip-text [&>p:first-of-type]:first-letter:text-transparent [&>p:first-of-type]:first-letter:float-left [&>p:first-of-type]:first-letter:mr-3 [&>p:first-of-type]:first-letter:mt-1 [&>p:first-of-type]:first-letter:leading-none
-            ">
-              <ReactMarkdown 
-                remarkPlugins={[remarkGfm]}
-                rehypePlugins={[rehypeRaw, rehypeSlug]}
-                components={{
-                  h2: ({ node, children, ...props }) => (
-                    <h2 {...props} className="flex items-center gap-3 not-prose">
-                      <div className="w-1 h-7 rounded-full bg-gradient-to-b from-sky-400 to-cyan-500 flex-shrink-0 shadow-sm shadow-sky-500/20" />
-                      <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-sky-200 to-cyan-200 bg-clip-text text-transparent mt-12 sm:mt-14 mb-6 sm:mb-7">{children}</span>
-                    </h2>
-                  ),
-                  h3: ({ node, children, ...props }) => (
-                    <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-sky-300 mt-10 sm:mt-12 mb-4 sm:mb-5 flex items-center gap-2">
-                      <Star className="w-3.5 h-3.5 text-sky-400/60 flex-shrink-0" />
-                      {children}
-                    </h3>
-                  ),
-                  a: ({ node, children, href, ...props }) => {
-                    if (href && href.startsWith('#')) {
+            {/* Paper Body */}
+            <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-14">
+              <div className="prose prose-lg max-w-none
+                prose-p:text-stone-700 prose-p:leading-[2] prose-p:mb-6 prose-p:text-[16.5px] sm:prose-p:text-[17.5px]
+                prose-headings:text-stone-900
+                prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:font-bold prose-h2:border-b prose-h2:border-stone-200 prose-h2:pb-3
+                prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-stone-800
+                prose-strong:text-stone-900 prose-strong:font-semibold
+                prose-em:text-stone-600
+                prose-ul:text-stone-700 prose-ul:space-y-1.5
+                prose-ol:text-stone-700 prose-ol:space-y-1.5
+                prose-li:text-stone-700 prose-li:leading-relaxed prose-li:text-[16px] sm:prose-li:text-[17px]
+                prose-blockquote:border-l-3 prose-blockquote:border-l-stone-400 prose-blockquote:bg-stone-100/60 prose-blockquote:px-5 prose-blockquote:py-4 prose-blockquote:rounded-r-lg
+                prose-blockquote:text-stone-600 prose-blockquote:italic prose-blockquote:text-[16px] sm:prose-blockquote:text-[17px]
+                prose-hr:border-stone-200 prose-hr:my-10
+                prose-a:text-sky-700 prose-a:underline prose-a:decoration-sky-300/50 hover:prose-a:text-sky-600 prose-a:transition-colors
+                prose-code:text-stone-800 prose-code:bg-stone-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:border prose-code:border-stone-200
+                prose-img:rounded-lg prose-img:shadow-lg
+              " style={{ fontFamily: "'Georgia', 'Times New Roman', 'Cambria', serif" }}>
+                <ReactMarkdown 
+                  remarkPlugins={[remarkGfm]}
+                  rehypePlugins={[rehypeRaw, rehypeSlug]}
+                  components={{
+                    h2: ({ node, children, ...props }) => (
+                      <h2 {...props} className="not-prose text-xl sm:text-2xl font-bold text-stone-900 mt-14 mb-6 pb-3 border-b border-stone-200" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                        {children}
+                      </h2>
+                    ),
+                    h3: ({ node, children, ...props }) => (
+                      <h3 {...props} className="not-prose text-lg sm:text-xl font-semibold text-stone-800 mt-10 mb-4" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
+                        {children}
+                      </h3>
+                    ),
+                    a: ({ node, children, href, ...props }) => {
+                      if (href && href.startsWith('#')) {
+                        return (
+                          <a
+                            {...props}
+                            href={href}
+                            className="text-sky-700 hover:text-sky-600 underline decoration-sky-300/50 hover:decoration-sky-400/60 transition-all cursor-pointer"
+                            data-testid={`link-internal-${href.slice(1)}`}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              navigateToInternalLink(href);
+                            }}
+                          >
+                            {children}
+                          </a>
+                        );
+                      }
                       return (
-                        <a
-                          {...props}
-                          href={href}
-                          className="text-cyan-400 hover:text-cyan-300 underline decoration-cyan-500/30 hover:decoration-cyan-400/60 transition-all cursor-pointer"
-                          data-testid={`link-internal-${href.slice(1)}`}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            navigateToInternalLink(href);
-                          }}
-                        >
+                        <a {...props} href={href} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:text-sky-600 underline decoration-sky-300/50 transition-colors">
                           {children}
                         </a>
                       );
-                    }
-                    return (
-                      <a {...props} href={href} target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 underline decoration-sky-500/30 transition-colors">
-                        {children}
-                      </a>
-                    );
-                  },
-                  blockquote: ({ node, children, ...props }) => (
-                    <blockquote {...props} className="not-prose border-l-2 border-l-sky-500/60 bg-gradient-to-r from-sky-500/5 to-transparent backdrop-blur-sm px-4 sm:px-5 py-4 rounded-r-xl my-6 border border-sky-500/10">
-                      <div className="text-slate-200 italic text-[16px] sm:text-[17px] leading-relaxed">{children}</div>
-                    </blockquote>
-                  ),
-                  img: ({ node, ...props }) => (
-                    <figure className="my-8 flex flex-col items-center not-prose">
-                      <div className="bg-slate-900/60 backdrop-blur-sm p-3 sm:p-4 rounded-xl border border-sky-500/20 shadow-xl shadow-sky-500/5 max-w-lg w-full">
-                        <img {...props} className="w-full rounded-lg" loading="lazy" />
-                        {props.alt && (
-                          <p className="text-center text-sm text-slate-400 mt-3 italic">{props.alt}</p>
-                        )}
+                    },
+                    blockquote: ({ node, children, ...props }) => (
+                      <blockquote {...props} className="not-prose border-l-[3px] border-l-stone-400 bg-stone-50 px-5 py-4 rounded-r-lg my-6">
+                        <div className="text-stone-600 italic text-[16px] sm:text-[17px] leading-relaxed" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>{children}</div>
+                      </blockquote>
+                    ),
+                    img: ({ node, ...props }) => (
+                      <figure className="my-8 flex flex-col items-center not-prose">
+                        <div className="bg-white p-2 rounded-lg shadow-md border border-stone-200 max-w-lg w-full">
+                          <img {...props} className="w-full rounded" loading="lazy" />
+                          {props.alt && (
+                            <p className="text-center text-sm text-stone-500 mt-2 italic" style={{ fontFamily: "'Georgia', serif" }}>{props.alt}</p>
+                          )}
+                        </div>
+                      </figure>
+                    ),
+                    hr: () => (
+                      <div className="my-10 sm:my-12 flex items-center justify-center not-prose">
+                        <div className="w-16 h-px bg-stone-300" />
                       </div>
-                    </figure>
-                  ),
-                  hr: () => (
-                    <div className="my-10 sm:my-12 flex items-center justify-center gap-3 not-prose">
-                      <div className="h-px flex-1 bg-gradient-to-r from-transparent to-sky-500/30" />
-                      <div className="flex gap-1.5">
-                        <div className="w-1 h-1 rounded-full bg-sky-400/60" />
-                        <div className="w-1 h-1 rounded-full bg-cyan-400/60" />
-                        <div className="w-1 h-1 rounded-full bg-sky-400/60" />
-                      </div>
-                      <div className="h-px flex-1 bg-gradient-to-l from-transparent to-sky-500/30" />
-                    </div>
-                  ),
-                }}
-              >
-                {chapter.content}
-              </ReactMarkdown>
+                    ),
+                  }}
+                >
+                  {chapter.content}
+                </ReactMarkdown>
+              </div>
             </div>
-          </GlassCard>
+
+            {/* Paper Footer */}
+            <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-6 border-t border-stone-200/60 bg-stone-50/50">
+              <div className="flex items-center justify-between text-xs text-stone-400" style={{ fontFamily: "'Inter', sans-serif" }}>
+                <span>Through The Veil</span>
+                <span>Chapter {currentGlobalIndex + 1} of {totalChapters}</span>
+              </div>
+            </div>
+          </div>
 
           {isPreviewOnly && currentChapter >= FREE_PREVIEW_CHAPTERS - 1 && (
             <motion.div
