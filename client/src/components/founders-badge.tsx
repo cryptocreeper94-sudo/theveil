@@ -28,7 +28,7 @@ const tierConfig = {
     bonus: '75%'
   },
   diamond: { 
-    bg: 'bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400', 
+    bg: 'bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400', 
     text: 'text-white',
     label: 'Founder',
     bonus: '100%'

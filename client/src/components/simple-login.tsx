@@ -35,7 +35,7 @@ const isPasswordValid = (pwd: string) => {
 
 const ECOSYSTEM_APPS: Record<string, { label: string; color: string }> = {
   garagebot: { label: "GarageBot", color: "from-cyan-500 to-sky-500" },
-  darkwavegames: { label: "The Arcade", color: "from-sky-500 to-pink-500" },
+  darkwavegames: { label: "The Arcade", color: "from-sky-500 to-cyan-500" },
   darkwavestudios: { label: "DarkWave Studios", color: "from-blue-500 to-cyan-500" },
   yourlegacy: { label: "Your Legacy", color: "from-emerald-500 to-teal-500" },
   trustshield: { label: "TrustShield", color: "from-red-500 to-cyan-500" },

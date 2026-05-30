@@ -74,7 +74,7 @@ export function GenesisHallmarkCard() {
   if (isLoading) {
     return (
       <div className="w-full max-w-md mx-auto">
-        <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-sky-900/50 to-pink-900/50 animate-pulse" />
+        <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-sky-900/50 to-cyan-900/50 animate-pulse" />
       </div>
     );
   }
@@ -120,7 +120,7 @@ export function GenesisHallmarkCard() {
             />
             
             {/* Rainbow Border Glow */}
-            <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-pink-500 to-blue-500 opacity-50 blur-sm group-hover:opacity-75 transition-opacity" />
+            <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 opacity-50 blur-sm group-hover:opacity-75 transition-opacity" />
             
             {/* Card Content Container */}
             <div className="relative z-10 p-6 bg-gradient-to-br from-slate-900/95 via-sky-950/95 to-slate-900/95 rounded-2xl">
@@ -128,7 +128,7 @@ export function GenesisHallmarkCard() {
               {/* Header Badge */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-500 to-pink-500 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-sky-500 to-cyan-500 flex items-center justify-center">
                     <Award className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -145,7 +145,7 @@ export function GenesisHallmarkCard() {
               {/* Main Card Display - NFT Style */}
               <div className="relative mb-6">
                 {/* Token Display */}
-                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-sky-900/50 via-slate-900 to-pink-900/50 border border-white/10 p-4 flex flex-col items-center justify-center overflow-hidden">
+                <div className="relative aspect-square rounded-xl bg-gradient-to-br from-sky-900/50 via-slate-900 to-cyan-900/50 border border-white/10 p-4 flex flex-col items-center justify-center overflow-hidden">
                   
                   {/* Animated Background Particles */}
                   <div className="absolute inset-0 overflow-hidden">
@@ -192,7 +192,7 @@ export function GenesisHallmarkCard() {
                       transition={{ duration: 2, repeat: Infinity }}
                     >
                       <Hash className="w-3 h-3 text-sky-400" />
-                      <span className="text-xs font-mono font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+                      <span className="text-xs font-mono font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
                         {genesis.globalSerial}
                       </span>
                     </motion.div>
@@ -202,7 +202,7 @@ export function GenesisHallmarkCard() {
               
               {/* Title & Info */}
               <div className="text-center mb-6">
-                <h3 className="text-xl font-bold bg-gradient-to-r from-sky-400 via-pink-400 to-sky-400 bg-clip-text text-transparent mb-1">
+                <h3 className="text-xl font-bold bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent mb-1">
                   Trust Layer
                 </h3>
                 <p className="text-sm text-white/60">{genesis.message}</p>
@@ -281,7 +281,7 @@ export function GenesisHallmarkCard() {
               
               {/* View Explorer Button */}
               <Button
-                className="w-full bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 text-white font-medium mt-2"
+                className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 text-white font-medium mt-2"
                 data-testid="button-view-explorer"
               >
                 <span>View on Explorer</span>
@@ -312,7 +312,7 @@ export function GenesisHallmarkSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 border border-sky-500/30 mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-500/20 border border-sky-500/30 mb-4"
           >
             <Award className="w-4 h-4 text-sky-400" />
             <span className="text-sm text-sky-300">Hallmark System</span>
@@ -324,7 +324,7 @@ export function GenesisHallmarkSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold mb-4"
           >
-            <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-sky-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
               Genesis Hallmark
             </span>
           </motion.h2>
@@ -358,7 +358,7 @@ export function GenesisHallmarkSection() {
           className="mt-12 grid md:grid-cols-3 gap-6 text-center"
         >
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-500/20 flex items-center justify-center">
               <Hash className="w-6 h-6 text-sky-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">12-Digit Serial</h3>
@@ -367,7 +367,7 @@ export function GenesisHallmarkSection() {
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-500/20 flex items-center justify-center">
               <Shield className="w-6 h-6 text-green-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">Immutable Proof</h3>
@@ -376,7 +376,7 @@ export function GenesisHallmarkSection() {
             </p>
           </div>
           <div className="p-6 rounded-xl bg-white/5 border border-white/10">
-            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-500/20 flex items-center justify-center">
               <QrCode className="w-6 h-6 text-blue-400" />
             </div>
             <h3 className="font-semibold text-white mb-2">Instant Verification</h3>

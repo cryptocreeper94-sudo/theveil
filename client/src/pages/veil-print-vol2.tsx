@@ -408,7 +408,7 @@ export default function VeilPrintVol2() {
         @page { margin: 1in; }
       `}</style>
 
-      <div className="no-print bg-gradient-to-r from-sky-600 to-pink-600 text-white p-4 text-center sticky top-0 z-50">
+      <div className="no-print bg-gradient-to-r from-sky-600 to-cyan-600 text-white p-4 text-center sticky top-0 z-50">
         <p className="text-lg font-medium">
           To save as PDF: Press <strong>Ctrl+P</strong> (or <strong>Cmd+P</strong> on Mac), then select "Save as PDF"
         </p>

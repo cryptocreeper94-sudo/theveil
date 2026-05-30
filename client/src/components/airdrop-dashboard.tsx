@@ -114,7 +114,7 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
         animate={{ y: 0, opacity: 1 }}
         className="relative"
       >
-        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-sky-600/30 to-pink-600/30 border border-sky-500/40 flex items-center justify-center backdrop-blur-sm">
+        <div className="w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br from-sky-600/30 to-cyan-600/30 border border-sky-500/40 flex items-center justify-center backdrop-blur-sm">
           <span className="text-2xl md:text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent" data-testid={`text-countdown-${label.toLowerCase()}`}>
             {String(value).padStart(2, "0")}
           </span>
@@ -232,7 +232,7 @@ export function AirdropDashboard() {
         animate={{ opacity: 1, y: 0 }}
         className="relative overflow-hidden rounded-2xl"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-pink-900/30 to-cyan-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-900/40 via-cyan-900/30 to-cyan-900/40" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDM0djItSDJ2LTJoMzR6bTAtMzB2Mkg0djJoMzJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
         
         <FloatingOrb delay={0} size="lg" />
@@ -302,7 +302,7 @@ export function AirdropDashboard() {
               </div>
               <motion.div
                 data-testid="text-dwc-balance"
-                className="text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent"
+                className="text-3xl font-bold font-mono bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent"
                 initial={{ scale: 0.8 }}
                 animate={{ scale: 1 }}
                 key={dwcAmount}
@@ -331,7 +331,7 @@ export function AirdropDashboard() {
 
           <div className="text-center mb-4">
             <h3 className="text-sm font-semibold mb-4 flex items-center justify-center gap-2">
-              <PartyPopper className="w-4 h-4 text-pink-400" />
+              <PartyPopper className="w-4 h-4 text-cyan-400" />
               Time Until SIG Launch
             </h3>
             <div className="flex items-center justify-center gap-3">
@@ -431,7 +431,7 @@ export function AirdropDashboard() {
           </motion.div>
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="p-3 rounded-xl bg-gradient-to-br from-sky-500/10 to-pink-500/10 border border-sky-500/20 text-center"
+            className="p-3 rounded-xl bg-gradient-to-br from-sky-500/10 to-cyan-500/10 border border-sky-500/20 text-center"
             data-testid="reward-pioneer-title"
           >
             <Trophy className="w-5 h-5 text-sky-400 mx-auto mb-1" />

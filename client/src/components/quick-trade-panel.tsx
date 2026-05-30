@@ -48,13 +48,13 @@ const SOLANA_DEXES = [
 const EVM_DEXES: Record<string, { name: string; url: (token: string) => string; color: string }[]> = {
   ethereum: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/1/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-500 to-sky-500' },
-    { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?outputCurrency=${token}`, color: 'bg-pink-500/80' },
+    { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?outputCurrency=${token}`, color: 'bg-cyan-500/80' },
     { name: 'SushiSwap', url: (token: string) => `https://www.sushi.com/swap?chainId=1&token1=${token}`, color: 'bg-sky-500/80' },
   ],
   base: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/8453/simple/swap/ETH/${token}`, color: 'bg-gradient-to-r from-blue-400 to-blue-600' },
     { name: 'Aerodrome', url: (token: string) => `https://aerodrome.finance/swap?to=${token}`, color: 'bg-blue-500/80' },
-    { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?chain=base&outputCurrency=${token}`, color: 'bg-pink-500/80' },
+    { name: 'Uniswap', url: (token: string) => `https://app.uniswap.org/swap?chain=base&outputCurrency=${token}`, color: 'bg-cyan-500/80' },
   ],
   polygon: [
     { name: '1inch', url: (token: string) => `https://app.1inch.io/#/137/simple/swap/MATIC/${token}`, color: 'bg-gradient-to-r from-sky-400 to-sky-600' },
@@ -284,7 +284,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
                   className={`h-full rounded-full transition-all ${
                     aiScore >= 70 ? 'bg-gradient-to-r from-emerald-500 to-cyan-500' :
                     aiScore >= 40 ? 'bg-gradient-to-r from-sky-500 to-teal-500' :
-                    'bg-gradient-to-r from-red-500 to-pink-500'
+                    'bg-gradient-to-r from-red-500 to-cyan-500'
                   }`}
                   style={{ width: `${aiScore}%` }}
                 />
@@ -454,7 +454,7 @@ export function QuickTradePanel({ tokenAddress, tokenSymbol, tokenName, recommen
                 className={`w-full mt-3 bg-gradient-to-r ${
                   recommendation === 'snipe' ? 'from-emerald-500 to-cyan-500' :
                   recommendation === 'watch' ? 'from-sky-500 to-cyan-500' :
-                  'from-red-500 to-pink-500'
+                  'from-red-500 to-cyan-500'
                 } text-white font-bold`}
                 data-testid="button-execute-swap"
               >

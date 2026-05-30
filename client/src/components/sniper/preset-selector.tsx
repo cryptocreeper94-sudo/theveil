@@ -190,7 +190,7 @@ export function PresetSelector({ selectedPreset, onPresetChange }: PresetSelecto
                           <div className="space-y-2">
                             <p className="text-[10px] font-semibold text-white/50 uppercase">Filters Cont.</p>
                             <div className="flex items-center gap-2 text-xs">
-                              <Clock className="w-3 h-3 text-pink-400" />
+                              <Clock className="w-3 h-3 text-cyan-400" />
                               <span className="text-white/70">Max Age:</span>
                               <span className="text-white font-medium">{preset.safetyFilters.maxTokenAgeMinutes}m</span>
                             </div>

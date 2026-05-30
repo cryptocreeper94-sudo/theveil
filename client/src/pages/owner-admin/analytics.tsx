@@ -72,7 +72,7 @@ export default function OwnerAnalytics() {
   const summaryStats = [
     { label: "Page Views", value: analyticsData?.summary?.pageViews || 0, icon: <Eye className="w-5 h-5 text-cyan-400" />, change: "+12%" },
     { label: "Unique Visitors", value: analyticsData?.summary?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-sky-400" />, change: "+8%" },
-    { label: "Avg. Session", value: analyticsData?.summary?.avgSessionDuration || "0:00", icon: <Clock className="w-5 h-5 text-pink-400" />, change: "+5%" },
+    { label: "Avg. Session", value: analyticsData?.summary?.avgSessionDuration || "0:00", icon: <Clock className="w-5 h-5 text-cyan-400" />, change: "+5%" },
     { label: "Bounce Rate", value: `${analyticsData?.summary?.bounceRate || 0}%`, icon: <TrendingUp className="w-5 h-5 text-sky-400" />, change: "-3%" },
   ];
 
@@ -212,7 +212,7 @@ export default function OwnerAnalytics() {
                   <div className="flex items-center gap-2">
                     <div className="w-24 h-2 bg-slate-800 rounded-full overflow-hidden">
                       <div 
-                        className="h-full bg-gradient-to-r from-sky-500 to-pink-500 rounded-full"
+                        className="h-full bg-gradient-to-r from-sky-500 to-cyan-500 rounded-full"
                         style={{ width: `${(page.views / (analyticsData?.topPages?.[0]?.views || 1)) * 100}%` }}
                       />
                     </div>
@@ -233,7 +233,7 @@ export default function OwnerAnalytics() {
             style={{ boxShadow: "0 0 30px rgba(236,72,153,0.1)" }}
           >
             <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
-              <Smartphone className="w-5 h-5 text-pink-400" />
+              <Smartphone className="w-5 h-5 text-cyan-400" />
               Devices
             </h3>
             <div className="h-48">
@@ -266,7 +266,7 @@ export default function OwnerAnalytics() {
                 <span className="text-xs text-gray-400">Mobile</span>
               </div>
               <div className="flex items-center gap-1">
-                <Tablet className="w-4 h-4 text-pink-400" />
+                <Tablet className="w-4 h-4 text-cyan-400" />
                 <span className="text-xs text-gray-400">Tablet</span>
               </div>
             </div>

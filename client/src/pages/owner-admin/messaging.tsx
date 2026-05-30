@@ -241,7 +241,7 @@ export default function MessagingCatalog() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-400 to-cyan-400 bg-clip-text text-transparent">
                   Messaging Catalog
                 </span>
               </h1>
@@ -250,7 +250,7 @@ export default function MessagingCatalog() {
           </div>
         </motion.div>
 
-        <div className="bg-gradient-to-r from-sky-500/10 via-pink-500/10 to-cyan-500/10 border border-sky-500/20 rounded-2xl p-4 mb-8">
+        <div className="bg-gradient-to-r from-sky-500/10 via-cyan-500/10 to-cyan-500/10 border border-sky-500/20 rounded-2xl p-4 mb-8">
           <div className="flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
             <div>
@@ -268,7 +268,7 @@ export default function MessagingCatalog() {
           <TabsList className="bg-slate-900/50 border border-white/10 p-1 rounded-xl mb-6 w-full md:w-auto">
             <TabsTrigger 
               value="core" 
-              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-sky-500 data-[state=active]:to-pink-500 rounded-lg px-6"
+              className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-sky-500 data-[state=active]:to-cyan-500 rounded-lg px-6"
               data-testid="tab-core"
             >
               <Lock className="w-4 h-4 mr-2" />

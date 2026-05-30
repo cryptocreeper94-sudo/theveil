@@ -136,7 +136,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
                 <Wallet className="w-4 h-4 text-cyan-400" />
                 <span className="text-sm text-gray-400">Signals Dashboard</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 {formatNumber(totalDwc)} SIG
               </h2>
               <p className="text-sm text-gray-400 mt-1">
@@ -197,7 +197,7 @@ export function DwcBagDashboard({ compact = false }: { compact?: boolean }) {
 
         <GlassCard className="p-4">
           <div className="flex items-center gap-2 mb-2">
-            <Gift className="w-4 h-4 text-pink-400" />
+            <Gift className="w-4 h-4 text-cyan-400" />
             <span className="text-xs text-gray-400">Airdrops</span>
           </div>
           <p className="text-lg font-bold text-white">{formatNumber(sources.airdrops.pending)}</p>

@@ -120,8 +120,8 @@ export function ReferralCalculator() {
                 <span>Unlock <strong className="text-green-400">Premium Features</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-1.5 h-1.5 rounded-full bg-pink-400" />
-                <span>Redeem for <strong className="text-pink-400">Exclusive NFTs</strong></span>
+                <div className="w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                <span>Redeem for <strong className="text-cyan-400">Exclusive NFTs</strong></span>
               </div>
             </div>
           </div>
@@ -329,7 +329,7 @@ export function ReferralCalculator() {
           </div>
         </div>
 
-        <div className="mt-6 p-4 bg-gradient-to-r from-sky-500/10 to-pink-500/10 rounded-xl border border-sky-500/20">
+        <div className="mt-6 p-4 bg-gradient-to-r from-sky-500/10 to-cyan-500/10 rounded-xl border border-sky-500/20">
           <div className="flex items-start gap-3">
             <Gift className="w-5 h-5 text-sky-400 mt-0.5" />
             <div>

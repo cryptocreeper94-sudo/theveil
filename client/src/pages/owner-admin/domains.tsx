@@ -110,7 +110,7 @@ function SecretEntry({ onSuccess }: { onSuccess: () => void }) {
               <Sparkles className="w-5 h-5 text-sky-400" />
             </motion.div>
           </motion.div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent mb-2">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent mb-2">
             Domain Manager
           </h1>
           <p className="text-gray-400 text-sm">Enter your secret key to manage domains</p>
@@ -155,10 +155,10 @@ function SecretEntry({ onSuccess }: { onSuccess: () => void }) {
             type="button"
             onClick={() => handleSubmit()}
             disabled={loading || secret.length < 4}
-            className="w-full py-4 bg-gradient-to-r from-cyan-500 via-sky-500 to-pink-500 rounded-xl text-white font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all relative overflow-hidden group hover:scale-[1.02] active:scale-[0.98]"
+            className="w-full py-4 bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 rounded-xl text-white font-bold disabled:opacity-50 disabled:cursor-not-allowed transition-all relative overflow-hidden group hover:scale-[1.02] active:scale-[0.98]"
             data-testid="button-owner-domain-auth"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity" />
             <span className="relative flex items-center justify-center gap-2">
               {loading ? (
                 <>
@@ -194,7 +194,7 @@ interface Domain {
 const SUPPORTED_TLDS = [
   { value: "tlid", label: ".tlid", color: "from-cyan-500 to-blue-500", icon: Zap },
   { value: "legacy", label: ".legacy", color: "from-sky-500 to-cyan-500", icon: Crown },
-  { value: "chrono", label: ".chrono", color: "from-sky-500 to-pink-500", icon: Clock },
+  { value: "chrono", label: ".chrono", color: "from-sky-500 to-cyan-500", icon: Clock },
   { value: "pulse", label: ".pulse", color: "from-green-500 to-emerald-500", icon: Star },
 ];
 
@@ -221,7 +221,7 @@ function DomainCard({ domain, onDelete, onCopy, index }: {
       className="group relative"
       data-testid={`card-domain-${domain.id}`}
     >
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 via-sky-500/30 to-pink-500/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/30 via-sky-500/30 to-cyan-500/30 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
       
       <div className="relative bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden group-hover:border-white/20 transition-all duration-300">
@@ -262,7 +262,7 @@ function DomainCard({ domain, onDelete, onCopy, index }: {
                   </Badge>
                 )}
                 {domain.isProtected && (
-                  <Badge className="bg-gradient-to-r from-red-500/20 to-pink-500/20 text-red-400 border-red-500/30 gap-1">
+                  <Badge className="bg-gradient-to-r from-red-500/20 to-cyan-500/20 text-red-400 border-red-500/30 gap-1">
                     <Shield className="w-3 h-3" /> Protected
                   </Badge>
                 )}
@@ -405,7 +405,7 @@ function DomainManager() {
               </motion.button>
             </Link>
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                 Domain Manager
               </h1>
               <p className="text-gray-400 mt-1">Manage your owned domains directly - no wallet required</p>
@@ -416,7 +416,7 @@ function DomainManager() {
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(6,182,212,0.4)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowAddDialog(true)}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-sky-500 to-pink-500 rounded-xl text-white font-bold flex items-center gap-2 shadow-lg shadow-cyan-500/25"
+            className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 rounded-xl text-white font-bold flex items-center gap-2 shadow-lg shadow-cyan-500/25"
             data-testid="button-add-domain"
           >
             <Plus className="w-5 h-5" />
@@ -440,7 +440,7 @@ function DomainManager() {
             animate={{ opacity: 1, scale: 1 }}
             className="relative"
           >
-            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-sky-500/20 to-pink-500/20 rounded-3xl blur" />
+            <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-sky-500/20 to-cyan-500/20 rounded-3xl blur" />
             <div className="relative bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-3xl p-16 text-center">
               <motion.div
                 animate={{ y: [0, -10, 0] }}
@@ -456,7 +456,7 @@ function DomainManager() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowAddDialog(true)}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-sky-500 to-pink-500 rounded-xl text-white font-bold inline-flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 rounded-xl text-white font-bold inline-flex items-center gap-2"
               >
                 <Plus className="w-5 h-5" />
                 Add Your First Domain
@@ -513,7 +513,7 @@ function DomainManager() {
 
       <Dialog open={showAddDialog} onOpenChange={setShowAddDialog}>
         <DialogContent className="bg-slate-900/95 backdrop-blur-xl border-white/10 max-w-md">
-          <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-sky-500/20 to-pink-500/20 rounded-lg blur pointer-events-none" />
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-500/20 via-sky-500/20 to-cyan-500/20 rounded-lg blur pointer-events-none" />
           <DialogHeader className="relative">
             <DialogTitle className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent flex items-center gap-2">
               <Globe className="w-6 h-6 text-cyan-400" />
@@ -569,7 +569,7 @@ function DomainManager() {
               whileTap={{ scale: 0.98 }}
               onClick={handleAddDomain}
               disabled={!newDomain.name.trim() || adding}
-              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 via-sky-500 to-pink-500 rounded-lg text-white font-bold disabled:opacity-50 flex items-center gap-2"
+              className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 via-sky-500 to-cyan-500 rounded-lg text-white font-bold disabled:opacity-50 flex items-center gap-2"
               data-testid="button-confirm-add-domain"
             >
               {adding ? <Loader2 className="w-4 h-4 animate-spin" /> : <Plus className="w-4 h-4" />}

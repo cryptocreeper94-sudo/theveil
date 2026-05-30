@@ -248,7 +248,7 @@ export default function ZealyAdmin() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-sky-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 via-cyan-400 to-cyan-400 bg-clip-text text-transparent">
                   Zealy Quest Manager
                 </span>
               </h1>
@@ -259,7 +259,7 @@ export default function ZealyAdmin() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setShowAddForm(true)}
-              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-semibold"
+              className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-xl text-white font-semibold"
               data-testid="button-add-quest-mapping"
             >
               <Plus className="w-5 h-5" />
@@ -491,7 +491,7 @@ export default function ZealyAdmin() {
                     whileTap={{ scale: 0.98 }}
                     onClick={() => createMutation.mutate(formData)}
                     disabled={createMutation.isPending || !formData.zealyQuestId || !formData.zealyQuestName}
-                    className="px-6 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-semibold disabled:opacity-50"
+                    className="px-6 py-2 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-xl text-white font-semibold disabled:opacity-50"
                     data-testid="button-save-mapping"
                   >
                     {createMutation.isPending ? "Saving..." : "Save Mapping"}
@@ -519,7 +519,7 @@ export default function ZealyAdmin() {
             style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-pink-500/20">
+              <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20">
                 <Trophy className="w-5 h-5 text-sky-400" />
               </div>
               <h3 className="text-xl font-bold text-white">Quest Mappings</h3>
@@ -663,7 +663,7 @@ export default function ZealyAdmin() {
               <p>Set up your community quest in Zealy's dashboard with tasks like joining Discord, following Twitter, etc.</p>
             </div>
             <div className="bg-slate-800/30 rounded-xl p-4">
-              <div className="text-pink-400 font-semibold mb-2">2. Add Mapping Here</div>
+              <div className="text-cyan-400 font-semibold mb-2">2. Add Mapping Here</div>
               <p>Copy the Quest ID from Zealy and create a mapping above with your desired Shell reward amount.</p>
             </div>
             <div className="bg-slate-800/30 rounded-xl p-4">

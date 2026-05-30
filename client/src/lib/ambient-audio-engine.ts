@@ -13,7 +13,7 @@ type SoundGenerator = {
 
 type EraProfiles = Record<string, LocationProfile>;
 
-function createNoiseBuffer(ctx: AudioContext, duration: number, type: "white" | "pink" | "brown" = "white"): AudioBuffer {
+function createNoiseBuffer(ctx: AudioContext, duration: number, type: "white" | "cyan" | "brown" = "white"): AudioBuffer {
   const sampleRate = ctx.sampleRate;
   const length = sampleRate * duration;
   const buffer = ctx.createBuffer(1, length, sampleRate);
@@ -23,7 +23,7 @@ function createNoiseBuffer(ctx: AudioContext, duration: number, type: "white" | 
     const white = Math.random() * 2 - 1;
     if (type === "white") {
       data[i] = white;
-    } else if (type === "pink") {
+    } else if (type === "cyan") {
       b0 = 0.99886 * b0 + white * 0.0555179;
       b1 = 0.99332 * b1 + white * 0.0750759;
       b2 = 0.96900 * b2 + white * 0.1538520;
@@ -341,7 +341,7 @@ export class AmbientAudioEngine {
 
     switch (gen.type) {
       case "noise": {
-        const noiseType = (p.filter || 500) < 300 ? "brown" : (p.filter || 500) > 2000 ? "white" : "pink";
+        const noiseType = (p.filter || 500) < 300 ? "brown" : (p.filter || 500) > 2000 ? "white" : "cyan";
         const buffer = createNoiseBuffer(ctx, 4, noiseType);
         const source = ctx.createBufferSource();
         source.buffer = buffer;

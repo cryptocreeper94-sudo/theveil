@@ -464,7 +464,7 @@ export default function OwnerSeoManager() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent">
                   SEO Manager
                 </span>
               </h1>
@@ -500,7 +500,7 @@ export default function OwnerSeoManager() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowNewForm(true)}
-              className="px-4 py-2 bg-gradient-to-r from-sky-500 to-pink-500 rounded-lg text-white font-medium flex items-center gap-2"
+              className="px-4 py-2 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-lg text-white font-medium flex items-center gap-2"
               data-testid="button-new-config"
             >
               <Plus className="w-4 h-4" />
@@ -516,7 +516,7 @@ export default function OwnerSeoManager() {
           style={{ boxShadow: "0 0 40px rgba(14,165,233,0.1)" }}
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-pink-500/20">
+            <div className="p-2 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20">
               <Search className="w-5 h-5 text-sky-400" />
             </div>
             <div>
@@ -556,7 +556,7 @@ export default function OwnerSeoManager() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowNewForm(true)}
-                className="px-6 py-3 bg-gradient-to-r from-sky-500 to-pink-500 rounded-xl text-white font-medium"
+                className="px-6 py-3 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-xl text-white font-medium"
                 data-testid="button-create-first"
               >
                 Create First Config

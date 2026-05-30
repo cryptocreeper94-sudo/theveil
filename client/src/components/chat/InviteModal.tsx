@@ -34,7 +34,7 @@ export const InviteModal: React.FC<{ open: boolean; onClose: () => void; onGener
               <div key={i.code} className="flex items-center justify-between p-2 bg-slate-900/20 rounded">
                 <div className="text-xs text-white">{i.code}</div>
                 <div className="text-xs text-slate-400">Uses: {i.uses ?? 0}</div>
-                <button className="text-xs text-pink-400" data-testid={`revoke-${i.code}`}>Revoke</button>
+                <button className="text-xs text-cyan-400" data-testid={`revoke-${i.code}`}>Revoke</button>
               </div>
             ))}
           </div>

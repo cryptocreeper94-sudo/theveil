@@ -276,12 +276,12 @@ function BentoCard({
   className?: string; 
   span?: "1" | "2" | "row"; 
   href?: string;
-  glow?: "cyan" | "purple" | "pink" | "emerald";
+  glow?: "cyan" | "purple" | "cyan" | "emerald";
 }) {
   const glowColors = {
     cyan: "rgba(0,200,255,0.15)",
     purple: "rgba(14,165,233,0.15)",
-    pink: "rgba(236,72,153,0.15)",
+    cyan: "rgba(236,72,153,0.15)",
     emerald: "rgba(16,185,129,0.15)",
   };
   
@@ -344,7 +344,7 @@ function OwnerDashboard() {
   const quickStats = [
     { label: "Page Views (24h)", value: analyticsStats?.pageViews || 0, icon: <Eye className="w-5 h-5 text-cyan-400" />, trend: "up" },
     { label: "Unique Visitors", value: analyticsStats?.uniqueVisitors || 0, icon: <Users className="w-5 h-5 text-sky-400" />, trend: "up" },
-    { label: "Marketing Posts", value: marketingStats?.totalPosts || 0, icon: <Megaphone className="w-5 h-5 text-pink-400" />, trend: "neutral" },
+    { label: "Marketing Posts", value: marketingStats?.totalPosts || 0, icon: <Megaphone className="w-5 h-5 text-cyan-400" />, trend: "neutral" },
     { label: "Posts Deployed", value: marketingStats?.deployed || 0, icon: <CheckCircle2 className="w-5 h-5 text-green-400" />, trend: "up" },
   ];
 
@@ -356,7 +356,7 @@ function OwnerDashboard() {
     { id: "kyc", title: "KYC Verification", description: "Review and approve identity verifications", icon: <ShieldCheck className="w-6 h-6" />, href: "/owner-admin/kyc", glow: "purple" as const },
     { id: "business-verification", title: "Business Verification", description: "Approve business memberships, EIN lookup, Main Street slots", icon: <Gamepad2 className="w-6 h-6" />, href: "/owner-admin/business-verification", glow: "emerald" as const },
     { id: "analytics", title: "Analytics Dashboard", description: "Real visitor data, traffic sources, geographic insights", icon: <BarChart3 className="w-6 h-6" />, href: "/owner-admin/analytics", glow: "purple" as const },
-    { id: "seo", title: "SEO Manager", description: "Meta tags, OpenGraph, structured data per route", icon: <Search className="w-6 h-6" />, href: "/owner-admin/seo", glow: "pink" as const },
+    { id: "seo", title: "SEO Manager", description: "Meta tags, OpenGraph, structured data per route", icon: <Search className="w-6 h-6" />, href: "/owner-admin/seo", glow: "cyan" as const },
     { id: "referrals", title: "Referral Dashboard", description: "Affiliate management, fraud detection, payouts", icon: <Crown className="w-6 h-6" />, href: "/owner-admin/referrals", glow: "purple" as const },
     { id: "faucet", title: "Faucet Claims", description: "Monitor testnet token distribution", icon: <Zap className="w-6 h-6" />, href: "/owner-admin/faucet", glow: "cyan" as const },
     { id: "marketing", title: "Marketing Automation", description: `${marketingStats?.totalPosts || 0} branded posts, auto-deployment`, icon: <Megaphone className="w-6 h-6" />, href: "/admin/marketing", glow: "cyan" as const },
@@ -452,7 +452,7 @@ function OwnerDashboard() {
         >
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-2">
-              <span className="bg-gradient-to-r from-cyan-400 via-sky-500 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-cyan-400 via-sky-500 to-cyan-500 bg-clip-text text-transparent">
                 Owner Portal
               </span>
             </h1>

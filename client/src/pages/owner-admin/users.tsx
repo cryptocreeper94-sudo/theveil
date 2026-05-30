@@ -489,7 +489,7 @@ export default function OwnerUsers() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
           {[
             { label: "Whitelist", value: stats.totalWhitelisted, icon: <Shield className="w-5 h-5 text-sky-400" />, color: "from-sky-500/20 to-sky-500/5" },
-            { label: "Presale Orders", value: stats.totalPresaleOrders, icon: <Sparkles className="w-5 h-5 text-pink-400" />, color: "from-pink-500/20 to-pink-500/5" },
+            { label: "Presale Orders", value: stats.totalPresaleOrders, icon: <Sparkles className="w-5 h-5 text-cyan-400" />, color: "from-cyan-500/20 to-cyan-500/5" },
             { label: "Early Adopters", value: stats.totalEarlyAdopters, icon: <Crown className="w-5 h-5 text-sky-400" />, color: "from-sky-500/20 to-sky-500/5" },
             { label: "Waitlist", value: stats.totalWaitlist, icon: <Mail className="w-5 h-5 text-cyan-400" />, color: "from-cyan-500/20 to-cyan-500/5" },
             { label: "Beta Testers", value: stats.totalBetaTesters, icon: <Star className="w-5 h-5 text-teal-400" />, color: "from-teal-500/20 to-teal-500/5" },
@@ -672,7 +672,7 @@ export default function OwnerUsers() {
                           <td className="px-4 py-3 font-mono text-cyan-400">{item.email || "-"}</td>
                           <td className="px-4 py-3 font-mono text-xs text-gray-400">{item.walletAddress ? `${item.walletAddress.slice(0,8)}...` : "-"}</td>
                           <td className="px-4 py-3 font-bold text-green-400">{formatAmount(item.amount)}</td>
-                          <td className="px-4 py-3"><Badge className="bg-pink-500/20 text-pink-400 border-pink-500/30">{item.tier}</Badge></td>
+                          <td className="px-4 py-3"><Badge className="bg-cyan-500/20 text-cyan-400 border-cyan-500/30">{item.tier}</Badge></td>
                           <td className="px-4 py-3">
                             {item.status === "completed" ? (
                               <span className="flex items-center gap-1 text-green-400"><CheckCircle2 className="w-3 h-3" /> Paid</span>

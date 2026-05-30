@@ -74,7 +74,7 @@ const TIER_ICONS: Record<string, string> = {
 const TIER_COLORS: Record<string, string> = {
   explorer: "from-gray-500 to-gray-600",
   builder: "from-blue-500 to-cyan-500",
-  architect: "from-sky-500 to-pink-500",
+  architect: "from-sky-500 to-cyan-500",
   oracle: "from-sky-500 to-cyan-500",
 };
 

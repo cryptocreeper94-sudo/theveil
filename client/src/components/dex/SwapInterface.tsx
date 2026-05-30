@@ -105,7 +105,7 @@ export const SwapInterface: React.FC = () => {
             />
             <span className="text-slate-500">%</span>
           </div>
-          <div>Price impact: <span className="text-pink-400">{quote ? `${quote.priceImpactPct}%` : '—'}</span></div>
+          <div>Price impact: <span className="text-cyan-400">{quote ? `${quote.priceImpactPct}%` : '—'}</span></div>
         </div>
 
         <button

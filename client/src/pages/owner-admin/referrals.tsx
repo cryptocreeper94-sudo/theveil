@@ -181,7 +181,7 @@ export default function OwnerReferrals() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-sky-400 to-pink-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-sky-400 to-cyan-500 bg-clip-text text-transparent">
                   Referral Dashboard
                 </span>
               </h1>
@@ -254,7 +254,7 @@ export default function OwnerReferrals() {
                   className="flex items-center justify-between p-3 bg-slate-900/50 rounded-lg border border-white/5"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-pink-500 flex items-center justify-center text-sm font-bold">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-sky-500 to-cyan-500 flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </div>
                     <div>

@@ -46,7 +46,7 @@ export function TrustCard({
     pioneer: "from-green-500 to-emerald-500",
     guardian: "from-sky-500 to-cyan-500",
     startup: "from-blue-500 to-cyan-500",
-    professional: "from-sky-500 to-pink-500",
+    professional: "from-sky-500 to-cyan-500",
     enterprise: "from-sky-500 to-cyan-500",
   };
 
@@ -155,7 +155,7 @@ export function TrustCard({
             transition={{ duration: 2, repeat: isHovered ? Infinity : 0, ease: "linear" }}
           />
 
-          <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-pink-500 to-blue-500 opacity-50 blur-sm" />
+          <div className="absolute -inset-[1px] rounded-2xl bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 opacity-50 blur-sm" />
 
           <div className="relative z-10 p-6 h-full flex flex-col bg-gradient-to-br from-slate-900/95 via-sky-950/95 to-slate-900/95 rounded-2xl">
             <div className="flex items-start justify-between mb-4">
@@ -201,7 +201,7 @@ export function TrustCard({
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  <span className="text-sm font-mono font-bold bg-gradient-to-r from-sky-400 to-pink-400 bg-clip-text text-transparent">
+                  <span className="text-sm font-mono font-bold bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent">
                     {trustNumber}
                   </span>
                 </motion.div>
@@ -300,7 +300,7 @@ export function TrustCardPlaceholder({ onActivate, isActivating }: TrustCardPlac
     <div className="w-full max-w-md mx-auto">
       <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-sky-950/50 to-slate-900 aspect-[1.6/1] p-6">
         <div className="h-full flex flex-col items-center justify-center text-center">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-500/20 to-pink-500/20 flex items-center justify-center mb-4">
+          <div className="w-16 h-16 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-500/20 flex items-center justify-center mb-4">
             <Award className="w-8 h-8 text-sky-400" />
           </div>
           <h3 className="font-bold text-lg mb-2">Get Your Trust Card</h3>
@@ -310,7 +310,7 @@ export function TrustCardPlaceholder({ onActivate, isActivating }: TrustCardPlac
           <Button 
             onClick={onActivate}
             disabled={isActivating}
-            className="bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500"
+            className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500"
             data-testid="button-activate-membership"
           >
             {isActivating ? (

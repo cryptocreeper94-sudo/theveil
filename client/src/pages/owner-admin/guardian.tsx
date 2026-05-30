@@ -40,7 +40,7 @@ interface Certification {
 function getTierInfo(tier: string) {
   switch (tier) {
     case "guardian_premier":
-      return { name: "Guardian Premier", price: "Custom", gradient: "from-pink-500 to-pink-700", icon: Award };
+      return { name: "Guardian Premier", price: "Custom", gradient: "from-cyan-500 to-cyan-700", icon: Award };
     case "guardian_certified":
       return { name: "Guardian Certified", price: "$2,499", gradient: "from-sky-500 to-sky-700", icon: ShieldCheck };
     case "guardian_assurance":
@@ -212,7 +212,7 @@ export default function OwnerGuardian() {
             <BackButton />
             <div>
               <h1 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                   Guardian Admin
                 </span>
               </h1>
@@ -235,7 +235,7 @@ export default function OwnerGuardian() {
             { label: "Active", value: stats.active, icon: <Clock className="w-5 h-5 text-blue-400" />, color: "from-blue-500/20 to-blue-500/5" },
             { label: "In Progress", value: stats.inProgress, icon: <Play className="w-5 h-5 text-sky-400" />, color: "from-sky-500/20 to-sky-500/5" },
             { label: "Completed", value: stats.completed, icon: <CheckCircle2 className="w-5 h-5 text-emerald-400" />, color: "from-emerald-500/20 to-emerald-500/5" },
-            { label: "Revenue", value: `$${stats.revenue.toLocaleString()}`, icon: <DollarSign className="w-5 h-5 text-pink-400" />, color: "from-pink-500/20 to-pink-500/5" },
+            { label: "Revenue", value: `$${stats.revenue.toLocaleString()}`, icon: <DollarSign className="w-5 h-5 text-cyan-400" />, color: "from-cyan-500/20 to-cyan-500/5" },
           ].map((stat, i) => (
             <motion.div
               key={stat.label}

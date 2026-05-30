@@ -38,7 +38,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#0ea5e9",
     description: "Infrastructure where accountability is built in",
     logoText: "Trust Layer",
-    primaryGradient: "from-sky-500 to-pink-500",
+    primaryGradient: "from-sky-500 to-cyan-500",
   },
   studios: {
     name: "DarkWave Studios",
@@ -54,7 +54,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#ec4899",
     description: "Premium arcade games, sweepstakes, and classic card games",
     logoText: "The Arcade",
-    primaryGradient: "from-pink-500 to-sky-500",
+    primaryGradient: "from-cyan-500 to-sky-500",
   },
   chrono: {
     name: "Chronicles",
@@ -62,7 +62,7 @@ export const APP_CONFIG: Record<AppDomain, {
     themeColor: "#38bdf8",
     description: "Not a game. A life. Live your legacy.",
     logoText: "Chronicles",
-    primaryGradient: "from-sky-500 to-pink-500",
+    primaryGradient: "from-sky-500 to-cyan-500",
   },
   chronochat: {
     name: "Signal Chat",

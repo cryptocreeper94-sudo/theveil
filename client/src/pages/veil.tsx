@@ -157,14 +157,14 @@ export default function Veil() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-500/15 to-pink-500/15 border border-sky-500/20 backdrop-blur-sm mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-500/15 to-cyan-500/15 border border-sky-500/20 backdrop-blur-sm mb-6 sm:mb-8">
             <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
             <span className="text-[10px] sm:text-xs text-slate-300 uppercase tracking-[0.15em] font-medium">Complete Edition — 2026</span>
             <Flame className="w-4 h-4 text-sky-400 animate-pulse" />
           </div>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
-            <span className="bg-gradient-to-r from-sky-300 via-pink-300 to-sky-300 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent">
               Through The Veil
             </span>
           </h1>
@@ -176,7 +176,7 @@ export default function Veil() {
           <div className="flex items-center justify-center gap-3 mb-4">
             <div className="w-12 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
             <Feather className="w-4 h-4 text-sky-400/60" />
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-pink-500/50" />
+            <div className="w-12 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
           </div>
 
           <p className="text-sm sm:text-base text-slate-300/80 max-w-xl mx-auto mb-3 leading-relaxed">
@@ -188,7 +188,7 @@ export default function Veil() {
             <Button
               onClick={() => handleReadOnline()}
               size="lg"
-              className="bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
+              className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
               data-testid="button-read-online"
             >
               <BookOpen className="w-5 h-5 mr-2" />
@@ -244,7 +244,7 @@ export default function Veil() {
               loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-sky-900/30 to-pink-900/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-sky-900/30 to-cyan-900/20" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-10">
               <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium max-w-lg leading-relaxed">
                 52 chapters. 163+ scripture references. The complete investigation into hidden history, suppressed truth, and spiritual warfare.
@@ -262,7 +262,7 @@ export default function Veil() {
         >
           {[
             { icon: ScrollText, label: "52 Chapters", sub: "Complete Edition", color: "text-sky-400" },
-            { icon: Shield, label: "163+ Scriptures", sub: "Cited & Referenced", color: "text-pink-400" },
+            { icon: Shield, label: "163+ Scriptures", sub: "Cited & Referenced", color: "text-cyan-400" },
             { icon: Layers, label: "13 Parts", sub: "Evidence to Journey", color: "text-cyan-400" },
             { icon: Star, label: "107K Words", sub: "Full Investigation", color: "text-sky-400" },
           ].map((stat) => (
@@ -314,7 +314,7 @@ export default function Veil() {
               </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-pink-500/20 border border-sky-500/30 flex-shrink-0">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/30 flex-shrink-0">
                     <Headphones className="w-6 h-6 text-sky-400" />
                   </div>
                   <div>
@@ -340,7 +340,7 @@ export default function Veil() {
                       "Sit back and listen — works offline on any device!",
                     ].map((step, i) => (
                       <li key={i} className="flex gap-3 items-start">
-                        <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-sky-500/30 to-pink-500/30 text-sky-300 flex items-center justify-center text-xs font-bold border border-sky-500/20">
+                        <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-sky-500/30 to-cyan-500/30 text-sky-300 flex items-center justify-center text-xs font-bold border border-sky-500/20">
                           {i + 1}
                         </span>
                         <span className="text-sm text-slate-300 leading-relaxed pt-1">{step}</span>
@@ -351,7 +351,7 @@ export default function Veil() {
 
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a href="https://get.adobe.com/reader/" target="_blank" rel="noopener noreferrer" className="flex-1" data-testid="link-adobe-reader">
-                    <Button className="w-full bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 py-5 text-sm sm:text-base min-h-[48px]" data-testid="button-adobe-reader">
+                    <Button className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 py-5 text-sm sm:text-base min-h-[48px]" data-testid="button-adobe-reader">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Get Adobe Reader (Free)
                     </Button>
@@ -390,7 +390,7 @@ export default function Veil() {
                   <ul className="space-y-2.5 mb-5">
                     {["Complete edition", "163+ scripture refs", "Print-ready format"].map((txt) => (
                       <li key={txt} className="flex items-center gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-pink-400 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 flex-shrink-0" />
                         <span className="text-sm text-slate-300">{txt}</span>
                       </li>
                     ))}
@@ -450,7 +450,7 @@ export default function Veil() {
         >
           <GlassCard glow>
             <div className="p-6 sm:p-8">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-pink-500/20 border border-sky-500/30 w-fit mb-5">
+              <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/30 w-fit mb-5">
                 <BookOpen className="w-6 h-6 text-sky-400" />
               </div>
               <h4 className="text-lg font-bold text-white mb-3">Read Online</h4>
@@ -459,7 +459,7 @@ export default function Veil() {
               </p>
               <Button
                 onClick={() => handleReadOnline()}
-                className="w-full bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 py-5 text-sm min-h-[48px]"
+                className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 py-5 text-sm min-h-[48px]"
                 data-testid="button-read-online-card"
               >
                 <Eye className="w-4 h-4 mr-2" />
@@ -535,10 +535,10 @@ export default function Veil() {
                     data-testid={`toc-section-${section.id}`}
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500/20 to-pink-500/20 border border-sky-500/20 flex items-center justify-center flex-shrink-0">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 flex items-center justify-center flex-shrink-0">
                         <BookMarked className="w-4 h-4 text-sky-400" />
                       </div>
-                      <span className="bg-gradient-to-r from-sky-300 to-pink-300 bg-clip-text text-transparent text-left">
+                      <span className="bg-gradient-to-r from-sky-300 to-cyan-300 bg-clip-text text-transparent text-left">
                         {section.title}
                       </span>
                     </div>
@@ -552,7 +552,7 @@ export default function Veil() {
                           className="w-full flex items-start gap-3 p-3 sm:p-4 text-left hover:bg-gradient-to-r hover:from-sky-500/5 hover:to-transparent transition-all duration-300 rounded-lg group min-h-[44px]"
                           data-testid={`toc-chapter-${chapter.anchor}`}
                         >
-                          <div className="w-1 h-8 rounded-full bg-gradient-to-b from-sky-500/40 to-transparent flex-shrink-0 mt-0.5 group-hover:from-sky-400 group-hover:to-pink-400/40 transition-all" />
+                          <div className="w-1 h-8 rounded-full bg-gradient-to-b from-sky-500/40 to-transparent flex-shrink-0 mt-0.5 group-hover:from-sky-400 group-hover:to-cyan-400/40 transition-all" />
                           <div className="flex-1 min-w-0">
                             <span className="text-white font-medium text-sm sm:text-base group-hover:text-sky-200 transition-colors block">{chapter.name}</span>
                             <span className="text-slate-500 text-xs sm:text-sm block mt-1 leading-relaxed">{chapter.description}</span>
@@ -578,12 +578,12 @@ export default function Veil() {
         >
           <GlassCard glow>
             <div className="p-8 sm:p-10 md:p-14 text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-pink-500/5 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
               <div className="absolute top-6 left-8 opacity-10">
                 <Quote className="w-12 h-12 text-sky-400" />
               </div>
               <div className="absolute bottom-6 right-8 opacity-10 rotate-180">
-                <Quote className="w-12 h-12 text-pink-400" />
+                <Quote className="w-12 h-12 text-cyan-400" />
               </div>
               <div className="relative z-10">
                 <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed italic mb-6 sm:mb-8">
@@ -592,7 +592,7 @@ export default function Veil() {
                 <div className="flex items-center justify-center gap-3 mb-2">
                   <div className="w-8 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
                   <Feather className="w-4 h-4 text-sky-400/60" />
-                  <div className="w-8 h-px bg-gradient-to-l from-transparent to-pink-500/50" />
+                  <div className="w-8 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
                 </div>
                 <p className="text-sky-300 font-semibold">— Jason Andrews</p>
               </div>
@@ -615,7 +615,7 @@ export default function Veil() {
             <Button
               onClick={() => handleReadOnline()}
               size="lg"
-              className="bg-gradient-to-r from-sky-600 to-pink-600 hover:from-sky-500 hover:to-pink-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
+              className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
               data-testid="button-read-online-bottom"
             >
               <Eye className="w-5 h-5 mr-2" />

@@ -97,7 +97,7 @@ export function PresaleBanner() {
         data-testid="presale-banner"
       >
         <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-sky-600/20 to-pink-600/20 blur-xl" />
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/20 via-sky-600/20 to-cyan-600/20 blur-xl" />
 
           <div className="relative bg-slate-950/95 backdrop-blur-xl border-t border-white/10">
             <button
@@ -266,7 +266,7 @@ export function PresaleBanner() {
                       </div>
                       <div className="bg-white/5 rounded-lg p-2.5">
                         <div className="flex items-center gap-1 mb-1">
-                          <Zap className="w-3 h-3 text-pink-400" />
+                          <Zap className="w-3 h-3 text-cyan-400" />
                           <span className="text-[10px] text-white/50">SIG Remaining</span>
                         </div>
                         <span className="text-sm font-bold text-white" data-testid="presale-expanded-remaining">{formatNumber(tokensRemaining)}</span>

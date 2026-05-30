@@ -59,7 +59,7 @@ export function GamesNav() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 safe-area-top ${
           scrolled
-            ? "bg-slate-950/95 border-b border-pink-500/10 shadow-[0_2px_20px_rgba(236,72,153,0.08)]"
+            ? "bg-slate-950/95 border-b border-cyan-500/10 shadow-[0_2px_20px_rgba(236,72,153,0.08)]"
             : "bg-transparent"
         }`}
         style={scrolled ? { WebkitBackdropFilter: 'blur(24px)', backdropFilter: 'blur(24px)' } : undefined}
@@ -85,12 +85,12 @@ export function GamesNav() {
             )}
 
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="relative w-8 h-8 rounded-xl bg-gradient-to-br from-pink-500 to-sky-600 flex items-center justify-center shadow-lg shadow-pink-500/20 group-hover:shadow-pink-500/40 transition-shadow">
+              <div className="relative w-8 h-8 rounded-xl bg-gradient-to-br from-cyan-500 to-sky-600 flex items-center justify-center shadow-lg shadow-cyan-500/20 group-hover:shadow-cyan-500/40 transition-shadow">
                 <Gamepad2 className="w-4.5 h-4.5 text-white" />
                 <div className="absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-green-400 border-2 border-slate-950 animate-pulse" />
               </div>
               <div className="hidden sm:flex flex-col leading-none">
-                <span className="text-sm font-bold bg-gradient-to-r from-pink-400 to-sky-400 bg-clip-text text-transparent">
+                <span className="text-sm font-bold bg-gradient-to-r from-cyan-400 to-sky-400 bg-clip-text text-transparent">
                   DarkWave
                 </span>
                 <span className="text-[10px] text-white/50 font-medium tracking-wider uppercase">Games</span>
@@ -128,7 +128,7 @@ export function GamesNav() {
               <Button
                 size="sm"
                 onClick={handleInstall}
-                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-pink-500 to-sky-500 hover:from-pink-400 hover:to-sky-400 text-white border-0 rounded-lg shadow-lg shadow-pink-500/20"
+                className="h-8 px-3 text-xs font-bold bg-gradient-to-r from-cyan-500 to-sky-500 hover:from-cyan-400 hover:to-sky-400 text-white border-0 rounded-lg shadow-lg shadow-cyan-500/20"
                 data-testid="button-install-pwa"
               >
                 <Download className="w-3.5 h-3.5 mr-1" />
@@ -177,7 +177,7 @@ export function GamesNav() {
               <Link key={item.href} href={item.href}>
                 <button
                   className={`flex flex-col items-center justify-center gap-0.5 rounded-lg transition-all tap-transparent ${
-                    active ? "text-pink-400" : "text-white/40"
+                    active ? "text-cyan-400" : "text-white/40"
                   }`}
                   style={{ minWidth: '44px', minHeight: '44px', WebkitTapHighlightColor: 'transparent' }}
                   data-testid={`bottom-nav-${item.label.toLowerCase()}`}

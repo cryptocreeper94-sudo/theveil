@@ -57,7 +57,7 @@ export function FirstLoginModal() {
           onClick={(e) => e.stopPropagation()}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-sky-500/5 pointer-events-none" />
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-sky-500/20 to-pink-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-sky-500/20 to-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-blue-500/10 rounded-full blur-3xl pointer-events-none" />
           
           <button
@@ -87,7 +87,7 @@ export function FirstLoginModal() {
 
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold mb-2">
-                <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-pink-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-400 via-sky-400 to-cyan-400 bg-clip-text text-transparent">
                   Welcome to Trust Layer
                 </span>
               </h2>
@@ -107,7 +107,7 @@ export function FirstLoginModal() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-pink-500/10 border border-sky-500/20">
+              <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-cyan-500/10 border border-sky-500/20">
                 <div className="p-2 rounded-lg bg-sky-500/20">
                   <Gift className="w-5 h-5 text-sky-400" />
                 </div>
