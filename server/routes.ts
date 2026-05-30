@@ -23400,12 +23400,6 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
           mdMtime = stat.mtimeMs;
           if (cachedVeilChapters && mdMtime === cachedVeilMtime) {
             let volumes = cachedVeilChapters;
-            if (preview && Array.isArray(volumes)) {
-              volumes = volumes.slice(0, 1).map((v: any) => ({
-                ...v,
-                chapters: v.chapters?.slice(0, 4) || [],
-              }));
-            }
             res.setHeader('Cache-Control', 'public, max-age=60');
             return res.json(volumes);
           }
@@ -23421,12 +23415,6 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
       let volumes = parseVeilMarkdown(mdContent);
       cachedVeilChapters = volumes;
       cachedVeilMtime = mdMtime;
-      if (preview && Array.isArray(volumes)) {
-        volumes = volumes.slice(0, 1).map((v: any) => ({
-          ...v,
-          chapters: v.chapters?.slice(0, 4) || [],
-        }));
-      }
       res.setHeader('Cache-Control', 'public, max-age=60');
       res.json(volumes);
     } catch (error: any) {
@@ -23452,12 +23440,6 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
           mdMtime = stat.mtimeMs;
           if (cachedVeilChapters && mdMtime === cachedVeilMtime) {
             let volumes = cachedVeilChapters;
-            if (preview && Array.isArray(volumes)) {
-              volumes = volumes.slice(0, 1).map((v: any) => ({
-                ...v,
-                chapters: v.chapters?.slice(0, 4) || [],
-              }));
-            }
             const toc = volumes.map((v: any) => ({
               id: v.id,
               title: v.title,
@@ -23479,13 +23461,6 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
       let volumes = parseVeilMarkdown(mdContent);
       cachedVeilChapters = volumes;
       cachedVeilMtime = mdMtime;
-
-      if (preview && Array.isArray(volumes)) {
-        volumes = volumes.slice(0, 1).map((v: any) => ({
-          ...v,
-          chapters: v.chapters?.slice(0, 4) || [],
-        }));
-      }
 
       const toc = volumes.map((v: any) => ({
         id: v.id,
@@ -23547,6 +23522,29 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
       }
 
       const chapter = volumes[volIndex].chapters[chapIndex];
+
+      const preview = req.query.preview === "true";
+      if (preview) {
+        let globalIdx = 0;
+        let targetGlobalIdx = -1;
+        let frontMatterCount = 0;
+
+        for (let v = 0; v < volumes.length; v++) {
+          if (volumes[v].title === 'Front Matter') frontMatterCount += volumes[v].chapters.length;
+          for (let c = 0; c < volumes[v].chapters.length; c++) {
+            if (v === volIndex && c === chapIndex) {
+              targetGlobalIdx = globalIdx;
+            }
+            globalIdx++;
+          }
+        }
+
+        const previewLimit = frontMatterCount + 4;
+        if (targetGlobalIdx >= previewLimit) {
+          return res.status(403).json({ error: "Chapter locked in preview mode" });
+        }
+      }
+
       res.setHeader('Cache-Control', 'public, max-age=300');
       res.json({
         id: chapter.id,

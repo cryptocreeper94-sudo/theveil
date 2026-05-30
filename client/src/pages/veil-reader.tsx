@@ -205,7 +205,8 @@ export default function VeilReader() {
   // throughtheveil.tlid.io = paygated ($4.99)
   const isFreeHost = typeof window !== 'undefined' && window.location.hostname.startsWith('ttv.');
   const isPreviewOnly = isFreeHost ? false : hasPurchased === false;
-  const FREE_PREVIEW_CHAPTERS = 4;
+  const frontMatterCount = toc[0]?.title === 'Front Matter' ? toc[0].chapters.length : 0;
+  const FREE_PREVIEW_CHAPTERS = frontMatterCount > 0 ? frontMatterCount + 4 : 4;
 
   const loadToc = async (retryCount = 0) => {
     setLoading(true);
@@ -1730,7 +1731,7 @@ export default function VeilReader() {
                       You've reached the end of the preview
                     </h3>
                     <p className="text-white/50 max-w-md mx-auto mb-2 text-sm">
-                      You've read the first {FREE_PREVIEW_CHAPTERS} chapters. The full book contains 52 chapters across 13 parts — 107,000 words of investigation. Purchase to continue reading.
+                      You've read the first 4 chapters. The full book contains 52 chapters across 13 parts — 107,000 words of investigation. Purchase to continue reading.
                     </p>
                     <p className="text-white/30 text-xs mb-6">
                       Available on Amazon for $9.99 — or get it here for half price.
