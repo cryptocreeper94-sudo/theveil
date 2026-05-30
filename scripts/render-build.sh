@@ -1,31 +1,16 @@
 #!/bin/bash
-# Render Build — Through The Veil (static site + reader)
+# Render Build — Through The Veil (simple static site + server)
 set -e
-echo "✓ [Render] TheVeil — building static site..."
+echo "🌫️ [Render] TheVeil — installing dependencies..."
 
-# Create dist directory
-mkdir -p dist
+# No build step needed — server.cjs is the server, index.html is the landing page
+# Just verify critical files exist
+echo "📋 Checking required files..."
+test -f server.cjs && echo "  ✅ server.cjs" || echo "  ❌ server.cjs MISSING"
+test -f index.html && echo "  ✅ index.html" || echo "  ❌ index.html MISSING"
+test -f reader.html && echo "  ✅ reader.html" || echo "  ❌ reader.html MISSING"
+test -f public/through-the-veil.md && echo "  ✅ book markdown" || echo "  ❌ book markdown MISSING"
+test -f public/assets/Through-The-Veil-EBOOK.pdf && echo "  ✅ PDF ($(du -h public/assets/Through-The-Veil-EBOOK.pdf | cut -f1))" || echo "  ❌ PDF MISSING"
+test -f public/assets/Through-The-Veil-EBOOK.epub && echo "  ✅ EPUB" || echo "  ❌ EPUB MISSING"
 
-# Copy core files
-cp index.html dist/index.html
-cp reader.html dist/reader.html
-cp server.cjs dist/index.cjs
-
-# Copy public assets (includes book markdown, PDF, EPUB, images)
-if [ -d "public" ]; then
-  cp -r public dist/public 2>/dev/null || true
-fi
-
-# Copy the complete HTML book
-if [ -f "Through-The-Veil-COMPLETE.html" ]; then
-  cp Through-The-Veil-COMPLETE.html dist/public/Through-The-Veil-COMPLETE.html 2>/dev/null || true
-fi
-
-# Also pull from client/public if public dir is missing the book
-if [ -d "client/public" ]; then
-  mkdir -p dist/client/public
-  cp -r client/public/* dist/client/public/ 2>/dev/null || true
-fi
-
-echo "✓ [Render] Build complete — dist/ ready"
-ls -la dist/
+echo "🌫️ [Render] Build complete — ready to serve"
