@@ -201,7 +201,10 @@ export default function VeilReader() {
     }
   }, []);
 
-  const isPreviewOnly = hasPurchased === false;
+  // ttv.tlid.io = free version (all chapters unlocked)
+  // throughtheveil.tlid.io = paygated ($4.99)
+  const isFreeHost = typeof window !== 'undefined' && window.location.hostname.startsWith('ttv.');
+  const isPreviewOnly = isFreeHost ? false : hasPurchased === false;
   const FREE_PREVIEW_CHAPTERS = 4;
 
   const loadToc = async (retryCount = 0) => {
