@@ -1,7 +1,7 @@
 #!/bin/bash
-# Render Start Script — Trust Layer (dwtl.io)
+# Render Start Script — Through The Veil
 set -e
 
-echo "🚀 [Render] Starting Trust Layer..."
+echo "📖 [Render] Starting Through The Veil..."
 
 NODE_ENV=production node dist/index.cjs
