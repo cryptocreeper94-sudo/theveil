@@ -1608,7 +1608,9 @@ export default function VeilReader() {
           <div className="bg-[#fafaf8] rounded-2xl shadow-2xl shadow-black/40 overflow-hidden border border-white/10">
             {/* Paper Header */}
             <div className="px-8 sm:px-12 md:px-16 lg:px-20 pt-12 sm:pt-16 pb-8 sm:pb-10 border-b border-stone-200/60">
-              <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-stone-400 mb-4 text-center" style={{ fontFamily: "'Inter', sans-serif" }}>{volume.title}</p>
+              {volume.title.toUpperCase() !== 'FRONT MATTER' && (
+                <p className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-stone-400 mb-4 text-center" style={{ fontFamily: "'Inter', sans-serif" }}>{volume.title}</p>
+              )}
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-900 text-center leading-tight" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }} data-testid="chapter-title">
                 {chapter.title}
               </h1>
