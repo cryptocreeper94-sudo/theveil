@@ -1,4 +1,4 @@
 #!/bin/bash
 # Render Start — Through The Veil
 echo "🌫️ [Render] Starting TheVeil..."
-node server.cjs
+node dist/index.cjs
