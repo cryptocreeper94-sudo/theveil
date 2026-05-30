@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-    :root{--sky:#38bdf8;--pink:#ec4899;--cyan:#22d3ee;--bg:#020617;--text:#f0f4f8;--dim:rgba(240,244,248,.55);--muted:rgba(240,244,248,.28);--border:rgba(255,255,255,.06)}
+    :root{--sky:#38bdf8;--sky2:#0ea5e9;--cyan:#22d3ee;--bg:#020617;--text:#f0f4f8;--dim:rgba(240,244,248,.55);--muted:rgba(240,244,248,.28);--border:rgba(255,255,255,.06)}
     html{scroll-behavior:smooth}
     body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
     .page{max-width:1100px;margin:0 auto;padding:40px 20px 60px}
@@ -18,7 +18,7 @@
     .bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0}
     .orb{position:absolute;border-radius:50%;filter:blur(130px);opacity:.1;animation:drift 28s ease-in-out infinite alternate}
     .o1{width:600px;height:600px;background:var(--sky);top:-200px;left:-100px}
-    .o2{width:500px;height:500px;background:var(--pink);bottom:-200px;right:-100px;animation-delay:8s}
+    .o2{width:500px;height:500px;background:var(--cyan);bottom:-200px;right:-100px;animation-delay:8s}
     @keyframes drift{0%{transform:translate(0,0) scale(1)}100%{transform:translate(50px,-30px) scale(1.05)}}
 
     /* Glass Card */
@@ -28,7 +28,7 @@
     /* Nav */
     .nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:48px;position:relative;z-index:2}
     .nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-    .nav-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--pink));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#000}
+    .nav-mark{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg,var(--sky),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900;color:#000}
     .nav-text{font-size:12px;font-weight:700;color:var(--dim);letter-spacing:.04em}
     .nav-links{display:flex;gap:16px}
     .nav-links a{font-size:11px;font-weight:700;color:var(--muted);text-decoration:none;letter-spacing:.04em;transition:color .2s}
@@ -38,19 +38,19 @@
     .hero{text-align:center;position:relative;z-index:1;margin-bottom:60px}
     .hero-icon{font-size:5rem;display:block;margin-bottom:20px;filter:drop-shadow(0 0 40px rgba(56,189,248,.2));animation:float 4s ease-in-out infinite}
     @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    .badge{display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:999px;background:linear-gradient(135deg,rgba(56,189,248,.1),rgba(236,72,153,.1));border:1px solid rgba(56,189,248,.2);font-size:10px;font-weight:800;color:var(--sky);letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
-    h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;letter-spacing:-.05em;line-height:1.06;margin-bottom:14px;background:linear-gradient(135deg,var(--text) 0%,var(--sky) 50%,var(--pink) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:5px 16px;border-radius:999px;background:linear-gradient(135deg,rgba(56,189,248,.1),rgba(34,211,238,.1));border:1px solid rgba(56,189,248,.2);font-size:10px;font-weight:800;color:var(--sky);letter-spacing:.12em;text-transform:uppercase;margin-bottom:20px}
+    h1{font-size:clamp(2.4rem,6vw,4rem);font-weight:900;letter-spacing:-.05em;line-height:1.06;margin-bottom:14px;background:linear-gradient(135deg,var(--text) 0%,var(--sky) 50%,var(--cyan) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .subtitle{font-size:clamp(1rem,3vw,1.5rem);color:rgba(148,163,184,.8);font-weight:300;letter-spacing:.02em;margin-bottom:8px}
     .author{color:var(--sky);font-weight:700;font-size:1rem;margin-bottom:32px}
     .hero-desc{color:var(--dim);font-size:.95rem;max-width:520px;margin:0 auto 28px;line-height:1.75}
 
     /* Buttons */
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 32px;border-radius:14px;border:none;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;text-decoration:none;transition:all .3s}
-    .btn-sky{background:linear-gradient(135deg,#0284c7,#db2777);color:#fff;box-shadow:0 4px 20px rgba(56,189,248,.25)}
+    .btn-sky{background:linear-gradient(135deg,#0284c7,#0891b2);color:#fff;box-shadow:0 4px 20px rgba(56,189,248,.25)}
     .btn-sky:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(56,189,248,.35)}
     .btn-outline{background:transparent;border:1px solid rgba(56,189,248,.3);color:var(--sky)}
     .btn-outline:hover{background:rgba(56,189,248,.08)}
-    .btn-red{background:linear-gradient(135deg,#dc2626,#0891b2);color:#fff}
+    .btn-red{background:linear-gradient(135deg,#0284c7,#0891b2);color:#fff}
     .btn-cyan{background:linear-gradient(135deg,#0891b2,#2563eb);color:#fff}
     .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
 
@@ -77,10 +77,10 @@
     .how-to h4{font-size:.85rem;font-weight:800;margin-bottom:12px;color:var(--sky)}
     .how-to ol{padding-left:0;list-style:none;counter-reset:step}
     .how-to li{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:.85rem;color:rgba(203,213,225,.8);line-height:1.6}
-    .how-to li::before{counter-increment:step;content:counter(step);flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(236,72,153,.2));border:1px solid rgba(56,189,248,.2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--sky)}
+    .how-to li::before{counter-increment:step;content:counter(step);flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,rgba(56,189,248,.2),rgba(34,211,238,.2));border:1px solid rgba(56,189,248,.2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--sky)}
     .bullet-list{list-style:none;padding:0;margin-bottom:16px}
     .bullet-list li{display:flex;align-items:center;gap:8px;font-size:.85rem;color:rgba(203,213,225,.8);margin-bottom:8px}
-    .bullet-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--pink));flex-shrink:0}
+    .bullet-list li::before{content:'';width:5px;height:5px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--cyan));flex-shrink:0}
 
     /* Features Row */
     .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:60px;position:relative;z-index:1}
@@ -98,8 +98,8 @@
     .toc-section{margin-bottom:8px}
     .toc-trigger{width:100%;display:flex;align-items:center;gap:12px;padding:14px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;cursor:pointer;transition:all .2s;font-family:inherit}
     .toc-trigger:hover{background:rgba(255,255,255,.05)}
-    .toc-trigger-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(236,72,153,.15));border:1px solid rgba(56,189,248,.15);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
-    .toc-trigger-text{flex:1;text-align:left;font-size:.9rem;font-weight:700;background:linear-gradient(135deg,var(--sky),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .toc-trigger-icon{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(34,211,238,.15));border:1px solid rgba(56,189,248,.15);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+    .toc-trigger-text{flex:1;text-align:left;font-size:.9rem;font-weight:700;background:linear-gradient(135deg,var(--sky),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .toc-arrow{font-size:12px;color:var(--sky);transition:transform .3s}
     .toc-section.open .toc-arrow{transform:rotate(90deg)}
     .toc-chapters{max-height:0;overflow:hidden;transition:max-height .4s ease}
@@ -107,7 +107,7 @@
     .toc-chapter{display:flex;align-items:flex-start;gap:12px;padding:12px 20px;cursor:pointer;transition:background .2s;border-radius:10px;margin:2px 8px;text-decoration:none}
     .toc-chapter:hover{background:rgba(56,189,248,.05)}
     .toc-bar{width:3px;min-height:32px;border-radius:3px;background:linear-gradient(180deg,rgba(56,189,248,.3),transparent);flex-shrink:0;margin-top:2px;transition:background .2s}
-    .toc-chapter:hover .toc-bar{background:linear-gradient(180deg,var(--sky),var(--pink))}
+    .toc-chapter:hover .toc-bar{background:linear-gradient(180deg,var(--sky),var(--cyan))}
     .toc-ch-name{font-size:.85rem;font-weight:600;color:#fff;margin-bottom:2px}
     .toc-ch-desc{font-size:.75rem;color:rgba(148,163,184,.5);line-height:1.5}
 
@@ -179,7 +179,7 @@
       <div class="glass">
         <div class="format-content">
           <div class="format-header">
-            <div class="format-icon" style="background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(236,72,153,.15));border:1px solid rgba(56,189,248,.2)">🎧</div>
+            <div class="format-icon" style="background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(34,211,238,.15));border:1px solid rgba(56,189,248,.2)">🎧</div>
             <div><div class="format-title">Listen to the Book</div><div class="format-sub">Free Audio with Adobe Reader</div></div>
           </div>
           <div class="format-desc">Want to listen instead of read? Adobe Acrobat Reader has a built-in "Read Out Loud" feature that will read the entire book to you — completely free, works offline.</div>
@@ -202,7 +202,7 @@
         <div class="glass">
           <div class="format-content">
             <div class="format-header">
-              <div class="format-icon" style="background:linear-gradient(135deg,rgba(220,38,38,.15),rgba(8,145,178,.15));border:1px solid rgba(220,38,38,.2)">📄</div>
+              <div class="format-icon" style="background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(8,145,178,.15));border:1px solid rgba(14,165,233,.2)">📄</div>
               <div><div class="format-title">PDF Download</div><div class="format-sub">Desktop & Print</div></div>
             </div>
             <ul class="bullet-list"><li>Complete edition</li><li>163+ scripture refs</li><li>Print-ready format</li></ul>
@@ -225,7 +225,7 @@
     <!-- Features -->
     <div class="features">
       <div class="glass"><div class="feat-content">
-        <div class="feat-icon" style="background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(236,72,153,.15));border:1px solid rgba(56,189,248,.2)">📖</div>
+        <div class="feat-icon" style="background:linear-gradient(135deg,rgba(56,189,248,.15),rgba(34,211,238,.15));border:1px solid rgba(56,189,248,.2)">📖</div>
         <div class="feat-title">Read Online</div>
         <div class="feat-desc">Full interactive e-reader with chapter navigation, progress tracking, and AI voice narration. Works on any device.</div>
         <a href="/veil/read" class="btn btn-sky" style="width:100%;margin-top:16px">👁️ Open E-Reader</a>
