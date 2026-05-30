@@ -1,4 +1,4 @@
-# Render Blueprint â€” Through The Veil (ebook platform)
+# Render Blueprint — Through The Veil (ebook platform)
 services:
   - type: web
     name: theveil
@@ -7,8 +7,8 @@ services:
     plan: starter
     branch: main
     repo: https://github.com/cryptocreeper94-sudo/theveil
-    buildCommand: echo "No build needed"
-    startCommand: node server.cjs
+    buildCommand: npm install && npm run build
+    startCommand: NODE_ENV=production node dist/index.cjs
     healthCheckPath: /api/health
     envVars:
       - key: NODE_VERSION
@@ -17,3 +17,5 @@ services:
         value: production
       - key: PORT
         value: 5000
+      - key: DATABASE_URL
+        sync: false
