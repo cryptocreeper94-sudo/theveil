@@ -45,7 +45,7 @@ function getVolumes() {
   }
   if (!md) return [];
 
-  const lines = md.split('\n');
+  const lines = md.split('\n').map(l => l.replace(/\r$/, ''));
   const chapters = [];
   let current = null;
   let content = [];
