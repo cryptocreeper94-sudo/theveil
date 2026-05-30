@@ -131,7 +131,23 @@
     .footer-nav a{font-size:10px;color:var(--muted);text-decoration:none;transition:color .2s}
     .footer-nav a:hover{color:var(--sky)}
 
-    @media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.formats{grid-template-columns:1fr}.features{grid-template-columns:1fr}.nav{flex-direction:column;gap:14px;text-align:center}}
+    /* Hero Image */
+    .hero-banner{width:100%;max-width:800px;margin:0 auto 40px;border-radius:20px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 20px 60px rgba(0,0,0,.5);position:relative;z-index:1}
+    .hero-banner img{width:100%;height:auto;display:block;transition:transform 8s ease;object-fit:cover}
+    .hero-banner:hover img{transform:scale(1.05)}
+    .hero-banner .banner-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(2,6,23,.8) 100%)}
+
+    /* Image Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:60px;position:relative;z-index:1}
+    .gallery-card{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06);position:relative;aspect-ratio:16/10;cursor:pointer;transition:all .4s}
+    .gallery-card:hover{border-color:rgba(56,189,248,.2);transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+    .gallery-card img{width:100%;height:100%;object-fit:cover;transition:transform 6s ease}
+    .gallery-card:hover img{transform:scale(1.08)}
+    .gallery-card .card-label{position:absolute;bottom:0;left:0;right:0;padding:20px 16px 16px;background:linear-gradient(transparent,rgba(2,6,23,.9));font-size:.85rem;font-weight:700;color:#fff;letter-spacing:.02em}
+    .gallery-card .card-sublabel{font-size:.7rem;color:rgba(148,163,184,.6);margin-top:4px;font-weight:400}
+    .gallery-card.featured{grid-column:span 2;aspect-ratio:21/9}
+
+    @media(max-width:768px){.stats{grid-template-columns:repeat(2,1fr)}.formats{grid-template-columns:1fr}.features{grid-template-columns:1fr}.nav{flex-direction:column;gap:14px;text-align:center}.gallery{grid-template-columns:1fr}.gallery-card.featured{grid-column:span 1;aspect-ratio:16/10}}
   </style>
 </head>
 <body>
@@ -165,12 +181,39 @@
       </div>
     </div>
 
+    <!-- Hero Banner Image -->
+    <div class="hero-banner">
+      <img src="/images/veil-lifting.png" alt="The veil being lifted — truth revealed" loading="eager">
+      <div class="banner-overlay"></div>
+    </div>
+
     <!-- Stats -->
     <div class="stats">
       <div class="stat"><div class="stat-icon">📜</div><div class="stat-val">52 Chapters</div><div class="stat-label">Complete Edition</div></div>
       <div class="stat"><div class="stat-icon">🛡️</div><div class="stat-val">163+ Scriptures</div><div class="stat-label">Cited & Referenced</div></div>
       <div class="stat"><div class="stat-icon">📚</div><div class="stat-val">13 Parts</div><div class="stat-label">Evidence to Journey</div></div>
       <div class="stat"><div class="stat-icon">⭐</div><div class="stat-val">107K Words</div><div class="stat-label">Full Investigation</div></div>
+    </div>
+
+    <!-- Image Gallery -->
+    <div class="section-title"><div class="badge">🔍 Visual Journey</div><h2>Explore the Evidence</h2></div>
+    <div class="gallery">
+      <div class="gallery-card featured">
+        <img src="/images/nephilim-ruins.png" alt="Megalithic ruins of pre-flood civilization" loading="lazy">
+        <div class="card-label">The Nephilim Civilization<div class="card-sublabel">Megalithic structures too advanced for ancient humans — Part One: The Evidence</div></div>
+      </div>
+      <div class="gallery-card">
+        <img src="/images/ancient-tablets.png" alt="Ancient Hebrew tablets glowing with truth" loading="lazy">
+        <div class="card-label">The Hidden Scriptures<div class="card-sublabel">Removed books, altered translations, erased names</div></div>
+      </div>
+      <div class="gallery-card">
+        <img src="/images/dead-sea-scrolls.png" alt="Ancient scrolls revealing suppressed truth" loading="lazy">
+        <div class="card-label">The Dead Sea Evidence<div class="card-sublabel">What they found. What they hid. What it means.</div></div>
+      </div>
+      <div class="gallery-card">
+        <img src="/images/spiritual-awakening.png" alt="Figure standing at dawn overlooking ancient ruins" loading="lazy">
+        <div class="card-label">The Awakening<div class="card-sublabel">Coming through the fog into clarity — Part Four: The Journey</div></div>
+      </div>
     </div>
 
     <!-- Formats -->
