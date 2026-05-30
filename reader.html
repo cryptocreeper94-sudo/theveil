@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Through The Veil | E-Reader</title>
+  <meta name="description" content="Read Through The Veil online — 52 chapters, 163+ scripture references. By Jason Andrews.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌫️</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--sky:#38bdf8;--pink:#ec4899;--bg:#020617;--bg2:#0c1222;--text:#e2e8f0;--dim:#94a3b8;--muted:#64748b;--border:rgba(255,255,255,.06)}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+
+    /* Top Bar */
+    .topbar{position:sticky;top:0;z-index:100;background:rgba(2,6,23,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px}
+    .topbar-back{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--sky);text-decoration:none;transition:opacity .2s;flex-shrink:0}
+    .topbar-back:hover{opacity:.7}
+    .topbar-title{flex:1;font-size:13px;font-weight:700;color:var(--dim);text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .topbar-btn{background:none;border:1px solid rgba(56,189,248,.2);border-radius:8px;padding:6px 12px;color:var(--sky);font-size:11px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s;flex-shrink:0}
+    .topbar-btn:hover{background:rgba(56,189,248,.1)}
+
+    /* Layout */
+    .layout{display:flex;min-height:calc(100vh - 49px)}
+
+    /* Sidebar */
+    .sidebar{width:320px;background:var(--bg2);border-right:1px solid var(--border);overflow-y:auto;flex-shrink:0;transition:transform .3s}
+    .sidebar-header{padding:20px;border-bottom:1px solid var(--border)}
+    .sidebar-header h2{font-size:1rem;font-weight:900;background:linear-gradient(135deg,var(--sky),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+    .sidebar-header p{font-size:11px;color:var(--muted)}
+    .vol-group{border-bottom:1px solid var(--border)}
+    .vol-header{display:flex;align-items:center;gap:8px;padding:12px 20px;cursor:pointer;transition:background .2s;font-size:12px;font-weight:800;color:var(--sky);text-transform:uppercase;letter-spacing:.08em}
+    .vol-header:hover{background:rgba(56,189,248,.05)}
+    .vol-arrow{font-size:10px;transition:transform .3s}
+    .vol-group.open .vol-arrow{transform:rotate(90deg)}
+    .vol-chapters{max-height:0;overflow:hidden;transition:max-height .4s ease}
+    .vol-group.open .vol-chapters{max-height:2000px}
+    .ch-item{display:block;padding:10px 20px 10px 36px;font-size:13px;color:var(--dim);cursor:pointer;transition:all .2s;border:none;background:none;width:100%;text-align:left;font-family:inherit;line-height:1.5}
+    .ch-item:hover{background:rgba(56,189,248,.05);color:var(--text)}
+    .ch-item.active{color:var(--sky);background:rgba(56,189,248,.08);border-left:3px solid var(--sky);font-weight:700}
+
+    /* Content */
+    .content{flex:1;overflow-y:auto;max-height:calc(100vh - 49px)}
+    .reader-body{max-width:760px;margin:0 auto;padding:40px 32px 80px}
+    .ch-part{font-size:10px;font-weight:800;color:var(--sky);text-transform:uppercase;letter-spacing:.14em;margin-bottom:8px}
+    .ch-title{font-size:1.8rem;font-weight:900;margin-bottom:24px;line-height:1.3;background:linear-gradient(135deg,var(--text),var(--sky));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .ch-content{font-family:'Merriweather','Georgia',serif;font-size:15px;line-height:2;color:rgba(226,232,240,.85)}
+    .ch-content p{margin-bottom:16px}
+    .ch-content h2{font-family:'Inter',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);margin:32px 0 16px;line-height:1.4}
+    .ch-content h3{font-family:'Inter',sans-serif;font-size:1.1rem;font-weight:700;color:var(--sky);margin:24px 0 12px}
+    .ch-content blockquote{border-left:3px solid var(--sky);padding:12px 20px;margin:20px 0;background:rgba(56,189,248,.04);border-radius:0 8px 8px 0;font-style:italic;color:rgba(226,232,240,.7)}
+    .ch-content strong{color:var(--text);font-weight:700}
+    .ch-content em{color:rgba(226,232,240,.7)}
+    .ch-content ul,.ch-content ol{padding-left:24px;margin-bottom:16px}
+    .ch-content li{margin-bottom:8px}
+    .ch-content hr{border:none;border-top:1px solid var(--border);margin:32px 0}
+
+    /* Nav buttons */
+    .ch-nav{display:flex;justify-content:space-between;gap:12px;margin-top:48px;padding-top:24px;border-top:1px solid var(--border)}
+    .ch-nav-btn{display:flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;border:1px solid rgba(56,189,248,.2);background:rgba(56,189,248,.05);color:var(--sky);font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:all .2s}
+    .ch-nav-btn:hover{background:rgba(56,189,248,.1)}
+    .ch-nav-btn:disabled{opacity:.3;cursor:default}
+
+    /* Loading */
+    .loading{display:flex;flex-direction:column;align-items:center;justify-content:center;height:60vh;gap:16px}
+    .spinner{width:32px;height:32px;border:3px solid var(--border);border-top-color:var(--sky);border-radius:50%;animation:spin .8s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .loading-text{font-size:13px;color:var(--muted)}
+
+    /* Mobile */
+    .menu-btn{display:none}
+    .sidebar-overlay{display:none}
+    @media(max-width:768px){
+      .sidebar{position:fixed;top:49px;left:0;bottom:0;z-index:50;transform:translateX(-100%)}
+      .sidebar.open{transform:translateX(0)}
+      .sidebar-overlay{display:block;position:fixed;inset:0;top:49px;background:rgba(0,0,0,.6);z-index:40;opacity:0;pointer-events:none;transition:opacity .3s}
+      .sidebar-overlay.open{opacity:1;pointer-events:auto}
+      .menu-btn{display:block}
+      .reader-body{padding:24px 16px 60px}
+      .ch-title{font-size:1.4rem}
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <a href="/" class="topbar-back">← Back</a>
+    <button class="topbar-btn menu-btn" onclick="toggleSidebar()">☰ Chapters</button>
+    <div class="topbar-title" id="topbar-title">Through The Veil</div>
+    <a href="/api/veil/pdf" class="topbar-btn" download="Through-The-Veil.pdf">⬇ PDF</a>
+  </div>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <div class="sidebar-overlay" id="overlay" onclick="toggleSidebar()"></div>
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Through The Veil</h2>
+        <p>The Greatest Story Ever Stole?</p>
+      </div>
+      <div id="toc-container"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content" id="content-scroll">
+      <div class="reader-body" id="reader-body">
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          <div class="loading-text">Loading chapters...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var toc = [];
+    var currentVol = 0;
+    var currentChap = 0;
+    var chapterCache = {};
+
+    // Load TOC
+    fetch('/api/veil/toc')
+      .then(function(r){ return r.json(); })
+      .then(function(data){
+        toc = data;
+        renderToc();
+        restorePosition();
+        loadChapter(currentVol, currentChap);
+      })
+      .catch(function(){
+        document.getElementById('loading').innerHTML = '<div style="color:#f87171;font-size:14px;">Failed to load book. Please refresh.</div>';
+      });
+
+    function renderToc() {
+      var container = document.getElementById('toc-container');
+      var html = '';
+      for (var vi = 0; vi < toc.length; vi++) {
+        var vol = toc[vi];
+        var open = vi === 0 ? ' open' : '';
+        html += '<div class="vol-group' + open + '" id="vol-' + vi + '">';
+        html += '<div class="vol-header" onclick="toggleVol(' + vi + ')"><span class="vol-arrow">▶</span>' + vol.title + '</div>';
+        html += '<div class="vol-chapters">';
+        for (var ci = 0; ci < vol.chapters.length; ci++) {
+          var ch = vol.chapters[ci];
+          var active = (vi === currentVol && ci === currentChap) ? ' active' : '';
+          html += '<button class="ch-item' + active + '" data-v="' + vi + '" data-c="' + ci + '" onclick="navTo(' + vi + ',' + ci + ')">' + ch.title + '</button>';
+        }
+        html += '</div></div>';
+      }
+      container.innerHTML = html;
+    }
+
+    function toggleVol(vi) {
+      var el = document.getElementById('vol-' + vi);
+      el.classList.toggle('open');
+    }
+
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('open');
+    }
+
+    function navTo(vi, ci) {
+      currentVol = vi;
+      currentChap = ci;
+      loadChapter(vi, ci);
+      updateActiveChapter();
+      savePosition();
+      // Close mobile sidebar
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('overlay').classList.remove('open');
+    }
+
+    function updateActiveChapter() {
+      var items = document.querySelectorAll('.ch-item');
+      items.forEach(function(el){
+        var v = parseInt(el.getAttribute('data-v'));
+        var c = parseInt(el.getAttribute('data-c'));
+        if (v === currentVol && c === currentChap) {
+          el.classList.add('active');
+        } else {
+          el.classList.remove('active');
+        }
+      });
+      // Open the correct volume group
+      var volEl = document.getElementById('vol-' + currentVol);
+      if (volEl && !volEl.classList.contains('open')) volEl.classList.add('open');
+    }
+
+    function loadChapter(vi, ci) {
+      var key = vi + '-' + ci;
+      if (chapterCache[key]) {
+        renderChapter(chapterCache[key]);
+        return;
+      }
+      document.getElementById('reader-body').innerHTML = '<div class="loading"><div class="spinner"></div><div class="loading-text">Loading chapter...</div></div>';
+      fetch('/api/veil/chapter/' + vi + '/' + ci)
+        .then(function(r){ return r.json(); })
+        .then(function(data){
+          chapterCache[key] = data;
+          renderChapter(data);
+        })
+        .catch(function(){
+          document.getElementById('reader-body').innerHTML = '<div style="padding:40px;text-align:center;color:#f87171;">Failed to load chapter. Please try again.</div>';
+        });
+    }
+
+    function renderChapter(ch) {
+      // Update topbar
+      document.getElementById('topbar-title').textContent = ch.title;
+      // Simple markdown to HTML (handles most common patterns)
+      var html = '';
+      if (ch.partTitle) html += '<div class="ch-part">' + escapeHtml(ch.partTitle) + '</div>';
+      html += '<div class="ch-title">' + escapeHtml(ch.title) + '</div>';
+      html += '<div class="ch-content">' + markdownToHtml(ch.content) + '</div>';
+      // Nav buttons
+      html += '<div class="ch-nav">';
+      var hasPrev = !(currentVol === 0 && currentChap === 0);
+      var totalChaps = toc[currentVol] ? toc[currentVol].chapters.length : 0;
+      var hasNext = !(currentVol === toc.length - 1 && currentChap >= totalChaps - 1);
+      html += '<button class="ch-nav-btn" onclick="prevChapter()"' + (hasPrev ? '' : ' disabled') + '>← Previous</button>';
+      html += '<button class="ch-nav-btn" onclick="nextChapter()"' + (hasNext ? '' : ' disabled') + '>Next →</button>';
+      html += '</div>';
+
+      document.getElementById('reader-body').innerHTML = html;
+      document.getElementById('content-scroll').scrollTop = 0;
+    }
+
+    function prevChapter() {
+      if (currentChap > 0) {
+        currentChap--;
+      } else if (currentVol > 0) {
+        currentVol--;
+        currentChap = toc[currentVol].chapters.length - 1;
+      } else return;
+      loadChapter(currentVol, currentChap);
+      updateActiveChapter();
+      savePosition();
+    }
+
+    function nextChapter() {
+      var totalChaps = toc[currentVol] ? toc[currentVol].chapters.length : 0;
+      if (currentChap < totalChaps - 1) {
+        currentChap++;
+      } else if (currentVol < toc.length - 1) {
+        currentVol++;
+        currentChap = 0;
+      } else return;
+      loadChapter(currentVol, currentChap);
+      updateActiveChapter();
+      savePosition();
+    }
+
+    function savePosition() {
+      try { localStorage.setItem('veil-reader-pos', JSON.stringify({ v: currentVol, c: currentChap })); } catch(e){}
+    }
+
+    function restorePosition() {
+      try {
+        var saved = JSON.parse(localStorage.getItem('veil-reader-pos') || '{}');
+        if (saved.v !== undefined && saved.v < toc.length) {
+          currentVol = saved.v;
+          if (saved.c !== undefined && toc[saved.v] && saved.c < toc[saved.v].chapters.length) {
+            currentChap = saved.c;
+          }
+        }
+      } catch(e){}
+      updateActiveChapter();
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    function markdownToHtml(md) {
+      if (!md) return '';
+      var lines = md.split('\n');
+      var html = '';
+      var inBlockquote = false;
+      var inList = false;
+      var listType = '';
+
+      for (var i = 0; i < lines.length; i++) {
+        var line = lines[i];
+
+        // Horizontal rule
+        if (/^---+$/.test(line.trim()) || /^\*\*\*+$/.test(line.trim())) {
+          if (inBlockquote) { html += '</blockquote>'; inBlockquote = false; }
+          if (inList) { html += '</' + listType + '>'; inList = false; }
+          html += '<hr>';
+          continue;
+        }
+
+        // Headers
+        if (/^### (.+)/.test(line)) {
+          if (inBlockquote) { html += '</blockquote>'; inBlockquote = false; }
+          if (inList) { html += '</' + listType + '>'; inList = false; }
+          html += '<h3>' + inlineFormat(line.replace(/^### /, '')) + '</h3>';
+          continue;
+        }
+        if (/^## (.+)/.test(line)) {
+          if (inBlockquote) { html += '</blockquote>'; inBlockquote = false; }
+          if (inList) { html += '</' + listType + '>'; inList = false; }
+          html += '<h2>' + inlineFormat(line.replace(/^## /, '')) + '</h2>';
+          continue;
+        }
+
+        // Blockquote
+        if (/^> (.*)/.test(line)) {
+          if (inList) { html += '</' + listType + '>'; inList = false; }
+          if (!inBlockquote) { html += '<blockquote>'; inBlockquote = true; }
+          html += inlineFormat(line.replace(/^> ?/, '')) + '<br>';
+          continue;
+        } else if (inBlockquote) {
+          html += '</blockquote>';
+          inBlockquote = false;
+        }
+
+        // Unordered list
+        if (/^[-*] (.+)/.test(line)) {
+          if (inList && listType !== 'ul') { html += '</' + listType + '>'; inList = false; }
+          if (!inList) { html += '<ul>'; inList = true; listType = 'ul'; }
+          html += '<li>' + inlineFormat(line.replace(/^[-*] /, '')) + '</li>';
+          continue;
+        }
+
+        // Ordered list
+        if (/^\d+\. (.+)/.test(line)) {
+          if (inList && listType !== 'ol') { html += '</' + listType + '>'; inList = false; }
+          if (!inList) { html += '<ol>'; inList = true; listType = 'ol'; }
+          html += '<li>' + inlineFormat(line.replace(/^\d+\. /, '')) + '</li>';
+          continue;
+        }
+
+        // End list if not continuing
+        if (inList && line.trim() === '') {
+          html += '</' + listType + '>';
+          inList = false;
+        }
+
+        // Empty line = paragraph break
+        if (line.trim() === '') {
+          continue;
+        }
+
+        // Normal paragraph
+        if (inList) { html += '</' + listType + '>'; inList = false; }
+        html += '<p>' + inlineFormat(line) + '</p>';
+      }
+
+      if (inBlockquote) html += '</blockquote>';
+      if (inList) html += '</' + listType + '>';
+      return html;
+    }
+
+    function inlineFormat(text) {
+      // Bold
+      text = text.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      // Italic
+      text = text.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      text = text.replace(/_(.+?)_/g, '<em>$1</em>');
+      // Inline code
+      text = text.replace(/`(.+?)`/g, '<code style="background:rgba(56,189,248,.1);padding:2px 6px;border-radius:4px;font-size:13px;color:#38bdf8">$1</code>');
+      // Links
+      text = text.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" style="color:#38bdf8" target="_blank">$1</a>');
+      return text;
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') prevChapter();
+      if (e.key === 'ArrowRight') nextChapter();
+    });
+  </script>
+</body>
+</html>
