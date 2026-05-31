@@ -1,27 +1,19 @@
-# TLID.io Subdomain Registry
+# TLID.io Subdomain & Domain Registry
 
-All ecosystem apps are accessible via branded `.tlid.io` subdomains.
-These subdomains require a wildcard A record (`*`) at your DNS registrar (Namecheap)
-pointing to the same IP address as your main `tlid.io` domain.
-
-Each subdomain must also be added as a custom domain in Replit's publish settings.
+All ecosystem apps and services are accessible via branded domains and `.tlid.io` subdomains. 
+All deployments are handled locally and deployed to production infrastructure (Render, etc.).
 
 ---
 
-## DNS Setup (Namecheap - One Time)
+## Primary Purchased Domains
 
-1. Log in to Namecheap > Domain List > Manage `tlid.io` > Advanced DNS
-2. Find the IP address from your existing `tlid.io` A record
-3. Add: **A Record** | Host: `*` | Value: *(same IP)* | TTL: Automatic
-
----
-
-## All Custom Domains (Purchased)
-
-| Domain | Points To |
-|--------|-----------|
-| `dwsc.io` | Main Trust Layer app |
+| Domain | Points To / App Name |
+|--------|----------------------|
+| `axiom42.com` | Axiom 42 Engine |
+| `lumescan.tech` | Lume Scan Product Landing |
+| `lumeauto.tech` | Lume Auto Diagnostics Engine / Automotive Lab |
 | `dwtl.io` | Main Trust Layer app |
+| `dwsc.io` | Main Trust Layer app |
 | `tlid.io` | Main Trust Layer app |
 | `yourlegacy.io` | Chronicles |
 | `darkwavegames.io` | The Arcade |
@@ -45,93 +37,54 @@ Each subdomain must also be added as a custom domain in Replit's publish setting
 
 ---
 
-## Subdomains to Add in Replit Publish Settings
+## Active Subdomains
 
-Add each of these as a custom domain when publishing:
+*Note: Apex domains override subdomains so there is no redundancy here.*
 
-| # | Subdomain | App Name | Type | Redirects To |
-|---|-----------|----------|------|-------------|
-| 1 | `academy.tlid.io` | DarkWave Academy | Internal | *(serves /academy)* |
-| 2 | `arbora.tlid.io` | Arbora | External | verdara.replit.app/arbora |
-| 3 | `arcade.tlid.io` | The Arcade | Internal | *(serves /arcade)* |
-| 4 | `brewboard.tlid.io` | Brew & Board Coffee | External | brewandboard.coffee |
-| 5 | `chronicles.tlid.io` | Chronicles | Internal | *(serves /)* |
-| 6 | `darkwave.tlid.io` | DarkWave | Internal | *(serves /)* |
-| 7 | `darkwavegames.tlid.io` | DarkWave Games | Internal | darkwavegames.io |
-| 8 | `darkwavestudios.tlid.io` | DarkWave Studios | External | darkwavestudios.io |
-| 9 | `driverconnect.tlid.io` | TL Driver Connect | External | happyeats.app |
-| 10 | `dwsc.tlid.io` | DWSC | Internal | dwsc.io |
-| 11 | `garagebot.tlid.io` | GarageBot | External | garagebot.io |
-| 12 | `guardian.tlid.io` | Guardian | Internal | *(serves /guardian-scanner)* |
-| 13 | `guardianai.tlid.io` | Guardian AI | Internal | *(serves /guardian-ai)* |
-| 14 | `guardianscanner.tlid.io` | Guardian Scanner | Internal | *(serves /guardian-scanner)* |
-| 15 | `guardianscreener.tlid.io` | Guardian Screener | Internal | *(serves /guardian-screener)* |
-| 16 | `lotopspro.tlid.io` | Lot Ops Pro | External | lotopspro.com |
-| 17 | `nashpaintpros.tlid.io` | Nashville Painting Pros | External | nashpaintpros.io |
-| 18 | `orbit.tlid.io` | ORBIT Staffing OS | External | orbitstaffing.io |
-| 19 | `orby.tlid.io` | Orby | External | getorby.io |
-| 20 | `paintpros.tlid.io` | PaintPros | External | paintpros.io |
-| 21 | `pulse.tlid.io` | Pulse | External | darkwavepulse.com |
-| 22 | `signalchat.tlid.io` | Signal Chat | Internal | *(serves /signal-chat)* |
-| 23 | `strikeagent.tlid.io` | StrikeAgent | External | strikeagent.io |
-| 24 | `thevoid.tlid.io` | The Void | Internal | *(serves /the-void)* |
-| 25 | `throughtheveil.tlid.io` | Through The Veil | Internal | *(serves /veil)* |
-| 26 | `tlid.tlid.io` | TLID.io | Internal | *(serves /domains)* |
-| 27 | `torque.tlid.io` | Torque | Internal | *(serves /torque)* |
-| 28 | `tradeworks.tlid.io` | TradeWorks AI | External | tradeworksai.io |
-| 29 | `trusthome.tlid.io` | Trust Home | Internal | *(serves /trust-home)* |
-| 30 | `trustlayer.tlid.io` | Trust Layer | Internal | *(serves /)* |
-| 31 | `trustshield.tlid.io` | TrustShield | Internal | *(serves /guardian-scanner)* |
-| 32 | `trustvault.tlid.io` | Trust Vault | Internal | *(serves /trust-vault)* |
-| 33 | `vedasolus.tlid.io` | VedaSolus | External | vedasolus.io |
-| 34 | `verdara.tlid.io` | Verdara | External | verdara.replit.app |
-| 35 | `yourlegacy.tlid.io` | Your Legacy | Internal | yourlegacy.io |
+| Subdomain | App Name / Purpose |
+|-----------|--------------------|
+| `an.tlid.io` | Axiom News |
+| `axiom42.tlid.io` | Axiom 42 Engine |
+| `cep.tlid.io` | Cox Enterprise Platform (CEP) |
+| `chronoverse.tlid.io` | Chronoverse (Live) |
+| `cox.tlid.io` | Cox Enterprise Platform |
+| `emp.tlid.io` | EMP Demo System (Cox Automotive Ledger fork) |
+| `lumev.tlid.io` | Lume-V Verification (Customer Facing Site) |
+| `trustbook.tlid.io` | TrustBook (Live) |
+| `academy.tlid.io` | DarkWave Academy |
+| `arbora.tlid.io` | Arbora |
+| `arcade.tlid.io` | The Arcade |
+| `brewboard.tlid.io` | Brew & Board Coffee |
+| `chronicles.tlid.io` | Chronicles |
+| `darkwave.tlid.io` | DarkWave |
+| `darkwavegames.tlid.io`| DarkWave Games |
+| `darkwavestudios.tlid.io`| DarkWave Studios |
+| `driverconnect.tlid.io`| TL Driver Connect |
+| `dwsc.tlid.io` | DWSC |
+| `garagebot.tlid.io` | GarageBot |
+| `guardian.tlid.io` | Guardian |
+| `guardianai.tlid.io` | Guardian AI |
+| `guardianscanner.tlid.io`| Guardian Scanner |
+| `guardianscreener.tlid.io`| Guardian Screener |
+| `lotopspro.tlid.io` | Lot Ops Pro |
+| `nashpaintpros.tlid.io`| Nashville Painting Pros |
+| `orbit.tlid.io` | ORBIT Staffing OS |
+| `orby.tlid.io` | Orby |
+| `paintpros.tlid.io` | PaintPros |
+| `pulse.tlid.io` | Pulse |
+| `signalchat.tlid.io` | Signal Chat |
+| `strikeagent.tlid.io`| StrikeAgent |
+| `thevoid.tlid.io` | The Void |
+| `throughtheveil.tlid.io`| Through The Veil |
+| `tlid.tlid.io` | TLID.io |
+| `torque.tlid.io` | Torque |
+| `tradeworks.tlid.io` | TradeWorks AI |
+| `trusthome.tlid.io` | Trust Home |
+| `trustlayer.tlid.io` | Trust Layer |
+| `trustshield.tlid.io`| TrustShield |
+| `trustvault.tlid.io` | Trust Vault |
+| `vedasolus.tlid.io` | VedaSolus |
+| `verdara.tlid.io` | Verdara |
+| `yourlegacy.tlid.io` | Your Legacy |
 
----
-
-## Types
-
-- **Internal** = Hosted within this Replit app (gateway serves the correct page directly)
-- **External** = Hosted on a separate app (gateway redirects to the custom domain)
-
----
-
-## Quick Copy List (for Replit Publish Settings)
-
-```
-academy.tlid.io
-arbora.tlid.io
-arcade.tlid.io
-brewboard.tlid.io
-chronicles.tlid.io
-darkwave.tlid.io
-darkwavegames.tlid.io
-darkwavestudios.tlid.io
-driverconnect.tlid.io
-dwsc.tlid.io
-garagebot.tlid.io
-guardian.tlid.io
-guardianai.tlid.io
-guardianscanner.tlid.io
-guardianscreener.tlid.io
-lotopspro.tlid.io
-nashpaintpros.tlid.io
-orbit.tlid.io
-orby.tlid.io
-paintpros.tlid.io
-pulse.tlid.io
-signalchat.tlid.io
-strikeagent.tlid.io
-thevoid.tlid.io
-throughtheveil.tlid.io
-tlid.tlid.io
-torque.tlid.io
-tradeworks.tlid.io
-trusthome.tlid.io
-trustlayer.tlid.io
-trustshield.tlid.io
-trustvault.tlid.io
-vedasolus.tlid.io
-verdara.tlid.io
-yourlegacy.tlid.io
-```
+*Note: The Lume-V API is backend-only (Render domain), so it is intentionally omitted from the subdomain registry.*
