@@ -434,6 +434,19 @@ export default function VeilReader() {
   };
 
   const unlockBrowserSpeech = () => {
+    if (!audioElementRef.current) {
+      audioElementRef.current = new Audio();
+      audioElementRef.current.preload = 'auto';
+    }
+    if (!audioElementRef.current.src) {
+      audioElementRef.current.src = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
+      audioElementRef.current.play().catch(() => {});
+      audioElementRef.current.pause();
+    } else if (audioElementRef.current.paused) {
+      audioElementRef.current.play().catch(() => {});
+      audioElementRef.current.pause();
+    }
+
     if (browserSpeechUnlockedRef.current) return;
     if ('speechSynthesis' in window) {
       const u = new SpeechSynthesisUtterance('');
@@ -1197,10 +1210,11 @@ export default function VeilReader() {
 
   return (
     <div className="min-h-screen bg-slate-950 relative">
-      <div className="fixed top-0 left-0 right-0 z-50">
-        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-b border-sky-500/15" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
-        <div className="container mx-auto px-4 py-2.5 relative z-10 flex items-center justify-between">
+      <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+        <div className="relative">
+          <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-2xl border-b border-sky-500/15" />
+          <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent" />
+          <div className="container mx-auto px-4 py-2.5 relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <Button 
               variant="ghost" 
@@ -1263,11 +1277,11 @@ export default function VeilReader() {
           </div>
         </div>
       </div>
-      
-      {(speechSupported || useAIVoice) && (
-        <div className="fixed top-[52px] left-0 right-0 z-40">
-          <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl border-b border-sky-500/10" />
-          <div className="container mx-auto px-4 py-2 relative z-10">
+        
+        {(speechSupported || useAIVoice) && (
+          <div className="relative z-40 shadow-xl shadow-black/20">
+            <div className="absolute inset-0 bg-slate-950/90 backdrop-blur-xl border-b border-sky-500/10" />
+            <div className="container mx-auto px-4 py-2 relative z-10">
             <div className="flex items-center justify-center gap-5">
               {isLoading ? (
                 <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-sky-500/10 border border-sky-500/20">
@@ -1369,7 +1383,7 @@ export default function VeilReader() {
             </motion.div>
           )}
         </div>
-      )}
+        )}
 
       <AnimatePresence>
         {showWhatsNew && (
@@ -1588,7 +1602,7 @@ export default function VeilReader() {
         />
       </div>
 
-      <div className={`${(speechSupported || useAIVoice) ? 'pt-28' : 'pt-20'} pb-28 px-4 sm:px-6 md:px-8 relative z-10`}>
+      <div className={`${(speechSupported || useAIVoice) ? 'pt-40' : 'pt-24'} pb-28 px-4 sm:px-6 md:px-8 relative z-10`}>
         {(chapterLoading || !chapter) ? (
           <div className="max-w-3xl mx-auto flex flex-col items-center justify-center py-20">
             <div className="relative w-14 h-14 mb-6">
@@ -1625,7 +1639,7 @@ export default function VeilReader() {
             {/* Paper Body */}
             <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-10 sm:py-14">
               <div className="prose prose-lg max-w-none
-                prose-p:text-stone-700 prose-p:leading-[2] prose-p:mb-6 prose-p:text-[16.5px] sm:prose-p:text-[17.5px] prose-p:text-justify
+                prose-p:text-stone-700 prose-p:leading-[2] prose-p:mb-6 prose-p:text-[16.5px] sm:prose-p:text-[17.5px]
                 prose-headings:text-stone-900
                 prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:mt-14 prose-h2:mb-6 prose-h2:font-bold prose-h2:border-b prose-h2:border-stone-200 prose-h2:pb-3 prose-h2:text-center
                 prose-h3:text-lg sm:prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold prose-h3:text-stone-800 prose-h3:text-center
