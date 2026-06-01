@@ -1383,8 +1383,8 @@ export default function VeilReader() {
             </motion.div>
           )}
         </div>
-        )}
-
+      )}
+      </div>
       <AnimatePresence>
         {showWhatsNew && (
           <>
