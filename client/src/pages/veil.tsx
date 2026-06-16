@@ -80,6 +80,53 @@ const item = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
+const heroImages = [
+  "/images/veil_hero/hero1.jpg",
+  "/images/veil_hero/hero2.jpg",
+  "/images/veil_hero/hero3.jpg",
+  "/images/veil_hero/hero4.jpg",
+  "/images/veil_hero/hero5.jpg"
+];
+
+function KenBurnsHero() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 6000); // 6 seconds per slide
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 w-full h-full overflow-hidden bg-slate-950">
+      {heroImages.map((src, index) => (
+        <motion.div
+          key={src}
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{
+            opacity: currentIndex === index ? 1 : 0,
+            scale: currentIndex === index ? 1 : 1.1,
+            transition: { 
+              opacity: { duration: 2 },
+              scale: { duration: 10, ease: "linear" } 
+            }
+          }}
+          className="absolute inset-0 w-full h-full"
+          style={{ zIndex: currentIndex === index ? 1 : 0 }}
+        >
+          <img
+            src={src}
+            alt="Through The Veil Concept"
+            className="w-full h-full object-cover"
+            loading={index === 0 ? "eager" : "lazy"}
+          />
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
 export default function Veil() {
   const [, setLocation] = useLocation();
   const [isStandalone, setIsStandalone] = useState(false);
@@ -237,12 +284,8 @@ export default function Veil() {
           className="mb-12 sm:mb-16"
         >
           <div className="relative rounded-2xl overflow-hidden aspect-[16/7] sm:aspect-[16/6] max-w-5xl mx-auto">
-            <img
-              src="/images/veil-hero.jpg"
-              alt="Through The Veil"
-              className="w-full h-full object-cover"
-              loading="eager"
-            />
+            {/* Ken Burns Slideshow */}
+            <KenBurnsHero />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
             <div className="absolute inset-0 bg-gradient-to-r from-sky-900/30 to-cyan-900/20" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-10">
