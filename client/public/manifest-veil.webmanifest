@@ -1,16 +1,16 @@
 {
-  "id": "throughtheveil.tlid.io",
-  "name": "Through The Veil",
-  "short_name": "The Veil",
-  "description": "A Journey Through Hidden History, Suppressed Truth, and Spiritual Warfare. By Jason Andrews.",
+  "id": "thelyingpen.tlid.io",
+  "name": "INVARIANT — What the Lying Pen Could Not Change",
+  "short_name": "INVARIANT",
+  "description": "A Journey Through Hidden History, Suppressed Truth, and Spiritual Warfare. By Ronald Jason Andrews. Second Edition — 2026.",
   "start_url": "/veil",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#a855f7",
+  "background_color": "#050505",
+  "theme_color": "#050505",
   "orientation": "any",
   "scope": "/veil",
   "lang": "en",
-  "categories": ["books", "education", "news"],
+  "categories": ["books", "education"],
   "related_applications": [],
   "prefer_related_applications": false,
   "icons": [
@@ -80,7 +80,7 @@
       "name": "Read Online",
       "short_name": "Read",
       "url": "/veil/read",
-      "description": "Read Through The Veil online"
+      "description": "Read INVARIANT online"
     }
   ]
 }
