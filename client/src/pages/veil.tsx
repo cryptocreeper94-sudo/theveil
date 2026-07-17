@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation } from "wouter";
+import { AnimatePresence, motion } from "framer-motion";
 
 // ─── Table of Contents Data ──────────────────────────────────────────
 const tableOfContents = [
@@ -153,6 +154,26 @@ function KenBurnsHero() {
 // ─── Main Component ──────────────────────────────────────────────────
 export default function Veil() {
   const [, setLocation] = useLocation();
+
+  // Easter egg PIN modal
+  const [showPinModal, setShowPinModal] = useState(false);
+  const [pinValue, setPinValue] = useState('');
+  const [pinError, setPinError] = useState(false);
+  const pinClickCountRef = useRef(0);
+  const pinClickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const handleFooterTripleClick = () => {
+    pinClickCountRef.current++;
+    if (pinClickTimerRef.current) clearTimeout(pinClickTimerRef.current);
+    if (pinClickCountRef.current >= 3) {
+      pinClickCountRef.current = 0;
+      setPinValue('');
+      setPinError(false);
+      setShowPinModal(true);
+    } else {
+      pinClickTimerRef.current = setTimeout(() => { pinClickCountRef.current = 0; }, 1500);
+    }
+  };
 
   const handleReadOnline = (anchor?: string) => {
     if (anchor) {
@@ -419,7 +440,11 @@ export default function Veil() {
         <div className="container">
           <div className="footer-inner">
             <div className="footer-left">
-              <span className="footer-logo">INVARIANT</span>
+              <span
+                className="footer-logo"
+                style={{ cursor: 'default', userSelect: 'none' }}
+                onClick={handleFooterTripleClick}
+              >INVARIANT</span>
               <span className="footer-sep">|</span>
               <span className="footer-dim">DARKWAVE STUDIOS LLC</span>
             </div>
@@ -432,6 +457,62 @@ export default function Veil() {
           </div>
         </div>
       </footer>
+
+      {/* Easter Egg PIN Modal */}
+      <AnimatePresence>
+        {showPinModal && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            style={{ position: 'fixed', inset: 0, zIndex: 99999, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0,0,0,0.9)' }}
+            onClick={(e) => { if (e.target === e.currentTarget) setShowPinModal(false); }}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              style={{
+                borderRadius: '4px', padding: '48px', textAlign: 'center', minWidth: '320px',
+                background: '#050505', border: '1px solid rgba(255,255,255,0.1)',
+              }}
+            >
+              <div style={{ fontFamily: 'JetBrains Mono, monospace', fontSize: '0.65rem', letterSpacing: '0.2em', color: '#555', marginBottom: '32px', textTransform: 'uppercase' }}>ACCESS CODE</div>
+              <input
+                type="password"
+                maxLength={6}
+                value={pinValue}
+                autoFocus
+                onChange={(e) => { setPinValue(e.target.value.replace(/\D/g, '')); setPinError(false); }}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    if (pinValue === '042404') {
+                      localStorage.setItem('invariant-access', 'granted');
+                      setShowPinModal(false);
+                      setLocation('/veil/read');
+                    } else {
+                      setPinError(true);
+                      setPinValue('');
+                    }
+                  }
+                }}
+                style={{
+                  textAlign: 'center', fontSize: '1.5rem', letterSpacing: '8px', width: '180px',
+                  padding: '12px 16px', borderRadius: '2px', outline: 'none', color: '#fff',
+                  background: 'rgba(255,255,255,0.03)', fontFamily: 'JetBrains Mono, monospace',
+                  border: `1px solid ${pinError ? '#f43f5e' : 'rgba(255,255,255,0.1)'}`,
+                  transition: 'border-color 0.3s',
+                }}
+                placeholder="······"
+              />
+              <div style={{ marginTop: '16px', fontSize: '0.65rem', fontFamily: 'JetBrains Mono, monospace', letterSpacing: '0.1em', color: pinError ? '#f43f5e' : '#333' }}>
+                {pinError ? 'INVALID CODE' : 'ENTER 6-DIGIT CODE'}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Inline Styles */}
       <style>{`
