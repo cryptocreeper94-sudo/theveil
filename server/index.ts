@@ -269,14 +269,17 @@ app.get("/api/veil/chapter/:volIndex/:chapIndex", (req, res) => {
 // ─── PDF / EPUB Downloads ────────────────────────────────────────────
 app.get("/api/veil/pdf", (_req, res) => {
   const pdfPaths = [
+    path.join(process.cwd(), "server", "data", "INVARIANT.pdf"),
     path.join(process.cwd(), "server", "data", "Through-The-Veil.pdf"),
+    path.join(process.cwd(), "server-data", "INVARIANT.pdf"),
     path.join(process.cwd(), "server-data", "Through-The-Veil.pdf"),
+    path.join(process.cwd(), "dist", "server-data", "INVARIANT.pdf"),
     path.join(process.cwd(), "dist", "server-data", "Through-The-Veil.pdf"),
   ];
   for (const p of pdfPaths) {
     if (fs.existsSync(p)) {
       res.setHeader("Content-Type", "application/pdf");
-      res.setHeader("Content-Disposition", 'attachment; filename="Through-The-Veil.pdf"');
+      res.setHeader("Content-Disposition", 'attachment; filename="INVARIANT.pdf"');
       return fs.createReadStream(p).pipe(res);
     }
   }
@@ -285,14 +288,17 @@ app.get("/api/veil/pdf", (_req, res) => {
 
 app.get("/api/veil/epub", (_req, res) => {
   const epubPaths = [
+    path.join(process.cwd(), "server", "data", "INVARIANT.epub"),
     path.join(process.cwd(), "server", "data", "Through-The-Veil.epub"),
+    path.join(process.cwd(), "server-data", "INVARIANT.epub"),
     path.join(process.cwd(), "server-data", "Through-The-Veil.epub"),
+    path.join(process.cwd(), "dist", "server-data", "INVARIANT.epub"),
     path.join(process.cwd(), "dist", "server-data", "Through-The-Veil.epub"),
   ];
   for (const p of epubPaths) {
     if (fs.existsSync(p)) {
       res.setHeader("Content-Type", "application/epub+zip");
-      res.setHeader("Content-Disposition", 'attachment; filename="Through-The-Veil.epub"');
+      res.setHeader("Content-Disposition", 'attachment; filename="INVARIANT.epub"');
       return fs.createReadStream(p).pipe(res);
     }
   }
