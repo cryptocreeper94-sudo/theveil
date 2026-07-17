@@ -1,6 +1,6 @@
 # INVARIANT
 
-## What the Lying Pen Could Not Change
+*What the Lying Pen Could Not Change*
 
 ---
 
