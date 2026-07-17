@@ -195,28 +195,36 @@ export default function Veil() {
   }, []);
 
   return (
-    <div className="min-h-screen pt-20 pb-12" style={{ background: "linear-gradient(180deg, #020617, #0c1222, #020617)" }}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen" style={{ background: "linear-gradient(180deg, #020617, #0c1222, #020617)" }}>
 
+      {/* Full-bleed Ken Burns Hero */}
+      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background slideshow */}
+        <KenBurnsHero />
+        {/* Gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-[#020617]/40 z-[1]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-sky-900/20 to-cyan-900/10 z-[1]" />
+
+        {/* Hero content */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+          className="relative z-[2] text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
         >
           <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-500/15 to-cyan-500/15 border border-sky-500/20 backdrop-blur-sm mb-6 sm:mb-8">
             <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
-            <span className="text-[10px] sm:text-xs text-slate-300 uppercase tracking-[0.15em] font-medium">Complete Edition — 2026</span>
+            <span className="text-[10px] sm:text-xs text-slate-300 uppercase tracking-[0.15em] font-medium">Second Edition — 2026</span>
             <Flame className="w-4 h-4 text-sky-400 animate-pulse" />
           </div>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent">
               INVARIANT
             </span>
           </h1>
 
-          <h2 className="text-lg sm:text-xl md:text-2xl text-slate-400 mb-6 sm:mb-8 font-light tracking-wide">
+          <h2 className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8 font-light tracking-wide">
             What the Lying Pen Could Not Change
           </h2>
 
@@ -276,25 +284,25 @@ export default function Veil() {
           )}
         </motion.div>
 
+        {/* Scroll indicator */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2]"
         >
-          <div className="relative rounded-2xl overflow-hidden aspect-[16/7] sm:aspect-[16/6] max-w-5xl mx-auto">
-            {/* Ken Burns Slideshow */}
-            <KenBurnsHero />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-r from-sky-900/30 to-cyan-900/20" />
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 md:p-10">
-              <p className="text-white/90 text-sm sm:text-base md:text-lg font-medium max-w-lg leading-relaxed">
-                62 chapters. 163+ scripture references. The complete investigation into hidden history, suppressed truth, and spiritual warfare.
-              </p>
-            </div>
-          </div>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            className="w-6 h-10 rounded-full border-2 border-sky-500/30 flex items-start justify-center p-1.5"
+          >
+            <div className="w-1.5 h-2.5 rounded-full bg-sky-400/50" />
+          </motion.div>
         </motion.div>
+      </div>
+
+      {/* Content below hero */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
 
         <motion.div
           variants={container}
