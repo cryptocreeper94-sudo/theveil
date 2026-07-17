@@ -139,6 +139,13 @@ export default function VeilReader() {
   const [hasPurchased, setHasPurchased] = useState<boolean | null>(null);
   const [purchaseLoading, setPurchaseLoading] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
+
+  // Easter egg PIN system
+  const [showPinModal, setShowPinModal] = useState(false);
+  const [pinValue, setPinValue] = useState('');
+  const [pinError, setPinError] = useState(false);
+  const pinClickCountRef = useRef(0);
+  const pinClickTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   
   const [isPlaying, setIsPlaying] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -167,7 +174,14 @@ export default function VeilReader() {
 
   useEffect(() => {
     const host = window.location.hostname.toLowerCase();
-    const isPaywalledDomain = host.includes("throughtheveil") || host.includes("trustbook");
+    const isPaywalledDomain = host.includes("throughtheveil") || host.includes("trustbook") || host.includes("thelyingpen");
+
+    // Check for saved PIN bypass
+    const savedPin = localStorage.getItem('invariant-access');
+    if (savedPin === 'granted') {
+      setHasPurchased(true);
+      return;
+    }
 
     if (!isPaywalledDomain) {
       setHasPurchased(true);
@@ -1722,10 +1736,85 @@ export default function VeilReader() {
             {/* Paper Footer */}
             <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-6 border-t border-stone-200/60 bg-stone-50/50">
               <div className="flex items-center justify-between text-xs text-stone-400" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <span>INVARIANT</span>
+                <span
+                  className="cursor-default select-none"
+                  onClick={() => {
+                    pinClickCountRef.current++;
+                    if (pinClickTimerRef.current) clearTimeout(pinClickTimerRef.current);
+                    if (pinClickCountRef.current >= 3) {
+                      pinClickCountRef.current = 0;
+                      setPinValue('');
+                      setPinError(false);
+                      setShowPinModal(true);
+                    } else {
+                      pinClickTimerRef.current = setTimeout(() => { pinClickCountRef.current = 0; }, 1500);
+                    }
+                  }}
+                >INVARIANT</span>
                 <span>Chapter {currentGlobalIndex + 1} of {totalChapters}</span>
               </div>
             </div>
+
+            {/* Easter Egg PIN Modal */}
+            <AnimatePresence>
+              {showPinModal && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="fixed inset-0 z-[99999] flex items-center justify-center"
+                  style={{ background: 'rgba(0,0,0,0.85)' }}
+                  onClick={(e) => { if (e.target === e.currentTarget) setShowPinModal(false); }}
+                >
+                  <motion.div
+                    initial={{ scale: 0.9, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.9, opacity: 0 }}
+                    transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                    className="rounded-2xl p-8 text-center min-w-[300px]"
+                    style={{
+                      background: 'linear-gradient(135deg, #0a0a1a, #0d1117)',
+                      border: '1px solid rgba(56, 189, 248, 0.2)',
+                    }}
+                  >
+                    <div className="text-xs tracking-[3px] mb-6" style={{ color: '#38bdf8' }}>ACCESS CODE</div>
+                    <input
+                      type="password"
+                      maxLength={6}
+                      value={pinValue}
+                      autoFocus
+                      onChange={(e) => {
+                        const v = e.target.value.replace(/\D/g, '');
+                        setPinValue(v);
+                        setPinError(false);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          if (pinValue === '042404') {
+                            localStorage.setItem('invariant-access', 'granted');
+                            setHasPurchased(true);
+                            setShowPinModal(false);
+                          } else {
+                            setPinError(true);
+                            setPinValue('');
+                          }
+                        }
+                      }}
+                      className="text-center text-2xl tracking-[8px] w-[180px] py-3 px-4 rounded-lg outline-none text-white"
+                      style={{
+                        background: 'rgba(56, 189, 248, 0.05)',
+                        border: `1px solid ${pinError ? '#f43f5e' : 'rgba(56, 189, 248, 0.2)'}`,
+                        transition: 'border-color 0.3s',
+                      }}
+                      placeholder="······"
+                    />
+                    <div className="mt-4 text-[10px]" style={{ color: 'rgba(255,255,255,0.3)' }}>
+                      {pinError ? 'Invalid code' : 'Enter 6-digit access code'}
+                    </div>
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
 
           {isPreviewOnly && currentChapter >= FREE_PREVIEW_CHAPTERS - 1 && (
