@@ -122,7 +122,7 @@ People are conditioned not to pay attention. Not to care. Not to question. That 
 
 Take what resonates. Question what doesn't. Verify everything you can. And above all - seek the Creator directly. No book, no teacher, no institution can replace that relationship.
 
-The journey through the veil begins now.
+The journey begins now.
 
 ---
 
@@ -8387,7 +8387,7 @@ The author claims no special revelation, no prophetic mantle, no authority beyon
 
 What the author does claim: the Creator is real. The signal is broadcasting. The receiver can be restored. And the veil that has covered humanity's eyes for millennia is finally beginning to lift.
 
-May your journey through the veil lead you to truth.
+May your journey lead you to truth.
 
 ---
 
@@ -8635,7 +8635,7 @@ What you'll find:
 - A platform built on transparency and trust
 - Resources for continued awakening
 
-This isn't about creating followers. It's about connecting seekers. The journey through the veil is easier when you're not walking alone.
+This isn't about creating followers. It's about connecting seekers. The journey is easier when you're not walking alone.
 
 ---
 
