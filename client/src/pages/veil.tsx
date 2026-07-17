@@ -1,135 +1,158 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useLocation } from "wouter";
-import { motion } from "framer-motion";
-import { GlassCard } from "@/components/glass-card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-  BookOpen, Download, FileText, Smartphone, Headphones, ExternalLink,
-  Sparkles, ScrollText, Eye, Star, Shield, Clock, Layers, Flame,
-  BookMarked, Feather, Crown, Quote, ChevronRight, Volume2, MonitorSmartphone
-} from "lucide-react";
 
+// ─── Table of Contents Data ──────────────────────────────────────────
 const tableOfContents = [
   {
     id: "part-1",
-    title: "Part One: The Evidence",
+    title: "PART ONE — THE EVIDENCE",
+    count: 7,
     chapters: [
-      { name: "Chapter 1: The Rebellion", description: "The 200 Watchers, the Nephilim, forbidden knowledge", anchor: "chapter-1" },
-      { name: "Chapter 2: The Corruption", description: "Genetic manipulation and the bloodline war", anchor: "chapter-2" },
-      { name: "Chapter 3: The Flood", description: "Why it had to happen, what survived", anchor: "chapter-3" },
-      { name: "Chapter 4: The Resets", description: "Tartaria, mud floods, orphan trains", anchor: "chapter-4" },
-      { name: "Chapter 5: The Substitution", description: "Yahusha became Jesus, the Name erased", anchor: "chapter-5" },
-      { name: "Chapter 6: The Calendar", description: "Time manipulation, Gregorian reform, phantom years", anchor: "chapter-6" },
-      { name: "Chapter 7: The Councils", description: "Nicaea, scripture removal, doctrine corruption", anchor: "chapter-7" },
+      { name: "The Rebellion", anchor: "chapter-1" },
+      { name: "The Corruption", anchor: "chapter-2" },
+      { name: "The Flood", anchor: "chapter-3" },
+      { name: "The Resets", anchor: "chapter-4" },
+      { name: "The Substitution", anchor: "chapter-5" },
+      { name: "The Calendar", anchor: "chapter-6" },
+      { name: "The Councils", anchor: "chapter-7" },
     ]
   },
   {
     id: "part-2",
-    title: "Part Two: The Patterns",
+    title: "PART TWO — THE PATTERNS",
+    count: 13,
     chapters: [
-      { name: "Chapter 8-15: The Inversions", description: "Medicine, education, government, religion", anchor: "chapter-8" },
-      { name: "Chapter 16-20: The Control Systems", description: "Fear, addiction, technology, media", anchor: "chapter-16" },
-      { name: "Chapter 21-25: The Hidden Rulers", description: "Bloodlines, secret societies, the Hydra", anchor: "chapter-21" },
-      { name: "Chapter 25C: The Alcatraz-Apollo Deception", description: "Three prisoners vanish, three astronauts appear", anchor: "chapter-25c" },
-      { name: "Chapter 25D: The Challenger Deception", description: "Seven astronauts die on live TV — six still walk among us", anchor: "chapter-25d" },
+      { name: "The Inversions (Ch. 8–15)", anchor: "chapter-8" },
+      { name: "The Control Systems (Ch. 16–20)", anchor: "chapter-16" },
+      { name: "The Hidden Rulers (Ch. 21–25)", anchor: "chapter-21" },
+      { name: "The Alcatraz-Apollo Deception", anchor: "chapter-25c" },
+      { name: "The Challenger Deception", anchor: "chapter-25d" },
     ]
   },
   {
     id: "part-3",
-    title: "Part Three: The Timeline",
+    title: "PART THREE — THE TIMELINE",
+    count: 12,
     chapters: [
-      { name: "Chapter 26-30: The Apostasy", description: "The Great Schism, the falling away", anchor: "chapter-26" },
-      { name: "Chapter 31-34: The Missing Millennium", description: "500-1500 AD, the obscured reign", anchor: "chapter-31" },
-      { name: "Chapter 35-37: Satan's Little Season", description: "Renaissance to present, the staged rapture", anchor: "chapter-35" },
+      { name: "The Apostasy (Ch. 26–30)", anchor: "chapter-26" },
+      { name: "The Missing Millennium (Ch. 31–34)", anchor: "chapter-31" },
+      { name: "Satan's Little Season (Ch. 35–37)", anchor: "chapter-35" },
     ]
   },
   {
     id: "part-4",
-    title: "Part Four: The Journey",
+    title: "PART FOUR — THE JOURNEY",
+    count: 9,
     chapters: [
-      { name: "Chapter 38: The Fog and The Lifting", description: "Coming out of addiction into clarity", anchor: "chapter-38" },
-      { name: "Chapter 39: Fear as the Weapon", description: "How they hijacked survival instinct", anchor: "chapter-39" },
-      { name: "Chapter 40: The Mark and The Names", description: "What if the mark isn't a chip?", anchor: "chapter-40" },
-      { name: "Chapter 41-44: Why I'm Not Hiding", description: "Personal testimony, the cost of truth", anchor: "chapter-41" },
+      { name: "The Fog and The Lifting", anchor: "chapter-38" },
+      { name: "Fear as the Weapon", anchor: "chapter-39" },
+      { name: "The Mark and The Names", anchor: "chapter-40" },
+      { name: "Why I'm Not Hiding (Ch. 41–44)", anchor: "chapter-41" },
     ]
   },
   {
     id: "appendices",
-    title: "Appendices",
+    title: "APPENDICES",
+    count: 3,
     chapters: [
-      { name: "Concordance of Terms", description: "Hebrew words, concepts, definitions", anchor: "concordance" },
-      { name: "Scripture Chain References", description: "163+ scripture citations", anchor: "scripture-chain" },
-      { name: "Source Documentation", description: "Dead Sea Scrolls, historical records", anchor: "sources" },
+      { name: "Concordance of Terms", anchor: "concordance" },
+      { name: "Scripture Chain References", anchor: "scripture-chain" },
+      { name: "Source Documentation", anchor: "sources" },
     ]
   }
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { staggerChildren: 0.1 } }
-};
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-};
+// ─── Scramble Title Effect ───────────────────────────────────────────
+const GLYPHS = "ΑΒΓΔΕΖΗΘΙΚΛΜΞΠΣΦΨΩאבגדהוזחטיכלמנסעפצקרשת⟁⟐⟑◆◇▪▫░▒▓";
+const TARGET = "INVARIANT";
 
+function ScrambleTitle() {
+  const [display, setDisplay] = useState(TARGET);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const runScramble = useCallback(() => {
+    let iteration = 0;
+    const maxIterations = TARGET.length;
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setDisplay(
+        TARGET.split("")
+          .map((char, idx) => {
+            if (idx < iteration) return TARGET[idx];
+            return GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
+          })
+          .join("")
+      );
+      iteration += 1 / 3;
+      if (iteration >= maxIterations + 1) {
+        setDisplay(TARGET);
+        if (intervalRef.current) clearInterval(intervalRef.current);
+      }
+    }, 40);
+  }, []);
+
+  useEffect(() => {
+    const timer = setTimeout(runScramble, 600);
+    return () => { clearTimeout(timer); if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [runScramble]);
+
+  // Re-trigger on scroll back to top
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY < 100) runScramble();
+    };
+    let ticking = false;
+    const throttled = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => { handleScroll(); ticking = false; });
+      }
+    };
+    window.addEventListener("scroll", throttled, { passive: true });
+    return () => window.removeEventListener("scroll", throttled);
+  }, [runScramble]);
+
+  return (
+    <h1
+      className="invariant-title"
+      onMouseEnter={runScramble}
+      aria-label="INVARIANT"
+    >
+      {display}
+    </h1>
+  );
+}
+
+// ─── Ken Burns Hero (CSS-driven) ─────────────────────────────────────
 const heroImages = [
   "/images/veil_hero/hero1.jpg",
   "/images/veil_hero/hero2.jpg",
   "/images/veil_hero/hero3.jpg",
   "/images/veil_hero/hero4.jpg",
-  "/images/veil_hero/hero5.jpg"
+  "/images/veil_hero/hero5.jpg",
 ];
 
 function KenBurnsHero() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-    }, 6000); // 6 seconds per slide
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <div className="absolute inset-0 w-full h-full overflow-hidden bg-slate-950">
-      {heroImages.map((src, index) => (
-        <motion.div
+    <>
+      {heroImages.map((src, i) => (
+        <div
           key={src}
-          initial={{ opacity: 0, scale: 1.1 }}
-          animate={{
-            opacity: currentIndex === index ? 1 : 0,
-            scale: currentIndex === index ? 1 : 1.1,
-            transition: { 
-              opacity: { duration: 2 },
-              scale: { duration: 10, ease: "linear" } 
-            }
+          className="hero-bg"
+          style={{
+            backgroundImage: `url(${src})`,
+            animationDelay: `${i * (24 / heroImages.length)}s`,
+            animationDuration: `${heroImages.length * (24 / heroImages.length)}s`,
           }}
-          className="absolute inset-0 w-full h-full"
-          style={{ zIndex: currentIndex === index ? 1 : 0 }}
-        >
-          <img
-            src={src}
-            alt="INVARIANT Book Concept"
-            className="w-full h-full object-cover"
-            loading={index === 0 ? "eager" : "lazy"}
-          />
-        </motion.div>
+        />
       ))}
-    </div>
+    </>
   );
 }
 
+// ─── Main Component ──────────────────────────────────────────────────
 export default function Veil() {
   const [, setLocation] = useLocation();
-  const [isStandalone, setIsStandalone] = useState(false);
 
   const handleReadOnline = (anchor?: string) => {
     if (anchor) {
@@ -143,10 +166,7 @@ export default function Veil() {
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
   const handleDownloadPDF = () => {
-    if (isIOS) {
-      window.open('/api/veil/pdf', '_blank');
-      return;
-    }
+    if (isIOS) { window.open('/api/veil/pdf', '_blank'); return; }
     const a = document.createElement('a');
     a.href = '/api/veil/pdf';
     a.download = 'INVARIANT.pdf';
@@ -156,10 +176,7 @@ export default function Veil() {
   };
 
   const handleDownloadEPUB = () => {
-    if (isIOS) {
-      window.open('/api/veil/epub', '_blank');
-      return;
-    }
+    if (isIOS) { window.open('/api/veil/epub', '_blank'); return; }
     const a = document.createElement('a');
     a.href = '/api/veil/epub';
     a.download = 'INVARIANT.epub';
@@ -168,12 +185,9 @@ export default function Veil() {
     document.body.removeChild(a);
   };
 
+  // PWA / Meta
   useEffect(() => {
     localStorage.setItem('veil-pwa-home', 'true');
-
-    const standalone = window.matchMedia('(display-mode: standalone)').matches || (navigator as any).standalone;
-    setIsStandalone(standalone);
-
   }, []);
 
   useEffect(() => {
@@ -181,7 +195,7 @@ export default function Veil() {
     let manifestLink = document.querySelector('link[rel="manifest"]') as HTMLLinkElement;
     if (manifestLink) manifestLink.href = '/manifest-veil.webmanifest';
     let themeColor = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
-    if (themeColor) themeColor.content = '#38bdf8';
+    if (themeColor) themeColor.content = '#050505';
     let appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]') as HTMLMetaElement;
     if (appleTitle) appleTitle.content = 'INVARIANT';
     let appleIcon = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
@@ -194,498 +208,501 @@ export default function Veil() {
     };
   }, []);
 
+  // Scroll reveal observer
+  useEffect(() => {
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    reveals.forEach(r => observer.observe(r));
+    setTimeout(() => {
+      reveals.forEach(r => {
+        if (r.getBoundingClientRect().top < window.innerHeight) r.classList.add('active');
+      });
+    }, 100);
+    return () => observer.disconnect();
+  }, []);
+
+  const stats = [
+    { value: "62", label: "CHAPTERS" },
+    { value: "163+", label: "SCRIPTURE REFS" },
+    { value: "13", label: "PARTS" },
+    { value: "118K", label: "WORDS" },
+  ];
+
   return (
-    <div className="min-h-screen" style={{ background: "linear-gradient(180deg, #020617, #0c1222, #020617)" }}>
+    <div className="invariant-page">
+      {/* Noise overlay */}
+      <div className="noise" />
 
-      {/* Full-bleed Ken Burns Hero */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background slideshow */}
+      {/* ═══ HERO ═══ */}
+      <section className="hero-sec">
         <KenBurnsHero />
-        {/* Gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/60 to-[#020617]/40 z-[1]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-sky-900/20 to-cyan-900/10 z-[1]" />
-
-        {/* Hero content */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="relative z-[2] text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
-        >
-          <div className="inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-gradient-to-r from-sky-500/15 to-cyan-500/15 border border-sky-500/20 backdrop-blur-sm mb-6 sm:mb-8">
-            <Sparkles className="w-4 h-4 text-sky-400 animate-pulse" />
-            <span className="text-[10px] sm:text-xs text-slate-300 uppercase tracking-[0.15em] font-medium">Second Edition — 2026</span>
-            <Flame className="w-4 h-4 text-sky-400 animate-pulse" />
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 sm:mb-6">
-            <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent">
-              INVARIANT
-            </span>
-          </h1>
-
-          <h2 className="text-lg sm:text-xl md:text-2xl text-slate-300 mb-6 sm:mb-8 font-light tracking-wide">
-            What the Lying Pen Could Not Change
-          </h2>
-
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
-            <Feather className="w-4 h-4 text-sky-400/60" />
-            <div className="w-12 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
-          </div>
-
-          <p className="text-sm sm:text-base text-slate-300/80 max-w-xl mx-auto mb-3 leading-relaxed">
+        <div className="hero-overlay" />
+        <div className="container reveal">
+          <div className="hero-tag">◆&ensp;DARKWAVE STUDIOS LLC</div>
+          <ScrambleTitle />
+          <h2 className="hero-subtitle">What the Lying Pen Could Not Change</h2>
+          <p className="hero-desc">
             A Journey Through Hidden History, Suppressed Truth, and Spiritual Warfare
           </p>
-          <p className="text-sky-300 font-semibold text-base sm:text-lg mb-8 sm:mb-10">By Ronald "Jason" Andrews</p>
+          <p className="hero-author">By Ronald "Jason" Andrews</p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-            <Button
-              onClick={() => handleReadOnline()}
-              size="lg"
-              className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
-              data-testid="button-read-online"
-            >
-              <BookOpen className="w-5 h-5 mr-2" />
-              Read Online
-            </Button>
-            <Button
-              onClick={handleDownloadPDF}
-              size="lg"
-              variant="outline"
-              className="border-sky-500/30 text-sky-300 hover:bg-sky-500/10 hover:border-sky-500/50 px-8 py-6 text-base backdrop-blur-sm transition-all active:scale-[0.98] min-h-[48px]"
-              data-testid="button-download-pdf-hero"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download PDF
-            </Button>
+          <div className="hero-stats">
+            {stats.map(s => (
+              <div key={s.label} className="stat-block">
+                <div className="stat-value">{s.value}</div>
+                <div className="stat-label">{s.label}</div>
+              </div>
+            ))}
           </div>
 
-          {!isStandalone && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.5 }}
-              className="mt-6 max-w-sm mx-auto"
-            >
-              <div className="flex items-center gap-2.5 px-5 py-3 rounded-xl bg-gradient-to-r from-sky-500/10 to-cyan-500/10 border border-sky-500/20 backdrop-blur-sm">
-                <MonitorSmartphone className="w-5 h-5 text-sky-400 flex-shrink-0" />
-                <div className="text-left">
-                  <p className="text-sky-300 text-sm font-medium">Add to Home Screen</p>
-                  <p className="text-slate-400 text-xs mt-0.5">
-                    {isIOS
-                      ? 'Tap the share icon (box with arrow) then "Add to Home Screen"'
-                      : 'Tap your browser menu (⋮) then "Add to Home Screen"'
-                    }
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          )}
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-[2]"
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            className="w-6 h-10 rounded-full border-2 border-sky-500/30 flex items-start justify-center p-1.5"
-          >
-            <div className="w-1.5 h-2.5 rounded-full bg-sky-400/50" />
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Content below hero */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-12 sm:mb-16 max-w-4xl mx-auto"
-        >
-          {[
-            { icon: ScrollText, label: "62 Chapters", sub: "Second Edition", color: "text-sky-400" },
-            { icon: Shield, label: "163+ Scriptures", sub: "Cited & Referenced", color: "text-cyan-400" },
-            { icon: Layers, label: "13 Parts", sub: "Evidence to Journey", color: "text-cyan-400" },
-            { icon: Star, label: "118K Words", sub: "Full Investigation", color: "text-sky-400" },
-          ].map((stat) => (
-            <motion.div key={stat.label} variants={item}>
-              <GlassCard glow className="text-center h-full">
-                <div className="p-5 sm:p-6">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-3 sm:mb-4 rounded-xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 flex items-center justify-center">
-                    <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
-                  </div>
-                  <p className="text-white font-bold text-sm sm:text-base">{stat.label}</p>
-                  <p className="text-slate-500 text-[10px] sm:text-xs mt-1.5">{stat.sub}</p>
-                </div>
-              </GlassCard>
-            </motion.div>
-          ))}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-16"
-        >
-          <div className="text-center mb-8">
-            <Badge variant="outline" className="border-sky-500/30 text-sky-400 mb-4 backdrop-blur-sm">
-              <Download className="w-3.5 h-3.5 mr-1.5" />
-              Get Your Copy
-            </Badge>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">Choose Your Format</h3>
+          <div className="hero-actions">
+            <button className="btn-brutal" onClick={() => handleReadOnline()} data-testid="button-read-online">
+              READ ONLINE
+            </button>
+            <button className="btn-brutal" onClick={handleDownloadPDF} data-testid="button-download-pdf-hero">
+              DOWNLOAD PDF
+            </button>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
-
-            <GlassCard glow className="md:col-span-2 lg:col-span-2 overflow-hidden">
-              <div className="relative">
-                <img
-                  src="/images/veil-manuscript.jpg"
-                  alt="Listen to the book"
-                  className="w-full h-40 sm:h-48 object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[rgba(12,18,36,0.95)] via-[rgba(12,18,36,0.5)] to-transparent" />
-                <div className="absolute top-4 left-4">
-                  <span className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-sky-300 bg-sky-500/15 border border-sky-500/25 rounded-full shadow-[0_0_10px_rgba(14,165,233,0.2)]">
-                    Featured
-                  </span>
-                </div>
-              </div>
-              <div className="p-6 sm:p-8">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/30 flex-shrink-0">
-                    <Headphones className="w-6 h-6 text-sky-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg sm:text-xl font-bold text-white">Listen to the Book</h3>
-                    <p className="text-sm text-slate-400 mt-0.5">Free Audio with Adobe Reader</p>
-                  </div>
-                </div>
-
-                <p className="text-slate-300 mb-6 leading-relaxed text-sm sm:text-base">
-                  Want to listen instead of read? Adobe Acrobat Reader has a built-in "Read Out Loud" feature that will read the entire book to you — completely free, works offline.
-                </p>
-
-                <div className="bg-slate-900/60 rounded-xl p-5 sm:p-6 mb-6 border border-white/5 backdrop-blur-sm">
-                  <h4 className="text-white font-semibold mb-4 text-sm sm:text-base flex items-center gap-2">
-                    <Crown className="w-4 h-4 text-sky-400" />
-                    How to Listen:
-                  </h4>
-                  <ol className="space-y-3">
-                    {[
-                      "Download the PDF and open it in Adobe Acrobat Reader",
-                      <>Go to <strong className="text-white">View → Read Out Loud → Activate</strong></>,
-                      <>Click <strong className="text-white">"Read This Page"</strong> or <strong className="text-white">"Read To End"</strong></>,
-                      "Sit back and listen — works offline on any device!",
-                    ].map((step, i) => (
-                      <li key={i} className="flex gap-3 items-start">
-                        <span className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-sky-500/30 to-cyan-500/30 text-sky-300 flex items-center justify-center text-xs font-bold border border-sky-500/20">
-                          {i + 1}
-                        </span>
-                        <span className="text-sm text-slate-300 leading-relaxed pt-1">{step}</span>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
-
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a href="https://get.adobe.com/reader/" target="_blank" rel="noopener noreferrer" className="flex-1" data-testid="link-adobe-reader">
-                    <Button className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 py-5 text-sm sm:text-base min-h-[48px]" data-testid="button-adobe-reader">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Get Adobe Reader (Free)
-                    </Button>
-                  </a>
-                  <div className="flex-1">
-                    <Button onClick={handleDownloadPDF} variant="outline" className="w-full border-sky-500/30 text-sky-300 hover:bg-sky-500/10 py-5 text-sm sm:text-base min-h-[48px]" data-testid="button-download-pdf-listen">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download PDF
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </GlassCard>
-
-            <div className="flex flex-col gap-4 md:gap-6">
-              <GlassCard glow className="flex-1 overflow-hidden">
-                <div className="relative">
-                  <img
-                    src="/images/veil-evidence.jpg"
-                    alt="PDF Download"
-                    className="w-full h-28 sm:h-32 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(12,18,36,0.95)] via-[rgba(12,18,36,0.4)] to-transparent" />
-                </div>
-                <div className="p-5 sm:p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-red-500/20 to-cyan-500/20 border border-red-500/30 flex-shrink-0">
-                      <FileText className="w-5 h-5 text-red-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-base sm:text-lg font-bold text-white">PDF Download</h4>
-                      <p className="text-[10px] sm:text-xs text-slate-500">Desktop & Print</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2.5 mb-5">
-                    {["Complete edition", "163+ scripture refs", "Print-ready format"].map((txt) => (
-                      <li key={txt} className="flex items-center gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 flex-shrink-0" />
-                        <span className="text-sm text-slate-300">{txt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button onClick={handleDownloadPDF} className="w-full bg-gradient-to-r from-red-600 to-cyan-600 hover:from-red-500 hover:to-cyan-500 py-5 text-sm min-h-[48px]" data-testid="button-download-pdf-card">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download PDF
-                  </Button>
-                </div>
-              </GlassCard>
-
-              <GlassCard glow className="flex-1 overflow-hidden">
-                <div className="relative">
-                  <img
-                    src="/images/veil-library.jpg"
-                    alt="EPUB Download"
-                    className="w-full h-28 sm:h-32 object-cover"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(12,18,36,0.95)] via-[rgba(12,18,36,0.4)] to-transparent" />
-                </div>
-                <div className="p-5 sm:p-6">
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex-shrink-0">
-                      <Smartphone className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <div>
-                      <h4 className="text-base sm:text-lg font-bold text-white">EPUB Download</h4>
-                      <p className="text-[10px] sm:text-xs text-slate-500">E-readers & Mobile</p>
-                    </div>
-                  </div>
-                  <ul className="space-y-2.5 mb-5">
-                    {["Complete edition", "Mobile optimized", "Kindle / Kobo / Nook"].map((txt) => (
-                      <li key={txt} className="flex items-center gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 flex-shrink-0" />
-                        <span className="text-sm text-slate-300">{txt}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button onClick={handleDownloadEPUB} className="w-full bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 py-5 text-sm min-h-[48px]" data-testid="button-download-epub-card">
-                    <Download className="w-4 h-4 mr-2" />
-                    Download EPUB
-                  </Button>
-                </div>
-              </GlassCard>
-            </div>
-
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 sm:mb-16 max-w-5xl mx-auto"
-        >
-          <GlassCard glow>
-            <div className="p-6 sm:p-8">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/30 w-fit mb-5">
-                <BookOpen className="w-6 h-6 text-sky-400" />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-3">Read Online</h4>
-              <p className="text-sm text-slate-400 leading-relaxed mb-5">
-                Full interactive e-reader with chapter navigation, progress tracking, and AI voice narration. Works on any device.
-              </p>
-              <Button
-                onClick={() => handleReadOnline()}
-                className="w-full bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 py-5 text-sm min-h-[48px]"
-                data-testid="button-read-online-card"
-              >
-                <Eye className="w-4 h-4 mr-2" />
-                Open E-Reader
-              </Button>
-            </div>
-          </GlassCard>
-
-          <GlassCard glow>
-            <div className="p-6 sm:p-8">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 w-fit mb-5">
-                <Volume2 className="w-6 h-6 text-cyan-400" />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-3">AI Voice Narration</h4>
-              <p className="text-sm text-slate-400 leading-relaxed mb-5">
-                Nova AI reads each chapter aloud with natural, expressive narration powered by OpenAI. Listen while you commute or relax.
-              </p>
-              <Button
-                onClick={() => handleReadOnline()}
-                variant="outline"
-                className="w-full border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/10 py-5 text-sm min-h-[48px]"
-                data-testid="button-ai-voice-card"
-              >
-                <Headphones className="w-4 h-4 mr-2" />
-                Listen Now
-              </Button>
-            </div>
-          </GlassCard>
-
-          <GlassCard glow className="md:col-span-2 lg:col-span-1">
-            <div className="p-6 sm:p-8">
-              <div className="p-3 rounded-xl bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/30 w-fit mb-5">
-                <Clock className="w-6 h-6 text-sky-400" />
-              </div>
-              <h4 className="text-lg font-bold text-white mb-3">Always Updated</h4>
-              <p className="text-sm text-slate-400 leading-relaxed mb-5">
-                The online edition stays current with new research, corrections, and expanded chapters. Version tracking built in.
-              </p>
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-500/10 border border-green-500/20">
-                <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-[10px] text-green-400 font-semibold uppercase tracking-wider">v3.0.0 — Latest</span>
-              </div>
-            </div>
-          </GlassCard>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-16 max-w-4xl mx-auto"
-        >
-          <div className="text-center mb-8">
-            <Badge variant="outline" className="border-sky-500/30 text-sky-400 mb-4 backdrop-blur-sm">
-              <ScrollText className="w-3.5 h-3.5 mr-1.5" />
-              Full Table of Contents
-            </Badge>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white">What's Inside</h3>
-          </div>
-
-          <GlassCard glow>
-            <div className="p-4 sm:p-6 md:p-8">
-            <Accordion type="single" collapsible defaultValue="part-1" className="space-y-2">
-              {tableOfContents.map((section) => (
-                <AccordionItem
-                  key={section.id}
-                  value={section.id}
-                  className="border border-white/10 rounded-xl overflow-hidden bg-white/[0.03] backdrop-blur-xl"
-                >
-                  <AccordionTrigger
-                    className="px-4 sm:px-6 py-4 hover:bg-white/5 text-white font-semibold text-sm sm:text-base [&>svg]:text-sky-400"
-                    data-testid={`toc-section-${section.id}`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-sky-500/20 to-cyan-500/20 border border-sky-500/20 flex items-center justify-center flex-shrink-0">
-                        <BookMarked className="w-4 h-4 text-sky-400" />
-                      </div>
-                      <span className="bg-gradient-to-r from-sky-300 to-cyan-300 bg-clip-text text-transparent text-left">
-                        {section.title}
-                      </span>
-                    </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-4 sm:px-6 pb-4">
-                    <div className="space-y-1">
-                      {section.chapters.map((chapter, idx) => (
-                        <button
-                          key={idx}
-                          onClick={() => handleReadOnline(chapter.anchor)}
-                          className="w-full flex items-start gap-3 p-3 sm:p-4 text-left hover:bg-gradient-to-r hover:from-sky-500/5 hover:to-transparent transition-all duration-300 rounded-lg group min-h-[44px]"
-                          data-testid={`toc-chapter-${chapter.anchor}`}
-                        >
-                          <div className="w-1 h-8 rounded-full bg-gradient-to-b from-sky-500/40 to-transparent flex-shrink-0 mt-0.5 group-hover:from-sky-400 group-hover:to-cyan-400/40 transition-all" />
-                          <div className="flex-1 min-w-0">
-                            <span className="text-white font-medium text-sm sm:text-base group-hover:text-sky-200 transition-colors block">{chapter.name}</span>
-                            <span className="text-slate-500 text-xs sm:text-sm block mt-1 leading-relaxed">{chapter.description}</span>
-                          </div>
-                          <ChevronRight className="w-4 h-4 text-slate-600 flex-shrink-0 mt-1 opacity-0 group-hover:opacity-100 group-hover:text-sky-400 transition-all" />
-                        </button>
-                      ))}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-            </div>
-          </GlassCard>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12 sm:mb-16 max-w-3xl mx-auto"
-        >
-          <GlassCard glow>
-            <div className="p-8 sm:p-10 md:p-14 text-center relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-sky-500/5 via-transparent to-cyan-500/5 pointer-events-none" />
-              <div className="absolute top-6 left-8 opacity-10">
-                <Quote className="w-12 h-12 text-sky-400" />
-              </div>
-              <div className="absolute bottom-6 right-8 opacity-10 rotate-180">
-                <Quote className="w-12 h-12 text-cyan-400" />
-              </div>
-              <div className="relative z-10">
-                <p className="text-base sm:text-lg md:text-xl text-slate-200 leading-relaxed italic mb-6 sm:mb-8">
-                  "I do not add to Scripture. I do not take away from it. I simply illuminate what is already written."
-                </p>
-                <div className="flex items-center justify-center gap-3 mb-2">
-                  <div className="w-8 h-px bg-gradient-to-r from-transparent to-sky-500/50" />
-                  <Feather className="w-4 h-4 text-sky-400/60" />
-                  <div className="w-8 h-px bg-gradient-to-l from-transparent to-cyan-500/50" />
-                </div>
-                <p className="text-sky-300 font-semibold">— Jason Andrews</p>
-              </div>
-            </div>
-          </GlassCard>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-8"
-        >
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4 sm:mb-5">Ready to Begin?</h3>
-          <p className="text-slate-400 text-sm sm:text-base mb-8 leading-relaxed">
-            Start reading online, or download your copy in PDF or EPUB format.
+      {/* ═══ THESIS (inverted white) ═══ */}
+      <section className="section section-light">
+        <div className="container reveal">
+          <h2 className="section-heading">THE INVESTIGATION</h2>
+          <p className="thesis-text">
+            For centuries, the institutions we trusted to preserve truth have been the very ones altering it. 
+            Scribal manipulation, council censorship, calendar fraud, and linguistic sabotage have obscured 
+            what was originally given in stone.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
-            <Button
-              onClick={() => handleReadOnline()}
-              size="lg"
-              className="bg-gradient-to-r from-sky-600 to-cyan-600 hover:from-sky-500 hover:to-cyan-500 px-8 py-6 text-base shadow-2xl shadow-sky-500/30 hover:shadow-sky-500/50 transition-all active:scale-[0.98] min-h-[48px]"
-              data-testid="button-read-online-bottom"
-            >
-              <Eye className="w-5 h-5 mr-2" />
-              Start Reading
-            </Button>
-          </div>
-        </motion.div>
-
-        <div className="text-center mt-12 pb-4">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-16 h-px bg-gradient-to-r from-transparent to-sky-500/30" />
-            <div className="w-1 h-1 rounded-full bg-sky-400/40" />
-            <div className="w-16 h-px bg-gradient-to-l from-transparent to-sky-500/30" />
-          </div>
-          <p className="text-slate-600 text-sm">
-            All glory to Yahuah, the Most High. HalleluYah.
+          <p className="thesis-text" style={{ marginTop: '32px' }}>
+            This book does not add to Scripture. It does not take away from it. It illuminates what is already 
+            written — by tracing the evidence of corruption back to its source, and by restoring the names, 
+            the timelines, and the patterns that were deliberately buried.
+          </p>
+          <p className="thesis-bold" style={{ marginTop: '32px' }}>
+            62 chapters. 118,000 words. Second Edition — 2026.
           </p>
         </div>
-      </div>
+      </section>
+
+      {/* ═══ FORMAT CARDS ═══ */}
+      <section className="section section-dark" id="formats">
+        <div className="container reveal">
+          <h2 className="section-heading">CHOOSE YOUR FORMAT</h2>
+          <p className="section-sub">Every format. Same truth. Always free.</p>
+
+          <div className="format-grid">
+            <button className="format-card" onClick={() => handleReadOnline()} data-testid="button-read-online-card">
+              <img src="/images/veil_hero/hero1.jpg" alt="Read Online" className="format-img" loading="lazy" />
+              <div className="format-body">
+                <div className="format-tag">E-READER</div>
+                <h3 className="format-title">Read Online</h3>
+                <p className="format-desc">
+                  Full interactive e-reader with chapter navigation, progress tracking, and AI voice narration.
+                </p>
+                <div className="format-cta">OPEN E-READER →</div>
+              </div>
+            </button>
+
+            <button className="format-card" onClick={handleDownloadPDF} data-testid="button-download-pdf-card">
+              <img src="/images/veil_hero/hero3.jpg" alt="PDF Download" className="format-img" loading="lazy" />
+              <div className="format-body">
+                <div className="format-tag">PDF</div>
+                <h3 className="format-title">Download PDF</h3>
+                <p className="format-desc">
+                  Complete edition, print-ready format. 163+ scripture references. Works with Adobe Read Aloud.
+                </p>
+                <div className="format-cta">DOWNLOAD →</div>
+              </div>
+            </button>
+
+            <button className="format-card" onClick={handleDownloadEPUB} data-testid="button-download-epub-card">
+              <img src="/images/veil_hero/hero5.jpg" alt="EPUB Download" className="format-img" loading="lazy" />
+              <div className="format-body">
+                <div className="format-tag">EPUB</div>
+                <h3 className="format-title">Download EPUB</h3>
+                <p className="format-desc">
+                  Mobile-optimized format for Kindle, Kobo, Nook, and Apple Books.
+                </p>
+                <div className="format-cta">DOWNLOAD →</div>
+              </div>
+            </button>
+
+            <button className="format-card" onClick={() => handleReadOnline()} data-testid="button-ai-voice-card">
+              <img src="/images/veil_hero/hero2.jpg" alt="AI Narration" className="format-img" loading="lazy" />
+              <div className="format-body">
+                <div className="format-tag">NARRATION</div>
+                <h3 className="format-title">AI Voice</h3>
+                <p className="format-desc">
+                  Nova AI reads each chapter with natural, expressive narration. Listen while you commute.
+                </p>
+                <div className="format-cta">LISTEN NOW →</div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ TABLE OF CONTENTS ═══ */}
+      <section className="section section-dark" id="contents">
+        <div className="container reveal">
+          <h2 className="section-heading">STRUCTURE</h2>
+          <p className="section-sub">62 chapters across 13 parts. Evidence to journey.</p>
+
+          <div className="toc-list">
+            {tableOfContents.map((part) => (
+              <div key={part.id} className="toc-part">
+                <div className="toc-part-header">
+                  <span className="toc-part-title">{part.title}</span>
+                  <span className="toc-part-count">{part.count} CH</span>
+                </div>
+                <div className="toc-chapters">
+                  {part.chapters.map((ch, i) => (
+                    <button
+                      key={i}
+                      className="toc-chapter"
+                      onClick={() => handleReadOnline(ch.anchor)}
+                      data-testid={`toc-chapter-${ch.anchor}`}
+                    >
+                      <span className="toc-chapter-name">{ch.name}</span>
+                      <span className="toc-chapter-arrow">→</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ QUOTE ═══ */}
+      <section className="section section-light">
+        <div className="container reveal">
+          <blockquote className="pull-quote">
+            "I do not add to Scripture. I do not take away from it. I simply illuminate what is already written."
+          </blockquote>
+          <p className="quote-author">— Jason Andrews</p>
+        </div>
+      </section>
+
+      {/* ═══ FINAL CTA ═══ */}
+      <section className="section section-dark">
+        <div className="container reveal" style={{ textAlign: 'center' }}>
+          <h2 className="section-heading">BEGIN</h2>
+          <p className="section-sub" style={{ marginBottom: '48px' }}>
+            Start reading online, or download your copy.
+          </p>
+          <div className="hero-actions">
+            <button className="btn-brutal" onClick={() => handleReadOnline()} data-testid="button-read-online-bottom">
+              START READING
+            </button>
+            <button className="btn-brutal" onClick={handleDownloadPDF} data-testid="button-download-pdf-bottom">
+              DOWNLOAD PDF
+            </button>
+            <button className="btn-brutal" onClick={handleDownloadEPUB} data-testid="button-download-epub-bottom">
+              DOWNLOAD EPUB
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ FOOTER ═══ */}
+      <footer className="invariant-footer">
+        <div className="container">
+          <div className="footer-inner">
+            <div className="footer-left">
+              <span className="footer-logo">INVARIANT</span>
+              <span className="footer-sep">|</span>
+              <span className="footer-dim">DARKWAVE STUDIOS LLC</span>
+            </div>
+            <div className="footer-right">
+              <span className="footer-dim">© 2026 Ronald "Jason" Andrews</span>
+            </div>
+          </div>
+          <div className="footer-bottom">
+            <p className="footer-glory">All glory to Yahuah, the Most High. HalleluYah.</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Inline Styles */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+        .invariant-page {
+          --bg-primary: #050505;
+          --bg-secondary: #0a0a0a;
+          --bg-tertiary: #111111;
+          --text-primary: #FFFFFF;
+          --text-secondary: #888888;
+          --text-dim: #555555;
+          --border: rgba(255, 255, 255, 0.08);
+          --border-light: rgba(255, 255, 255, 0.15);
+          --font-heading: 'Outfit', sans-serif;
+          --font-body: 'Inter', sans-serif;
+          --font-mono: 'JetBrains Mono', monospace;
+
+          background-color: var(--bg-primary);
+          color: var(--text-primary);
+          font-family: var(--font-body);
+          line-height: 1.6;
+          overflow-x: hidden;
+          -webkit-font-smoothing: antialiased;
+          min-height: 100vh;
+        }
+
+        .invariant-page * { box-sizing: border-box; }
+
+        .noise {
+          position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+          pointer-events: none; z-index: 9999; opacity: 0.04;
+          background-image: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E');
+        }
+
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 10; }
+        .section { padding: 140px 0; border-bottom: 1px solid var(--border); position: relative; overflow: hidden; }
+        .section-dark { background-color: var(--bg-primary); }
+        .section-light { background-color: var(--text-primary); color: var(--bg-primary); }
+        .section-light h2, .section-light h3, .section-light h4 { color: var(--bg-primary); }
+        .section-light p { color: #333; }
+
+        .section-heading {
+          font-family: var(--font-heading); font-weight: 900; text-transform: uppercase;
+          font-size: clamp(1.5rem, 4vw, 2.5rem); text-align: center; margin-bottom: 16px;
+          letter-spacing: -0.03em; line-height: 1.1;
+        }
+        .section-sub {
+          text-align: center; color: var(--text-secondary); font-size: 1.1rem;
+          max-width: 600px; margin: 0 auto 64px;
+        }
+
+        /* ═══ REVEAL ═══ */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ═══ HERO ═══ */
+        .hero-sec {
+          min-height: 100vh; display: flex; align-items: center;
+          padding-top: 80px; position: relative; overflow: hidden;
+        }
+        .hero-bg {
+          position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;
+          background-size: cover; background-position: center; opacity: 0;
+          animation: kenburns ${heroImages.length * 4.8}s infinite;
+        }
+        @keyframes kenburns {
+          0% { opacity: 0; transform: scale(1); }
+          ${100 / heroImages.length * 0.2}% { opacity: 1; }
+          ${100 / heroImages.length * 0.5}% { opacity: 1; }
+          ${100 / heroImages.length}% { opacity: 0; transform: scale(1.05); }
+          100% { opacity: 0; transform: scale(1.05); }
+        }
+        .hero-overlay {
+          position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+          background: linear-gradient(to bottom, rgba(5,5,5,0.4), var(--bg-primary));
+          z-index: 2;
+        }
+
+        .hero-tag {
+          font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.2em;
+          color: var(--text-dim); text-align: center; margin-bottom: 40px; text-transform: uppercase;
+        }
+
+        .invariant-title {
+          font-family: var(--font-mono); font-weight: 600;
+          font-size: clamp(2.5rem, 8vw, 7rem); line-height: 0.95;
+          color: var(--text-primary); text-align: center;
+          letter-spacing: 0.15em; cursor: default;
+          text-shadow: 0 4px 24px rgba(0,0,0,0.5);
+          margin: 0; padding: 0;
+        }
+
+        .hero-subtitle {
+          font-family: var(--font-body); font-weight: 300;
+          font-size: clamp(1rem, 2.5vw, 1.5rem); color: var(--text-secondary);
+          text-align: center; margin-top: 24px; letter-spacing: 0.05em;
+          text-transform: none;
+        }
+        .hero-desc {
+          font-family: var(--font-body); font-size: clamp(0.85rem, 1.5vw, 1rem);
+          color: var(--text-dim); text-align: center; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;
+        }
+        .hero-author {
+          font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.15em;
+          color: var(--text-secondary); text-align: center; margin-top: 24px; text-transform: uppercase;
+        }
+
+        .hero-stats {
+          display: flex; justify-content: center; gap: 48px; margin-top: 64px;
+          flex-wrap: wrap; padding: 32px 0;
+        }
+        .stat-block { text-align: center; min-width: 100px; }
+        .stat-value {
+          font-family: var(--font-mono); font-size: 2rem; font-weight: 600;
+          color: var(--text-primary); letter-spacing: 0.05em;
+        }
+        .stat-label {
+          font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-dim);
+          letter-spacing: 0.2em; margin-top: 8px;
+        }
+
+        .hero-actions {
+          display: flex; justify-content: center; gap: 24px; margin-top: 48px; flex-wrap: wrap;
+        }
+        .btn-brutal {
+          display: inline-block; background-color: transparent; color: var(--text-primary);
+          border: 1px solid rgba(255,255,255,0.2); padding: 16px 48px;
+          font-family: var(--font-heading); font-size: 1rem; font-weight: 800;
+          text-transform: uppercase; cursor: pointer;
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+          border-radius: 2px; letter-spacing: 0.05em;
+        }
+        .btn-brutal:hover {
+          background-color: var(--text-primary); color: var(--bg-primary);
+          transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+        }
+
+        /* ═══ THESIS ═══ */
+        .thesis-text {
+          font-size: clamp(1rem, 2vw, 1.3rem); line-height: 2;
+          max-width: 800px; margin: 0 auto; text-align: center;
+        }
+        .thesis-bold {
+          font-size: clamp(1rem, 2vw, 1.15rem); line-height: 2;
+          max-width: 800px; margin: 0 auto; text-align: center; font-weight: 600;
+        }
+
+        /* ═══ FORMAT CARDS ═══ */
+        .format-grid {
+          display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2px;
+        }
+        .format-card {
+          background: var(--bg-secondary); border: 1px solid var(--border);
+          text-decoration: none; transition: all 0.3s ease; display: block;
+          overflow: hidden; cursor: pointer; text-align: left; padding: 0; width: 100%;
+          color: var(--text-primary);
+        }
+        .format-card:hover {
+          border-color: var(--border-light); background: var(--bg-tertiary);
+        }
+        .format-card:hover .format-img { filter: grayscale(0%) contrast(1.1); }
+        .format-card:hover .format-cta { color: var(--text-primary); }
+        .format-img {
+          width: 100%; height: 180px; object-fit: cover; display: block;
+          filter: grayscale(100%) contrast(1.1); transition: filter 0.5s ease;
+        }
+        .format-body { padding: 24px 28px 28px; }
+        .format-tag {
+          font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.2em;
+          color: var(--text-dim); margin-bottom: 10px;
+        }
+        .format-title {
+          font-family: var(--font-heading); font-weight: 900; font-size: 1.3rem;
+          text-transform: uppercase; letter-spacing: -0.02em; margin: 0 0 12px;
+        }
+        .format-desc {
+          font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; margin: 0;
+        }
+        .format-cta {
+          font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em;
+          color: var(--text-dim); margin-top: 20px; text-transform: uppercase;
+          transition: color 0.3s;
+        }
+
+        /* ═══ TABLE OF CONTENTS ═══ */
+        .toc-list { max-width: 800px; margin: 0 auto; }
+        .toc-part { border-bottom: 1px solid var(--border); }
+        .toc-part:last-child { border-bottom: none; }
+        .toc-part-header {
+          display: flex; justify-content: space-between; align-items: center;
+          padding: 24px 0;
+        }
+        .toc-part-title {
+          font-family: var(--font-heading); font-weight: 900; font-size: 1rem;
+          text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        .toc-part-count {
+          font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-dim);
+          letter-spacing: 0.15em;
+        }
+        .toc-chapters { padding-bottom: 16px; }
+        .toc-chapter {
+          display: flex; justify-content: space-between; align-items: center;
+          width: 100%; padding: 10px 0 10px 24px; background: none; border: none;
+          color: var(--text-secondary); font-family: var(--font-body); font-size: 0.9rem;
+          cursor: pointer; transition: color 0.3s; text-align: left;
+        }
+        .toc-chapter:hover { color: var(--text-primary); }
+        .toc-chapter-name { flex: 1; }
+        .toc-chapter-arrow {
+          font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-dim);
+          opacity: 0; transition: opacity 0.3s;
+        }
+        .toc-chapter:hover .toc-chapter-arrow { opacity: 1; }
+
+        /* ═══ QUOTE ═══ */
+        .pull-quote {
+          font-family: var(--font-body); font-size: clamp(1.2rem, 3vw, 1.8rem);
+          text-align: center; max-width: 700px; margin: 0 auto; line-height: 1.8;
+          font-style: italic; font-weight: 300;
+        }
+        .quote-author {
+          font-family: var(--font-mono); font-size: 0.85rem; text-align: center;
+          margin-top: 32px; letter-spacing: 0.1em; font-weight: 600;
+        }
+
+        /* ═══ FOOTER ═══ */
+        .invariant-footer {
+          padding: 48px 0 32px; border-top: 1px solid var(--border); background: var(--bg-primary);
+        }
+        .footer-inner {
+          display: flex; justify-content: space-between; align-items: center;
+          flex-wrap: wrap; gap: 16px;
+        }
+        .footer-left { display: flex; align-items: center; gap: 12px; }
+        .footer-logo {
+          font-family: var(--font-heading); font-weight: 900; font-size: 1.1rem;
+          letter-spacing: 0.1em;
+        }
+        .footer-sep { color: var(--text-dim); }
+        .footer-dim {
+          color: var(--text-dim); font-family: var(--font-mono); font-size: 0.7rem;
+          letter-spacing: 0.15em;
+        }
+        .footer-right { display: flex; align-items: center; }
+        .footer-bottom {
+          margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border);
+          text-align: center;
+        }
+        .footer-glory {
+          font-family: var(--font-body); font-size: 0.85rem; color: var(--text-dim);
+          font-style: italic;
+        }
+
+        /* ═══ MOBILE ═══ */
+        @media (max-width: 768px) {
+          .section { padding: 80px 0; }
+          .hero-stats { gap: 24px; }
+          .stat-value { font-size: 1.5rem; }
+          .hero-actions { flex-direction: column; align-items: center; }
+          .btn-brutal { width: 100%; max-width: 320px; text-align: center; padding: 14px 32px; }
+          .format-grid { grid-template-columns: 1fr; }
+          .footer-inner { flex-direction: column; text-align: center; }
+          .footer-left { flex-direction: column; gap: 8px; }
+          .footer-sep { display: none; }
+          .section-sub { margin-bottom: 40px; }
+          .toc-part-header { padding: 16px 0; }
+          .toc-chapter { padding: 8px 0 8px 16px; font-size: 0.85rem; }
+        }
+      `}</style>
     </div>
   );
 }
