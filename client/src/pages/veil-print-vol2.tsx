@@ -392,7 +392,7 @@ HalleluYah.`
 
 export default function VeilPrintVol2() {
   useEffect(() => {
-    document.title = "Through The Veil - Volume 2: My Journey Beyond the Veil";
+    document.title = "INVARIANT - Volume 2: My Journey to the Invariant";
   }, []);
 
   return (
@@ -422,11 +422,11 @@ export default function VeilPrintVol2() {
 
       <div className="max-w-3xl mx-auto px-8 py-16 font-serif">
         <div className="text-center mb-24">
-          <h1 className="text-5xl font-bold mb-6 text-gray-900">Through The Veil</h1>
+          <h1 className="text-5xl font-bold mb-6 text-gray-900">INVARIANT</h1>
           <p className="text-2xl text-gray-600 mb-4">Volume Two</p>
-          <p className="text-xl text-gray-500 italic mb-12">My Journey Beyond the Veil</p>
+          <p className="text-xl text-gray-500 italic mb-12">My Journey to the Invariant</p>
           <div className="w-24 h-1 bg-sky-500 mx-auto mb-12"></div>
-          <p className="text-lg text-gray-600">By Jason Andrews</p>
+          <p className="text-lg text-gray-600">By Ronald "Jason" Andrews</p>
           <p className="text-gray-400 mt-8">January 2026</p>
         </div>
 

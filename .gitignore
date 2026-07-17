@@ -19,3 +19,5 @@ blockchain/target/
 .upm/
 .replit
 *.txt
+
+*.backup-*

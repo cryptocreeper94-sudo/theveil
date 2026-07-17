@@ -1,6 +1,6 @@
-# THROUGH THE VEIL
+# INVARIANT
 
-## The Greatest Story Ever Stole?
+## What the Lying Pen Could Not Change
 
 ---
 
@@ -8,17 +8,17 @@
 
 ---
 
-**By Jason Andrews**
+**By Ronald "Jason" Andrews**
 
 ---
 
-**First Edition**
+**Second Edition**
 
 ---
 
 ## Copyright
 
-Copyright © 2025 Jason Andrews. All rights reserved.
+Copyright Â© 2026 Ronald "Jason" Andrews, DarkWave Studios LLC. All rights reserved.
 
 No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the author, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law.
 
@@ -214,6 +214,18 @@ The journey through the veil begins now.
 
 ---
 
+
+---
+
+## A Note on Sources
+
+Throughout this book I reference the Eth Cepher as my primary English translation â€” and there are good reasons for that. The Eth Cepher restores the original Hebrew names. Yahuah instead of LORD. Yahusha instead of Jesus. Yirmeyahu instead of Jeremiah. Yeshayahu instead of Isaiah. Those restorations matter enormously, and you will understand why as this investigation unfolds.
+
+But I want to be honest: the Eth Cepher is still fundamentally built on the same corrupted foundation as most English translations. Restoring the names is significant, but it does not undo the centuries of interpretive decisions, selective omissions, and doctrinal shaping that happened before those names were ever changed. The names were the last layer to go. The deeper corruption happened much earlier â€” at the level of the Hebrew text itself.
+
+What I present in this book uses the Eth Cepher's restored names as a baseline. But the argument rests on the Hebrew. When the Hebrew and the English disagree, the Hebrew is what was given. The English is what was chosen â€” by men, with agendas, centuries later.
+
+With that understanding established, let us begin.
 # PART ONE: THE REBELLION
 
 ---
@@ -1527,6 +1539,132 @@ The institutional church that emerged would become the most powerful organizatio
 This was the institutionalization of the deception. Everything that followed - the Crusades, the Inquisition, the Protestant Reformation that retained most of Constantine's substitutions, the modern denominational Christianity - traces back to what was established in those councils of the 4th century.
 
 
+
+---
+
+## CHAPTER: THE EMPIRE THAT NEVER FELL
+
+People speak of the fall of Rome as though it was an ending.
+
+It was not an ending. It was a rebranding.
+
+In 476 CE, the last Western Roman Emperor â€” a teenager named Romulus Augustulus â€” was deposed by a Germanic chieftain named Odoacer. No battle. No siege. He was simply removed from power and sent into exile. History books call what followed the "Dark Ages" â€” a thousand years of supposed stagnation, sparse records, and arrested progress.
+
+But as this book has already established: those thousand years were not dark. They were the Millennial Reign. The records are sparse because they were deliberately obscured. The memory was erased as part of the same pattern of suppression this entire investigation traces. The institution that presided over that era had every reason to make sure future generations could not clearly see what actually happened during it.
+
+What is certain is this: the institution did not fall. The apparatus did not collapse. The bureaucracy, the legal framework, the land, the wealth, the mechanisms of control â€” none of it disappeared. It transferred. Over the preceding century and a half, a parallel power structure had been carefully constructed within the empire, using the empire's own infrastructure, legitimized by the empire's own authority.
+
+It was called the Church.
+
+### The Architect of the Absorption
+
+To understand how Rome became the Vatican, you have to understand Constantine.
+
+In 313 CE, Emperor Constantine issued the Edict of Milan, legalizing Christianity throughout the Roman Empire. History presents this as a conversion â€” a Roman Emperor who found faith, who ended persecution, who opened the door for the movement of Yahusha to flourish. That is the story they tell.
+
+The actual story is different.
+
+Constantine never renounced Roman paganism. He continued to serve as Pontifex Maximus â€” the high priest of Roman state religion â€” until his death. He minted coins bearing the image of Sol Invictus, the unconquered sun god, years after his supposed conversion. He was not baptized until he was on his deathbed, and even then the baptism was performed by an Arian bishop â€” a faction the Council of Nicaea had declared heretical twelve years earlier.
+
+What Constantine understood was not theology. It was power.
+
+The movement of Yahusha had survived three centuries of persecution and was still growing. It could not be destroyed. So it had to be controlled. And the way you control a movement is not to attack it from the outside â€” it is to get inside it, standardize it, institutionalize it, and make it serve the structure it once threatened.
+
+In 325 CE, Constantine called the Council of Nicaea. He personally presided over it. A Roman Emperor â€” not a follower of Yahusha, not an elder of the assembly, not anyone with any spiritual authority within the movement â€” sat at the head of the table and directed the outcome. The council determined which books were authoritative. The council established official doctrine. The council created the institutional framework that would govern the faith for the next seventeen centuries.
+
+The movement that had no king but Yahuah now had a Roman Emperor setting its theology.
+
+### The Transfer of Power
+
+When the Western Empire nominally collapsed in 476 CE, something interesting happened. The Bishop of Rome â€” already positioned as the most powerful religious figure in the West, operating from the capital of the former empire, using Roman legal structures, speaking Latin, administering through a hierarchy modeled on Roman provincial governance â€” simply continued.
+
+The emperor was gone. The pope remained.
+
+The territory that Rome had governed for centuries did not become ungoverned. It became governed by the Church. The infrastructure Rome had built â€” the roads, the administrative networks, the legal codes, the taxation systems â€” passed into the management of an institution that had been embedded within the empire for nearly 200 years.
+
+And then in 800 CE, Pope Leo III crowned Charlemagne as Emperor of the Romans. The Roman Empire â€” by name, explicitly â€” was formally reconstituted under papal authority. It would continue in various forms as the Holy Roman Empire until 1806. A thousand years of imperial Roman governance operating under the Church's blessing, with the Church maintaining the authority to crown and uncrown its rulers.
+
+The empire did not fall. It changed management.
+
+### The Sovereign That Answers to No One
+
+Today the Roman Catholic Church is the only institution on earth that is simultaneously a religion and a sovereign nation-state.
+
+Vatican City was established as an independent state in 1929 through the Lateran Treaty with Mussolini's Italy â€” but the sovereignty it formalized had been exercised for over a thousand years before that treaty was signed. It holds permanent observer status at the United Nations. It maintains full diplomatic relations with more than 180 countries. It operates its own banking system â€” the Institute for the Works of Religion, commonly known as the Vatican Bank. It issues its own passports. It has its own legal system.
+
+And it is immune from the laws of every nation in which it operates. When crimes are committed within its structure â€” and they have been, extensively, and the documentation is public â€” the institution itself cannot be prosecuted by any external authority. It investigates itself. It disciplines its own. Or it does not. No external court has jurisdiction.
+
+This is not the structure of a spiritual movement. This is the structure of an empire.
+
+### The Land
+
+The Roman Empire built its power on land. Conquest, annexation, taxation of territory â€” land was the material basis of Roman authority for seven centuries.
+
+The Church inherited that understanding completely.
+
+Current estimates of Catholic Church land holdings range from 70 million to 177 million acres globally â€” across every inhabited continent. This makes it one of the largest landowners on earth, comparable in scale to several nation-states. These holdings were accumulated over centuries through donations, bequests, conquest, and the absorption of territories whose populations converted â€” or were converted â€” to the faith.
+
+Much of this land was never purchased. It was transferred through the same mechanisms Rome used: military presence, political authority, and the legal structures that the Church itself administered. Roman law â€” the Corpus Juris Civilis of Emperor Justinian â€” was preserved, taught, and administered by the Church throughout the medieval period. The legal concept of institutional personhood that allows the Church to own property in perpetuity, across generations, without individual ownership â€” that is Roman law, maintained by Rome's successor institution.
+
+The empire built on land. The empire that never fell still holds the land.
+
+### The Bloodlines
+
+One of the most documented and least discussed realities of Vatican power is the continuity of the families behind it.
+
+The great noble families of ancient Rome â€” Orsini, Colonna, Farnese, Borgia, Aldobrandini, Pamphilj â€” did not disappear when the empire fell. They moved their influence into the Church. They produced popes, cardinals, and Church administrators for centuries. The Orsini family alone produced three popes. The Farnese produced one of the most powerful popes of the Renaissance. The Borgia â€” Rodrigo Borgia, who became Pope Alexander VI â€” are synonymous with the corruption and political manipulation of the papal office.
+
+These families are not historical curiosities. Several of them maintain active presence and influence in Vatican and Italian aristocratic circles today. The same bloodlines that governed Rome govern the institution that replaced Rome.
+
+This is not speculation. It is genealogy. It is documented. And it follows the exact pattern this book has been tracing from the beginning: power does not disappear. It transfers, it adapts, it rebrands. But it remains in the same hands.
+
+### The Law That Never Changed
+
+Western civilization â€” its courts, its contracts, its property law, its very concept of rights and legal personhood â€” runs on Roman law.
+
+The Corpus Juris Civilis, compiled under Emperor Justinian in the 6th century CE, forms the basis of legal systems across continental Europe, Latin America, and much of the world that Rome and its successor institutions reached. The concept of the corporation â€” a legal entity separate from any individual, capable of owning property and entering contracts in perpetuity â€” is Roman. The structure of courts, of prosecution, of legal hierarchy â€” Roman.
+
+The Church preserved this law when nothing else did. Through the medieval period, when secular literacy collapsed across much of Europe, it was Church scholars â€” in Church institutions, funded by Church wealth â€” who copied, taught, and transmitted Roman legal texts. The legal framework that gave the Church the ability to own property, to operate as a sovereign entity, to function across political boundaries without being subject to any one nation â€” that framework required Roman law to exist, and the Church was the institution that kept it alive.
+
+The empire built the law. The empire that never fell still runs on it.
+
+### Same Institution. Different Name.
+
+I am not saying the Catholic Church is entirely without value or that every person within it is acting with corrupt intent. There are sincere people within every structure, including this one.
+
+What I am saying is that the institution itself â€” its structure, its authority, its legal status, its land holdings, its immunity from accountability, its bloodline continuity, its preservation of Roman law, its direct administrative lineage from the Roman imperial apparatus â€” is the Roman Empire.
+
+Not the spiritual heir of Rome. Not reminiscent of Rome. Not built on Roman foundations.
+
+Rome.
+
+The same institution that crucified Yahusha through its puppet Pilate. The same institution that persecuted His followers for three centuries. The same institution that, when it could not destroy the movement, absorbed it, standardized it, removed the books that explained too much, narrowed the commandments that demanded too much, elevated the agent who redirected the theology â€” and then declared itself the sole legitimate authority on the faith of the man it killed.
+
+And it still holds the land. It still holds the law. It still answers to no one.
+
+This is not the dark ages. This is now.
+
+### Free Will and the Recognizing
+
+The pattern is visible. You do not need a seminary degree to see it. You need only what you were born with â€” the discernment that was placed in you before any institution existed to manage it.
+
+The empire tells you it is a church. The church tells you it speaks for the Creator. And the Creator â€” the one whose name they replaced, whose commandments they narrowed, whose movement they co-opted â€” said plainly through Yirmeyahu:
+
+"Learn not the way of the nations."
+
+The way of the nations is empire. It is always empire. Control of land, control of law, control of the text, control of the name. The same pattern running across every century, wearing different clothes.
+
+The stone still says Lo Tirtzach.
+The councils still removed the books.
+The agent still redirected the theology.
+The empire still holds the land.
+
+And the truth â€” the invariant truth that none of this has been able to change â€” is still there. Underneath all of it. Waiting for anyone with the discernment to find it.
+
+> "Learn not the way of the nations, and be not dismayed at the signs of heaven; for the nations are dismayed at them."
+> â€” Yirmeyahu (Jeremiah) 10:2
+
+
 # PART FIVE: THE GREAT SUBSTITUTION
 
 ---
@@ -2265,6 +2403,213 @@ Now everything feels solid, blocky, disconnected. The spiritual realm seems fore
 That's not because the connection doesn't exist. It's because the tuning has been sabotaged.
 
 Restore the words. Restore the frequency. Restore the connection.
+
+
+---
+
+## CHAPTER: THE NARROWING
+
+There is a commandment that most people believe they understand.
+
+They have heard it their whole lives. They have built moral frameworks around it. They have used it to draw lines between what they will and will not do. It sits near the center of Western ethics, religious law, and the common conscience.
+
+*Lo Tirtzach.*
+
+The English says: Thou shalt not kill.
+
+And somewhere between the stone tablet and the pew, a word got added that was never there.
+
+*...kill humans.*
+
+### What the Word Actually Says
+
+The Hebrew root of Tirtzach is ratsach (hebrew letters here).
+
+It means to kill. To slay. To take life. That is the complete definition.
+
+The Hebrew scriptures are precise when they want to be. They have specific words for specific kinds of killing. Harag — to strike down an enemy in battle. Shachat — to slaughter, used for ritual killing of animals. Muth — to die, to put to death. Each of these words exists. Each of them carries a specific context.
+
+Yahuah did not choose any of them.
+
+He chose ratsach — the broadest possible word. The word with no qualifier. The word that means exactly what it sounds like in any language: do not kill.
+
+And He carved it in stone with His own hand. Not a scribe's copy. Not a priest's transcription. The physical inscription made by the finger of the Creator Himself, on the mountain, before any institution existed to manage what it meant.
+
+The qualifier — humans only — was added later. By men. With ink.
+
+### The Pen That Rewrote It
+
+Yirmeyahu (Jeremiah) 8:8:
+
+> "How do ye say, We are wise, and the Torah of Yahuah is with us? Lo, certainly in vain made he it; the lying pen of the scribes is lying."
+
+This is not a marginal voice. This is not an outside critic. This is a prophet of Yahuah speaking to his own people — to the very community that prided itself on its knowledge of the Torah — and saying plainly: the scribes lied. The men entrusted with the text used their position to change what was written.
+
+Not crudely. Not obviously. The stone tablets were never touched. What the scribes changed was the interpretive layer that wrapped around the text — the teaching tradition, the commentary, the oral law that over time became more authoritative than the written word itself. You narrow a commandment not by erasing it but by explaining it until the explanation replaces it.
+
+The lying pen did not destroy the Torah. It slowly, carefully, made the Torah say what the institution needed it to say.
+
+And what the institution needed was for Lo Tirtzach to have a limit.
+
+### The Verse You Already Know in Your Bones
+
+Yeshayahu (Isaiah) 66:3:
+
+> "He that killeth an ox is as if he slew a man; he that sacrificeth a lamb, as if he cut off a dog's neck."
+
+Yahuah is speaking. He is equating the killing of an ox with the killing of a man. He is saying that sacrificing a lamb is the same act as slitting a dog's throat. Not similar. Not comparable. The same.
+
+If Lo Tirtzach only applied to humans, this verse makes no sense. Why would Yahuah be offended by the sacrifice of a lamb? Why would He compare it to murder if the animal's life carried no sacred weight?
+
+He makes the comparison because the weight is the same. The nephesh — the living soul — is the same. And the command not to take it was never limited to the kind of body it lives in.
+
+### Five Witnesses
+
+What makes this more than one man's interpretation is that Yahuah says it repeatedly, through multiple prophets, across centuries. This is not a single passage that can be argued away. This is a pattern.
+
+Yirmeyahu (Jeremiah) 7:22: *"For I spake not unto your fathers, nor commanded them in the day that I brought them out of the land of Egypt, concerning burnt offerings or sacrifices."*
+
+He says He did not command it.
+
+Yeshayahu (Isaiah) 1:11: *"To what purpose is the multitude of your sacrifices unto me? saith Yahuah: I am full of the burnt offerings of rams, and the fat of fed beasts; and I delight not in the blood of bullocks, or of lambs, or of he goats."*
+
+He does not want it.
+
+Amos 5:21-25: *"I hate, I despise your feast days, and I will not smell in your solemn assemblies. Though ye offer me burnt offerings and your meat offerings, I will not accept them... Did ye offer unto me sacrifices and offerings in the wilderness forty years, O house of Ysharal?"*
+
+He hates it.
+
+Hoshea (Hosea) 6:6: *"For I desired mercy, and not sacrifice; and the knowledge of Elohim more than burnt offerings."*
+
+This is the one Yahusha quotes — twice — when the religious leaders challenged Him.
+
+Tehilliym (Psalm) 51:16-17: *"For thou desirest not sacrifice; else would I give it: thou delightest not in burnt offering. The sacrifices of Elohim are a broken spirit: a broken and contrite heart."*
+
+David — the man described as after Yahuah's own heart — understood it.
+
+Five witnesses. Five different voices. Five different generations. All saying the same thing: this was not what was asked of you.
+
+### Blood Is Sacred — All of It
+
+Vayiqra (Leviticus) 17:14: *"For it is the life of all flesh; the blood of it is for the life thereof."*
+
+The word is nephesh — the same word used for the living soul of a human being. The soul of all flesh is in the blood. Not the soul of human flesh. All flesh.
+
+Mishlei (Proverbs) 12:10: *"A righteous man regards the life of his animal: but the tender mercies of the wicked are cruel."*
+
+The commandment says Lo Tirtzach — no qualifier. The nephesh in all flesh is the reason why.
+
+### The Book They Named After Byblos
+
+The word Bible does not come from a Hebrew or Aramaic root. It comes from the Greek *ta biblia* — meaning "the books" — which comes from *byblos*, the Greek word for papyrus. And byblos came from the name of a city: Byblos. A Phoenician port city on the coast of what is now Lebanon.
+
+Byblos was not a neutral name. It was the religious capital of Phoenicia. Its patron goddess was Baalat Gebal — literally, Lady of Byblos. The female consort of Ba'al.
+
+The stone still says Lo Tirtzach. The Book named after Byblos says something slightly different. You get to decide which one you believe.
+
+### Free Will Is the Key
+
+Free will is not a philosophical concept. It is a tool — the most powerful tool you were given.
+
+Look at the Hebrew. Ratsach — no qualifier. Look at what Yirmeyahu 8:8 says the scribes did. Look at what Yahuah says through Yirmeyahu, Yeshayahu, Amos, Hoshea, and David about what He never asked for.
+
+And then make your own decision. Not mine. Not the institution's.
+
+The commandment was given clearly. Life is sacred — all of it. The institution needed it not to be. So the lying pen did what it was paid to do.
+
+What they could not change is the stone. And the stone still says: Lo Tirtzach.
+
+> "And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up."
+> — Devarim (Deuteronomy) 6:7
+
+
+
+---
+
+## CHAPTER: THE AGENT
+
+There is something that once you see, you cannot unsee.
+
+Paul — the man whose letters make up the majority of what Western Christianity calls its New Testament — never met Yahusha. Not once. Not in the flesh, not in conversation, not as a witness to anything Yahusha said or did while He walked this earth. Everything Paul claims to know about the Messiah came from a private vision.
+
+And somehow, this man — this single unverified witness — ended up writing 13 to 14 of the 27 books of the canon. More than any apostle who actually walked with Yahusha.
+
+Before we go any further, I need you to hold that in your mind and sit with it.
+
+### Who Paul Was Before Damascus
+
+Sha'ul of Tarsus — who became Paul — was a Pharisee. Not a casual observer of the law. A trained, devoted, professional Pharisee, educated under Gamaliel. The Pharisees were the class of religious leaders who coordinated the arrest, trial, and execution of Yahusha.
+
+Paul was not merely a member of that class. By his own account in Philippians 3:6, he was among the most zealous of them. He hunted them. He had them arrested, imprisoned, and killed. He held the coats of the men who stoned Stephanos (Stephen) to death.
+
+And then, on a road to Damascus, everything changed.
+
+By his own account.
+
+### The Road No One Else Can Verify
+
+The Damascus road account appears three times in the book of Acts — chapters 9, 22, and 26. They do not fully agree with each other. In Acts 9:7, the men traveling with Paul heard the voice but saw no one. In Acts 22:9, Paul says they saw the light but did not hear the voice.
+
+Every account comes from Paul himself, or from Luke — Paul's traveling companion. There is no independent witness.
+
+The question is not whether something happened to Paul. The question is: who sent him?
+
+### What Paul Taught vs. What Yahusha Said
+
+Yahusha, in Mattithyahu (Matthew) 5:17-18:
+
+> "Think not that I am come to destroy the Torah or the prophets: I am not come to destroy, but to fulfil. For verily I say unto you, Till heaven and earth pass, one yod or one stroke shall in no wise pass from the Torah, till all be fulfilled."
+
+Paul, in Galatians 3:13: *"Christ hath redeemed us from the curse of the law."*
+
+Paul, in Romans 10:4: *"For Christ is the end of the law for righteousness to every one that believeth."*
+
+Paul, in Colossians 2:14: *"Blotting out the handwriting of ordinances that was against us."*
+
+These are not theological nuances. These are direct contradictions. One man says the Torah stands forever. Another man says it is a curse, it is ended, it is blotted out. Both cannot be right.
+
+The institution chose Paul's version. Which is exactly what Rome needed.
+
+### The Apostles Were Suspicious of Him Too
+
+Kepha (Peter), in 2 Kepha (2 Peter) 3:15-16:
+
+> "Even as our beloved brother Paul also according to the wisdom given unto him hath written unto you; as also in all his letters, speaking in them of these things; in which are some things hard to be understood, which they that are unlearned and unstable wrest, as they do also the other scriptures, unto their own destruction."
+
+And in Chizayon (Revelation) 2:2, Yahusha commends Ephesus:
+
+> "...thou hast tried them which say they are apostles, and are not, and hast found them liars."
+
+Apostles who are not apostles. In the city of Paul's greatest influence.
+
+### The Pattern of Controlled Opposition
+
+Take a movement that threatens the existing power structure. Infiltrate it. Place a voice inside it that slowly, carefully redirects its theology. Make that voice prolific. Over time, make that voice more authoritative than the original.
+
+A Pharisee with Roman citizenship — who converts dramatically, claims private divine authority, systematically dismantles the Torah requirements that made the movement distinctly non-Roman, and ends up authoring the majority of the canon?
+
+That is not a coincidence. That is a resume.
+
+### What This Means for You
+
+I am not telling you Paul was definitively a Roman agent. I cannot prove that any more than the institution can prove the Damascus road happened exactly as described.
+
+What I am telling you is that the contradictions are real. The timeline is real. The theological shift is real. The pattern is real.
+
+Yahusha said the Torah stands. Paul said it is a curse. Someone is wrong. And the institution built its entire doctrinal foundation on the one who never met Him.
+
+Use the tool you were given. Read the words of Yahusha directly. Then read Paul's letters and ask yourself whose theology serves the Most High — and whose theology served Rome.
+
+Lo Tirtzach carried no human qualifier until the lying pen narrowed it.
+The movement of Yahusha carried no anti-Torah theology until the Agent redirected it.
+
+Same pattern. Same pen. Same institution.
+
+The stone still says what it says.
+
+> "Beware of false prophets, which come to you in sheep's clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits."
+> — Mattithyahu (Matthew) 7:15-16
+
 
 ---
 
@@ -6226,6 +6571,113 @@ The point is direction, not perfection. Movement toward truth rather than arriva
 
 The veil lifts gradually for most. Layer by layer. Revelation by revelation. Patience is required.
 
+
+---
+
+## CHAPTER: THE FILTER
+
+By now you may be asking the only question that honestly matters.
+
+If the scribes corrupted the Torah — if the lying pen of Yirmeyahu 8:8 is real, if the councils removed books, if Paul redirected the movement, if the Name was erased and the commandments were narrowed — then what are you left with?
+
+This is not a rhetorical question. It is the most important practical question this entire investigation raises. And it deserves a direct, honest answer.
+
+The answer is: you apply a filter.
+
+Not a filter someone else built for you. A filter built from the text itself. From logic. From the consistent character of the source. From the cross-verification of independent witnesses.
+
+A filter that removes the noise and returns only what is invariant — what survives every test, every source, every century.
+
+### Why a Filter Works
+
+Corruption, by its nature, is inconsistent.
+
+Truth does not need to be managed. It is internally coherent. It says the same thing across different times, different voices, different cultures, different languages.
+
+The corruption is detectable precisely because it disturbs that coherence. These disturbances are the fingerprints of the lying pen.
+
+What does not disturb the coherence — what shows up in the oldest sources, in multiple independent traditions, in the words of Yahusha Himself — that is the invariant truth.
+
+### The Five Tests
+
+**Test One — Does Yahusha cite it?**
+
+Yahusha quoted scripture directly and extensively throughout His ministry. Every passage He personally validated is confirmed. He quoted Devarim. He quoted Tehilliym. He quoted Yeshayahu. He quoted Hoshea: "I desired mercy, and not sacrifice." He quoted the Shema.
+
+He did not quote Paul. He did not endorse the sacrificial system.
+
+What Yahusha cited is a vetted layer. Start there.
+
+**Test Two — Do multiple independent ancient witnesses agree?**
+
+The Dead Sea Scrolls predate the Masoretic Text by approximately one thousand years. The Ethiopian Orthodox Tewahedo canon contains 81 books. The Samaritan Pentateuch is a third independent witness.
+
+When all three agree, that passage has survived on its own merits across independent lines of transmission.
+
+**Test Three — Is it consistent with the character of Yahuah?**
+
+The character of the Creator is remarkably consistent: He values life. He wants mercy, not ritual. He defends the poor and the outcast. He wants direct relationship, not institutional mediation.
+
+When a passage contradicts this consistent character, the passage fails this test. Something was added, or something was changed.
+
+**Test Four — Who benefits from this passage existing?**
+
+Corruption follows power. Every deliberate change to the sacred text was made by someone with something to gain.
+
+A passage requiring animal sacrifice — who profits? The priestly class.
+A passage calling Torah a curse — who profits? Rome.
+A passage limiting Lo Tirtzach to humans only — who profits? Everyone who needed to build economies on the taking of animal life.
+A passage removing books explaining the origin of the Nephilim — who profits? The bloodlines.
+
+Ask it of every passage that troubles you. The corrupted passages will identify themselves.
+
+**Test Five — Does it require an intermediary?**
+
+Yahuah does not require you to go through a priest, a pastor, an institution, a scholar, or a building to reach Him. His direct communication with His people was always personal: Avraham in his tent, Mosheh on the mountain, Daniyl in exile, the still small voice that spoke to Eliyahu in the wilderness.
+
+Any passage that places a mandatory human intermediary between you and the Most High fails this test. The Creator who made you in His image does not require a subscription.
+
+### What Remains
+
+When you apply these five tests, what remains is not small.
+
+It is enough.
+
+The Shema — Yahuah our Elohim, Yahuah is one — passes every test.
+Lo Tirtzach — with no qualifier — passes every test.
+I desired mercy, and not sacrifice — passes every test.
+The two greatest commandments — love Yahuah with everything you have, love your neighbor as yourself — pass every test.
+
+The invariant core is coherent. It is simple. It does not contradict itself. It does not serve the institution. It serves only the relationship between the Creator and the thing He created.
+
+### The Origin of This Thinking
+
+I want to say something here that I have not said anywhere else in this book.
+
+The process I just described — stripping away what cannot be verified, identifying what is invariant across independent sources, flagging what is unknown or conflicting and refusing to guess at it — that is not just a method for reading scripture.
+
+It is how I think about everything now.
+
+I discovered it here. In this investigation. Sitting with a corrupted text, trying to find what was actually given, refusing to accept that the institution's version was the only version. The question this book started with — what is real underneath all of this? — is the same question I have asked about every system I have since tried to understand.
+
+This book is where that question was born. Everything I have built since is an answer to the same question, applied to different domains.
+
+The filter is the beginning of everything.
+
+### How to Read What Remains
+
+Do not read the scriptures the way you were taught to read them — passively, deferentially, as a recipient of someone else's interpretation. Read them the way you read anything you are trying to verify.
+
+You are not a vessel waiting to be filled with doctrine. You were made in the image of a Creator. You were given discernment before any institution existed to manage it.
+
+The filter is yours. It was always yours.
+
+Use it.
+
+> "But this shall be the covenant that I will make with the house of Ysharal; After those days, saith Yahuah, I will put my Torah in their inward parts, and write it in their hearts; and will be their Elohim, and they shall be my people. And they shall teach no more every man his neighbour, and every man his brother, saying, Know Yahuah: for they shall all know me."
+> — Yirmeyahu (Jeremiah) 31:33-34
+
+
 ---
 
 # CHAPTER 43: THE WITNESSES IN STONE AND SPIRIT
@@ -7915,7 +8367,7 @@ What happens next is between the reader and the Most High.
 
 ---
 
-*Through the Veil: Unraveling the Tapestry of Lies?*
+*INVARIANT: What the Lying Pen Could Not Change*
 
 *"The signal is broadcasting. The receiver can be restored."*
 
@@ -8196,9 +8648,9 @@ This isn't about creating followers. It's about connecting seekers. The journey 
 
 ---
 
-*First Edition - 2025*
+*Second Edition - 2026*
 
-*Through the Veil: Unraveling the Tapestry of Lies?*
+*INVARIANT: What the Lying Pen Could Not Change*
 
 *By Jason Andrews*
 

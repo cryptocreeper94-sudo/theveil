@@ -117,7 +117,7 @@ function KenBurnsHero() {
         >
           <img
             src={src}
-            alt="Through The Veil Concept"
+            alt="INVARIANT Book Concept"
             className="w-full h-full object-cover"
             loading={index === 0 ? "eager" : "lazy"}
           />
@@ -149,7 +149,7 @@ export default function Veil() {
     }
     const a = document.createElement('a');
     a.href = '/api/veil/pdf';
-    a.download = 'Through-The-Veil.pdf';
+    a.download = 'INVARIANT.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -162,7 +162,7 @@ export default function Veil() {
     }
     const a = document.createElement('a');
     a.href = '/api/veil/epub';
-    a.download = 'Through-The-Veil.epub';
+    a.download = 'INVARIANT.epub';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -177,13 +177,13 @@ export default function Veil() {
   }, []);
 
   useEffect(() => {
-    document.title = "Through The Veil | The Greatest Story Ever Stole?";
+    document.title = "INVARIANT | What the Lying Pen Could Not Change";
     let manifestLink = document.querySelector('link[rel="manifest"]') as HTMLLinkElement;
     if (manifestLink) manifestLink.href = '/manifest-veil.webmanifest';
     let themeColor = document.querySelector('meta[name="theme-color"]') as HTMLMetaElement;
     if (themeColor) themeColor.content = '#38bdf8';
     let appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]') as HTMLMetaElement;
-    if (appleTitle) appleTitle.content = 'Through The Veil';
+    if (appleTitle) appleTitle.content = 'INVARIANT';
     let appleIcon = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
     if (appleIcon) appleIcon.href = '/icons/veil-192x192.png';
     return () => {
@@ -212,12 +212,12 @@ export default function Veil() {
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-sky-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent">
-              Through The Veil
+              INVARIANT
             </span>
           </h1>
 
           <h2 className="text-lg sm:text-xl md:text-2xl text-slate-400 mb-6 sm:mb-8 font-light tracking-wide">
-            The Greatest Story Ever Stole?
+            What the Lying Pen Could Not Change
           </h2>
 
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -229,7 +229,7 @@ export default function Veil() {
           <p className="text-sm sm:text-base text-slate-300/80 max-w-xl mx-auto mb-3 leading-relaxed">
             A Journey Through Hidden History, Suppressed Truth, and Spiritual Warfare
           </p>
-          <p className="text-sky-300 font-semibold text-base sm:text-lg mb-8 sm:mb-10">By Jason Andrews</p>
+          <p className="text-sky-300 font-semibold text-base sm:text-lg mb-8 sm:mb-10">By Ronald "Jason" Andrews</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md sm:max-w-none mx-auto">
             <Button

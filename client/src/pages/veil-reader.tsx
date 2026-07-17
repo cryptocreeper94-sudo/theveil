@@ -66,7 +66,7 @@ const STORAGE_KEY = 'veil-reader-user-data';
 
 function useVeilPWA() {
   useEffect(() => {
-    document.title = "Through The Veil | The Greatest Story Ever Stole?";
+    document.title = "INVARIANT | What the Lying Pen Could Not Change";
     
     let manifestLink = document.querySelector('link[rel="manifest"]') as HTMLLinkElement;
     if (manifestLink) {
@@ -80,7 +80,7 @@ function useVeilPWA() {
     
     let appleTitle = document.querySelector('meta[name="apple-mobile-web-app-title"]') as HTMLMetaElement;
     if (appleTitle) {
-      appleTitle.content = 'Through The Veil';
+      appleTitle.content = 'INVARIANT';
     }
 
     let appleIcon = document.querySelector('link[rel="apple-touch-icon"]') as HTMLLinkElement;
@@ -1021,7 +1021,7 @@ export default function VeilReader() {
     }
     const a = document.createElement('a');
     a.href = '/api/veil/pdf';
-    a.download = 'Through-The-Veil.pdf';
+    a.download = 'INVARIANT.pdf';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -1058,7 +1058,7 @@ export default function VeilReader() {
             <BookOpen className="absolute inset-0 m-auto w-7 h-7 text-sky-400" />
           </div>
           <p className="text-slate-200 text-lg font-medium mb-2">Opening your book...</p>
-          <p className="text-sm bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent font-semibold tracking-wide mb-4">Through The Veil</p>
+          <p className="text-sm bg-gradient-to-r from-sky-400 to-cyan-400 bg-clip-text text-transparent font-semibold tracking-wide mb-4">INVARIANT</p>
           <p className="text-slate-500 text-xs">52 chapters · 107,000 words</p>
         </motion.div>
       </div>
@@ -1722,7 +1722,7 @@ export default function VeilReader() {
             {/* Paper Footer */}
             <div className="px-8 sm:px-12 md:px-16 lg:px-20 py-6 border-t border-stone-200/60 bg-stone-50/50">
               <div className="flex items-center justify-between text-xs text-stone-400" style={{ fontFamily: "'Inter', sans-serif" }}>
-                <span>Through The Veil</span>
+                <span>INVARIANT</span>
                 <span>Chapter {currentGlobalIndex + 1} of {totalChapters}</span>
               </div>
             </div>
