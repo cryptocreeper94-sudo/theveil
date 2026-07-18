@@ -157,11 +157,13 @@ function parseVeilMarkdown(markdown: string) {
     const sec = fmSectionMatches[s];
     const nextStart = s + 1 < fmSectionMatches.length ? fmSectionMatches[s + 1].start : fmText.length;
     const secContent = fmText.substring(sec.start, nextStart).trim();
-    if (secContent.length > 10) {
+    // Strip the leading ## heading since it's already used as the section title
+    const strippedContent = secContent.replace(/^##\s+.+\n*/, '').trim();
+    if (strippedContent.length > 10) {
       frontMatterSections.push({
         id: "fm-" + sec.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-+/g, "-").substring(0, 40),
         title: sec.title,
-        content: secContent,
+        content: strippedContent,
         partTitle: "Front Matter",
       });
     }
