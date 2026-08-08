@@ -7460,9 +7460,9 @@ I have heard the stories most of us have heard — people pulled back from comas
 
 But there is one deathbed I do not have to take on anyone else's testimony, because I stood at it.
 
-Hours before my grandmother died, I watched her raise her hands to the sky.
+My grandmother had been non-responsive for days. Hours before she died, I watched her raise her hands toward the sky — and her eyes went up with them. She looked up at the ceiling and reached, as if she were looking straight through it. As if the ceiling were not there.
 
-She was not clawing at the air. She was not begging anything to stay away. She lifted her hands the way you lift them toward something you *know* — the way a child lifts them toward a parent coming through the door. Nobody reaches upward toward what they dread.
+She was not clawing at the air. She was not begging anything to stay away. Her eyes were fixed on something, and her hands lifted toward it the way you lift them toward something you *know* — the way a child lifts them toward a parent coming through the door. Nobody reaches upward toward what they dread, and nobody stares through a ceiling at nothing. A woman who had not responded to any voice in the room for days was responding to something. It simply was not in the room.
 
 That is not fear. That is recognition.
 
@@ -7478,7 +7478,7 @@ It does not claim that every peaceful death proves connection or every hard deat
 
 It claims only this: the sentence that taught the world to be terrified carries the signature of the pen, while the mouth of the Master — every time, without exception — refused the terror and refused even the word. One of those two voices spent this entire book earning your suspicion. The other one said: *she is not dead, but sleeping.*
 
-I was given the evidence eight years before I had the framework to read it. A woman with her hands in the air, hours from the end, reaching toward something she recognized.
+I was given the evidence eight years before I had the framework to read it. A woman non-responsive for days, eyes up and hands raised, hours from the end — looking straight through the ceiling at something she recognized.
 
 Some evidence waits its whole life for its chapter.
 
