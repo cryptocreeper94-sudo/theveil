@@ -5973,6 +5973,28 @@ A pen can reverse a name unlimited times - reverse it, reverse the reversal, and
 
 But a pen cannot move a river. It cannot re-aim a stone alignment at the moon. It cannot un-melt a canyon wall or manufacture two-million-year-old glass. The documents are the crime scene - handle them with gloves. **The land is the witness.** Chapter 43 will call that witness to the stand.
 
+## The Little Season
+
+Before this chapter closes, the strongest objection to everything you just read has to be stated at full strength - because if this book won't state it, someone else will, and they'll state it worse.
+
+Here it is: **prophecy doesn't end at Armageddon. It ends in restoration.** No more tears. The earth healed. The deceiver dealt with. So if the fire already fell - if the day of burning is behind us, written into the melted rock of this continent - then we should be living in the fixed world. Look around. We are manifestly not. Doesn't the broken state of the present *prove* the fire is still future?
+
+It's a fair blow. Now watch what the text itself does with it.
+
+Read Chazon (Revelation) 20 slowly - not the sermon version, the actual sequence. The battle is not the last event. After the battle comes a whole age: the thousand years, the deceiver bound, the world under restoration. And then - this is the verse almost every pulpit skips - the deceiver is **loosed for a little season**, to go out and deceive the nations *one more time*, before the true end. Read that again. The text itself describes a world *after* Armageddon, *after* the restored age, that gets deceived again - deceived at the scale of nations, all four corners of the earth.
+
+So the question "how could Armageddon be behind us in a world this broken?" has an answer sitting in the text: because the brokenness you're looking at may not be the world *before* the fire. It may be the little season *after* the restoration.
+
+And ask yourself what the little season would look like from the inside. Not rubble. Not open war. The text says the loosed deceiver's weapon is *deception of the nations* - so the little season's signature would be lies at planetary scale. A stolen calendar. A relocated map. Truth sharded across a hundred camps, each fragment pre-discredited. A restored age buried under a worse story, its buildings inherited by people taught they built them, its orphaned children shipped by train into new histories. If the little season is now, it would look **exactly like the world this book has been describing** - a world whose defining feature is not violence but engineered forgetting.
+
+Notice, too, which reading actually requires more faith. Their version needs Armageddon perpetually future - a horizon that recedes forever, always one blood moon away, generation after generation. A fire that never falls is precisely what a control system needs: infinite urgency, zero accounting. This book's version requires only what you can observe from where you're standing - that deception peaks *late* in the story. And it is peaking.
+
+Now the discipline - because this is where I owe you the same honesty I've demanded of everyone else. Handled carelessly, this framework can explain *anything*: every trace of a better past becomes "the millennium," every present evil becomes "the little season," every contrary document becomes "the pen." A theory that can absorb every observation has stopped being an argument and become a lens - and a lens is just another veil. So hold this claim to the book's own standard. **The pen cannot prove a millennium; only the land can.** A restored age of that scale must have left physical signatures - infrastructure no one claims, abundance built into the ground, works too great for the history assigned to them. Some candidates stand in the record: the inherited cities, the mound networks, the world the fairs displayed and demolished. They are worth weighing. They are not yet a verdict.
+
+I present the little season as the reading that best fits the text and the evidence together. I do not assert it. The question stays open - that is what separates an investigation from a doctrine. But understand what the question costs them either way: if the fire is future, their map is still wrong. And if the fire is past, their entire prophecy industry is selling tickets to a play that already closed - during the one season the text says the whole world would be deceived.
+
+---
+
 ---
 
 # CHAPTER 37: THE GREAT DECEPTION IS HERE
