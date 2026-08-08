@@ -824,13 +824,15 @@ Bere'shiyth (Genesis) 19:24-25: "Then [Yahuah](#concordance-yahuah) rained upon 
 
 What Wyatt found: **entire city structures turned to ash**. Not metaphorical ash - literal calcium sulfite ash. Buildings with right angles. Walls. Streets. Ziggurats. All reduced to white powder.
 
-![Sodom Ash Ruins - Calcium sulfite ash structures with visible windows and doorways still intact, near the Dead Sea](/images/veil-sodom-ash-ruins.jpg)
+*A note on the photographs in this chapter: these images are presented as illustrations of the sites and artifacts as identified by Ron Wyatt and later investigators. The identifications - which mountain, which ruin, which sea floor - are claims, not settled fact, and this book's own Chapter 36C questions the map they rest on. The images show you what the investigators reported. Judge the evidence; hold the addresses loosely.*
+
+![Ash formations at the site Wyatt identified as Sodom - structures of calcium sulfite ash near the Dead Sea, as documented by site investigators](/images/veil-sodom-ash-ruins.jpg)
 
 Embedded in this ash are **sulfur balls** - pure brimstone with burn rings around them, some still encased in the ash that formed when they burned. These sulfur balls are 95-98% pure sulfur. For comparison, naturally occurring volcanic sulfur is only 40% pure at maximum.
 
-![Sulfur Brimstone Ball - 95-98% pure sulfur embedded in ash from the Sodom site, unlike any naturally occurring sulfur on Earth](/images/veil-sulfur-brimstone-ball.jpg)
+![Sulfur brimstone ball - reported as 95-98% pure sulfur, recovered from the ash site near the Dead Sea; specimens like this are held in private collections and small museums](/images/veil-sulfur-brimstone-ball.jpg)
 
-![Sulfur Ball Embedded in Ash Wall - Brimstone still in situ within the calcium sulfite ash structure at the Sodom ruins near the Dead Sea](/images/veil-sulfur-in-wall.jpg)
+![Sulfur ball embedded in ash - brimstone shown in situ within the calcium sulfite ash structures at the site identified as Sodom](/images/veil-sulfur-in-wall.jpg)
 
 These sulfur balls are unlike anything found anywhere else on Earth. They're not volcanic. They're not natural formations. They appear to have rained down from above and burned at temperatures hot enough to melt rock - exactly as Genesis describes.
 
@@ -842,11 +844,11 @@ Shemoth (Exodus) 19:18: "And mount Sinai was altogether on a smoke, because Yahu
 
 Traditional sites in the Sinai Peninsula show no evidence of this burning. But Jabal al-Lawz in Saudi Arabia - the site Wyatt identified as the true Mount Sinai - shows something remarkable: **the peak is burned black**.
 
-![Jabal al-Lawz (Mount Sinai) - The blackened peak in Saudi Arabia, burned from above where Yahuah descended in fire. Note the clear line where the burning stops](/images/veil-jabal-al-lawz-burned.jpg)
+![Jabal al-Lawz, Saudi Arabia - the blackened peak at the site Wyatt identified as Mount Sinai. Note the visible line where the darkened rock stops](/images/veil-jabal-al-lawz-burned.jpg)
 
 You can see the line where the burning stops. The lower portion of the mountain is normal rock. Above a certain elevation, it's charred. Blackened. As if something descended in fire.
 
-![The Split Rock at Horeb - The massive rock Moses struck for water (Exodus 17:6), split clean in two, with water erosion patterns visible at its base](/images/veil-split-rock-horeb.jpg)
+![The split rock near Jabal al-Lawz - a massive rock split clean in two with erosion patterns at its base, identified by Wyatt as the rock of Horeb (Exodus 17:6)](/images/veil-split-rock-horeb.jpg)
 
 Nearby, Wyatt documented the split rock that Moses struck for water (Exodus 17:6), large enough for millions to drink from, with clear water erosion patterns. He found the altar of the golden calf (Exodus 32), with petroglyphs of Egyptian-style cattle worship. He found the twelve pillars Moses erected (Exodus 24:4).
 
@@ -860,11 +862,11 @@ Ron Wyatt identified the crossing site at Nuweiba Beach on the Gulf of Aqaba - n
 
 What he reported finding underwater was extraordinary: coral-encrusted formations he identified as **Egyptian chariot wheels**, scattered across the sea floor in a pattern consistent with an army in pursuit. Four-spoke, six-spoke, and eight-spoke shapes - designs consistent with the 18th Dynasty of Egypt, the time of the Exodus. Independent verification of these formations has never been permitted or funded - which is itself worth noticing - so this stands as documented testimony and photographs, not as an excavated find. Weigh it accordingly.
 
-![Egyptian Chariot Wheels - Coral-encrusted chariot wheels found on the Red Sea floor at the Gulf of Aqaba crossing site, consistent with 18th Dynasty Egyptian design](/images/veil-chariot-wheels-red-sea.jpg)
+![Coral-encrusted formation on the Gulf of Aqaba sea floor, identified by divers as an Egyptian chariot wheel consistent with 18th Dynasty design - photographed, never independently excavated](/images/veil-chariot-wheels-red-sea.jpg)
 
 On both shores - the Egyptian side and the Arabian side - stand **granite columns**. These pillars, erected as memorials, mark the crossing site. The column on the Saudi side still bears Phoenician inscriptions. King Solomon himself may have erected these markers to commemorate what happened there.
 
-![Granite Column at Nuweiba Beach - One of the memorial pillars marking the Red Sea crossing site, erected as a marker on the shore of the Gulf of Aqaba](/images/veil-nuweiba-column.jpg)
+![Granite column at Nuweiba Beach on the Gulf of Aqaba - one of the pillars investigators identify as memorial markers of the crossing site](/images/veil-nuweiba-column.jpg)
 
 The underwater land bridge between the two shores has a gradual descent - exactly what would be needed for millions of people with livestock and carts to cross. The depths on either side drop sharply - exactly where the waters would have "stood as walls" and collapsed on the Egyptian army.
 
@@ -874,7 +876,7 @@ In the mountains of Ararat in eastern Turkey, near the village of Dogubayazit, s
 
 Using the Royal Egyptian cubit (20.6 inches), the Ark would be 515 feet long. The formation at this site measures 515 feet exactly.
 
-![Noah's Ark Formation - Aerial view of the boat-shaped formation near Dogubayazit, Turkey, measuring exactly 515 feet, matching the biblical dimensions](/images/veil-noahs-ark-formation.jpg)
+![The Durupinar formation near Dogubayazit, Turkey - the boat-shaped formation measuring 515 feet, identified by Wyatt as the remains of Noah's Ark](/images/veil-noahs-ark-formation.jpg)
 
 Ground-penetrating radar revealed internal structures consistent with a ship - regularly spaced, parallel lines suggesting deck beams and bulkheads. Metal detector surveys found iron at regular intervals, consistent with metal brackets or fittings.
 
