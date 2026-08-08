@@ -23264,14 +23264,15 @@ Keep responses concise (2-3 sentences max), friendly, and helpful. If asked abou
 
       const chapterMatch = line.match(/^# (CHAPTER \d+[A-Z]?:.+)$/i);
       const appendixMatch = line.match(/^# (APPENDIX[^:]*:.*)$/i) || line.match(/^# (APPENDIX.*)$/i);
+      const epilogueMatch = line.match(/^# (EPILOGUE[^:]*:?.*)$/i);
 
-      if (chapterMatch || appendixMatch) {
+      if (chapterMatch || appendixMatch || epilogueMatch) {
         inFrontMatter = false;
         if (currentChapter) {
           currentChapter.content = currentContent.join('\n').trim();
           chapters.push(currentChapter);
         }
-        const title = (chapterMatch ? chapterMatch[1] : appendixMatch![1]).trim();
+        const title = (chapterMatch ? chapterMatch[1] : appendixMatch ? appendixMatch[1] : epilogueMatch![1]).trim();
         const id = 'ch-' + title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+/g, '-').substring(0, 50);
         if (appendixMatch && !currentPart.includes('APPENDIX')) {
           currentPart = 'APPENDIX: Reference Materials';

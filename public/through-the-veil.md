@@ -238,6 +238,7 @@ Keep this section in mind every time a chapter makes you certain. Especially the
 - Chapter 44: Final Reflections
 - Chapter 45: Words as Seals — Why Signal
 - Chapter 46: The Proof In Their Behavior (Capstone)
+- Epilogue: The Two Deathbeds
 
 **Appendix: Reference Materials**
 
@@ -7413,6 +7414,75 @@ And if the deception is this elaborate, this systematic, this comprehensive...
 Then what it's trying to hide must be worth hiding.
 
 Seek, and you will find.
+
+---
+
+# EPILOGUE: THE TWO DEATHBEDS
+
+There is one sentence this book has not yet cross-examined, and it may be the most quoted sentence in Christendom:
+
+*"For the wages of sin is death."*
+
+Every reader knows it. Most can cite it before they can cite anything the Master said with his own mouth. It has been carved into headstones, thundered from pulpits, and whispered over hospital beds for seventeen centuries. It is the sentence an entire civilization's terror of dying is built on.
+
+Look at the signature.
+
+Romans 6:23. It is Sha'ul's sentence. Of all the lines humanity chose to build its fear upon, the famous one comes from the pen this book has spent chapters cross-examining — not from the mouth of Yahusha, not from the eyewitnesses, not from Ya'aqob or Kepha or the Didache. From the man who never walked with him.
+
+That alone does not make the sentence false. By this book's own method, it means one thing: we check it against what the Master said himself.
+
+## What He Actually Said
+
+And what he said is stranger — and far less terrifying:
+
+*"Amein, amein, I say unto you, if a man guard my word, he shall never see death."* (Yochanon 8:51)
+
+His hearers were so shocked they accused him of having a devil. *"Avraham died, and the prophets — and you say a man shall never taste death?"* They heard it exactly as literally as we do. And he did not retract it. He did not soften it into metaphor. He let it stand.
+
+At the tomb of El'azar, at the house of Yair, over a girl everyone in the room knew was gone: *"She is not dead, but sleeping."* They laughed him to scorn. He kept using the word. Over and over, deliberately, he refused to call physical death by the name everyone else used.
+
+Either he was speaking poetry — or he knew something about the event itself. That what we call death, seen from the connected side, is not the thing we are terrified of. That the terror is the view from the severed side only.
+
+## One Word Doing the Work of Two
+
+Here is the Frankenstein-English problem compressed into a single syllable. Our language has one word — *death* — doing the work of two entirely different events:
+
+1. The substrate wearing out. The body, the vessel, the receiver's housing failing.
+2. The connection ending. The severance. The line going dead.
+
+The Scriptures keep these separate — that is why the phrase *"the second death"* exists at all (Revelation 20:14). A second death is only intelligible if the first one is not the real one. English collapsed both events into one word, and in that collapse, an entire civilization learned to fear the wrong one.
+
+Read the wage-sentence again with the two events separated. If sin's wage is the *severance* — and the body's wearing-out merely reveals what state the line was in when it failed — then the sentence stops being a threat about biology and becomes a diagnosis about connection. Which is exactly what the preceding chapters predict. The writer of Hebrews says it without any veil at all: he came to deliver those *"who through fear of death were all their lifetime subject to bondage"* (Hebrews 2:15). A lifetime of bondage requires a lifetime of fear. Fear of death is not a side effect of the system. It is an instrument of it — perhaps the oldest one. A receiver jammed by dread.
+
+## The Two Deathbeds
+
+I have heard the stories most of us have heard — people pulled back from comas describing terror, describing things arriving in the room, crying *don't take me, don't take me*. I weigh those accounts carefully and I ask you to do the same; the dying brain is contested ground, and both camps plant stories there. This book does not build on what cannot be checked.
+
+But there is one deathbed I do not have to take on anyone else's testimony, because I stood at it.
+
+Hours before my grandmother died, I watched her raise her hands to the sky.
+
+She was not clawing at the air. She was not begging anything to stay away. She lifted her hands the way you lift them toward something you *know* — the way a child lifts them toward a parent coming through the door. Nobody reaches upward toward what they dread.
+
+That is not fear. That is recognition.
+
+If the receiver thesis of this book is right, I was not watching a woman lose her life. I was watching a woman whose line was open take the call. The substrate was failing — and the connection did not so much as flicker. The decisive thing had been settled long before the body finished. Which is precisely what the previous chapter claimed, before I ever thought to test it against my own memory: the state of the connection at the end is the only thing the end reveals.
+
+Two deathbeds. One word. The severed man meets the event as terror, because for him it is the second death arriving early, casting its shadow backward. The connected woman meets it with her hands in the air, because for her it is not death at all — it is the word the Master insisted on: *sleep*, and then the voice that wakes you.
+
+## What This Epilogue Does Not Claim
+
+It does not claim that physical death is pleasant, or that grief is a mistake, or that the body's failing is nothing. He wept at El'azar's tomb — the shortest verse in the book, and one of the most human. Weeping and terror are not the same thing.
+
+It does not claim that every peaceful death proves connection or every hard death proves severance. The body fails in ways that have nothing to do with the state of the line, and no man is authorized to read another man's deathbed as a verdict.
+
+It claims only this: the sentence that taught the world to be terrified carries the signature of the pen, while the mouth of the Master — every time, without exception — refused the terror and refused even the word. One of those two voices spent this entire book earning your suspicion. The other one said: *she is not dead, but sleeping.*
+
+I was given the evidence decades before I had the framework to read it. A woman with her hands in the air, hours from the end, reaching toward something she recognized.
+
+Some evidence waits its whole life for its chapter.
+
+This was hers.
 
 ---
 
