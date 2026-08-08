@@ -114,7 +114,9 @@ What you hold in your hands (or on your screen) is the product of that clarity. 
 
 This book is based on research, world events, historical precedent, and patterns that keep appearing across cultures, centuries, and continents. Think of truth as a massive puzzle - fragments from a hundred different puzzles scattered across time and geography. You can shake that box hoping it assembles itself. Or you can start connecting pieces that fit, building a tapestry that reveals a picture.
 
-That's what this book offers: a connect-the-dots model. **I am not making definitive claims.** I present what I've found - not as doctrine, but as a starting point for your own journey. The goal isn't to convince you of anything. The goal is to show you how I connected the dots - and invite you to verify, challenge, or expand on what I've found.
+That's what this book offers: a connect-the-dots model. **I am not making definitive claims.** I present what I've found - not as doctrine, but as a starting point for your own journey.
+
+Let me be precise about that, because I owe you precision. I won't pretend this book has no aim - it argues, and it argues hard. But there are two kinds of convincing, and they are not the same. One kind wants your *agreement*: it hides the counterarguments, punishes doubt, and needs you to land where the author landed. The other kind wants your *attention*: it shows its work, states the objections at full strength, marks its own uncertainty, and hands you the tools to check it. This book attempts the second kind, and you should hold it to that standard on every page. I am not trying to convince you to believe me. I am trying to convince you to **look** - and if you look and land somewhere different than I did, this book has still done its job.
 
 This book is written in the voice of a documentary narrator - authoritative but conversational. It's designed to be read or listened to aloud. If you're hearing this as an audiobook, know that every word was chosen with your ears in mind.
 
@@ -7317,7 +7319,7 @@ The door is open.
 
 ### ✦ AUTHOR'S FINAL THOUGHTS ✦
 
-I didn't write this to convince anyone of anything. Convincing isn't my job. The [Ruach](#concordance-ruach) (Spirit) does that work - not words on a page.
+I didn't write this to convince you to believe me - I wrote it to convince you to look. I said that at the beginning, and the distinction has governed every chapter since: argue hard, show the work, state the objections, leave the verdict with you. Belief isn't my job. The [Ruach](#concordance-ruach) (Spirit) does that work - not words on a page.
 
 I wrote this because the patterns demanded to be documented. Because the dots demanded to be connected. Because staying silent felt like complicity.
 
