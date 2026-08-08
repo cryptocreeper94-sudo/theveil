@@ -7478,7 +7478,7 @@ It does not claim that every peaceful death proves connection or every hard deat
 
 It claims only this: the sentence that taught the world to be terrified carries the signature of the pen, while the mouth of the Master — every time, without exception — refused the terror and refused even the word. One of those two voices spent this entire book earning your suspicion. The other one said: *she is not dead, but sleeping.*
 
-I was given the evidence decades before I had the framework to read it. A woman with her hands in the air, hours from the end, reaching toward something she recognized.
+I was given the evidence eight years before I had the framework to read it. A woman with her hands in the air, hours from the end, reaching toward something she recognized.
 
 Some evidence waits its whole life for its chapter.
 
