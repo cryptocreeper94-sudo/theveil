@@ -269,7 +269,6 @@ One more thing before you begin — a promise about where this road goes, so the
 
 ---
 
-
 ---
 
 ## A Note on Sources
@@ -853,15 +852,11 @@ Bere'shiyth (Genesis) 19:24-25: "Then [Yahuah](#concordance-yahuah) rained upon 
 
 What Wyatt found: **entire city structures turned to ash**. Not metaphorical ash - literal calcium sulfite ash. Buildings with right angles. Walls. Streets. Ziggurats. All reduced to white powder.
 
-*A note on the photographs in this chapter: these images are presented as illustrations of the sites and artifacts as identified by Ron Wyatt and later investigators. The identifications - which mountain, which ruin, which sea floor - are claims, not settled fact, and this book's own Chapter 36C questions the map they rest on. The images show you what the investigators reported. Judge the evidence; hold the addresses loosely.*
+*A note on images: this chapter shows you no photographs, and that is deliberate. Every site and artifact described here - the ash formations, the sulfur balls, the blackened peak, the split rock, the coral-encrusted shapes, the boat-shaped formation - is documented in photographs, films, and site reports that are freely discoverable. Do your own work. Go look. A photograph placed in front of you is one more thing you were handed; an image you found yourself, checked yourself, and weighed yourself is evidence you own. This book's method is to convince you to look, not to look for you.*
 
-![Ash formations at the site Wyatt identified as Sodom - structures of calcium sulfite ash near the Dead Sea, as documented by site investigators](/images/veil-sodom-ash-ruins.jpg)
+*And hold even the looking loosely - because Chapter 36C will raise a question that changes what these discoveries mean. If the map itself was relocated, then the Middle Eastern sites may be exactly what they appear to be: real places, really found, on the trail the pen laid down. The breadcrumb trail can be genuine and still be a trail. Whether the fire, the crossing, and the mountain belong to that land's past - or to another land's, closer than you were ever told - is a question this book will put to you directly when the evidence is ready. Presented, not asserted. Keep reading.*
 
 Embedded in this ash are **sulfur balls** - pure brimstone with burn rings around them, some still encased in the ash that formed when they burned. These sulfur balls are 95-98% pure sulfur. For comparison, naturally occurring volcanic sulfur is only 40% pure at maximum.
-
-![Sulfur brimstone ball - reported as 95-98% pure sulfur, recovered from the ash site near the Dead Sea; specimens like this are held in private collections and small museums](/images/veil-sulfur-brimstone-ball.jpg)
-
-![Sulfur ball embedded in ash - brimstone shown in situ within the calcium sulfite ash structures at the site identified as Sodom](/images/veil-sulfur-in-wall.jpg)
 
 These sulfur balls are unlike anything found anywhere else on Earth. They're not volcanic. They're not natural formations. They appear to have rained down from above and burned at temperatures hot enough to melt rock - exactly as Genesis describes.
 
@@ -873,11 +868,7 @@ Shemoth (Exodus) 19:18: "And mount Sinai was altogether on a smoke, because Yahu
 
 Traditional sites in the Sinai Peninsula show no evidence of this burning. But Jabal al-Lawz in Saudi Arabia - the site Wyatt identified as the true Mount Sinai - shows something remarkable: **the peak is burned black**.
 
-![Jabal al-Lawz, Saudi Arabia - the blackened peak at the site Wyatt identified as Mount Sinai. Note the visible line where the darkened rock stops](/images/veil-jabal-al-lawz-burned.jpg)
-
 You can see the line where the burning stops. The lower portion of the mountain is normal rock. Above a certain elevation, it's charred. Blackened. As if something descended in fire.
-
-![The split rock near Jabal al-Lawz - a massive rock split clean in two with erosion patterns at its base, identified by Wyatt as the rock of Horeb (Exodus 17:6)](/images/veil-split-rock-horeb.jpg)
 
 Nearby, Wyatt documented the split rock that Moses struck for water (Exodus 17:6), large enough for millions to drink from, with clear water erosion patterns. He found the altar of the golden calf (Exodus 32), with petroglyphs of Egyptian-style cattle worship. He found the twelve pillars Moses erected (Exodus 24:4).
 
@@ -891,11 +882,7 @@ Ron Wyatt identified the crossing site at Nuweiba Beach on the Gulf of Aqaba - n
 
 What he reported finding underwater was extraordinary: coral-encrusted formations he identified as **Egyptian chariot wheels**, scattered across the sea floor in a pattern consistent with an army in pursuit. Four-spoke, six-spoke, and eight-spoke shapes - designs consistent with the 18th Dynasty of Egypt, the time of the Exodus. Independent verification of these formations has never been permitted or funded - which is itself worth noticing - so this stands as documented testimony and photographs, not as an excavated find. Weigh it accordingly.
 
-![Coral-encrusted formation on the Gulf of Aqaba sea floor, identified by divers as an Egyptian chariot wheel consistent with 18th Dynasty design - photographed, never independently excavated](/images/veil-chariot-wheels-red-sea.jpg)
-
 On both shores - the Egyptian side and the Arabian side - stand **granite columns**. These pillars, erected as memorials, mark the crossing site. The column on the Saudi side still bears Phoenician inscriptions. King Solomon himself may have erected these markers to commemorate what happened there.
-
-![Granite column at Nuweiba Beach on the Gulf of Aqaba - one of the pillars investigators identify as memorial markers of the crossing site](/images/veil-nuweiba-column.jpg)
 
 The underwater land bridge between the two shores has a gradual descent - exactly what would be needed for millions of people with livestock and carts to cross. The depths on either side drop sharply - exactly where the waters would have "stood as walls" and collapsed on the Egyptian army.
 
@@ -904,8 +891,6 @@ The underwater land bridge between the two shores has a gradual descent - exactl
 In the mountains of Ararat in eastern Turkey, near the village of Dogubayazit, sits a boat-shaped formation that matches the biblical dimensions of the Ark precisely. Bere'shiyth (Genesis) 6:15: "And this is the fashion which you shall make it of: The length of the ark shall be three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits."
 
 Using the Royal Egyptian cubit (20.6 inches), the Ark would be 515 feet long. The formation at this site measures 515 feet exactly.
-
-![The Durupinar formation near Dogubayazit, Turkey - the boat-shaped formation measuring 515 feet, identified by Wyatt as the remains of Noah's Ark](/images/veil-noahs-ark-formation.jpg)
 
 Ground-penetrating radar revealed internal structures consistent with a ship - regularly spaced, parallel lines suggesting deck beams and bulkheads. Metal detector surveys found iron at regular intervals, consistent with metal brackets or fittings.
 
@@ -1603,8 +1588,6 @@ The institutional church that emerged would become the most powerful organizatio
 
 This was the institutionalization of the deception. Everything that followed - the Crusades, the Inquisition, the Protestant Reformation that retained most of Constantine's substitutions, the modern denominational Christianity - traces back to what was established in those councils of the 4th century.
 
-
-
 ---
 
 ## CHAPTER: THE EMPIRE THAT NEVER FELL
@@ -1728,7 +1711,6 @@ And the truth â€” the invariant truth that none of this has been able to ch
 
 > "Learn not the way of the nations, and be not dismayed at the signs of heaven; for the nations are dismayed at them."
 > â€” Yirmeyahu (Jeremiah) 10:2
-
 
 # PART FIVE: THE GREAT SUBSTITUTION
 
@@ -2454,7 +2436,6 @@ You have already seen why the words matter: words carry frequency, the words are
 
 Restore the words. Restore the frequency. Restore the connection.
 
-
 ---
 
 ## CHAPTER: THE NARROWING
@@ -2572,8 +2553,6 @@ What they could not change is the stone. And the stone still says: Lo Tirtzach.
 > "And thou shalt teach them diligently unto thy children, and shalt talk of them when thou sittest in thine house, and when thou walkest by the way, and when thou liest down, and when thou risest up."
 > — Devarim (Deuteronomy) 6:7
 
-
-
 ---
 
 ## CHAPTER: THE AGENT
@@ -2659,7 +2638,6 @@ The stone still says what it says.
 
 > "Beware of false prophets, which come to you in sheep's clothing, but inwardly they are ravening wolves. Ye shall know them by their fruits."
 > — Mattithyahu (Matthew) 7:15-16
-
 
 ---
 
@@ -4452,7 +4430,6 @@ Consider the possibility that this is not accidental - that it's the same ancien
 Restore the pineal, and the physical eyes return to their proper role. Servants of navigation, not masters of perception. The programming loses its power when the discernment center comes back online. The spectacle becomes visible as spectacle. The manipulation becomes obvious.
 
 This is why they fight so hard to keep the pineal calcified. This is why the substances continue flowing. This is why the screens multiply. They know what happens when the true eye opens.
-
 
 ---
 
@@ -6727,7 +6704,6 @@ The point is direction, not perfection. Movement toward truth rather than arriva
 
 The veil lifts gradually for most. Layer by layer. Revelation by revelation. Patience is required.
 
-
 ---
 
 ## CHAPTER: THE FILTER
@@ -6832,7 +6808,6 @@ Use it.
 
 > "But this shall be the covenant that I will make with the house of Ysharal; After those days, saith Yahuah, I will put my Torah in their inward parts, and write it in their hearts; and will be their Elohim, and they shall be my people. And they shall teach no more every man his neighbour, and every man his brother, saying, Know Yahuah: for they shall all know me."
 > — Yirmeyahu (Jeremiah) 31:33-34
-
 
 ---
 
