@@ -21,3 +21,7 @@ blockchain/target/
 *.txt
 
 *.backup-*
+
+video_pipeline/
+finals/
+server/data/INVARIANT.html

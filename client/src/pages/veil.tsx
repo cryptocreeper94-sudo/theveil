@@ -6,62 +6,160 @@ import { AnimatePresence, motion } from "framer-motion";
 const tableOfContents = [
   {
     id: "part-1",
-    title: "PART ONE — THE EVIDENCE",
-    count: 7,
+    title: "PART ONE — THE REBELLION",
+    count: 6,
     chapters: [
-      { name: "The Rebellion", anchor: "chapter-1" },
-      { name: "The Corruption", anchor: "chapter-2" },
-      { name: "The Flood", anchor: "chapter-3" },
-      { name: "The Resets", anchor: "chapter-4" },
-      { name: "The Substitution", anchor: "chapter-5" },
-      { name: "The Calendar", anchor: "chapter-6" },
-      { name: "The Councils", anchor: "chapter-7" },
+      { name: "The Council and the Fall", anchor: "ch-chapter-1-the-council-and-the-fall" },
+      { name: "The 200 Watchers Descend", anchor: "ch-chapter-2-the-200-watchers-descend" },
+      { name: "The Forbidden Knowledge", anchor: "ch-chapter-3-the-forbidden-knowledge" },
+      { name: "The Whole World Remembers", anchor: "ch-chapter-3b-the-whole-world-remembers" },
+      { name: "The Nephilim and the Corruption", anchor: "ch-chapter-4-the-nephilim-and-the-corruption" },
+      { name: "The Blood Redemption", anchor: "ch-chapter-4b-the-blood-redemption" },
     ]
   },
   {
     id: "part-2",
-    title: "PART TWO — THE PATTERNS",
-    count: 13,
+    title: "PART TWO — THE FIRST RESET",
+    count: 4,
     chapters: [
-      { name: "The Inversions (Ch. 8–15)", anchor: "chapter-8" },
-      { name: "The Control Systems (Ch. 16–20)", anchor: "chapter-16" },
-      { name: "The Hidden Rulers (Ch. 21–25)", anchor: "chapter-21" },
-      { name: "The Alcatraz-Apollo Deception", anchor: "chapter-25c" },
-      { name: "The Challenger Deception", anchor: "chapter-25d" },
+      { name: "The Flood and What It Destroyed", anchor: "ch-chapter-5-the-flood-and-what-it-destroyed" },
+      { name: "The Physical Evidence They Ignore", anchor: "ch-chapter-5b-the-physical-evidence-they-ignore" },
+      { name: "Dragons, Not Dinosaurs", anchor: "ch-chapter-6-dragons-not-dinosaurs" },
+      { name: "The Dog-Headed Beings and Hybrid Remnants", anchor: "ch-chapter-7-the-dog-headed-beings-and-hybrid-remnant" },
     ]
   },
   {
     id: "part-3",
-    title: "PART THREE — THE TIMELINE",
-    count: 12,
+    title: "PART THREE — THE SCATTERING",
+    count: 3,
     chapters: [
-      { name: "The Apostasy (Ch. 26–30)", anchor: "chapter-26" },
-      { name: "The Missing Millennium (Ch. 31–34)", anchor: "chapter-31" },
-      { name: "Satan's Little Season (Ch. 35–37)", anchor: "chapter-35" },
+      { name: "Babel and the Confusion of Tongues", anchor: "ch-chapter-8-babel-and-the-confusion-of-tongues" },
+      { name: "The Divine Language Lost", anchor: "ch-chapter-9-the-divine-language-lost" },
+      { name: "Spelling as Spellcasting", anchor: "ch-chapter-10-spelling-as-spellcasting" },
     ]
   },
   {
     id: "part-4",
-    title: "PART FOUR — THE JOURNEY",
-    count: 9,
+    title: "PART FOUR — THE HIDDEN RULERS",
+    count: 4,
     chapters: [
-      { name: "The Fog and The Lifting", anchor: "chapter-38" },
-      { name: "Fear as the Weapon", anchor: "chapter-39" },
-      { name: "The Mark and The Names", anchor: "chapter-40" },
-      { name: "Why I'm Not Hiding (Ch. 41–44)", anchor: "chapter-41" },
+      { name: "Bloodlines and the Thrones of Earth", anchor: "ch-chapter-11-bloodlines-and-the-thrones-of-earth" },
+      { name: "The Council of the Cast-Out", anchor: "ch-chapter-12-the-council-of-the-cast-out" },
+      { name: "The Nephilim Bloodlines Continue", anchor: "ch-chapter-13-the-nephilim-bloodlines-continue" },
+      { name: "Constantine and the Council of Nicaea", anchor: "ch-chapter-13b-constantine-and-the-council-of-nicaea" },
+    ]
+  },
+  {
+    id: "part-5",
+    title: "PART FIVE — THE GREAT SUBSTITUTION",
+    count: 6,
+    chapters: [
+      { name: "The Name That Was Erased", anchor: "ch-chapter-14-the-name-that-was-erased" },
+      { name: "The Name That Was Stolen", anchor: "ch-chapter-15-the-name-that-was-stolen" },
+      { name: "The Continuous Deception", anchor: "ch-chapter-15b-the-continuous-deception" },
+      { name: "The King James Corruption", anchor: "ch-chapter-16-the-king-james-corruption" },
+      { name: "Religious Inversions", anchor: "ch-chapter-17-religious-inversions-what-popular-relig" },
+      { name: "The Substituted Calendar", anchor: "ch-chapter-18-the-substituted-calendar" },
+    ]
+  },
+  {
+    id: "part-6",
+    title: "PART SIX — THE SECOND RESET",
+    count: 4,
+    chapters: [
+      { name: "Tartaria and the Mud Flood", anchor: "ch-chapter-19-tartaria-and-the-mud-flood" },
+      { name: "The Petrified Giants", anchor: "ch-chapter-20-the-petrified-giants" },
+      { name: "The Orphan Trains and Memory Erasure", anchor: "ch-chapter-21-the-orphan-trains-and-memory-erasure" },
+      { name: "The 200 Craters and the 200 Fallen", anchor: "ch-chapter-22-the-200-craters-and-the-200-fallen" },
+    ]
+  },
+  {
+    id: "part-7",
+    title: "PART SEVEN — THE SYSTEMS OF CONTROL",
+    count: 8,
+    chapters: [
+      { name: "Modern Medicine — The Band-Aid Economy", anchor: "ch-chapter-23-modern-medicine-the-band-aid-economy" },
+      { name: "The Indoctrination Machine", anchor: "ch-chapter-24-the-indoctrination-machine" },
+      { name: "Economics and the Worker Bees", anchor: "ch-chapter-25-economics-and-the-worker-bees" },
+      { name: "False Flags — The Art of Manufactured Crisis", anchor: "ch-chapter-25b-false-flags-the-art-of-manufactured-cr" },
+      { name: "The Alcatraz-Apollo Deception", anchor: "ch-chapter-25c-the-alcatraz-apollo-deception" },
+      { name: "The Challenger Deception", anchor: "ch-chapter-25d-the-challenger-deception" },
+      { name: "The Beast System and the Carousel", anchor: "ch-chapter-26-the-beast-system-and-the-carousel" },
+      { name: "The Predators and the Ritual", anchor: "ch-chapter-26b-the-predators-and-the-ritual" },
+    ]
+  },
+  {
+    id: "part-8",
+    title: "PART EIGHT — THE WAR ON PERCEPTION",
+    count: 5,
+    chapters: [
+      { name: "The Eye Versus the I — The Pineal Gateway", anchor: "ch-chapter-27-the-eye-versus-the-i-the-pineal-gateway" },
+      { name: "The Mirror Trap — Vanity and the Deadly Inversion", anchor: "ch-chapter-28-the-mirror-trap-vanity-and-the-deadly-i" },
+      { name: "Substances That Steal the Signal", anchor: "ch-chapter-29-substances-that-steal-the-signal" },
+      { name: "The Frequency War", anchor: "ch-chapter-30-the-frequency-war" },
+      { name: "The Hidden Cosmology", anchor: "ch-chapter-31-the-hidden-cosmology" },
+    ]
+  },
+  {
+    id: "part-9",
+    title: "PART NINE — THE HOLLOW WORLD",
+    count: 2,
+    chapters: [
+      { name: "The Hollow Souls", anchor: "ch-chapter-32-the-hollow-souls" },
+      { name: "UFOs and the Alien Deception", anchor: "ch-chapter-33-ufos-and-the-alien-deception" },
+    ]
+  },
+  {
+    id: "part-10",
+    title: "PART TEN — THE HIDDEN TIMELINE",
+    count: 8,
+    chapters: [
+      { name: "The Missing Millennium", anchor: "ch-chapter-34-the-missing-millennium" },
+      { name: "Daniel, Enoch, and the Seventy Generations", anchor: "ch-chapter-34a-daniel-enoch-and-the-seventy-generatio" },
+      { name: "The Resurrections Hidden", anchor: "ch-chapter-34b-the-resurrections-hidden" },
+      { name: "The Short Season", anchor: "ch-chapter-35-the-short-season" },
+      { name: "The Layers of Deception — Redirect Upon Redirect", anchor: "ch-chapter-36-the-layers-of-deception-redirect-upon-r" },
+      { name: "The Revival That Isn't", anchor: "ch-chapter-36b-the-revival-that-isn-t" },
+      { name: "The Relocated Map — The Geography of the Lie", anchor: "ch-chapter-36c-the-relocated-map-the-geography-of-the" },
+      { name: "The Great Deception Is Here", anchor: "ch-chapter-37-the-great-deception-is-here" },
+    ]
+  },
+  {
+    id: "part-11",
+    title: "PART ELEVEN — THE AWAKENING",
+    count: 4,
+    chapters: [
+      { name: "The Return of Memory — Reconnection, Not Reincarnation", anchor: "ch-chapter-38-the-return-of-memory-reconnection-not-r" },
+      { name: "The Stages of Awakening", anchor: "ch-chapter-39-the-stages-of-awakening" },
+      { name: "The Collective Awakening", anchor: "ch-chapter-40-the-collective-awakening" },
+      { name: "Love — The Ultimate Corruption", anchor: "ch-chapter-41-love-the-ultimate-corruption" },
+    ]
+  },
+  {
+    id: "part-12",
+    title: "PART TWELVE — THE RESTORATION",
+    count: 7,
+    chapters: [
+      { name: "The Path Forward", anchor: "ch-chapter-42-the-path-forward" },
+      { name: "The Witnesses in Stone and Spirit", anchor: "ch-chapter-43-the-witnesses-in-stone-and-spirit" },
+      { name: "The Stolen Way", anchor: "ch-chapter-43b-the-stolen-way" },
+      { name: "The Stolen Present Tense", anchor: "ch-chapter-43c-the-stolen-present-tense" },
+      { name: "Final Reflections", anchor: "ch-chapter-44-final-reflections" },
+      { name: "Words as Seals — Why Signal", anchor: "ch-chapter-45-words-as-seals-why-signal" },
+      { name: "The Proof in Their Behavior", anchor: "ch-chapter-46-the-proof-in-their-behavior" },
     ]
   },
   {
     id: "appendices",
     title: "APPENDICES",
-    count: 3,
+    count: 2,
     chapters: [
-      { name: "Concordance of Terms", anchor: "concordance" },
-      { name: "Scripture Chain References", anchor: "scripture-chain" },
-      { name: "Source Documentation", anchor: "sources" },
+      { name: "Reference Materials", anchor: "ch-appendix-reference-materials" },
+      { name: "About the Cepher Translation", anchor: "ch-appendix-b-about-the-cepher-translation" },
     ]
   }
 ];
+
 
 // ─── Scramble Title Effect ───────────────────────────────────────────
 const GLYPHS = "ΑΒΓΔΕΖΗΘΙΚΛΜΞΠΣΦΨΩאבגדהוזחטיכלמנסעפצקרשת⟁⟐⟑◆◇▪▫░▒▓";
