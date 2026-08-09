@@ -102,6 +102,29 @@ The scriptures themselves warned that this substitution would happen. They told 
 
 All of that is ahead.
 
+But you should never have to stop reading to wonder who is being discussed. So here is the key — the names this book uses, alongside the names you were taught. Fold the corner of this page. You may want it for the first few chapters, and then you won't need it at all.
+
+| In this book | The name you were taught |
+|---|---|
+| Yahuah | God / the LORD / Jehovah |
+| Yahusha | Jesus |
+| Ruach ha'Qodesh | The Holy Spirit |
+| Sha'ul | Paul |
+| Kepha | Peter |
+| Ya'aqob | James |
+| Yochanon | John |
+| Miryam | Mary |
+| Mosheh | Moses |
+| Eliyahu | Elijah |
+| Yirmeyahu | Jeremiah |
+| Yesha'yahu | Isaiah |
+| El'azar | Lazarus |
+| Avraham | Abraham |
+| Yisra'el | Israel |
+| Yerushalayim | Jerusalem |
+| Torah | The Law (the first five books) |
+| Cepher | Book / scroll (as in the Eth Cepher translation) |
+
 ---
 
 ## Author's Note
@@ -149,6 +172,8 @@ So here is how to read this book - including this book:
 The defense is not certainty. The defense is the method: hold the fragments loosely, hold the *mechanism* firmly, and weigh every claim by what cannot be faked. Documents can be rewritten. Names can be reversed - and reversed again, and again, until people forget what they were even thinking about. But there are witnesses that cannot be renamed. You will meet them throughout this book, and by the final chapters you will understand why they matter more than every archive on earth.
 
 Keep this section in mind every time a chapter makes you certain. Especially then.
+
+One more thing before you begin — a promise about where this road goes, so the middle of the journey doesn't feel like wandering. This book will move through maps, calendars, names, buried cities, and contested letters, and at times it will feel like the subject is history. It is not. Every chapter, whatever its terrain, is closing distance on a single claim about *you*: that something you were told waits for you later, elsewhere, after death, is in fact available now, here, in the present tense — and that the entire architecture of deception in these pages exists for no other purpose than to keep you from noticing. The maps and calendars are the evidence trail. The present tense is the destination. If a middle chapter ever feels far from home, remember: it is a step on the way to that door, and the book will walk you all the way to it.
 
 ---
 
@@ -3055,7 +3080,7 @@ A false flag operation is an attack or event designed to appear as if it was com
 
 The pattern is ancient. The execution is modern. The denial is eternal.
 
-**THE DOCUMENTED HISTORY**
+## The Documented History
 
 Start with what's admitted. Not conspiracy theory - declassified, confirmed, on the record:
 
@@ -3069,7 +3094,7 @@ Start with what's admitted. Not conspiracy theory - declassified, confirmed, on 
 
 **The Lusitania (1915)**: A British passenger ship sunk by a German U-boat, killing 1,198 people including 128 Americans. Used to push America toward entering World War I. What wasn't publicized: the ship was carrying munitions. The British Admiralty had reduced its escort and slowed its speed through U-boat waters. Some historians argue the ship was deliberately put in harm's way.
 
-**THE PATTERN**
+## The Pattern
 
 Notice the pattern:
 
@@ -3082,7 +3107,7 @@ Notice the pattern:
 
 The event serves the agenda. The agenda existed before the event. The event simply provided the emotional trigger to make the agenda acceptable.
 
-**THE PLAUSIBLE DENIABILITY PLAYBOOK**
+## The Plausible Deniability Playbook
 
 How do governments deny involvement in false flags? The playbook is consistent:
 
@@ -3092,7 +3117,7 @@ How do governments deny involvement in false flags? The playbook is consistent:
 - **Delay, delay, delay**: Keep documents classified for 50-75 years. By the time truth emerges, the perpetrators are dead and the public has moved on.
 - **Rely on normalcy bias**: Most people cannot believe their government would harm its own citizens. This disbelief is the greatest protection.
 
-**PATTERNS WORTH NOTING**
+## Patterns Worth Noting
 
 This book makes no definitive claims about specific modern events. But patterns are worth noting. Questions are worth asking. Timing is worth observing.
 
@@ -3116,7 +3141,7 @@ What is not debated: the timing. The destruction of inconvenient records. The wa
 
 Again - no definitive claims. Only patterns. Only questions. Only the observation that convenient timing and convenient destruction of evidence appear repeatedly throughout history. And that those who notice are always given the same label.
 
-**SEPTEMBER 11, 2001**
+## September 11, 2001
 
 This is the event that changed everything. The event that launched two decades of war, the surveillance state, the Patriot Act, the Department of Homeland Security, the TSA, the normalization of mass surveillance, and the permanent erosion of civil liberties across the Western world. It is also the event most protected by the "conspiracy theorist" label. To question September 11 is to invite immediate dismissal, social sanction, and professional destruction. Which, given everything this book has documented about how that label functions, should itself raise questions.
 
@@ -3202,7 +3227,7 @@ The fruit of September 11 was twenty years of war. Trillions of dollars transfer
 
 Those are the fruits. The reader can identify the tree.
 
-**THE MODERN APPLICATION**
+## The Modern Application
 
 The pattern hasn't stopped. It has become more sophisticated.
 
