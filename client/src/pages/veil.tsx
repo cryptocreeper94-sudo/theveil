@@ -250,10 +250,10 @@ export default function Veil() {
   }, []);
 
   const stats = [
-    { value: "62", label: "CHAPTERS" },
+    { value: "71", label: "CHAPTERS" },
     { value: "163+", label: "SCRIPTURE REFS" },
     { value: "13", label: "PARTS" },
-    { value: "118K", label: "WORDS" },
+    { value: "128K", label: "WORDS" },
   ];
 
   return (
@@ -309,7 +309,7 @@ export default function Veil() {
             the timelines, and the patterns that were deliberately buried.
           </p>
           <p className="thesis-bold" style={{ marginTop: '32px' }}>
-            62 chapters. 118,000 words. Second Edition — 2026.
+            71 chapters. 128,000 words. Second Edition — 2026.
           </p>
         </div>
       </section>
@@ -376,7 +376,7 @@ export default function Veil() {
       <section className="section section-dark" id="contents">
         <div className="container reveal">
           <h2 className="section-heading">STRUCTURE</h2>
-          <p className="section-sub">62 chapters across 13 parts. Evidence to journey.</p>
+          <p className="section-sub">71 chapters across 13 parts. Evidence to journey.</p>
 
           <div className="toc-list">
             {tableOfContents.map((part) => (

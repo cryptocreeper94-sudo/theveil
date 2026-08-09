@@ -30,7 +30,7 @@ const EBOOK_CHANGELOG: ChangelogEntry[] = [
     date: "February 4, 2026",
     updates: [
       { type: 'added', description: 'MAJOR: E-reader now syncs directly with the master ebook file', chapterId: 'v1-introduction', volumeIndex: 0 },
-      { type: 'added', description: 'All 62 chapters now display complete content from the source document', chapterId: 'v1-introduction', volumeIndex: 0 },
+      { type: 'added', description: 'All 71 chapters now display complete content from the source document', chapterId: 'v1-introduction', volumeIndex: 0 },
       { type: 'added', description: 'Added Leviathan vs Ouroboros distinction - biblical creature vs pagan eternal cycle symbol', chapterId: 'v1-dragons', volumeIndex: 0 },
       { type: 'updated', description: 'Replaced "hell" with "Tartaros" in 2 Peter 2:4 references (accurate to Greek original)', chapterId: 'v1-watchers', volumeIndex: 0 },
     ]
@@ -1072,7 +1072,7 @@ export default function VeilReader() {
           </div>
           <p className="text-slate-200 text-lg font-medium mb-2">Opening your book...</p>
           <p className="text-sm bg-gradient-to-r from-amber-300 to-amber-300 bg-clip-text text-transparent font-semibold tracking-wide mb-4">INVARIANT</p>
-          <p className="text-slate-500 text-xs">62 chapters · 118,000 words</p>
+          <p className="text-slate-500 text-xs">71 chapters · 128,000 words</p>
         </motion.div>
       </div>
     );
@@ -1833,7 +1833,7 @@ export default function VeilReader() {
                       You've reached the end of the preview
                     </h3>
                     <p className="text-white/50 max-w-md mx-auto mb-2 text-sm">
-                      You've read the first 4 chapters. The full book contains 62 chapters across 13 parts — 118,000 words of investigation. Purchase to continue reading.
+                      You've read the first 4 chapters. The full book contains 71 chapters across 13 parts — 128,000 words of investigation. Purchase to continue reading.
                     </p>
                     <p className="text-white/30 text-xs mb-6">
                       Available on Amazon for $9.99 — or get it here for half price.
@@ -1878,11 +1878,11 @@ export default function VeilReader() {
                       </p>
                     )}
                     <div className="flex items-center justify-center gap-4 text-xs text-white/30">
-                      <span>62 chapters</span>
+                      <span>71 chapters</span>
                       <span>·</span>
                       <span>13 parts</span>
                       <span>·</span>
-                      <span>118K words</span>
+                      <span>128K words</span>
                       <span>·</span>
                       <span>AI narration included</span>
                     </div>
