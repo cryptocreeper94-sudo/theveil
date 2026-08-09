@@ -2450,22 +2450,7 @@ Divide and conquer. It works on nations. It works on religions. It works on fami
 
 ### The Frequency Connection
 
-Words carry frequency. This isn't mystical speculation - it's physics. Sound is vibration. Vibration affects matter. The Creator spoke the universe into existence. Words have power.
-
-When the original words are changed:
-- The frequency changes
-- The resonance changes
-- The connection changes
-
-Calling on "LORD" doesn't carry the same vibration as calling on Yahuah. Using "Jesus" doesn't resonate the same as Yahusha. The spell is literally different.
-
-This is why they changed the words. Not translation convenience. Not linguistic evolution. Intentional severing of the frequency connection between humanity and the Creator.
-
-You were designed to connect to the ether, the cosmos, the Father. That connection operates on frequency. The words are the tuning mechanism. Change the words, detune the receiver.
-
-Now everything feels solid, blocky, disconnected. The spiritual realm seems foreign. Connection to the Creator feels like imagination rather than experience.
-
-That's not because the connection doesn't exist. It's because the tuning has been sabotaged.
+You have already seen why the words matter: words carry frequency, the words are the tuning mechanism, and changing them detunes the receiver. Apply that here and the strategy becomes visible - divide the flock, then hand each divided piece a detuned vocabulary. The severing wasn't only institutional. It was acoustic.
 
 Restore the words. Restore the frequency. Restore the connection.
 
@@ -6334,17 +6319,7 @@ This isn't condemnation. It's an alarm. The building is on fire and the exit sig
 
 That's how good the counterfeit is.
 
-The protection isn't complicated. It's restoration:
-
-The Creator's name: **Yahuah**.
-The Messiah's name: **Yahusha**.
-The Set-Apart Spirit: **Ruach Ha'Qodesh**.
-The covenant: eternal and unchanged.
-The Torah: still in effect.
-The Sabbath: the seventh day, not the first.
-The mo'edim: His appointed times, not Rome's holidays.
-The signal: still broadcasting.
-The receiver: waiting to be restored.
+The protection isn't complicated. It's restoration - the names, the covenant, the Torah, the seventh-day Sabbath, His appointed times. The full path back is walked step by step in Chapter 42; the numbers in this chapter are simply one more reason to take it.
 
 The deception succeeds because people don't verify. They accept what they've been handed. They trust the institution. They never calculate the numbers they were explicitly told to calculate.
 
@@ -7304,25 +7279,7 @@ These are not accidents. These are not coincidences. When the same number appear
 
 ## The Transliteration Lie
 
-They changed the names and called it "translation."
-
-[Yahusha](#concordance-yahusha) became Iesous, became Iesus, became Jesus.
-
-They told you: "It's just how names translate between languages. The meaning is preserved."
-
-But the meaning was NOT preserved.
-
-**Yahusha** = "Yahuah is Salvation" - the Father's name embedded in the Son's name
-
-**Jesus** = A Greek-Latin-English construction with no meaning, no connection to the Father's name
-
-"I am come in my Father's name, and ye receive me not: if another shall come in his own name, him ye will receive." (Yahuchanon 5:43)
-
-He came in the Father's name - literally, the name [Yahuah](#concordance-yahuah) is inside the name Yahusha. Rejected.
-
-Another came in a man's name - a name with no connection to the Father. Received by billions.
-
-The prophecy fulfilled. Hidden in plain sight. And most people call it "just a translation issue."
+They changed the names and called it "translation." The full chain - [Yahusha](#concordance-yahusha) to Iesous to Iesus to Jesus, the Father's name embedded in the Son's and then stripped out of it, the prophecy of Yahuchanon 5:43 fulfilled in plain sight - was laid out earlier in this book. It belongs in this chapter's catalog for one reason: it is the same signature as the logos and the numbers. Not drift. Design. The most important word in human history was altered, and the alteration was branded a technicality.
 
 ## The Sunday Substitution
 
